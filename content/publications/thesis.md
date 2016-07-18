@@ -1,7 +1,8 @@
 ---
+weight: 3
 ---
 
-## Thesis 
+## Thesis
 
 ### Doctoral Thesis
 * *Junpei Kawamoto*,
