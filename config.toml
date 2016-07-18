@@ -37,6 +37,13 @@ theme = "hugo-strata-theme"
 			title = "Publications"
 			url = "/publications/"
 
+		[[params.sidebar.nav]]
+			title = "Research"
+			url = "/research/"
+
+		[[params.sidebar.nav]]
+			title = "Lectures"
+			url = "/lectures/"
 
 	[params.about]
 		title = "Profile"
@@ -70,15 +77,6 @@ theme = "hugo-strata-theme"
 	[School of Informatics and Mathematical Science](http://www.s-im.t.kyoto-u.ac.jp/en?set_language=en),
 	[Faculty of Engineering](http://www.t.kyoto-u.ac.jp/en),
 	[Kyoto University](http://www.kyoto-u.ac.jp/en).
-
-## Academic Societies
-- [ACM: Association for Computing Machinery](http://www.acm.org/)
-- [IEEE: The Institute of Electrical and Electronics Engineers](https://www.ieee.org/)
-- [IPSJ: Information Processing Society of Japan](http://www.ipsj.or.jp/english/index.html)
-- [DBSJ: DataBase Society of Japan](http://www.dbsj.org/English/index.html)
-- [JSAI: The Japanese Society for Artificial Intelligence](http://www.ai-gakkai.or.jp/jsai/english.html)
-
-
 """
 
 	[params.portfolio]
@@ -121,3 +119,7 @@ theme = "hugo-strata-theme"
 			thumb = "thumbs/06.jpg"
 			title = "Lorem ipsum dolor."
 			description = "Lorem ipsum dolor sit amet."
+
+
+	[params.contact]
+		email = "junpei.kawamoto@acm.org"
