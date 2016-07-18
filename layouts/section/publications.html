@@ -1,0 +1,12 @@
+{{ partial "head" . }}
+	<body id="top">
+		{{ partial "header" . }}
+
+		<div id="main">
+			<h1>Publications</h1>
+      {{ range .Data.Pages }} {{ .Content }} {{ end }}
+		</div>
+
+		{{ partial "footer" . }}
+	</body>
+</html>
