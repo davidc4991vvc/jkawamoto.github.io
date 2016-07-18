@@ -7,10 +7,10 @@ weight: 2
   "A Machine Learning Based Approach for Detecting DRDoS Attacks and Its Performance Evaluation,"
   Proc. of the 11th Asia Joint Conference on Information Security, Fukuoka, Japan, 2016. (to appear)
 * Longzhu Cai, Yaokai Feng, *Junpei Kawamoto*, and Kouichi Sakurai,
-  "A Behavior-based Method for Detecting DNS Amplification Attacks,"
-  Proc. of the 10th International Workshop on Advances in Infromation Security, Fukuoka, Japan, 2016. (to appear)
+  "[A Behavior-based Method for Detecting DNS Amplification Attacks](http://hdl.handle.net/2324/1657554),"
+  Proc. of the 10th International Workshop on Advances in Infromation Security, Fukuoka, Japan, 2016.
 * Pengfei Li, Yaokai Feng, *Junpei Kawamoto*, and Kouichi Sakurai,
-  "A Proposal for Cyber-Attack Trace-back Using Packet Marking and Logging,"
+  "[A Proposal for Cyber-Attack Trace-back Using Packet Marking and Logging](http://hdl.handle.net/2324/1657555),"
   Proc. of the 10th International Workshop on Advances in Infromation Security, Fukuoka, Japan, 2016. (to appear)
 * Misni Harjo Suwito, Shinchi Matsumoto, *Junpei Kawamoto*, Dieter Gollmann, and Kouichi Sakurai,
   "[An Analysis of IT Assessment Security Maturity in Higher Education Institution](http://hdl.handle.net/2324/1566107),"
