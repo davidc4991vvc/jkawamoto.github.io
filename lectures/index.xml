@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lectures on Junpei Kawamoto</title>
+    <link>https://jkawamoto.github.io/lectures/</link>
+    <description>Recent content in Lectures on Junpei Kawamoto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
+    <atom:link href="https://jkawamoto.github.io/lectures/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>https://jkawamoto.github.io/lectures/main/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/lectures/main/</guid>
+      <description>
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;2015&#34;&gt;2015&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1PluqFw&#34;&gt;Cryptography and Information Security&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://moodle.artsci.kyushu-u.ac.jp/course/view.php?id=733&#34;&gt;Advanced Computer Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Exercises in Logic Design&lt;/li&gt;
+&lt;li&gt;Exercises in System Programming&lt;/li&gt;
+&lt;li&gt;Laboratory of Electrical Engineering and Computer Science I&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Laboratory of Electrical Engineering and Computer Science II&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;2014&#34;&gt;2014&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://itslab.inf.kyushu-u.ac.jp/lecture/info_sec2014/&#34;&gt;Cryptography and Information Security&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://opal.inf.kyushu-u.ac.jp/algorithm.html&#34;&gt;Exercises in Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/1K6Ux07&#34;&gt;Introduction of Computer Science&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Exercises in Logic Design&lt;/li&gt;
+&lt;li&gt;Laboratory of Electrical Engineering and Computer Science I&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;2013&#34;&gt;2013&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;students only&#34;&gt;[http://itslab.inf.kyushu-u.ac.jp/lecture/auto2013/|Automata, Formal Languages and Computation Theory]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;students only&#34;&gt;[http://itslab.inf.kyushu-u.ac.jp/lecture/comp_world2013/|Introduction of Computer Science]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Exercises in System Programming&lt;/li&gt;
+&lt;li&gt;Laboratory of Electrical Engineering and Computer Science II&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
