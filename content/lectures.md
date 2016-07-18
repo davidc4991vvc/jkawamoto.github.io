@@ -1,5 +1,7 @@
------
------
+---
+title: Lectures
+---
+
 ## 2015
 * [Cryptography and Information Security](http://bit.ly/1PluqFw)
 * [Advanced Computer Programming](https://moodle.artsci.kyushu-u.ac.jp/course/view.php?id=733)

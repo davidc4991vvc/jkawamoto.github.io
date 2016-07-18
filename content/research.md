@@ -1,4 +1,5 @@
 ---
+title: Research
 ---
 ## Research Grants
 * Grant-in-Aid for Young Scientists (B) from the Japan Society for the Promotion of Science, 2014-2016.
