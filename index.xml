@@ -10,36 +10,6 @@
     <atom:link href="https://jkawamoto.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title></title>
-      <link>https://jkawamoto.github.io/research/main/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/research/main/</guid>
-      <description>
-
-&lt;h2 id=&#34;research-grants&#34;&gt;Research Grants&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Grant-in-Aid for Young Scientists (B) from the Japan Society for the Promotion of Science, 2014-2016.&lt;/li&gt;
-&lt;li&gt;Grant-in-Aid from Artificial Intelligence Research Promotion Foundation, 2014 - 2015.&lt;/li&gt;
-&lt;li&gt;Grant-in-Aid from the Nakajima Foundation, 2012 - 2013.&lt;/li&gt;
-&lt;li&gt;Grant-in-Aid for JSPS Fellows, Compromise Prevention in Database Outsourcing, 2009 – 2011.&lt;/li&gt;
-&lt;li&gt;Exploratory IT Human Resources Project, Development of a Privacy Protection System for Web Applications, 2007.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;academic-societies&#34;&gt;Academic Societies&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.acm.org/&#34;&gt;ACM: Association for Computing Machinery&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.ieee.org/&#34;&gt;IEEE: The Institute of Electrical and Electronics Engineers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.ipsj.or.jp/english/index.html&#34;&gt;IPSJ: Information Processing Society of Japan&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.dbsj.org/English/index.html&#34;&gt;DBSJ: DataBase Society of Japan&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.ai-gakkai.or.jp/jsai/english.html&#34;&gt;JSAI: The Japanese Society for Artificial Intelligence&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Lectures</title>
       <link>https://jkawamoto.github.io/lectures/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -75,6 +45,239 @@
 &lt;li&gt;&lt;a href=&#34;students only&#34;&gt;[http://itslab.inf.kyushu-u.ac.jp/lecture/comp_world2013/|Introduction of Computer Science]&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Exercises in System Programming&lt;/li&gt;
 &lt;li&gt;Laboratory of Electrical Engineering and Computer Science II&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>https://jkawamoto.github.io/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/research/</guid>
+      <description>
+
+&lt;h2 id=&#34;research-grants&#34;&gt;Research Grants&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Grant-in-Aid for Young Scientists (B) from the Japan Society for the Promotion of Science, 2014-2016.&lt;/li&gt;
+&lt;li&gt;Grant-in-Aid from Artificial Intelligence Research Promotion Foundation, 2014 - 2015.&lt;/li&gt;
+&lt;li&gt;Grant-in-Aid from the Nakajima Foundation, 2012 - 2013.&lt;/li&gt;
+&lt;li&gt;Grant-in-Aid for JSPS Fellows, Compromise Prevention in Database Outsourcing, 2009 – 2011.&lt;/li&gt;
+&lt;li&gt;Exploratory IT Human Resources Project, Development of a Privacy Protection System for Web Applications, 2007.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;academic-societies&#34;&gt;Academic Societies&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.acm.org/&#34;&gt;ACM: Association for Computing Machinery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ieee.org/&#34;&gt;IEEE: The Institute of Electrical and Electronics Engineers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ipsj.or.jp/english/index.html&#34;&gt;IPSJ: Information Processing Society of Japan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.dbsj.org/English/index.html&#34;&gt;DBSJ: DataBase Society of Japan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ai-gakkai.or.jp/jsai/english.html&#34;&gt;JSAI: The Japanese Society for Artificial Intelligence&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>その他の活動</title>
+      <link>https://jkawamoto.github.io/activity-ja/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/activity-ja/</guid>
+      <description>
+
+&lt;h2 id=&#34;学会活動&#34;&gt;学会活動&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2013年 5月 - present:
+&lt;a href=&#34;http://www.ieice.org/jpn/index.html&#34;&gt;電子情報通信学会&lt;/a&gt; 査読委員&lt;/li&gt;
+&lt;li&gt;2013年 4月 - present:
+&lt;a href=&#34;http://www.ipsj.or.jp/&#34;&gt;情報処理学会&lt;/a&gt; 会誌編集委員会 編集委員&lt;/li&gt;
+&lt;li&gt;2014年 6月 - 2015年 3月:
+&lt;a href=&#34;http://www.ieice.org/~isec/&#34;&gt;電子情報通信学会 情報セキュリティ研究会&lt;/a&gt; 幹事補佐&lt;/li&gt;
+&lt;li&gt;2008年 9月 - 2012年 3月:
+&lt;a href=&#34;http://www.ai-gakkai.or.jp/jsai/&#34;&gt;人工知能学会&lt;/a&gt; 学生編集委員&lt;/li&gt;
+&lt;li&gt;2009年 4月 - 2010年 3月:
+&lt;a href=&#34;http://www.jouraku.org/&#34;&gt;情洛会&lt;/a&gt; 学生幹事&lt;/li&gt;
+&lt;li&gt;2016年 7月:
+&lt;a href=&#34;http://confsys.encs.concordia.ca/IDEAS/ideas16/ideas16.php&#34;&gt;20th International Database Engineering &amp;amp; Applications Symposium&lt;/a&gt;
+Track committee.&lt;/li&gt;
+&lt;li&gt;2016年 3月:
+&lt;a href=&#34;http://db-event.jpn.org/deim2016/&#34;&gt;第8回データ工学と情報マネジメントに関するフォーラム&lt;/a&gt;
+座長，コメンテータ&lt;/li&gt;
+&lt;li&gt;2015年 10月:
+&lt;a href=&#34;http://www.iwsec.org/css/2015/&#34;&gt;コンピュータセキュリティシンポジウム 2015&lt;/a&gt; 実行委員&lt;/li&gt;
+&lt;li&gt;2015年 3月:
+&lt;a href=&#34;http://db-event.jpn.org/deim2015/&#34;&gt;第7回データ工学と情報マネジメントに関するフォーラム&lt;/a&gt;
+座長，コメンテータ&lt;/li&gt;
+&lt;li&gt;2014年 11月:
+&lt;a href=&#34;http://www.ic3i.org/index.html&#34;&gt;The 1st International Conference on Contemporary Computing and Informatics&lt;/a&gt;
+Technical Program Committee&lt;/li&gt;
+&lt;li&gt;2014年 9月:
+&lt;a href=&#34;http://bit.ly/1zdPV3e&#34;&gt;平成26年度(第67回)電気・情報関係学会九州支部連合大会&lt;/a&gt;
+プログラム委員&lt;/li&gt;
+&lt;li&gt;2014年 7月:
+&lt;a href=&#34;http://www.ipsj.or.jp/kenkyukai/event/dbs159ifat115.html&#34;&gt;第159回DBS・第115回IFAT合同研究発表会&lt;/a&gt;
+座長，コメンテータ&lt;/li&gt;
+&lt;li&gt;2014年 7月:
+&lt;a href=&#34;http://db-event.jpn.org/idb2014/&#34;&gt;iDB Workshop 2014&lt;/a&gt;
+Local Arrangement Committee&lt;/li&gt;
+&lt;li&gt;2014年 3月:
+&lt;a href=&#34;http://db-event.jpn.org/deim2014/&#34;&gt;第6回データ工学と情報マネジメントに関するフォーラム&lt;/a&gt;
+コメンテータ&lt;/li&gt;
+&lt;li&gt;2013年11月:
+&lt;a href=&#34;http://bit.ly/1p1WXC3&#34;&gt;情報通信システムセキュリティ研究会&lt;/a&gt; 座長&lt;/li&gt;
+&lt;li&gt;2011年 6月, 第25回人工知能学会全国大会 学生プログラム委員&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;アウトリーチ活動&#34;&gt;アウトリーチ活動&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2014年 8月, ビッグデータ＆オープンデータ研究会 in 九州,
+第2回 BODIKトーク「&lt;a href=&#34;http://www.isit.or.jp/wg8/2014/07/24/talk2/&#34;&gt;オープンデータとプライバシ保護&lt;/a&gt;」&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;京都大学ictイノベーション&#34;&gt;京都大学ICTイノベーション&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2010年 Webサービスとサービス連携におけるプライバシ&lt;/li&gt;
+&lt;li&gt;2009年 クラウドコンピューティングにおける個人情報と関係情報の保護
+[ &lt;a href=&#34;http://bit.ly/Px3Ygq&#34;&gt;配布資料&lt;/a&gt; ]&lt;/li&gt;
+&lt;li&gt;2008年 Webアプリケーションにおけるプライバシー保護
+[ &lt;a href=&#34;http://bit.ly/RAoxZf&#34;&gt;配布資料&lt;/a&gt; ]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;ipax&#34;&gt;IPAX&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2008年 Webアプリケーションにおけるプライバシコントローラの開発&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;未踏ソフトウェア&#34;&gt;未踏ソフトウェア&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;IPA 2007年度第Ⅱ期未踏ソフトウェア創造事業「未踏ユース」,
+“Webアプリケーションにおけるプライバシコントローラの開発”
+[ &lt;a href=&#34;http://www.ipa.go.jp/about/jigyoseika/07fy-pro/youth/2007-0849a.pdf&#34;&gt;資料&lt;/a&gt; ]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ta-ra&#34;&gt;TA/RA&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2009年度 計算機科学実験及演習2 – ソフトウェア TA (京都大学 工学部 情報学科 2回生向け)&lt;/li&gt;
+&lt;li&gt;2009年度 基礎情報処理演習 TA (京都大学 工学部 情報学科 1回生向け)&lt;/li&gt;
+&lt;li&gt;2008年度 計算機科学実験及演習2 – ソフトウェア TA (京都大学 工学部 情報学科 2回生向け)&lt;/li&gt;
+&lt;li&gt;2008年度 基礎情報処理演習 TA (京都大学 工学部 情報学科 1回生向け)&lt;/li&gt;
+&lt;li&gt;2008年度 情報システム設計論Ⅱ演習 TA (京都大学 情報学研究科 社会情報学専攻 修士課程 1回生向け)&lt;/li&gt;
+&lt;li&gt;2008.10 – 2009.1 地球環境観測データおよびモデル出力データに対するメタデータ管理システムに関する研究 RA&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>プロフィール</title>
+      <link>https://jkawamoto.github.io/japanese/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/japanese/</guid>
+      <description>
+
+&lt;h2 id=&#34;略歴&#34;&gt;略歴&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2013.9 - 2016.6:
+&lt;a href=&#34;http://www.kyushu-u.ac.jp&#34;&gt;九州大学&lt;/a&gt;
+&lt;a href=&#34;http://portal.isee.kyushu-u.ac.jp&#34;&gt;大学院システム情報科学研究院&lt;/a&gt;
+(&lt;a href=&#34;http://itslab.csce.kyushu-u.ac.jp/index-j.html&#34;&gt;櫻井研究室&lt;/a&gt;) 助教&lt;/li&gt;
+&lt;li&gt;2013.12 - 2016.6:
+&lt;a href=&#34;http://www.kyushu-u.ac.jp&#34;&gt;九州大学&lt;/a&gt;
+&lt;a href=&#34;http://www.eng.kyushu-u.ac.jp/&#34;&gt;工学部&lt;/a&gt;,
+&lt;a href=&#34;http://www.sci.kyushu-u.ac.jp/&#34;&gt;理学部&lt;/a&gt; 助教 （兼担）&lt;/li&gt;
+&lt;li&gt;2013.9 – 2016.3:
+&lt;a href=&#34;http://www.isit.or.jp/&#34;&gt;九州先端科学技術研究所&lt;/a&gt; 特別研究員&lt;/li&gt;
+&lt;li&gt;2012.4 – 2013.9:
+&lt;a href=&#34;http://www.tsukuba.ac.jp/&#34;&gt;筑波大学&lt;/a&gt;
+&lt;a href=&#34;http://www.sie.tsukuba.ac.jp/&#34;&gt;システム情報系&lt;/a&gt;
+(&lt;a href=&#34;http://www.mdl.cs.tsukuba.ac.jp/index_j.html&#34;&gt;機械学習･データマイニング研究室&lt;/a&gt;) 研究員&lt;/li&gt;
+&lt;li&gt;2012.1 – 2012.3:
+&lt;a href=&#34;http://www.nict.go.jp/&#34;&gt;情報通信研究機構&lt;/a&gt; 有期研究員&lt;/li&gt;
+&lt;li&gt;2009.4 – 2011.12:
+&lt;a href=&#34;http://www.jsps.go.jp/j-pd/index.html&#34;&gt;日本学術振興会 特別研究員 (DC1)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2007.4 – 2012.3:
+&lt;a href=&#34;http://www.kyoto-u.ac.jp/ja&#34;&gt;京都大学&lt;/a&gt;
+&lt;a href=&#34;http://www.i.kyoto-u.ac.jp/&#34;&gt;大学院情報学研究科&lt;/a&gt;
+&lt;a href=&#34;http://www.soc.i.kyoto-u.ac.jp/&#34;&gt;社会情報学専攻&lt;/a&gt;
+(&lt;a href=&#34;http://www.db.soc.i.kyoto-u.ac.jp/&#34;&gt;吉川研究室&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;2003.4 – 2007.3:
+&lt;a href=&#34;http://www.kyoto-u.ac.jp/ja&#34;&gt;京都大学&lt;/a&gt;
+&lt;a href=&#34;http://www.t.kyoto-u.ac.jp/ja&#34;&gt;工学部&lt;/a&gt;
+&lt;a href=&#34;http://www.s-im.t.kyoto-u.ac.jp/ja&#34;&gt;情報学科&lt;/a&gt;
+(&lt;a href=&#34;http://www.dl.kuis.kyoto-u.ac.jp/wordpress/&#34;&gt;田中研究室&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;1999.4 – 2002.3:
+&lt;a href=&#34;http://www.seifu.ac.jp/&#34;&gt;清風学園清風高等学校理数科&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;所属学会&#34;&gt;所属学会&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ieee.org/index.html&#34;&gt;IEEE: The Institute of Electrical and Electronics Engineers&lt;/a&gt; (2013年 3月- )&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.acm.org/&#34;&gt;ACM: Association for Computing Machinery&lt;/a&gt; (2009年 4月- )&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ipsj.or.jp/&#34;&gt;IPSJ: 情報処理学会&lt;/a&gt; (2008年 7月- )&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.dbsj.org/&#34;&gt;DBSJ: 日本データベース学会&lt;/a&gt; (2007年 5月- )&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ai-gakkai.or.jp/jsai/&#34;&gt;JSAI: 人工知能学会&lt;/a&gt; (2006年 3月- )&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;競争的外部資金獲得実績&#34;&gt;競争的外部資金獲得実績&lt;/h2&gt;
+
+&lt;h3 id=&#34;代表&#34;&gt;代表&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jsps.go.jp/&#34;&gt;日本学術振興会&lt;/a&gt;
+学術研究助成基金助成金 若手研究 (B) (2014年度～2016年度)
+「&lt;a href=&#34;https://www.jkawamoto.info/ja/jsps2014&#34;&gt;データマイニングのためのオーダーメイドプライバシ保護&lt;/a&gt;」&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.airpf.or.jp/&#34;&gt;財団法人人工知能研究振興財団&lt;/a&gt;
+人工知能研究助成 (2014年度～2015年度)
+「&lt;a href=&#34;https://www.jkawamoto.info/ja/airpf2014&#34;&gt;プライバシを保護したストリームデータの統合解析技術に関する研究&lt;/a&gt;」&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.nakajimafound.or.jp/&#34;&gt;公益財団法人中島記念国際交流財団&lt;/a&gt;
+日本人若手研究者研究助成金 (2012年度～2013年度)
+「問合せからの情報漏洩を防ぐクラウドデータベースに関する研究」&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jsps.go.jp/&#34;&gt;日本学術振興会&lt;/a&gt;
+科学研究費補助金 特別研究員奨励費 (2009年度～2011年度)
+「アウトソーシングデータベースにおける情報漏洩防止を保証する技術の研究」&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ipa.go.jp/&#34;&gt;情報処理推進機構&lt;/a&gt;
+2007年度第Ⅱ期未踏ソフトウェア創造事業「未踏ユース」
+「&lt;a href=&#34;https://www.jkawamoto.info/ja/mito&#34;&gt;Webアプリケーションにおけるプライバシコントローラの開発&lt;/a&gt;」&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;分担&#34;&gt;分担&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;九州大学 P &amp;amp; P つばさプロジェクト (2015年度〜2016年度)
+「IT 技術を用いた大学生対象のメンタルヘルス e- ラーニングシステムの構築」&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jsps.go.jp/&#34;&gt;日本学術振興会&lt;/a&gt; 国間交流事業 (2014年度～2015年度)
+「暗号原理を用いたセキュア通信システムの数学的設計と解析における計算論的側面」&lt;/li&gt;
+&lt;li&gt;国立情報学研究所 共同研究 (2014年度)
+「画像等への情報隠ぺい型ではないステガノグラフイ技術の評価、および確率論的秘密分散・類似画像検索技術への適用と、アルゴリズムの確立」&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;研究プロジェクト&#34;&gt;研究プロジェクト&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2012.9 - 2016.3:
+&lt;a href=&#34;https://joras.csis.u-tokyo.ac.jp/project/show/id/490&#34;&gt;位置情報解析のためプライバシ保護手法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2013.9 - 2016.3:
+&lt;a href=&#34;http://itslab.inf.kyushu-u.ac.jp/cyber/jp/index.html&#34;&gt;国際連携によるサイバー攻撃の予知技術の研究開発&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2012.4 - 2013.8:
+&lt;a href=&#34;http://www.tkl.iis.u-tokyo.ac.jp/FIRST/&#34;&gt;超巨大データベース時代に向けた最高速データベースエンジンの開発と当該エンジンを核とする戦略的社会サービスの実証・評価&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;資格-試験&#34;&gt;資格・試験&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jitec.jp/&#34;&gt;ソフトウェア開発技術者&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jitec.jp/&#34;&gt;初級システムアドミニストレータ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.rekiken.gr.jp/&#34;&gt;歴史能力検定 – 世界史2級&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -135,10 +338,10 @@ Vol.1, No.1, pp.79-87, June, 2008. (in Japanese)&lt;/li&gt;
 &amp;ldquo;A Machine Learning Based Approach for Detecting DRDoS Attacks and Its Performance Evaluation,&amp;rdquo;
 Proc. of the 11th Asia Joint Conference on Information Security, Fukuoka, Japan, 2016. (to appear)&lt;/li&gt;
 &lt;li&gt;Longzhu Cai, Yaokai Feng, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, and Kouichi Sakurai,
-&amp;ldquo;A Behavior-based Method for Detecting DNS Amplification Attacks,&amp;rdquo;
-Proc. of the 10th International Workshop on Advances in Infromation Security, Fukuoka, Japan, 2016. (to appear)&lt;/li&gt;
+&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1657554&#34;&gt;A Behavior-based Method for Detecting DNS Amplification Attacks&lt;/a&gt;,&amp;rdquo;
+Proc. of the 10th International Workshop on Advances in Infromation Security, Fukuoka, Japan, 2016.&lt;/li&gt;
 &lt;li&gt;Pengfei Li, Yaokai Feng, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, and Kouichi Sakurai,
-&amp;ldquo;A Proposal for Cyber-Attack Trace-back Using Packet Marking and Logging,&amp;rdquo;
+&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1657555&#34;&gt;A Proposal for Cyber-Attack Trace-back Using Packet Marking and Logging&lt;/a&gt;,&amp;rdquo;
 Proc. of the 10th International Workshop on Advances in Infromation Security, Fukuoka, Japan, 2016. (to appear)&lt;/li&gt;
 &lt;li&gt;Misni Harjo Suwito, Shinchi Matsumoto, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, Dieter Gollmann, and Kouichi Sakurai,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1566107&#34;&gt;An Analysis of IT Assessment Security Maturity in Higher Education Institution&lt;/a&gt;,&amp;rdquo;
