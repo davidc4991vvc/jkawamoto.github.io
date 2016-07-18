@@ -1,3 +1,123 @@
 baseurl = "https://jkawamoto.github.io/"
 languageCode = "ja"
 title = "Junpei Kawamoto"
+copyright = "&copy; 2016 Junpei Kawamoto"
+theme = "hugo-strata-theme"
+
+[params]
+	# To provide some metadata for search engines feel free to add a few
+    # information about you and your website.
+	name = "Junpei Kawamoto"
+	description = "Describe your website"
+
+	# Enable Google Analytics by inserting your tracking code
+	googleAnalytics = ""
+
+
+	[params.sidebar]
+		# Replace the avatar with a picture of your own under static/images
+		avatar = "avatar.jpg"
+		# Use Markdown to format the string. This works nearly all over the theme
+		bio = "**Junpei Kawamoto**, Ph.D. in Informatics<br>Research Scientist working with Data mining, Security, and Privacy."
+		# The icons will be shown if you enter your username
+		twitter = "junkawamoto"
+		github = "jkawamoto"
+		dribbble = ""
+		facebook = "junpei.kawamoto"
+		googleplus = ""
+		flickr = ""
+
+		copyright = [
+			"&copy; Junpei Kawamoto",
+			"Design: [HTML5 UP](//html5up.net)",
+			"Demo Images: [Unsplash](//unsplash.com/)"
+		]
+
+		[[params.sidebar.nav]]
+			title = "Publications"
+			url = "/publications/"
+
+
+	[params.about]
+		title = "Profile"
+		content = """
+## Experience
+- 2013.9 - 2016.6: Assist. Prof. at
+	[Faculty of Information Science and Electrical Engineering](http://portal.isee.kyushu-u.ac.jp/e/),
+	[Kyushu University](http://www.kyushu-u.ac.jp/en/)
+- 2013.12 - 2016.6: Assist. Prof. at
+	[Faculty of Science](http://www.sci.kyushu-u.ac.jp/e/),
+	[Kyushu University](http://www.kyushu-u.ac.jp/en/)
+- 2013.12 - 2016.6: Assist. Prof. at
+	[Faculty of Engineering](http://www.eng.kyushu-u.ac.jp/e/index.html),
+	[Kyushu University](http://www.kyushu-u.ac.jp/en/)
+- 2013.9 - 2016.3: Research Fellow at
+	[Institute of Systems, Information Technologies and Nanotechnologies](http://www.isit.or.jp/english/)
+-	2012.4 - 2013.9: Research Fellow at
+	[Grad. School of Systems and Info. Engineering](http://www.sie.tsukuba.ac.jp/english/),
+	[University of Tsukuba](http://www.tsukuba.ac.jp/english/)
+- 2012.1 - 2012.3: Expert Researcher at
+	[National Institute of Information and Communications Technology](http://www.nict.go.jp/en/index.html)
+- 2009.4 – 2011.12: Research Fellow  at
+	[Japan Society for the Promotion of Science](http://www.jsps.go.jp/english/index.html)
+- 2007.10 - 2008.3: Software Developer at
+ 	[Information-technology Promotion Agency, Japan](https://www.ipa.go.jp/index-e.html)
+
+## Education
+- 2007.4 - 2012.3: [Graduate School of Informatics](http://www.i.kyoto-u.ac.jp/en/),
+	[Kyoto University](http://www.kyoto-u.ac.jp/en).
+- 2003.4 – 2007.3:
+	[School of Informatics and Mathematical Science](http://www.s-im.t.kyoto-u.ac.jp/en?set_language=en),
+	[Faculty of Engineering](http://www.t.kyoto-u.ac.jp/en),
+	[Kyoto University](http://www.kyoto-u.ac.jp/en).
+
+## Academic Societies
+- [ACM: Association for Computing Machinery](http://www.acm.org/)
+- [IEEE: The Institute of Electrical and Electronics Engineers](https://www.ieee.org/)
+- [IPSJ: Information Processing Society of Japan](http://www.ipsj.or.jp/english/index.html)
+- [DBSJ: DataBase Society of Japan](http://www.dbsj.org/English/index.html)
+- [JSAI: The Japanese Society for Artificial Intelligence](http://www.ai-gakkai.or.jp/jsai/english.html)
+
+
+"""
+
+	[params.portfolio]
+		title = "Recent Work"
+
+		# The images and thumbnails are stored under static/images
+		# Create and change subfolders as you like
+		[[params.portfolio.gallery]]
+			image = "fulls/01.jpg"
+			thumb = "thumbs/01.jpg"
+			title = "Lorem ipsum dolor."
+			description = "Lorem ipsum dolor sit amet."
+
+		[[params.portfolio.gallery]]
+			image = "fulls/02.jpg"
+			thumb = "thumbs/02.jpg"
+			title = "Lorem ipsum dolor."
+			description = "Lorem ipsum dolor sit amet."
+
+		[[params.portfolio.gallery]]
+			image = "fulls/03.jpg"
+			thumb = "thumbs/03.jpg"
+			title = "Lorem ipsum dolor."
+			description = "Lorem ipsum dolor sit amet."
+
+		[[params.portfolio.gallery]]
+			image = "fulls/04.jpg"
+			thumb = "thumbs/04.jpg"
+			title = "Lorem ipsum dolor."
+			description = "Lorem ipsum dolor sit amet."
+
+		[[params.portfolio.gallery]]
+			image = "fulls/05.jpg"
+			thumb = "thumbs/05.jpg"
+			title = "Lorem ipsum dolor."
+			description = "Lorem ipsum dolor sit amet."
+
+		[[params.portfolio.gallery]]
+			image = "fulls/06.jpg"
+			thumb = "thumbs/06.jpg"
+			title = "Lorem ipsum dolor."
+			description = "Lorem ipsum dolor sit amet."
