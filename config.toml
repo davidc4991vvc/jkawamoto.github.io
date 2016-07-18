@@ -45,6 +45,14 @@ theme = "hugo-strata-theme"
 			title = "Lectures"
 			url = "/lectures/"
 
+		[[params.sidebar.nav]]
+			title = "日本語"
+			url = "/japanese/"
+
+		[[params.sidebar.nav]]
+			title = "その他の活動"
+			url = "/activity-ja/"
+
 	[params.about]
 		title = "Profile"
 		content = """
