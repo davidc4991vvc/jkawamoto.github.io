@@ -30,7 +30,7 @@ theme = "hugo-strata-theme"
 		copyright = [
 			"&copy; Junpei Kawamoto",
 			"Design: [HTML5 UP](//html5up.net)",
-			"Demo Images: [Unsplash](//unsplash.com/)"
+			"[Little Kitune studio](http://www.littlekitune.org/)"
 		]
 
 		[[params.sidebar.nav]]
