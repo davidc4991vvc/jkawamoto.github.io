@@ -1,10 +1,10 @@
 {{ "<!-- Header -->" | safeHTML }}
 <header id="header">
 	<a href="#" class="image avatar"><img src="{{ .Site.BaseURL }}images/{{ .Site.Params.sidebar.avatar }}" alt="" /></a>
-	<h1>{{ .Site.Params.sidebar.bio | markdownify }}</h1>
+	<h1 style="text-shadow: 1px 1px 5px black; color: rgba(255,255,255,0.7);">{{ .Site.Params.sidebar.bio | markdownify }}</h1>
 
   <br/>
-  <ul style="list-style:none;">
+  <ul style="list-style:none; text-shadow: 1px 1px 5px black;">
     <li><a href="{{ .Site.BaseURL }}">Home</a></li>
     {{ range .Site.Params.sidebar.nav }}
     <li><a href="{{ .url }}">{{ .title }}</a></li>
