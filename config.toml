@@ -18,7 +18,7 @@ theme = "hugo-strata-theme"
 		# Replace the avatar with a picture of your own under static/images
 		avatar = "avatar.jpg"
 		# Use Markdown to format the string. This works nearly all over the theme
-		bio = "**Junpei Kawamoto**, Ph.D. in Informatics<br>Research Scientist working with Data mining, Security, and Privacy."
+		bio = "**Junpei Kawamoto**, Ph.D. in Informatics.<br>Research scientist working with data mining, security, and privacy."
 		# The icons will be shown if you enter your username
 		twitter = "junkawamoto"
 		github = "jkawamoto"
@@ -64,11 +64,8 @@ theme = "hugo-strata-theme"
 - 2013.9 - 2016.6: Assist. Prof. at
 	[Faculty of Information Science and Electrical Engineering](http://portal.isee.kyushu-u.ac.jp/e/),
 	[Kyushu University](http://www.kyushu-u.ac.jp/en/)
-- 2013.12 - 2016.6: Assist. Prof. at
-	[Faculty of Science](http://www.sci.kyushu-u.ac.jp/e/),
-	[Kyushu University](http://www.kyushu-u.ac.jp/en/)
-- 2013.12 - 2016.6: Assist. Prof. at
-	[Faculty of Engineering](http://www.eng.kyushu-u.ac.jp/e/index.html),
+- 2013.12 - 2016.6: Assist. Prof. at Faculty of
+	[Science](http://www.sci.kyushu-u.ac.jp/e/) and [Engineering](http://www.eng.kyushu-u.ac.jp/e/index.html),
 	[Kyushu University](http://www.kyushu-u.ac.jp/en/)
 - 2013.9 - 2016.3: Research Fellow at
 	[Institute of Systems, Information Technologies and Nanotechnologies](http://www.isit.or.jp/english/)
@@ -83,11 +80,15 @@ theme = "hugo-strata-theme"
  	[Information-technology Promotion Agency, Japan](https://www.ipa.go.jp/index-e.html)
 
 ## Education
-- 2007.4 - 2012.3: [Graduate School of Informatics](http://www.i.kyoto-u.ac.jp/en/),
+- 2008.10 - 2012.3: PhD. Informatics,
+	[Graduate School of Informatics](http://www.i.kyoto-u.ac.jp/en/),
+	[Kyoto University](http://www.kyoto-u.ac.jp/en)
+- 2007.4 - 2008.9: M. Informatics,
+	[Graduate School of Informatics](http://www.i.kyoto-u.ac.jp/en/),
 	[Kyoto University](http://www.kyoto-u.ac.jp/en).
-- 2003.4 – 2007.3:
+- 2003.4 – 2007.3: B. Eng.,
 	[School of Informatics and Mathematical Science](http://www.s-im.t.kyoto-u.ac.jp/en?set_language=en),
-	[Faculty of Engineering](http://www.t.kyoto-u.ac.jp/en),
+	[Faculty of Eng.](http://www.t.kyoto-u.ac.jp/en),
 	[Kyoto University](http://www.kyoto-u.ac.jp/en).
 """
 
