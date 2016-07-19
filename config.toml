@@ -8,7 +8,7 @@ theme = "hugo-strata-theme"
 	# To provide some metadata for search engines feel free to add a few
     # information about you and your website.
 	name = "Junpei Kawamoto"
-	description = "Describe your website"
+	description = "Homepage of Junpei Kawamoto."
 
 	# Enable Google Analytics by inserting your tracking code
 	googleAnalytics = ""
