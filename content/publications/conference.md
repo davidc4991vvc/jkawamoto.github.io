@@ -1,4 +1,6 @@
 ---
+title: List of publications in international conferences.
+description: List of publications in international conferences.
 weight: 2
 ---
 

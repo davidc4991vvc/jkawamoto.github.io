@@ -1,4 +1,6 @@
 ---
+title: List of thesis.
+description: List of thesis.
 weight: 3
 ---
 

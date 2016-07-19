@@ -1,4 +1,6 @@
 ---
+title: List of publications in journals.
+description: List of publications in journals.
 weight: 1
 ---
 
