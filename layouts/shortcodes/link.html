@@ -1,0 +1,5 @@
+{{ $name := index .Params 0 }}
+
+{{ with .Page.Param $name }}
+  <a href="{{.link}}">{{.title}}</a>
+{{ end}}

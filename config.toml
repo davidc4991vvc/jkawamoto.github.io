@@ -50,6 +50,10 @@ theme = "hugo-strata-theme"
 			url = "/japanese/"
 
 		[[params.sidebar.nav]]
+			title = "論文リスト"
+			url = "/publications-ja/"
+
+		[[params.sidebar.nav]]
 			title = "その他の活動"
 			url = "/activity-ja/"
 
