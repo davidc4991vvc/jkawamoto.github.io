@@ -10,7 +10,7 @@ weight: 2
   Proc. of the 11th Asia Joint Conference on Information Security, Fukuoka, Japan, 2016. (to appear)
 * Longzhu Cai, Yaokai Feng, *Junpei Kawamoto*, and Kouichi Sakurai,
   "[{{%img qir%}}A Behavior-based Method for Detecting DNS Amplification Attacks](http://hdl.handle.net/2324/1657554),"
-  Proc. of the 10th International Workshop on Advances in Infromation Security, Fukuoka, Japan, 2016.
+  Proc. of the 10th International Workshop on Advances in Infromation Security, Fukuoka, Japan, 2016. (to appear)
 * Pengfei Li, Yaokai Feng, *Junpei Kawamoto*, and Kouichi Sakurai,
   "[{{%img qir%}}A Proposal for Cyber-Attack Trace-back Using Packet Marking and Logging](http://hdl.handle.net/2324/1657555),"
   Proc. of the 10th International Workshop on Advances in Infromation Security, Fukuoka, Japan, 2016. (to appear)
@@ -70,7 +70,7 @@ weight: 2
   pp.84:1--84:6, Cambodia, January 9-11, 2014. (Acceptance rate  29%)
 * *Junpei Kawamoto*,
   "A Locality Sensitive Hashing Filter for Encrypted Vector Databases,"
-  Proc. of [International Workshop on Privacy-AwaRe Intelligent Systems](http://www.ciise.concordia.ca/newsandevents/2012/PARIS12/index.htm) (PARIS 2012)],
+  Proc. of [International Workshop on Privacy-AwaRe Intelligent Systems](http://www.ciise.concordia.ca/newsandevents/2012/PARIS12/index.htm) (PARIS 2012),
   Macau, December, 2012. (Acceptance rate 15.8%)
   [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/paris2012-kawamoto)
 * *Junpei Kawamoto* and [Masatoshi Yoshikawa](http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/),
