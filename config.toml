@@ -11,7 +11,7 @@ theme = "hugo-strata-theme"
 	description = "Homepage of Junpei Kawamoto."
 
 	# Enable Google Analytics by inserting your tracking code
-	googleAnalytics = ""
+	googleAnalytics = "UA-19410992-1"
 
 
 	[params.sidebar]
@@ -30,7 +30,7 @@ theme = "hugo-strata-theme"
 		copyright = [
 			"&copy; Junpei Kawamoto",
 			"Design: [HTML5 UP](//html5up.net)",
-			"[Little Kitune studio](http://www.littlekitune.org/)"
+			"[Little Kitune studio](https://www.littlekitune.org/)"
 		]
 
 		[[params.sidebar.nav]]
