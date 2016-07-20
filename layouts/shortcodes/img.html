@@ -1,0 +1,4 @@
+{{ $name := index .Params 0 }}
+{{if $name}}
+  <img src="/images/{{$name | lower}}.png" alt="{{$name}}"/>
+{{ end}}
