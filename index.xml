@@ -235,10 +235,10 @@ Local Arrangement Committee&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.jsps.go.jp/&#34;&gt;日本学術振興会&lt;/a&gt;
 学術研究助成基金助成金 若手研究 (B) (2014年度～2016年度)
-「&lt;a href=&#34;https://www.jkawamoto.info/ja/jsps2014&#34;&gt;データマイニングのためのオーダーメイドプライバシ保護&lt;/a&gt;」&lt;/li&gt;
+「データマイニングのためのオーダーメイドプライバシ保護」&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.airpf.or.jp/&#34;&gt;財団法人人工知能研究振興財団&lt;/a&gt;
 人工知能研究助成 (2014年度～2015年度)
-「&lt;a href=&#34;https://www.jkawamoto.info/ja/airpf2014&#34;&gt;プライバシを保護したストリームデータの統合解析技術に関する研究&lt;/a&gt;」&lt;/li&gt;
+「プライバシを保護したストリームデータの統合解析技術に関する研究」&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.nakajimafound.or.jp/&#34;&gt;公益財団法人中島記念国際交流財団&lt;/a&gt;
 日本人若手研究者研究助成金 (2012年度～2013年度)
 「問合せからの情報漏洩を防ぐクラウドデータベースに関する研究」&lt;/li&gt;
@@ -247,14 +247,14 @@ Local Arrangement Committee&lt;/li&gt;
 「アウトソーシングデータベースにおける情報漏洩防止を保証する技術の研究」&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.ipa.go.jp/&#34;&gt;情報処理推進機構&lt;/a&gt;
 2007年度第Ⅱ期未踏ソフトウェア創造事業「未踏ユース」
-「&lt;a href=&#34;https://www.jkawamoto.info/ja/mito&#34;&gt;Webアプリケーションにおけるプライバシコントローラの開発&lt;/a&gt;」&lt;/li&gt;
+「Webアプリケーションにおけるプライバシコントローラの開発」&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;分担&#34;&gt;分担&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;九州大学 P &amp;amp; P つばさプロジェクト (2015年度〜2016年度)
-「IT 技術を用いた大学生対象のメンタルヘルス e- ラーニングシステムの構築」&lt;/li&gt;
+「&lt;a href=&#34;http://www.chc.kyushu-u.ac.jp/~selfcare/TOP.html&#34;&gt;IT 技術を用いた大学生対象のメンタルヘルス e- ラーニングシステムの構築&lt;/a&gt;」&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.jsps.go.jp/&#34;&gt;日本学術振興会&lt;/a&gt; 国間交流事業 (2014年度～2015年度)
 「暗号原理を用いたセキュア通信システムの数学的設計と解析における計算論的側面」&lt;/li&gt;
 &lt;li&gt;国立情報学研究所 共同研究 (2014年度)
@@ -408,31 +408,84 @@ Vol.1, No.1, pp.79-87, 2008年6月.
 
 &lt;ul&gt;
 &lt;li&gt;Chunlu Chen, Hiroaki Anada, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, and Kouichi Sakurai,
-&amp;ldquo;&lt;a href=&#34;http://isyou.info/jisis/vol6/no2/jisis-2016-vol6-no2-02.pdf&#34;&gt;A Hybrid Encryption Scheme with Key-cloning Protection: User / Terminal Double Authentication via Attributes and Fingerprints&lt;/a&gt;,&amp;rdquo;
+&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1657553&#34;&gt;
+
+  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+
+A Hybrid Encryption Scheme with Key-cloning Protection: User / Terminal Double Authentication via Attributes and Fingerprints&lt;/a&gt;,&amp;rdquo;
 Journal of Internet Services and Information Security,
 vol.6, issue 2, pp.23-36, May 2016.&lt;/li&gt;
 &lt;li&gt;Kazumasa Yamauchi, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, Yoshiaki Hori, and Kouichi Sakurai,
-&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1525466&#34;&gt;Evaluation of Machine Learning Techniques for C&amp;amp;C Traffic Classification&lt;/a&gt;,&amp;rdquo;
-IPSJ Journal, Vol.56, No.9, pp.1745-1753, 2015. (in Japanese)&lt;/li&gt;
+&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1525466&#34;&gt;
+
+  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+
+Evaluation of Machine Learning Techniques for C&amp;amp;C Traffic Classification&lt;/a&gt;,&amp;rdquo;
+IPSJ Journal, Vol.56, No.9, pp.1745-1753, 2015. (in Japanese)
+&lt;a href=&#34;http://ci.nii.ac.jp/naid/120005651849&#34;&gt;
+
+  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+
+&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Can Wang, Yaokai Feng, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, Yoshiaki Hori, and Kouichi Sakurai,
-&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/&#34;&gt;A Learning Algorithm for Behavior-based PortScan Automatic Detection and Its Evaluation&lt;/a&gt;,&amp;rdquo;
-IPSJ Journal,  Vol.56, No.9, pp.1770-1781, 2015. (in Japanese)&lt;/li&gt;
+&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/&#34;&gt;
+
+  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+
+A Learning Algorithm for Behavior-based PortScan Automatic Detection and Its Evaluation&lt;/a&gt;,&amp;rdquo;
+IPSJ Journal,  Vol.56, No.9, pp.1770-1781, 2015. (in Japanese)
+&lt;a href=&#34;http://ci.nii.ac.jp/naid/120005651850&#34;&gt;
+
+  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+
+&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Junpei Kawamoto&lt;/em&gt;,
-&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1498219&#34;&gt;A Locality Sensitive Hashing Filter for Encrypted Vector Databases&lt;/a&gt;,&amp;rdquo;
+&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1498219&#34;&gt;
+
+  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+
+A Locality Sensitive Hashing Filter for Encrypted Vector Databases&lt;/a&gt;,&amp;rdquo;
 &lt;a href=&#34;http://fi.mimuw.edu.pl&#34;&gt;Fundamenta Informaticae&lt;/a&gt;,
 Vol.137, No.2, pp.291-304, 2015.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Junpei Kawamoto&lt;/em&gt;, Patricia L. Gillett, and Jun Sakuma,
-&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2241/119458&#34;&gt;Frequency-based Constraint Relaxation for Private Query&lt;/a&gt;,&amp;rdquo;
+&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2241/119458&#34;&gt;
+
+  &lt;img src=&#34;https://jkawamoto.github.io/images/tulips.png&#34; alt=&#34;tulips&#34;/&gt;
+
+Frequency-based Constraint Relaxation for Private Query&lt;/a&gt;,&amp;rdquo;
 IPSJ Transactions on Databases (TOD),
-Vol.6, No.3, pp.50-60, June, 2013. (in Japanese)&lt;/li&gt;
+Vol.6, No.3, pp.50-60, June, 2013. (in Japanese)
+&lt;a href=&#34;http://ci.nii.ac.jp/naid/110009579665&#34;&gt;
+
+  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+
+&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Junpei Kawamoto&lt;/em&gt; and &lt;a href=&#34;http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/&#34;&gt;Masatoshi Yoshikawa&lt;/a&gt;,
-&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2433/147391&#34;&gt;Private Range Query in Key-Value Databases&lt;/a&gt;,&amp;rdquo;
+&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2433/147391&#34;&gt;
+
+  &lt;img src=&#34;https://jkawamoto.github.io/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
+
+Private Range Query in Key-Value Databases&lt;/a&gt;,&amp;rdquo;
 IPSJ Transactions on Databases (TOD),
-Vol.4, No.3, pp.33-44, October, 2011. (in Japanese)&lt;/li&gt;
+Vol.4, No.3, pp.33-44, October, 2011. (in Japanese)
+&lt;a href=&#34;http://ci.nii.ac.jp/naid/40019257549&#34;&gt;
+
+  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+
+&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Junpei Kawamoto&lt;/em&gt; and &lt;a href=&#34;http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/&#34;&gt;Masatoshi Yoshikawa&lt;/a&gt;,
-&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2433/147390&#34;&gt;Privacy Protection of Data Shared on Web Applications Using Broadcast Encryption and Clustering&lt;/a&gt;,&amp;rdquo;
+&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2433/147390&#34;&gt;
+
+  &lt;img src=&#34;https://jkawamoto.github.io/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
+
+Privacy Protection of Data Shared on Web Applications Using Broadcast Encryption and Clustering&lt;/a&gt;,&amp;rdquo;
 IPSJ Transactions on Databases (TOD),
-Vol.1, No.1, pp.79-87, June, 2008. (in Japanese)&lt;/li&gt;
+Vol.1, No.1, pp.79-87, June, 2008. (in Japanese)
+&lt;a href=&#34;http://ci.nii.ac.jp/naid/110007990003&#34;&gt;
+
+  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+
+&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -457,7 +510,7 @@ Proc. of the 11th Asia Joint Conference on Information Security, Fukuoka, Japan,
   &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 A Behavior-based Method for Detecting DNS Amplification Attacks&lt;/a&gt;,&amp;rdquo;
-Proc. of the 10th International Workshop on Advances in Infromation Security, Fukuoka, Japan, 2016.&lt;/li&gt;
+Proc. of the 10th International Workshop on Advances in Infromation Security, Fukuoka, Japan, 2016. (to appear)&lt;/li&gt;
 &lt;li&gt;Pengfei Li, Yaokai Feng, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, and Kouichi Sakurai,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1657555&#34;&gt;
 
@@ -573,7 +626,7 @@ Proc. of &lt;a href=&#34;http://www.icuimc.org/&#34;&gt;the 8th International Co
 pp.84:1&amp;ndash;84:6, Cambodia, January 9-11, 2014. (Acceptance rate  29%)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Junpei Kawamoto&lt;/em&gt;,
 &amp;ldquo;A Locality Sensitive Hashing Filter for Encrypted Vector Databases,&amp;rdquo;
-Proc. of &lt;a href=&#34;http://www.ciise.concordia.ca/newsandevents/2012/PARIS12/index.htm&#34;&gt;International Workshop on Privacy-AwaRe Intelligent Systems&lt;/a&gt; (PARIS 2012)],
+Proc. of &lt;a href=&#34;http://www.ciise.concordia.ca/newsandevents/2012/PARIS12/index.htm&#34;&gt;International Workshop on Privacy-AwaRe Intelligent Systems&lt;/a&gt; (PARIS 2012),
 Macau, December, 2012. (Acceptance rate 15.8%)
 &lt;a href=&#34;http://www.slideshare.net/jkawamoto/paris2012-kawamoto&#34;&gt;
 
@@ -669,7 +722,7 @@ Proc. of the 11th Asia Joint Conference on Information Security, Fukuoka, Japan,
   &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 A Behavior-based Method for Detecting DNS Amplification Attacks&lt;/a&gt;,&amp;rdquo;
-Proc. of the 10th International Workshop on Advances in Infromation Security, Fukuoka, Japan, 2016.&lt;/li&gt;
+Proc. of the 10th International Workshop on Advances in Infromation Security, Fukuoka, Japan, 2016. (to appear)&lt;/li&gt;
 &lt;li&gt;Pengfei Li, Yaokai Feng, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, and Kouichi Sakurai,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1657555&#34;&gt;
 
@@ -785,7 +838,7 @@ Proc. of &lt;a href=&#34;http://www.icuimc.org/&#34;&gt;the 8th International Co
 pp.84:1&amp;ndash;84:6, Cambodia, January 9-11, 2014. (Acceptance rate  29%)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Junpei Kawamoto&lt;/em&gt;,
 &amp;ldquo;A Locality Sensitive Hashing Filter for Encrypted Vector Databases,&amp;rdquo;
-Proc. of &lt;a href=&#34;http://www.ciise.concordia.ca/newsandevents/2012/PARIS12/index.htm&#34;&gt;International Workshop on Privacy-AwaRe Intelligent Systems&lt;/a&gt; (PARIS 2012)],
+Proc. of &lt;a href=&#34;http://www.ciise.concordia.ca/newsandevents/2012/PARIS12/index.htm&#34;&gt;International Workshop on Privacy-AwaRe Intelligent Systems&lt;/a&gt; (PARIS 2012),
 Macau, December, 2012. (Acceptance rate 15.8%)
 &lt;a href=&#34;http://www.slideshare.net/jkawamoto/paris2012-kawamoto&#34;&gt;
 
