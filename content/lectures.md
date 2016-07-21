@@ -18,7 +18,7 @@ title: Lectures
 * Laboratory of Electrical Engineering and Computer Science I  
 
 ## 2013
-* [[http://itslab.inf.kyushu-u.ac.jp/lecture/auto2013/|Automata, Formal Languages and Computation Theory]] (students only)
-* [[http://itslab.inf.kyushu-u.ac.jp/lecture/comp_world2013/|Introduction of Computer Science]] (students only)
+* [Automata, Formal Languages and Computation Theory](http://bit.ly/2acP9l4)
+* [Introduction of Computer Science](http://itslab.inf.kyushu-u.ac.jp/lecture/comp_world2013/)
 * Exercises in System Programming
 * Laboratory of Electrical Engineering and Computer Science II
