@@ -6,7 +6,7 @@ weight: 2
 
 ## Conference/Workshop
 * Yuxuan Gao, Yaokai Feng, *Junpei Kawamoto*, and Kouichi Sakurai,
-  "A Machine Learning Based Approach for Detecting DRDoS Attacks and Its Performance Evaluation,"
+  "[{{%img qir%}}A Machine Learning Based Approach for Detecting DRDoS Attacks and Its Performance Evaluation](http://hdl.handle.net/2324/1661854),"
   Proc. of the 11th Asia Joint Conference on Information Security, Fukuoka, Japan, 2016. (to appear)
 * Longzhu Cai, Yaokai Feng, *Junpei Kawamoto*, and Kouichi Sakurai,
   "[{{%img qir%}}A Behavior-based Method for Detecting DNS Amplification Attacks](http://hdl.handle.net/2324/1657554),"
