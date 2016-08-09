@@ -548,7 +548,11 @@ Android マルウェアの API 処理ロギングによる個人情報漏えい�
 
 &lt;ul&gt;
 &lt;li&gt;陳 春璐, 穴田 啓晃, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
-&amp;ldquo;端末フィンガープリント情報を用いた鍵乱用を防止可能なハイブリッド暗号化方式,&amp;rdquo;
+&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662063&#34;&gt;
+
+  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+
+端末フィンガープリント情報を用いた鍵乱用を防止可能なハイブリッド暗号化方式&lt;/a&gt;,&amp;rdquo;
 
 
 
@@ -557,7 +561,11 @@ Android マルウェアの API 処理ロギングによる個人情報漏えい�
 ,
 2C2-3, 長崎, 2015年10月21日～23日.&lt;/li&gt;
 &lt;li&gt;蔡 龍洙, フォン ヤオカイ, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
-&amp;ldquo;挙動に基づくDNSアンプ攻撃の検知,&amp;rdquo;
+&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662064&#34;&gt;
+
+  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+
+挙動に基づくDNSアンプ攻撃の検知&lt;/a&gt;,&amp;rdquo;
 
 
 
@@ -584,7 +592,11 @@ Android マルウェアの API 処理ロギングによる個人情報漏えい�
 ,
 3C3-1, 長崎, 2015年10月21日～23日.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;李 鵬飛, フォン ヤオカイ, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
-&amp;ldquo;パケットマーキングとロギングを用いたサイバー攻撃に対するトレースバック,&amp;rdquo;
+&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662066&#34;&gt;
+
+  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+
+パケットマーキングとロギングを用いたサイバー攻撃に対するトレースバック&lt;/a&gt;,&amp;rdquo;
 
 
 
@@ -596,7 +608,11 @@ Android マルウェアの API 処理ロギングによる個人情報漏えい�
 &amp;ldquo;端末フィンガープリント情報を用いたハイブリッド暗号化方式,&amp;rdquo;
 平成27年度（第68回）電気・情報関係学会九州支部連合大会, 09-2P-04, 福岡, 2015年9月26日〜27日.&lt;/li&gt;
 &lt;li&gt;宮崎 亮輔, &lt;em&gt;川本 淳平&lt;/em&gt;, 松本 晋一, 櫻井 幸一,
-&amp;ldquo;OpenFlowを用いた端末非依存型検知方式における負荷分散法,&amp;rdquo;
+&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662068&#34;&gt;
+
+  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+
+OpenFlowを用いた端末非依存型検知方式における負荷分散法&lt;/a&gt;,&amp;rdquo;
 平成27年度（第68回）電気・情報関係学会九州支部連合大会, 09-2P-07, 福岡, 2015年9月26日〜27日.&lt;/li&gt;
 &lt;li&gt;西郷里 拓, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;モバイル端末の署名認証に向けた加速度情報を考慮した改良DTWの提案,&amp;rdquo;
