@@ -45,15 +45,19 @@ theme = "hugo-strata-theme"
 			title = "Lectures"
 			url = "/lectures/"
 
-		[[params.sidebar.nav]]
+		[[params.sidebar.navja]]
 			title = "日本語"
 			url = "/japanese/"
 
-		[[params.sidebar.nav]]
+		[[params.sidebar.navja]]
 			title = "論文リスト"
 			url = "/publications-ja/"
 
-		[[params.sidebar.nav]]
+		[[params.sidebar.navja]]
+			title = "技術メモ"
+			url = "/blog-ja/"
+
+		[[params.sidebar.navja]]
 			title = "その他の活動"
 			url = "/activity-ja/"
 

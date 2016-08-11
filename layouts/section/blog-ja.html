@@ -1,0 +1,17 @@
+{{ partial "head" . }}
+	<body id="top">
+		{{ partial "header" . }}
+
+		<div id="main">
+			<h1>技術メモ</h1>
+      {{ range .Data.Pages }}
+        <section>
+          <h2>{{ .Title }}</h2>
+          {{ .Content }}
+        </section>
+      {{ end }}
+		</div>
+
+		{{ partial "footer" . }}
+	</body>
+</html>
