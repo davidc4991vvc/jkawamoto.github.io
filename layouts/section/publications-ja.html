@@ -5,6 +5,8 @@
 		<div id="main">
 			<h1>Publications</h1>
       {{ range .Data.Pages }} {{ .Content }} {{ end }}
+
+			{{ partial "adsense" . }}
 		</div>
 
 		{{ partial "footer" . }}
