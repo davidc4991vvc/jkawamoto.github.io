@@ -221,7 +221,7 @@ these words are often used interchangeably, as in historic times or historical t
 &lt;p&gt;Maven2 のプライベートリポジトリを作成し，
 公開鍵認証を行う scp プロトコルを用いて eclipse の &lt;a href=&#34;http://m2eclipse.sonatype.org/]&#34;&gt;m2eclipse プラグイン&lt;/a&gt; からデプロイする設定のメモ．
 なお，m2eclipse version 0.10.0 に含まれる &lt;strong&gt;Maven 3.0-SNAPSHOT では scp 認証に失敗する&lt;/strong&gt;．
-別途 Maven 2 系を (ダウンロード)[&lt;a href=&#34;http://maven.apache.org/&#34;&gt;http://maven.apache.org/&lt;/a&gt;] して，eclipse のウインドウ → 設定 → Maven → インストールに追加しデフォルトに設定しておく必要がある．&lt;/p&gt;
+別途 Maven 2 系を &lt;a href=&#34;http://maven.apache.org/&#34;&gt;ダウンロード&lt;/a&gt; して，eclipse のウインドウ → 設定 → Maven → インストールに追加しデフォルトに設定しておく必要がある．&lt;/p&gt;
 
 &lt;p&gt;準備が整えば，scp でアクセスする Maven リポジトリの作成から始める．作成するリポジトリの ID 及び，URL は次の通りとする．&lt;/p&gt;
 

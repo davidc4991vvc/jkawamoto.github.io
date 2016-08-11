@@ -13,6 +13,8 @@
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
 		<link rel="stylesheet" href="https://jkawamoto.github.io/css/main.css" />
 		
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
 	</head>
 
 	<body id="top">
@@ -57,7 +59,7 @@
 <p>Maven2 のプライベートリポジトリを作成し，
 公開鍵認証を行う scp プロトコルを用いて eclipse の <a href="http://m2eclipse.sonatype.org/]">m2eclipse プラグイン</a> からデプロイする設定のメモ．
 なお，m2eclipse version 0.10.0 に含まれる <strong>Maven 3.0-SNAPSHOT では scp 認証に失敗する</strong>．
-別途 Maven 2 系を (ダウンロード)[<a href="http://maven.apache.org/">http://maven.apache.org/</a>] して，eclipse のウインドウ → 設定 → Maven → インストールに追加しデフォルトに設定しておく必要がある．</p>
+別途 Maven 2 系を <a href="http://maven.apache.org/">ダウンロード</a> して，eclipse のウインドウ → 設定 → Maven → インストールに追加しデフォルトに設定しておく必要がある．</p>
 
 <p>準備が整えば，scp でアクセスする Maven リポジトリの作成から始める．作成するリポジトリの ID 及び，URL は次の通りとする．</p>
 
@@ -226,6 +228,9 @@ pom.xml のあるディレクトリを基底ディレクトリに，
   s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
 
+
+<script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
 	</body>
 </html>

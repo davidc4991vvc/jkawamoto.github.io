@@ -13,6 +13,8 @@
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
 		<link rel="stylesheet" href="https://jkawamoto.github.io/css/main.css" />
 		
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
 	</head>
 
 	<body id="top">
@@ -51,7 +53,7 @@
 			<h1>技術メモ</h1>
       
         <section>
-          <h2>R でのパッケージインストール</h2>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/installing-r-package/">R でのパッケージインストール</a></h2>
           <p>もっと良い方法があるのかも知れないが・・・．
 ChangeAnomalyDetection パッケージをインストールする場合，ルートで R を起動し</p>
 
@@ -65,7 +67,7 @@ ChangeAnomalyDetection パッケージをインストールする場合，ルー
         </section>
       
         <section>
-          <h2>某 BibTeX スタイルで DOI を非表示にする</h2>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/disable-doi/">某 BibTeX スタイルで DOI を非表示にする</a></h2>
           <p>DOI を参考文献リストに載せたくない場合，bstファイルの以下の部分</p>
 
 <pre><code>FUNCTION {format.doi.url}
@@ -94,13 +96,13 @@ ChangeAnomalyDetection パッケージをインストールする場合，ルー
         </section>
       
         <section>
-          <h2>Hadoop CDH4 で hadoop-env.sh が見つからない</h2>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/hadoop-cdh4-missing-hadoop-env-sh/">Hadoop CDH4 で hadoop-env.sh が見つからない</a></h2>
           <p>入れ忘れていただけみたいなので，<a href="http://bit.ly/1aQ2o1R">ここ</a>からダウンロードして <code>conf</code> 以下におけば良い．</p>
 
         </section>
       
         <section>
-          <h2>matplotlib で日本語を使う</h2>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/matplotlib-in-japanese/">matplotlib で日本語を使う</a></h2>
           <ol>
 <li>日本語フォントのインストール
 
@@ -130,7 +132,7 @@ font.sans-serif : TakaoPGothic
         </section>
       
         <section>
-          <h2>pdfoutput が定義されていない問題</h2>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/not-found-pdfoutput/">pdfoutput が定義されていない問題</a></h2>
           <p><a href="http://www.vldb.org/pvldb/format.html">某 LaTeX スタイルファイル</a>を使ったとき，
 <code>pdfoutput</code> が定義されていないと言われてコンパイルが通らない．
 とりあえず，</p>
@@ -144,7 +146,7 @@ font.sans-serif : TakaoPGothic
         </section>
       
         <section>
-          <h2>mod_python と mod_filter でフィルタを登録する際の注意</h2>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/mod_python-and-mod_filter/">mod_python と mod_filter でフィルタを登録する際の注意</a></h2>
           <p>Apache 2.2 で mod_python と mod_filter を用いてフィルタを作成する際の注意というかバグ．
 Python スクリプトをフィルタとして使う場合，まず，python 関数をフィルタプロバイダとして登録する．
 そのために，<a href="http://www.python.jp/doc/contrib/modpython/dir-filter-of.html">PythonOutputFilter ディレクティブ</a>を使用し，
@@ -193,7 +195,7 @@ mod_filter のどこかで， provider_name と filter_name を取り違えて�
         </section>
       
         <section>
-          <h2>historic と historical の違い</h2>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/historic-vs-historical/">historic と historical の違い</a></h2>
           <p>今日，TLに，</p>
 
 <blockquote>
@@ -223,13 +225,13 @@ these words are often used interchangeably, as in historic times or historical t
         </section>
       
         <section>
-          <h2>m2eclipse を使って scp でデプロイ</h2>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/scp-with-m2eclipse/">m2eclipse を使って scp でデプロイ</a></h2>
           
 
 <p>Maven2 のプライベートリポジトリを作成し，
 公開鍵認証を行う scp プロトコルを用いて eclipse の <a href="http://m2eclipse.sonatype.org/]">m2eclipse プラグイン</a> からデプロイする設定のメモ．
 なお，m2eclipse version 0.10.0 に含まれる <strong>Maven 3.0-SNAPSHOT では scp 認証に失敗する</strong>．
-別途 Maven 2 系を (ダウンロード)[<a href="http://maven.apache.org/">http://maven.apache.org/</a>] して，eclipse のウインドウ → 設定 → Maven → インストールに追加しデフォルトに設定しておく必要がある．</p>
+別途 Maven 2 系を <a href="http://maven.apache.org/">ダウンロード</a> して，eclipse のウインドウ → 設定 → Maven → インストールに追加しデフォルトに設定しておく必要がある．</p>
 
 <p>準備が整えば，scp でアクセスする Maven リポジトリの作成から始める．作成するリポジトリの ID 及び，URL は次の通りとする．</p>
 
@@ -338,7 +340,7 @@ pom.xml のあるディレクトリを基底ディレクトリに，
         </section>
       
         <section>
-          <h2>Servlet で Velocity (1.6.4) を使う</h2>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/servlet-velocity/">Servlet で Velocity (1.6.4) を使う</a></h2>
           <p>Servlet で Velocity を使用する場合，<code>org.apache.velocity.runtime.log.ServletLogChute</code> エラーが出ることがある．
 これは，デフォルトログシステムの初期化に失敗しているからで，<code>ServletContext</code> を渡すか別のログシステムを使えば解決する．</p>
 
@@ -359,7 +361,7 @@ engine.init();
         </section>
       
         <section>
-          <h2>Arm 用 OpenJDK で Selector#select の挙動がおかしい</h2>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/arm-jdk-selector/">Arm 用 OpenJDK で Selector#select の挙動がおかしい</a></h2>
           <p>ARM 用の OpenJDK VM (OpenJDK Core VM) では，
 選択できるキーが有ろうが無かろうが一つのキーも選択せずに Selector#select() が即座に返る．
 そして CPU 使用率がどんどん上がっていく．</p>
@@ -449,6 +451,9 @@ while(true){
   s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
 
+
+<script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
 	</body>
 </html>
