@@ -4,10 +4,15 @@
 	<h1 style="text-shadow: 1px 1px 5px black; color: rgba(255,255,255,0.7);">{{ .Site.Params.sidebar.bio | markdownify }}</h1>
 
   <br/>
-  <ul style="list-style:none; text-shadow: 1px 1px 5px black;">
-    <li><a href="/#main">Home</a></li>
+  <ul style="list-style:none; text-shadow: 1px 1px 5px black; margin: 0em;">
+    <li style="display: inline-block;"><a href="/#main">Home</a></li>
     {{ range .Site.Params.sidebar.nav }}
-    <li><a href="{{ .url }}#main">{{ .title }}</a></li>
+    <li style="display: inline-block;"><a href="{{ .url }}#main">{{ .title }}</a></li>
+    {{ end }}
+  </ul>
+	<ul style="list-style:none; text-shadow: 1px 1px 5px black;">
+    {{ range .Site.Params.sidebar.navja }}
+    <li style="display: inline-block;"><a href="{{ .url }}#main">{{ .title }}</a></li>
     {{ end }}
   </ul>
 
