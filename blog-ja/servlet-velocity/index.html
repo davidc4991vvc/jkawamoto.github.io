@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>List of thesis. &middot; Junpei Kawamoto</title>
+		<title>Servlet で Velocity (1.6.4) を使う &middot; Junpei Kawamoto</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Junpei Kawamoto">
@@ -49,35 +49,24 @@
 
 		<div id="main">
 			
-				<h1>List of thesis.</h1>
+				<h1>Servlet で Velocity (1.6.4) を使う</h1>
 			
 
-      
+      <p>Servlet で Velocity を使用する場合，<code>org.apache.velocity.runtime.log.ServletLogChute</code> エラーが出ることがある．
+これは，デフォルトログシステムの初期化に失敗しているからで，<code>ServletContext</code> を渡すか別のログシステムを使えば解決する．</p>
 
-<h2 id="thesis">Thesis</h2>
+<p>ServletContext を渡す場合，次のようにすれば良い．</p>
 
-<h3 id="doctoral-thesis">Doctoral Thesis</h3>
+<pre><code class="language-java">VelocityEngine engine = new VelocityEngine();
+engine.setApplicationAttribute(
+    ServletContext.class.getName(), servletContext);
+engine.init();
+</code></pre>
 
-<ul>
-<li><em>Junpei Kawamoto</em>,
-&ldquo;A Study on User&rsquo;s Privacy Protection against Query Analysis in Cloud Databases (クラウドデータベースにおける問合せ解析からの利用者情報保護に関する研究),&rdquo;
-京都大学 大学院情報学研究科 社会情報学専攻, 2012年3月.<br /></li>
-</ul>
-
-<h3 id="master-thesis">Master Thesis</h3>
-
-<ul>
-<li><em>Junpei Kawamoto</em>,
-&ldquo;Security of Social Information in Database As a Service Model (サービスとしてのデータベースモデルにおける社会的情報の安全性),&rdquo;
-京都大学 大学院情報学研究科 社会情報学専攻, 2008年8月22日.<br /></li>
-</ul>
-
-<h3 id="bachelor-thesis">Bachelor Thesis</h3>
+<p>また，別のログシステムを使用する場合は，<code>runtime.log.logsystem.class</code> プロパティに設定する．</p>
 
 <ul>
-<li><em>Junpei Kawamoto</em>,
-&ldquo;Supporting of Group Search by Extracting Search Intention from the Query Log and the Navigation History (クエリログとナビゲーション履歴からの探索意図抽出によるグループ探索支援),&rdquo;
-京都大学 工学部 情報学科, 2007年2月16日. (in Japanese)</li>
+<li>参考: <a href="http://bit.ly/9vALBn">Apache</a></li>
 </ul>
 
 		</div>

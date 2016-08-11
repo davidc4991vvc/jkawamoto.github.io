@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>m2eclipse を使って scp でデプロイ &middot; Junpei Kawamoto</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Junpei Kawamoto">
+    	<meta name="description" content="Homepage of Junpei Kawamoto.">
+    	<meta http-equiv="content-language" content="ja" />
+    	<meta name="generator" content="Hugo 0.16" />
+		
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="https://jkawamoto.github.io/css/main.css" />
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="#" class="image avatar"><img src="https://jkawamoto.github.io/images/avatar.jpg" alt="" /></a>
+	<h1 style="text-shadow: 1px 1px 5px black; color: rgba(255,255,255,0.7);"><strong>Junpei Kawamoto</strong>, Ph.D. in Informatics.<br>Research scientist working with data mining, security, and privacy.</h1>
+
+  <br/>
+  <ul style="list-style:none; text-shadow: 1px 1px 5px black; margin: 0em;">
+    <li style="display: inline-block;"><a href="/#main">Home</a></li>
+    
+    <li style="display: inline-block;"><a href="/publications/#main">Publications</a></li>
+    
+    <li style="display: inline-block;"><a href="/research/#main">Research</a></li>
+    
+    <li style="display: inline-block;"><a href="/lectures/#main">Lectures</a></li>
+    
+  </ul>
+	<ul style="list-style:none; text-shadow: 1px 1px 5px black;">
+    
+    <li style="display: inline-block;"><a href="/japanese/#main">日本語</a></li>
+    
+    <li style="display: inline-block;"><a href="/publications-ja/#main">論文リスト</a></li>
+    
+    <li style="display: inline-block;"><a href="/blog-ja/#main">技術メモ</a></li>
+    
+    <li style="display: inline-block;"><a href="/activity-ja/#main">その他の活動</a></li>
+    
+  </ul>
+
+</header>
+
+
+		<div id="main">
+			
+				<h1>m2eclipse を使って scp でデプロイ</h1>
+			
+
+      
+
+<p>Maven2 のプライベートリポジトリを作成し，
+公開鍵認証を行う scp プロトコルを用いて eclipse の <a href="http://m2eclipse.sonatype.org/]">m2eclipse プラグイン</a> からデプロイする設定のメモ．
+なお，m2eclipse version 0.10.0 に含まれる <strong>Maven 3.0-SNAPSHOT では scp 認証に失敗する</strong>．
+別途 Maven 2 系を (ダウンロード)[<a href="http://maven.apache.org/">http://maven.apache.org/</a>] して，eclipse のウインドウ → 設定 → Maven → インストールに追加しデフォルトに設定しておく必要がある．</p>
+
+<p>準備が整えば，scp でアクセスする Maven リポジトリの作成から始める．作成するリポジトリの ID 及び，URL は次の通りとする．</p>
+
+<ul>
+<li>ID: foo.org</li>
+<li>リポジトリ URL: scp://foo.org/var/maven2/repo</li>
+<li>スナップショットリポジトリ URL: scp://foo.org/var/maven2/reposnap</li>
+</ul>
+
+<p>つまり，/var/maven2/repo と /var/maven2/reposnap 以下にそれぞれのリポジトリ内容物を格納する．
+そのため，リポジトリを利用するユーザに /var/maven2/repo と /var/maven2/reposnap への読み書き権限を与える．</p>
+
+<p>scp プロトコルを使用するためには，wagon-ssh エクステンションが必要となるので，pom.xml の build – extendsions に以下を追加する．</p>
+
+<pre><code class="language-xml">&lt;build&gt;
+  &lt;extension&gt;
+    &lt;groupId&gt;org.apache.maven.wagon&lt;/groupId&gt;
+    &lt;artifactId&gt;wagon-ssh&lt;/artifactId&gt;
+    &lt;version&gt;1.0-beta-6&lt;/version&gt;
+  &lt;/extension&gt;
+&lt;/build&gt;
+</code></pre>
+
+<p>次に，デプロイ先の情報を登録する．pom.xml の project に以下を追加．</p>
+
+<pre><code class="language-xml">&lt;distributionManagement&gt;
+  &lt;repository&gt;
+    &lt;uniqueVersion&gt;false&lt;/uniqueVersion&gt;
+    &lt;id&gt;foo.org&lt;/id&gt;
+    &lt;name&gt;Foo.org Repository&lt;/name&gt;
+    &lt;url&gt;scp://foo.org/var/maven2/repo&lt;/url&gt;
+    &lt;layout&gt;default&lt;/layout&gt;
+  &lt;/repository&gt;
+  &lt;snapshotRepository&gt;
+    &lt;uniqueVersion&gt;true&lt;/uniqueVersion&gt;
+    &lt;id&gt;snapshot.foo.org&lt;/id&gt;
+    &lt;name&gt;Foo.org Snapshot repository&lt;/name&gt;
+    &lt;url&gt;scp://foo.org/var/maven2/reposnap&lt;/url&gt;
+    &lt;layout&gt;legacy&lt;/layout&gt;
+  &lt;/snapshotRepository&gt;
+&lt;/distributionManagement&gt;
+</code></pre>
+
+<p>最後に，ssh のログイン情報を setting.xml に記述．なお，このファイルの場所は，eclipse のウインドウ → 設定 → Maven → User Settings に書いてあるが，デフォルトでは作成されない．もしなければ自分で作成し，下記の通り書き込めば良い．</p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;settings xmlns=&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;
+          xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+          xsi:schemaLocation=&quot;http://maven.apache.org/SETTINGS/1.0.0
+          http://maven.apache.org/xsd/settings-1.0.0.xsd&quot;&gt;
+  &lt;servers&gt;
+    &lt;server&gt;
+      &lt;id&gt;foo.org&lt;/id&gt;
+      &lt;username&gt;USERNAME&lt;/username&gt;
+      &lt;privateKey&gt;PRIVATEKEY&lt;/privateKey&gt;
+      &lt;filePermissions&gt;664&lt;/filePermissions&gt;
+      &lt;directoryPermissions&gt;775&lt;/directoryPermissions&gt;
+    &lt;/server&gt;
+    &lt;server&gt;
+      &lt;id&gt;snapshot.foo.org&lt;/id&gt;
+      &lt;username&gt;USERNAME&lt;/username&gt;
+      &lt;privateKey&gt;PRIVATEKEY&lt;/privateKey&gt;
+      &lt;filePermissions&gt;664&lt;/filePermissions&gt;
+      &lt;directoryPermissions&gt;775&lt;/directoryPermissions&gt;
+    &lt;/server&gt;
+  &lt;/servers&gt;
+&lt;/settings&gt;
+</code></pre>
+
+<p>なお，USERNAME はログインユーザ名，PRIVATEKEY は秘密鍵 (openssl 形式) へのパスである．Putty 形式の秘密鍵ではエラーになるので注意．</p>
+
+<p>以上で，実行 → 実行構成 → Maven Build にて新規実行構成を追加し，
+pom.xml のあるディレクトリを基底ディレクトリに，
+ゴールをdeployに，Mavenランタイムに3.0-SNAPSHOTではなく2系列を選択して実行すればデプロイされる．うまくいかない場合は， c:/Users/<user>/.ssh に known_hosts を作成し，</p>
+
+<pre><code class="language-xml">&lt;file * known_hosts&gt;foo.org ssh-rsa PUBLICKEY&lt;/file&gt;
+</code></pre>
+
+<p>などと書く．PUBLICKEY は公開鍵，ssh-rsa の部分は鍵の種類によって変わる．公開鍵を調べるのが面倒な場合は TeraTerm の ssh_known_hosts ファイルなどからコピーすれば良い．</p>
+
+<p>作成したプライベートリポジトリを使用する場合は，pom.xml の repositories に以下を追加する．</p>
+
+<pre><code class="language-xml">&lt;repository&gt;
+  &lt;id&gt;foo.org&lt;/id&gt;
+  &lt;name&gt;Foo.org Repository&lt;/name&gt;
+  &lt;url&gt;scp://foo.org/var/maven2/repo&lt;/url&gt;
+  &lt;layout&gt;default&lt;/layout&gt;
+&lt;/repository&gt;
+&lt;repository&gt;
+  &lt;id&gt;snapshot.foo.org&lt;/id&gt;
+  &lt;name&gt;Foo.org Snapshot repository&lt;/name&gt;
+  &lt;url&gt;scp://foo.org/var/maven2/reposnap&lt;/url&gt;
+  &lt;layout&gt;legacy&lt;/layout&gt;
+&lt;/repository&gt;
+</code></pre>
+
+<p>これは，distributionManagement に記述した物とほぼ同じである．</p>
+
+<h2 id="参考">参考：</h2>
+
+<ul>
+<li><a href="http://wiki.fdiary.net/maven2/?CookBook#l31">scpを使ってデプロイする@Maven2のTipsを集めるWiki – CookBook</a></li>
+<li><a href="http://www.nulab.co.jp/kousei/chapter5/02.html">構成管理 実践入門 第5章 Maven2ベストプラクティス 社内リポジトリ – 自分たちのライブラリ置き場</a></li>
+</ul>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+    	<li><a href="//facebook.com/junpei.kawamoto" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+    
+		
+			<li><a href="//twitter.com/junkawamoto" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+			<li><a href="//github.com/jkawamoto" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		
+		
+			<li><a href="mailto:junpei.kawamoto@acm.org" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Junpei Kawamoto</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li><a href="https://www.littlekitune.org/">Little Kitune studio</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="https://jkawamoto.github.io/js/jquery.min.js"></script>
+<script src="https://jkawamoto.github.io/js/jquery.poptrox.min.js"></script>
+<script src="https://jkawamoto.github.io/js/skel.min.js"></script>
+<script src="https://jkawamoto.github.io/js/util.js"></script>
+
+<script src="https://jkawamoto.github.io/js/main.js"></script>
+
+
+<!-- Google Analytics -->
+<script>
+  var _gaq=[['_setAccount','UA-19410992-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+
+	</body>
+</html>

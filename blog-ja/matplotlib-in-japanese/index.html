@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>List of thesis. &middot; Junpei Kawamoto</title>
+		<title>matplotlib で日本語を使う &middot; Junpei Kawamoto</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Junpei Kawamoto">
@@ -49,36 +49,34 @@
 
 		<div id="main">
 			
-				<h1>List of thesis.</h1>
+				<h1>matplotlib で日本語を使う</h1>
 			
 
-      
-
-<h2 id="thesis">Thesis</h2>
-
-<h3 id="doctoral-thesis">Doctoral Thesis</h3>
+      <ol>
+<li>日本語フォントのインストール
 
 <ul>
-<li><em>Junpei Kawamoto</em>,
-&ldquo;A Study on User&rsquo;s Privacy Protection against Query Analysis in Cloud Databases (クラウドデータベースにおける問合せ解析からの利用者情報保護に関する研究),&rdquo;
-京都大学 大学院情報学研究科 社会情報学専攻, 2012年3月.<br /></li>
-</ul>
-
-<h3 id="master-thesis">Master Thesis</h3>
+<li>Takao Fonts を <code>Python\Lib\site-packages\matplotlib\mpl-data\fonts\ttf</code> へ．</li>
+</ul></li>
+<li>設定ファイルの編集
 
 <ul>
-<li><em>Junpei Kawamoto</em>,
-&ldquo;Security of Social Information in Database As a Service Model (サービスとしてのデータベースモデルにおける社会的情報の安全性),&rdquo;
-京都大学 大学院情報学研究科 社会情報学専攻, 2008年8月22日.<br /></li>
-</ul>
+<li><code>Python\Lib\site-packages\matplotlib\mpl-data\matplotlibrc</code> を <code>~/.matplotlib/</code> にコピー</li>
+<li>FONT セクションに下記を追加 (もちろん別のフォントを使う場合はそちらを指定)</li>
+</ul></li>
+</ol>
 
-<h3 id="bachelor-thesis">Bachelor Thesis</h3>
+<pre><code>font.serif : TakaoPMincho
+font.sans-serif : TakaoPGothic
+</code></pre>
+
+<ol>
+<li>フォントキャッシュの削除
 
 <ul>
-<li><em>Junpei Kawamoto</em>,
-&ldquo;Supporting of Group Search by Extracting Search Intention from the Query Log and the Navigation History (クエリログとナビゲーション履歴からの探索意図抽出によるグループ探索支援),&rdquo;
-京都大学 工学部 情報学科, 2007年2月16日. (in Japanese)</li>
-</ul>
+<li><code>~/.matplotlib/fontList.cache</code> を削除</li>
+</ul></li>
+</ol>
 
 		</div>
 
