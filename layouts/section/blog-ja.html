@@ -6,7 +6,7 @@
 			<h1>技術メモ</h1>
       {{ range .Data.Pages }}
         <section>
-          <h2>{{ .Title }}</h2>
+          <h2><a href="{{.Permalink}}">{{ .Title }}</a></h2>
           {{ .Content }}
         </section>
       {{ end }}

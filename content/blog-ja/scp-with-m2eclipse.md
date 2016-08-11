@@ -6,7 +6,7 @@ date: "2010-11-04"
 Maven2 のプライベートリポジトリを作成し，
 公開鍵認証を行う scp プロトコルを用いて eclipse の [m2eclipse プラグイン](http://m2eclipse.sonatype.org/]) からデプロイする設定のメモ．
 なお，m2eclipse version 0.10.0 に含まれる **Maven 3.0-SNAPSHOT では scp 認証に失敗する**．
-別途 Maven 2 系を (ダウンロード)[http://maven.apache.org/] して，eclipse のウインドウ → 設定 → Maven → インストールに追加しデフォルトに設定しておく必要がある．
+別途 Maven 2 系を [ダウンロード](http://maven.apache.org/) して，eclipse のウインドウ → 設定 → Maven → インストールに追加しデフォルトに設定しておく必要がある．
 
 準備が整えば，scp でアクセスする Maven リポジトリの作成から始める．作成するリポジトリの ID 及び，URL は次の通りとする．
 
