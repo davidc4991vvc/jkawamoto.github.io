@@ -3,7 +3,67 @@
   
   <url>
     <loc>https://jkawamoto.github.io/</loc>
-    <lastmod>2013-06-30T00:00:00+00:00</lastmod>
+    <lastmod>2014-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/blog-ja/starting-docker-container-via-upstart/</loc>
+    <lastmod>2014-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/blog-ja/systemd-configurations/</loc>
+    <lastmod>2014-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/blog-ja/switching-action-in-xslt/</loc>
+    <lastmod>2014-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/blog-ja/public-dataset-list/</loc>
+    <lastmod>2014-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/blog-ja/lots-of-private-information/</loc>
+    <lastmod>2014-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/blog-ja/ppdm-projects/</loc>
+    <lastmod>2014-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/blog-ja/converting-pdf-to-eps/</loc>
+    <lastmod>2014-03-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/blog-ja/lecture-notes-of-cryptography/</loc>
+    <lastmod>2014-02-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/blog-ja/windows8-networkname/</loc>
+    <lastmod>2013-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/blog-ja/reading-rss-by-python/</loc>
+    <lastmod>2013-12-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/blog-ja/deep-learning-libraries/</loc>
+    <lastmod>2013-12-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/blog-ja/replacing-newlines/</loc>
+    <lastmod>2013-08-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -22,13 +82,43 @@
   </url>
   
   <url>
+    <loc>https://jkawamoto.github.io/blog-ja/msra-open-dataset/</loc>
+    <lastmod>2013-08-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jkawamoto.github.io/blog-ja/matplotlib-in-japanese/</loc>
     <lastmod>2013-06-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://jkawamoto.github.io/blog-ja/windows-python-library/</loc>
+    <lastmod>2014-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jkawamoto.github.io/blog-ja/not-found-pdfoutput/</loc>
     <lastmod>2013-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/blog-ja/compiling-screen-256/</loc>
+    <lastmod>2016-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/blog-ja/aspell-from-emacs/</loc>
+    <lastmod>2014-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/blog-ja/getting-gnu-make/</loc>
+    <lastmod>2014-09-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/blog-ja/pull-via-proxy/</loc>
+    <lastmod>2014-09-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>

@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Blog-jas &middot; Junpei Kawamoto</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Junpei Kawamoto">
+    	<meta name="description" content="Homepage of Junpei Kawamoto.">
+    	<meta http-equiv="content-language" content="ja" />
+    	<meta name="generator" content="Hugo 0.16" />
+		
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="https://jkawamoto.github.io/css/main.css" />
+		
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+		  (adsbygoogle = window.adsbygoogle || []).push({
+		    google_ad_client: "ca-pub-4734862314145555",
+		    enable_page_level_ads: true
+		  });
+		</script>
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="#" class="image avatar"><img src="https://jkawamoto.github.io/images/avatar.jpg" alt="" /></a>
+	<h1 style="text-shadow: 1px 1px 5px black; color: rgba(255,255,255,0.7);"><strong>Junpei Kawamoto</strong>, Ph.D. in Informatics.<br>Research scientist working with data mining, security, and privacy.</h1>
+
+  <br/>
+  <ul style="list-style:none; text-shadow: 1px 1px 5px black; margin: 0em;">
+    <li style="display: inline-block;"><a href="/#main">Home</a></li>
+    
+    <li style="display: inline-block;"><a href="/publications/#main">Publications</a></li>
+    
+    <li style="display: inline-block;"><a href="/research/#main">Research</a></li>
+    
+    <li style="display: inline-block;"><a href="/lectures/#main">Lectures</a></li>
+    
+  </ul>
+	<ul style="list-style:none; text-shadow: 1px 1px 5px black;">
+    
+    <li style="display: inline-block;"><a href="/japanese/#main">日本語</a></li>
+    
+    <li style="display: inline-block;"><a href="/publications-ja/#main">論文リスト</a></li>
+    
+    <li style="display: inline-block;"><a href="/blog-ja/#main">メモ</a></li>
+    
+    <li style="display: inline-block;"><a href="/activity-ja/#main">その他の活動</a></li>
+    
+  </ul>
+
+</header>
+
+
+		<div id="main">
+			<h1>メモ</h1>
+
+      
+        <section>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/deep-learning-libraries/">Deep Learning ライブラリのリンク集</a></h2>
+					<div class="align-right">
+						Posted: <time pubdate="2013-12-09">2013-12-09</time>,
+						Last updated: <time pubdate="2013-12-12">2013-12-12</time>
+					</div>
+          <ul>
+<li>deeplearning.net</li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/replacing-newlines/">改行をカンマに置換</a></h2>
+					<div class="align-right">
+						Posted: <time pubdate="2013-08-06">2013-08-06</time>,
+						Last updated: <time pubdate="2013-08-06">2013-08-06</time>
+					</div>
+          <p>sed で変換するのは色々面倒で，<a href="http://unicus.jp/skmk/archives/315">ここ</a>によると，</p>
+
+<pre><code class="language-sh">$ tr '\n' ',' &lt; filename
+</code></pre>
+
+<p>が一番簡単．</p>
+
+        </section>
+      
+        <section>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/installing-r-package/">R でのパッケージインストール</a></h2>
+					<div class="align-right">
+						Posted: <time pubdate="2013-06-12">2013-06-12</time>,
+						Last updated: <time pubdate="2013-06-30">2013-06-30</time>
+					</div>
+          <p>もっと良い方法があるのかも知れないが・・・．
+ChangeAnomalyDetection パッケージをインストールする場合，ルートで R を起動し</p>
+
+<pre><code>install.packages(&quot;ChangeAnomalyDetection&quot;)
+</code></pre>
+
+<p>を実行する．
+依存パッケージがあるとエラーが出るので，
+そのエラーで必要と言われたパッケージを同様の方法でインストールしてから再度インストールする．</p>
+
+        </section>
+      
+        <section>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/disable-doi/">某 BibTeX スタイルで DOI を非表示にする</a></h2>
+					<div class="align-right">
+						Posted: <time pubdate="2013-04-16">2013-04-16</time>,
+						Last updated: <time pubdate="2015-12-23">2015-12-23</time>
+					</div>
+          <p>DOI を参考文献リストに載せたくない場合，bstファイルの以下の部分</p>
+
+<pre><code>FUNCTION {format.doi.url}
+{ doi empty$
+    { url empty$
+     'skip$
+     { format.online output.nonnull
+       format.url
+     }
+     if$
+    }
+    { format.online output.nonnull
+      &quot;\doi{&quot; doi &quot;}&quot; * *
+    }
+  if$
+}
+</code></pre>
+
+<p>を</p>
+
+<pre><code>FUNCTION {format.doi.url}{}
+</code></pre>
+
+<p>としておけば良い．</p>
+
+        </section>
+      
+        <section>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/hadoop-cdh4-missing-hadoop-env-sh/">Hadoop CDH4 で hadoop-env.sh が見つからない</a></h2>
+					<div class="align-right">
+						Posted: <time pubdate="2013-03-19">2013-03-19</time>,
+						Last updated: <time pubdate="2013-06-27">2013-06-27</time>
+					</div>
+          <p>入れ忘れていただけみたいなので，<a href="http://bit.ly/1aQ2o1R">ここ</a>からダウンロードして <code>conf</code> 以下におけば良い．</p>
+
+        </section>
+      
+        <section>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/msra-open-dataset/">MSRA 公開の移動履歴データセット</a></h2>
+					<div class="align-right">
+						Posted: <time pubdate="2013-03-14">2013-03-14</time>,
+						Last updated: <time pubdate="2013-08-05">2013-08-05</time>
+					</div>
+          <ul>
+<li><a href="http://research.microsoft.com/en-us/downloads/b16d359d-d164-469e-9fd4-daa38f2b2e13/">GeoLife GPS Trajectories</a></li>
+</ul>
+
+<p>Last.fm データセット</p>
+
+<ul>
+<li><a href="http://mtg.upf.edu/node/1671">Last.fm dataset 360K</a></li>
+<li><a href="http://www.dtic.upf.edu/~ocelma/MusicRecommendationDataset/lastfm-1K.html">Last.fm Dataset - 1K users</a></li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/matplotlib-in-japanese/">matplotlib で日本語を使う</a></h2>
+					<div class="align-right">
+						Posted: <time pubdate="2013-03-13">2013-03-13</time>,
+						Last updated: <time pubdate="2013-06-30">2013-06-30</time>
+					</div>
+          <ol>
+<li>日本語フォントのインストール
+
+<ul>
+<li>Takao Fonts を <code>Python\Lib\site-packages\matplotlib\mpl-data\fonts\ttf</code> へ．</li>
+</ul></li>
+<li>設定ファイルの編集
+
+<ul>
+<li><code>Python\Lib\site-packages\matplotlib\mpl-data\matplotlibrc</code> を <code>~/.matplotlib/</code> にコピー</li>
+<li>FONT セクションに下記を追加 (もちろん別のフォントを使う場合はそちらを指定)</li>
+</ul></li>
+</ol>
+
+<pre><code>font.serif : TakaoPMincho
+font.sans-serif : TakaoPGothic
+</code></pre>
+
+<ol>
+<li>フォントキャッシュの削除
+
+<ul>
+<li><code>~/.matplotlib/fontList.cache</code> を削除</li>
+</ul></li>
+</ol>
+
+        </section>
+      
+        <section>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/windows-python-library/">Python ライブラリ</a></h2>
+					<div class="align-right">
+						Posted: <time pubdate="2013-03-01">2013-03-01</time>,
+						Last updated: <time pubdate="2014-11-18">2014-11-18</time>
+					</div>
+          <p>Windows 用のライブラリは，<a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">ここ</a> から探す．
+ (64bit 用に自前でコンパイルするには VC コンパイラが要るため)</p>
+
+        </section>
+      
+        <section>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/not-found-pdfoutput/">pdfoutput が定義されていない問題</a></h2>
+					<div class="align-right">
+						Posted: <time pubdate="2013-03-01">2013-03-01</time>,
+						Last updated: <time pubdate="2013-06-30">2013-06-30</time>
+					</div>
+          <p><a href="http://www.vldb.org/pvldb/format.html">某 LaTeX スタイルファイル</a>を使ったとき，
+<code>pdfoutput</code> が定義されていないと言われてコンパイルが通らない．
+とりあえず，</p>
+
+<pre><code>\def\pdfoutput{0}
+</code></pre>
+
+<p>と書いておけば，エラーは消える．
+本当は別のパッケージやオプションで設定すべきだとは思うが・・・．</p>
+
+        </section>
+      
+        <section>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/compiling-screen-256/">macで256色表示可能な screen をコンパイル</a></h2>
+					<div class="align-right">
+						Posted: <time pubdate="2012-06-29">2012-06-29</time>,
+						Last updated: <time pubdate="2016-08-13">2016-08-13</time>
+					</div>
+          <p>下記のコマンドを実行する．</p>
+
+<pre><code class="language-sh">git clone git://git.savannah.gnu.org/screen.git
+cd screen/src
+./autogen.sh
+./configure --enable-colors256
+make
+sudo make install
+</code></pre>
+
+<p>上記を実行するために，automake が必要．これは，brew でインストールできる．（以下は，autoconf もインストールする例）</p>
+
+<pre><code class="language-sh">sudo brew install autoconf
+sudo brew install automake
+</code></pre>
+
+<p>256色表示できているかの確認は，<a href="ftp://ftp.fau.de/netbsd/NetBSD-release-6/xsrc/external/mit/xterm/dist/vttests/256colors2.pl">256colors2.pl</a> で行える．</p>
+
+        </section>
+      
+
+      <!-- AdSense -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4734862314145555"
+     data-ad-slot="7714563027"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+			
+				<section>
+					<nav class="align-center" role="pagination">
+						<ul style="list-style:none;">
+							
+								<li style="display: inline-block;">
+									<a href="/blog-ja/">前へ</a>
+								</li>
+							
+							
+								<li style="display: inline-block;">
+									<a href="/blog-ja/page/3/">次へ</a>
+								</li>
+							
+					  </ul>
+					</nav>
+				</section>
+			
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+    	<li><a href="//facebook.com/junpei.kawamoto" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+    
+		
+			<li><a href="//twitter.com/junkawamoto" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+			<li><a href="//github.com/jkawamoto" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		
+		
+			<li><a href="mailto:junpei.kawamoto@acm.org" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Junpei Kawamoto</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li><a href="https://www.littlekitune.org/">Little Kitune studio</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="https://jkawamoto.github.io/js/jquery.min.js"></script>
+<script src="https://jkawamoto.github.io/js/jquery.poptrox.min.js"></script>
+<script src="https://jkawamoto.github.io/js/skel.min.js"></script>
+<script src="https://jkawamoto.github.io/js/util.js"></script>
+
+<script src="https://jkawamoto.github.io/js/main.js"></script>
+
+
+<!-- Google Analytics -->
+<script>
+  var _gaq=[['_setAccount','UA-19410992-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+
+<script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+	</body>
+</html>

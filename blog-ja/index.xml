@@ -7,8 +7,241 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
-    <lastBuildDate>Wed, 12 Jun 2013 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Nov 2014 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jkawamoto.github.io/blog-ja/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Upstart で Docker コンテナを起動</title>
+      <link>https://jkawamoto.github.io/blog-ja/starting-docker-container-via-upstart/</link>
+      <pubDate>Sat, 08 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/starting-docker-container-via-upstart/</guid>
+      <description>&lt;p&gt;合っているのかイマイチ分かっていないけれど，下記の方法でとりあえず動いていると思う．&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;start on filesystem and started docker.io
+stop on runlevel [!2345]
+
+respawn
+respawn limit 5 5
+
+pre-start script
+
+  # 古いコンテナが残っていたら削除
+  OLD=`docker ps -a | grep “foo&amp;quot; | cut -d &amp;quot; &amp;quot; -f 1`
+  if [ $OLD ]; then
+      /usr/local/bin/docker kill $OLD
+      /usr/local/bin/docker rm $OLD
+  fi
+
+end script
+
+exec /usr/local/bin/docker run —name=foo -v /data:/var/data bar:latest
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Systemd の設定</title>
+      <link>https://jkawamoto.github.io/blog-ja/systemd-configurations/</link>
+      <pubDate>Thu, 25 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/systemd-configurations/</guid>
+      <description>
+
+&lt;h3 id=&#34;マウントユニット&#34;&gt;マウントユニット&lt;/h3&gt;
+
+&lt;p&gt;ファイルシステムのマウントを設定する．
+ユニットファイルはマウントポイントによって決まり拡張子は &lt;code&gt;.mount&lt;/code&gt;．例えば，/var/data にマウントする場合，
+ユニットファイル名は &lt;code&gt;var-data.mount&lt;/code&gt; と / を - に置き換える．パスに - が含まれている場合はエスケープする．&lt;/p&gt;
+
+&lt;h4 id=&#34;nfs-を用いてマウントする例&#34;&gt;NFS を用いてマウントする例&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-conf&#34;&gt;[Unit]
+Description=some network hdd
+
+[Mount]
+What=192.168.0.5:/data
+Where=/var/data
+Type=nfs
+Options=nolock
+
+[Install]
+WantedBy=multi-user.target
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;サービスユニット&#34;&gt;サービスユニット&lt;/h3&gt;
+
+&lt;p&gt;Docker 用サービスを起動する設定．docker イメージの作成から行えるが，今回は既にあるイメージを起動する．&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-conf&#34;&gt;[Unit]
+Description=Apache2
+After=docker.service var-data.mount
+Requires=docker.service var-data.mount
+
+[Service]
+TimeoutStartSec=0
+ExecStartPre=-/usr/bin/docker kill apache2
+ExecStartPre=-/usr/bin/docker rm apache2
+ExecStart=/usr/bin/docker run --name apache2 -v /var/data:/var/www/html:rw -p 80:80 apache2:latest
+ExecStop /usr/bin/docker stop apache2
+
+[Install]
+WantedBy=multi-user.target
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;ユニットの有効化&#34;&gt;ユニットの有効化&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ sudo systemctl enable /etc/systemd/system/var-data.mount
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>XSLT にてノード名別に処理を切り替える</title>
+      <link>https://jkawamoto.github.io/blog-ja/switching-action-in-xslt/</link>
+      <pubDate>Tue, 23 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/switching-action-in-xslt/</guid>
+      <description>&lt;p&gt;for-each 要素 + when 要素で対応しようとしていたがうまく行かなかった．
+XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
+
+&lt;p&gt;XSLT 的には apply-templetes 要素を使うのが正しいかと思われる．&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>パブリックデータセット</title>
+      <link>https://jkawamoto.github.io/blog-ja/public-dataset-list/</link>
+      <pubDate>Sun, 13 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/public-dataset-list/</guid>
+      <description>&lt;p&gt;パブリックデータセットまとめページのリスト。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.kdnuggets.com/datasets/index.html&#34;&gt;Datasets for Data Mining and Data Science&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://aws.amazon.com/datasets&#34;&gt;Amazon Public Datasets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.datawrangling.com/some-datasets-available-on-the-web&#34;&gt;Some Datasets Available on the Web&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>個人情報の固まり</title>
+      <link>https://jkawamoto.github.io/blog-ja/lots-of-private-information/</link>
+      <pubDate>Sun, 13 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/lots-of-private-information/</guid>
+      <description>&lt;p&gt;電話長などで公開されているデータだと思うけれど，住所氏名電話番号が簡単に手に入るウェブページ．&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://atamaga.jp/whitepage/2012/index.html&#34;&gt;住所でポン！2012&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>プライバシ保護データマネジメント関連のプロジェクト</title>
+      <link>https://jkawamoto.github.io/blog-ja/ppdm-projects/</link>
+      <pubDate>Sat, 12 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/ppdm-projects/</guid>
+      <description>&lt;p&gt;プライバシ保護データマネジメント関連のプロジェクト&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;(OpenPDS)[&lt;a href=&#34;http://openpds.media.mit.edu/&#34;&gt;http://openpds.media.mit.edu/&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;(情報銀行コンソーシアム)[&lt;a href=&#34;http://www.information-bank.net/&#34;&gt;http://www.information-bank.net/&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PDF から EPS への変換</title>
+      <link>https://jkawamoto.github.io/blog-ja/converting-pdf-to-eps/</link>
+      <pubDate>Sun, 09 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/converting-pdf-to-eps/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;brew install xpdf
+pdftops -eps hoge.pdf piyo.eps
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;フォントの問題がある場合は，&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;cd /usr/local/ghostscript
+sudo ln -s ./9.07/Resource/Font ./font
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;と &lt;code&gt;/usr/local/etc/xpdfrc&lt;/code&gt; を編集してフォント設定のコメントを有効にする．&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>伊豆さんの楕円曲線暗号資料</title>
+      <link>https://jkawamoto.github.io/blog-ja/lecture-notes-of-cryptography/</link>
+      <pubDate>Tue, 11 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/lecture-notes-of-cryptography/</guid>
+      <description>&lt;p&gt;どこで公開されていたのか忘れやすいのでメモ．&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://researchmap.jp/mulzrkzae-42427/#_42427&#34;&gt;http://researchmap.jp/mulzrkzae-42427/#_42427&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Windows8 でネットワーク名を変更する</title>
+      <link>https://jkawamoto.github.io/blog-ja/windows8-networkname/</link>
+      <pubDate>Mon, 16 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/windows8-networkname/</guid>
+      <description>&lt;p&gt;コンテキストメニューに「名前変更」を付ければ良いだけのことなのに，
+かなり面倒な手続きを踏まないと変更できない．&lt;/p&gt;
+
+&lt;p&gt;まず，コントロールパネルから管理ツールを開き，ローカルセキュリティポリシーを起動．
+ネットワークリストマネージャの中に接続先のリストがあるので，変更したい接続のプロパティを開いて変更する．&lt;/p&gt;
+
+&lt;p&gt;しかし，これ名前変更ではなくてエイリアスを作っているだけな気がする．
+ローカルセキュリティポリシー上では，「ネットワーク 2」 や「ネットワーク 3」のままで，
+どこの設定か分かりにくいし「説明」欄は変更できないようす．酷い設計である．&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>python で RSS フィードを読む</title>
+      <link>https://jkawamoto.github.io/blog-ja/reading-rss-by-python/</link>
+      <pubDate>Thu, 12 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/reading-rss-by-python/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://pypi.python.org/pypi/feedparser&#34;&gt;feedparser&lt;/a&gt; が良さそう&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Deep Learning ライブラリのリンク集</title>
+      <link>https://jkawamoto.github.io/blog-ja/deep-learning-libraries/</link>
+      <pubDate>Mon, 09 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/deep-learning-libraries/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;deeplearning.net&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>改行をカンマに置換</title>
+      <link>https://jkawamoto.github.io/blog-ja/replacing-newlines/</link>
+      <pubDate>Tue, 06 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/replacing-newlines/</guid>
+      <description>&lt;p&gt;sed で変換するのは色々面倒で，&lt;a href=&#34;http://unicus.jp/skmk/archives/315&#34;&gt;ここ&lt;/a&gt;によると，&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ tr &#39;\n&#39; &#39;,&#39; &amp;lt; filename
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;が一番簡単．&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>R でのパッケージインストール</title>
@@ -68,381 +301,6 @@ ChangeAnomalyDetection パッケージをインストールする場合，ルー
       
       <guid>https://jkawamoto.github.io/blog-ja/hadoop-cdh4-missing-hadoop-env-sh/</guid>
       <description>&lt;p&gt;入れ忘れていただけみたいなので，&lt;a href=&#34;http://bit.ly/1aQ2o1R&#34;&gt;ここ&lt;/a&gt;からダウンロードして &lt;code&gt;conf&lt;/code&gt; 以下におけば良い．&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>matplotlib で日本語を使う</title>
-      <link>https://jkawamoto.github.io/blog-ja/matplotlib-in-japanese/</link>
-      <pubDate>Wed, 13 Mar 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/blog-ja/matplotlib-in-japanese/</guid>
-      <description>&lt;ol&gt;
-&lt;li&gt;日本語フォントのインストール
-
-&lt;ul&gt;
-&lt;li&gt;Takao Fonts を &lt;code&gt;Python\Lib\site-packages\matplotlib\mpl-data\fonts\ttf&lt;/code&gt; へ．&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;設定ファイルの編集
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Python\Lib\site-packages\matplotlib\mpl-data\matplotlibrc&lt;/code&gt; を &lt;code&gt;~/.matplotlib/&lt;/code&gt; にコピー&lt;/li&gt;
-&lt;li&gt;FONT セクションに下記を追加 (もちろん別のフォントを使う場合はそちらを指定)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code&gt;font.serif : TakaoPMincho
-font.sans-serif : TakaoPGothic
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;フォントキャッシュの削除
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;~/.matplotlib/fontList.cache&lt;/code&gt; を削除&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>pdfoutput が定義されていない問題</title>
-      <link>https://jkawamoto.github.io/blog-ja/not-found-pdfoutput/</link>
-      <pubDate>Fri, 01 Mar 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/blog-ja/not-found-pdfoutput/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.vldb.org/pvldb/format.html&#34;&gt;某 LaTeX スタイルファイル&lt;/a&gt;を使ったとき，
-&lt;code&gt;pdfoutput&lt;/code&gt; が定義されていないと言われてコンパイルが通らない．
-とりあえず，&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;\def\pdfoutput{0}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;と書いておけば，エラーは消える．
-本当は別のパッケージやオプションで設定すべきだとは思うが・・・．&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>WebCGIRoleでPHPを使う</title>
-      <link>https://jkawamoto.github.io/blog-ja/php-in-webcgirole/</link>
-      <pubDate>Thu, 10 Feb 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/blog-ja/php-in-webcgirole/</guid>
-      <description>&lt;p&gt;基本的な設定は，&lt;a href=&#34;http://codezine.jp/article/detail/5518&#34;&gt;ここ&lt;/a&gt;を参考にすれば良い．
-しかし，Azure Cloud Tools 1.3 を使用している場合，&lt;em&gt;HTTP 500 Internal Server Error&lt;/em&gt; が出ることがある．
-この場合，&lt;code&gt;ServiceDefinition.csdef&lt;/code&gt; の &lt;code&gt;&amp;lt;Sites&amp;gt;&lt;/code&gt; 要素を削除する必要があるらしい．&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;WebRole name=&amp;quot;WebCgiRole1&amp;quot; enableNativeCodeExecution=&amp;quot;true&amp;quot;&amp;gt;
-  &amp;lt;!--
-  &amp;lt;Sites&amp;gt;
-    &amp;lt;Site name=&amp;quot;Web&amp;quot;&amp;gt;
-      &amp;lt;Bindings&amp;gt;
-        &amp;lt;Binding name=&amp;quot;Endpoint1&amp;quot; endpointName=&amp;quot;Endpoint1&amp;quot; /&amp;gt;
-       &amp;lt;/Bindings&amp;gt;
-    &amp;lt;/Site&amp;gt;
-  &amp;lt;/Sites&amp;gt;
-  --&amp;gt;
-  &amp;lt;Endpoints&amp;gt;
-    &amp;lt;InputEndpoint name=&amp;quot;Endpoint1&amp;quot; protocol=&amp;quot;http&amp;quot; port=&amp;quot;8080&amp;quot; /&amp;gt;
-  &amp;lt;/Endpoints&amp;gt;
-  &amp;lt;Imports&amp;gt;
-    &amp;lt;Import moduleName=&amp;quot;Diagnostics&amp;quot; /&amp;gt;
-   &amp;lt;/Imports&amp;gt;
-&amp;lt;/WebRole&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;参考: &lt;a href=&#34;http://bit.ly/19w63DG&#34;&gt;Avkash Chauhan’s Blog&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>mod_python と mod_filter でフィルタを登録する際の注意</title>
-      <link>https://jkawamoto.github.io/blog-ja/mod_python-and-mod_filter/</link>
-      <pubDate>Tue, 16 Nov 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/blog-ja/mod_python-and-mod_filter/</guid>
-      <description>&lt;p&gt;Apache 2.2 で mod_python と mod_filter を用いてフィルタを作成する際の注意というかバグ．
-Python スクリプトをフィルタとして使う場合，まず，python 関数をフィルタプロバイダとして登録する．
-そのために，&lt;a href=&#34;http://www.python.jp/doc/contrib/modpython/dir-filter-of.html&#34;&gt;PythonOutputFilter ディレクティブ&lt;/a&gt;を使用し，
-書式は次の通りになる．&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;PythonOutputFilter module_name provider_name
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;なお，provider_name は mod_filter 側で参照する名前である．&lt;/p&gt;
-
-&lt;p&gt;mod_filter側の設定は，例えばコンテンツタイプに image が含まれるレスポンス用のフィルタを登録する場合，&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;FilterProvider filter_name provider_name resp=Content-Type $image
-FilterChain filter_name
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;のようになり，先ほど provider_name として登録したフィルタプロバイダを適用条件を指定してフィルタに登録する．
-二行目の FilterChain ディレクティブはフィルタの適用順序を指定している．&lt;/p&gt;
-
-&lt;p&gt;適用条件毎に異なるフィルタプロバイダを登録できることが mod_filter のポイントである．
-例えば，次のようにすれば，画像フォーマット別に実行するスクリプトを切り替えることができる．&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;PythonOutputFilter png PNG_COMPRESSOR
-PythonOutputFilter jpg JPG_COMPRESSOR
-
-FilterProvider image_compressor PNG_COMPRESSOR resp=Content-Type image/png
-FilterProvider image_compressor JPG_COMPRESSOR resp=Content-Type image/jpeg
-FilterChain image_compressor
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;この場合，PNG には png.outputfilter 関数が，JPEG には jpg.outputfilter 関数が呼ばれる．&lt;/p&gt;
-
-&lt;p&gt;前置きが長くなったが，実際には上のようなフィルタを作成することができなかった．
-そもそも，provider_name と filter_name が異なってると，&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;python_filter: Could not find registered filter.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;などと言われてしまう．
-結局，一つのフィルタプロバイダごとに一つのフィルタを作成せねばならず，冗長な設定が増えるばかりである．&lt;/p&gt;
-
-&lt;p&gt;なお，&lt;a href=&#34;http://httpd.apache.org/docs/2.2/mod/mod_ext_filter.html&#34;&gt;mod_ext_filter&lt;/a&gt;にて登録したフィルタを
-mod_filter と組み合わせて使用する場合も provider_name と filter_name が同じでなければならない．
-mod_filter のどこかで， provider_name と filter_name を取り違えてるんじゃないかと思われるがソースコードは読んでないので不明．&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>historic と historical の違い</title>
-      <link>https://jkawamoto.github.io/blog-ja/historic-vs-historical/</link>
-      <pubDate>Thu, 04 Nov 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/blog-ja/historic-vs-historical/</guid>
-      <description>&lt;p&gt;今日，TLに，&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;民主党大敗を報じる The Washington Timesの見出しはThe Democrats are on the verge of a historical defeat。
-やはり格落ちの所はhistoricとhistoricalを使い分けられないようで。
-(&lt;a href=&#34;https://twitter.com/hinatakiyoto/status/29625944666&#34;&gt;@hinatakiyoto&lt;/a&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;というツイートがあって，historic と historical の違いが気になったので調べてみた（正確には聞いてみた）．
-詳細は，&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Historic and historical have different usages, though their senses overlap.
-Historic refers to what is important in history: the historic first voyage to the moon.
-It is also used of what is famous or interesting because of its association
-with persons or events in history: a historic house.Historical refers to whatever existed in the past,
-whether regarded as important or not: a minor historical character.
-Historical also refers to anything concerned with history or the study of the past: a historical novel;
-historical discoveries. While these distinctions are useful,
-these words are often used interchangeably, as in historic times or historical times.
-(&lt;a href=&#34;http://www.thefreedictionary.com/historic&#34;&gt;the Free Online Dictionary, Thesaurus and Encyclopedia.&lt;/a&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;ということで，historical defeat だと，歴史的な方法で負けたとか古典的な戦術に負けたとかの意味になるのだろうか．
-ちなみに，-ic と -ical でどう意味が変わるのかの決まったルールは無いらしいので，個別に覚えていくしかなさそう．&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>m2eclipse を使って scp でデプロイ</title>
-      <link>https://jkawamoto.github.io/blog-ja/scp-with-m2eclipse/</link>
-      <pubDate>Thu, 04 Nov 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/blog-ja/scp-with-m2eclipse/</guid>
-      <description>
-
-&lt;p&gt;Maven2 のプライベートリポジトリを作成し，
-公開鍵認証を行う scp プロトコルを用いて eclipse の &lt;a href=&#34;http://m2eclipse.sonatype.org/]&#34;&gt;m2eclipse プラグイン&lt;/a&gt; からデプロイする設定のメモ．
-なお，m2eclipse version 0.10.0 に含まれる &lt;strong&gt;Maven 3.0-SNAPSHOT では scp 認証に失敗する&lt;/strong&gt;．
-別途 Maven 2 系を &lt;a href=&#34;http://maven.apache.org/&#34;&gt;ダウンロード&lt;/a&gt; して，eclipse のウインドウ → 設定 → Maven → インストールに追加しデフォルトに設定しておく必要がある．&lt;/p&gt;
-
-&lt;p&gt;準備が整えば，scp でアクセスする Maven リポジトリの作成から始める．作成するリポジトリの ID 及び，URL は次の通りとする．&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ID: foo.org&lt;/li&gt;
-&lt;li&gt;リポジトリ URL: scp://foo.org/var/maven2/repo&lt;/li&gt;
-&lt;li&gt;スナップショットリポジトリ URL: scp://foo.org/var/maven2/reposnap&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;つまり，/var/maven2/repo と /var/maven2/reposnap 以下にそれぞれのリポジトリ内容物を格納する．
-そのため，リポジトリを利用するユーザに /var/maven2/repo と /var/maven2/reposnap への読み書き権限を与える．&lt;/p&gt;
-
-&lt;p&gt;scp プロトコルを使用するためには，wagon-ssh エクステンションが必要となるので，pom.xml の build – extendsions に以下を追加する．&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;build&amp;gt;
-  &amp;lt;extension&amp;gt;
-    &amp;lt;groupId&amp;gt;org.apache.maven.wagon&amp;lt;/groupId&amp;gt;
-    &amp;lt;artifactId&amp;gt;wagon-ssh&amp;lt;/artifactId&amp;gt;
-    &amp;lt;version&amp;gt;1.0-beta-6&amp;lt;/version&amp;gt;
-  &amp;lt;/extension&amp;gt;
-&amp;lt;/build&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;次に，デプロイ先の情報を登録する．pom.xml の project に以下を追加．&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;distributionManagement&amp;gt;
-  &amp;lt;repository&amp;gt;
-    &amp;lt;uniqueVersion&amp;gt;false&amp;lt;/uniqueVersion&amp;gt;
-    &amp;lt;id&amp;gt;foo.org&amp;lt;/id&amp;gt;
-    &amp;lt;name&amp;gt;Foo.org Repository&amp;lt;/name&amp;gt;
-    &amp;lt;url&amp;gt;scp://foo.org/var/maven2/repo&amp;lt;/url&amp;gt;
-    &amp;lt;layout&amp;gt;default&amp;lt;/layout&amp;gt;
-  &amp;lt;/repository&amp;gt;
-  &amp;lt;snapshotRepository&amp;gt;
-    &amp;lt;uniqueVersion&amp;gt;true&amp;lt;/uniqueVersion&amp;gt;
-    &amp;lt;id&amp;gt;snapshot.foo.org&amp;lt;/id&amp;gt;
-    &amp;lt;name&amp;gt;Foo.org Snapshot repository&amp;lt;/name&amp;gt;
-    &amp;lt;url&amp;gt;scp://foo.org/var/maven2/reposnap&amp;lt;/url&amp;gt;
-    &amp;lt;layout&amp;gt;legacy&amp;lt;/layout&amp;gt;
-  &amp;lt;/snapshotRepository&amp;gt;
-&amp;lt;/distributionManagement&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;最後に，ssh のログイン情報を setting.xml に記述．なお，このファイルの場所は，eclipse のウインドウ → 設定 → Maven → User Settings に書いてあるが，デフォルトでは作成されない．もしなければ自分で作成し，下記の通り書き込めば良い．&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
-&amp;lt;settings xmlns=&amp;quot;http://maven.apache.org/SETTINGS/1.0.0&amp;quot;
-          xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
-          xsi:schemaLocation=&amp;quot;http://maven.apache.org/SETTINGS/1.0.0
-          http://maven.apache.org/xsd/settings-1.0.0.xsd&amp;quot;&amp;gt;
-  &amp;lt;servers&amp;gt;
-    &amp;lt;server&amp;gt;
-      &amp;lt;id&amp;gt;foo.org&amp;lt;/id&amp;gt;
-      &amp;lt;username&amp;gt;USERNAME&amp;lt;/username&amp;gt;
-      &amp;lt;privateKey&amp;gt;PRIVATEKEY&amp;lt;/privateKey&amp;gt;
-      &amp;lt;filePermissions&amp;gt;664&amp;lt;/filePermissions&amp;gt;
-      &amp;lt;directoryPermissions&amp;gt;775&amp;lt;/directoryPermissions&amp;gt;
-    &amp;lt;/server&amp;gt;
-    &amp;lt;server&amp;gt;
-      &amp;lt;id&amp;gt;snapshot.foo.org&amp;lt;/id&amp;gt;
-      &amp;lt;username&amp;gt;USERNAME&amp;lt;/username&amp;gt;
-      &amp;lt;privateKey&amp;gt;PRIVATEKEY&amp;lt;/privateKey&amp;gt;
-      &amp;lt;filePermissions&amp;gt;664&amp;lt;/filePermissions&amp;gt;
-      &amp;lt;directoryPermissions&amp;gt;775&amp;lt;/directoryPermissions&amp;gt;
-    &amp;lt;/server&amp;gt;
-  &amp;lt;/servers&amp;gt;
-&amp;lt;/settings&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;なお，USERNAME はログインユーザ名，PRIVATEKEY は秘密鍵 (openssl 形式) へのパスである．Putty 形式の秘密鍵ではエラーになるので注意．&lt;/p&gt;
-
-&lt;p&gt;以上で，実行 → 実行構成 → Maven Build にて新規実行構成を追加し，
-pom.xml のあるディレクトリを基底ディレクトリに，
-ゴールをdeployに，Mavenランタイムに3.0-SNAPSHOTではなく2系列を選択して実行すればデプロイされる．うまくいかない場合は， c:/Users/&lt;user&gt;/.ssh に known_hosts を作成し，&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;file * known_hosts&amp;gt;foo.org ssh-rsa PUBLICKEY&amp;lt;/file&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;などと書く．PUBLICKEY は公開鍵，ssh-rsa の部分は鍵の種類によって変わる．公開鍵を調べるのが面倒な場合は TeraTerm の ssh_known_hosts ファイルなどからコピーすれば良い．&lt;/p&gt;
-
-&lt;p&gt;作成したプライベートリポジトリを使用する場合は，pom.xml の repositories に以下を追加する．&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;repository&amp;gt;
-  &amp;lt;id&amp;gt;foo.org&amp;lt;/id&amp;gt;
-  &amp;lt;name&amp;gt;Foo.org Repository&amp;lt;/name&amp;gt;
-  &amp;lt;url&amp;gt;scp://foo.org/var/maven2/repo&amp;lt;/url&amp;gt;
-  &amp;lt;layout&amp;gt;default&amp;lt;/layout&amp;gt;
-&amp;lt;/repository&amp;gt;
-&amp;lt;repository&amp;gt;
-  &amp;lt;id&amp;gt;snapshot.foo.org&amp;lt;/id&amp;gt;
-  &amp;lt;name&amp;gt;Foo.org Snapshot repository&amp;lt;/name&amp;gt;
-  &amp;lt;url&amp;gt;scp://foo.org/var/maven2/reposnap&amp;lt;/url&amp;gt;
-  &amp;lt;layout&amp;gt;legacy&amp;lt;/layout&amp;gt;
-&amp;lt;/repository&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;これは，distributionManagement に記述した物とほぼ同じである．&lt;/p&gt;
-
-&lt;h2 id=&#34;参考&#34;&gt;参考：&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://wiki.fdiary.net/maven2/?CookBook#l31&#34;&gt;scpを使ってデプロイする@Maven2のTipsを集めるWiki – CookBook&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.nulab.co.jp/kousei/chapter5/02.html&#34;&gt;構成管理 実践入門 第5章 Maven2ベストプラクティス 社内リポジトリ – 自分たちのライブラリ置き場&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>ホームディレクトリを暗号化すると公開鍵認証でログインできない</title>
-      <link>https://jkawamoto.github.io/blog-ja/encrypt-home/</link>
-      <pubDate>Wed, 03 Nov 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/blog-ja/encrypt-home/</guid>
-      <description>&lt;p&gt;Ubuntu 10.04 (lucid)で，深く考えずにホームディレクトリを暗号化してしまった結果，
-ssh の公開鍵認証ログインができなくなった．
-というか，ローカルコンソールでログイン済みの時は問題なく ssh でもログインできるが，
-ローカルでログインしていないと認証に失敗するようになった．
-よく考えれば，ホームディレクトリに置いている公開鍵を sshd が読めないので認証に失敗するのは当然である．&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://bearmini.net/blog/View.aspx?bid=1&amp;amp;aid=173&#34;&gt;bear.mini : Ubuntu 9.10 (Karmic Koala) でホームディレクトリを暗号化すると、ssh で公開鍵認証ログインが出来ない問題（解決）&lt;/a&gt;
-や
-&lt;a href=&#34;http://fukafuka.naganoblog.jp/e326208.html&#34;&gt;MacBookの憂鬱日記 : sshの設定 その２　っていうか、追記&lt;/a&gt;
-を参考に，次のようにして解決．&lt;/p&gt;
-
-&lt;p&gt;まず，暗号化されていないディレクトリに公開鍵を配置（今回は，&lt;code&gt;/home/.ecryptfs/USERNAME/.ssh/authorized_keys&lt;/code&gt; を選んだ）
-そして，鍵置き場と公開鍵のパーミション設定（&lt;code&gt;/home/.ecryptfs/&amp;lt;username&amp;gt;/.ssh&lt;/code&gt; は 700, &lt;code&gt;authorized_keys&lt;/code&gt; は 600）．
-最後に，sshd_config の編集．具体的には，AuthorizedKeysFile の部分を次のように変更．&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sshd_config&#34;&gt;AuthorizedKeysFile      /home/.ecryptfs/%u/.ssh/authorized_keys
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Servlet で Velocity (1.6.4) を使う</title>
-      <link>https://jkawamoto.github.io/blog-ja/servlet-velocity/</link>
-      <pubDate>Tue, 05 Oct 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/blog-ja/servlet-velocity/</guid>
-      <description>&lt;p&gt;Servlet で Velocity を使用する場合，&lt;code&gt;org.apache.velocity.runtime.log.ServletLogChute&lt;/code&gt; エラーが出ることがある．
-これは，デフォルトログシステムの初期化に失敗しているからで，&lt;code&gt;ServletContext&lt;/code&gt; を渡すか別のログシステムを使えば解決する．&lt;/p&gt;
-
-&lt;p&gt;ServletContext を渡す場合，次のようにすれば良い．&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;VelocityEngine engine = new VelocityEngine();
-engine.setApplicationAttribute(
-    ServletContext.class.getName(), servletContext);
-engine.init();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;また，別のログシステムを使用する場合は，&lt;code&gt;runtime.log.logsystem.class&lt;/code&gt; プロパティに設定する．&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;参考: &lt;a href=&#34;http://bit.ly/9vALBn&#34;&gt;Apache&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Arm 用 OpenJDK で Selector#select の挙動がおかしい</title>
-      <link>https://jkawamoto.github.io/blog-ja/arm-jdk-selector/</link>
-      <pubDate>Wed, 22 Sep 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/blog-ja/arm-jdk-selector/</guid>
-      <description>&lt;p&gt;ARM 用の OpenJDK VM (OpenJDK Core VM) では，
-選択できるキーが有ろうが無かろうが一つのキーも選択せずに Selector#select() が即座に返る．
-そして CPU 使用率がどんどん上がっていく．&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;final Selector sel = Selector.open();
-final ServerSocketChannel s = ServerSocketChannel.open();
-s.configureBlocking(false);
-s.socket().bind(address);
-s.register(sel, SelectionKey.OP_ACCEPT);
-while(true){
-  // nc は常に 0
-  final int nc = sel.select();
-
-  for(final SelectionKey key : sel.selectedKeys()){
-      if(key.isAcceptable()){
-      // 適当に accept する
-      ((ServerSocketChannel)key.channel()).accept();
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;選択できるキーが無い場合はともかく，実際に繋ぎに来ている場合でも無視されるので使い物にならない．
-なお，別の VM (OpenJDK Zero VM) に切り替えたところ正常に動いた．&lt;/p&gt;
 </description>
     </item>
     
