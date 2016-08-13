@@ -124,6 +124,39 @@ font.sans-serif : TakaoPGothic
     </item>
     
     <item>
+      <title>WebCGIRoleでPHPを使う</title>
+      <link>https://jkawamoto.github.io/blog-ja/php-in-webcgirole/</link>
+      <pubDate>Thu, 10 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/php-in-webcgirole/</guid>
+      <description>&lt;p&gt;基本的な設定は，&lt;a href=&#34;http://codezine.jp/article/detail/5518&#34;&gt;ここ&lt;/a&gt;を参考にすれば良い．
+しかし，Azure Cloud Tools 1.3 を使用している場合，&lt;em&gt;HTTP 500 Internal Server Error&lt;/em&gt; が出ることがある．
+この場合，&lt;code&gt;ServiceDefinition.csdef&lt;/code&gt; の &lt;code&gt;&amp;lt;Sites&amp;gt;&lt;/code&gt; 要素を削除する必要があるらしい．&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;WebRole name=&amp;quot;WebCgiRole1&amp;quot; enableNativeCodeExecution=&amp;quot;true&amp;quot;&amp;gt;
+  &amp;lt;!--
+  &amp;lt;Sites&amp;gt;
+    &amp;lt;Site name=&amp;quot;Web&amp;quot;&amp;gt;
+      &amp;lt;Bindings&amp;gt;
+        &amp;lt;Binding name=&amp;quot;Endpoint1&amp;quot; endpointName=&amp;quot;Endpoint1&amp;quot; /&amp;gt;
+       &amp;lt;/Bindings&amp;gt;
+    &amp;lt;/Site&amp;gt;
+  &amp;lt;/Sites&amp;gt;
+  --&amp;gt;
+  &amp;lt;Endpoints&amp;gt;
+    &amp;lt;InputEndpoint name=&amp;quot;Endpoint1&amp;quot; protocol=&amp;quot;http&amp;quot; port=&amp;quot;8080&amp;quot; /&amp;gt;
+  &amp;lt;/Endpoints&amp;gt;
+  &amp;lt;Imports&amp;gt;
+    &amp;lt;Import moduleName=&amp;quot;Diagnostics&amp;quot; /&amp;gt;
+   &amp;lt;/Imports&amp;gt;
+&amp;lt;/WebRole&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;参考: &lt;a href=&#34;http://bit.ly/19w63DG&#34;&gt;Avkash Chauhan’s Blog&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>mod_python と mod_filter でフィルタを登録する際の注意</title>
       <link>https://jkawamoto.github.io/blog-ja/mod_python-and-mod_filter/</link>
       <pubDate>Tue, 16 Nov 2010 00:00:00 +0000</pubDate>
@@ -326,6 +359,32 @@ pom.xml のあるディレクトリを基底ディレクトリに，
 &lt;li&gt;&lt;a href=&#34;http://wiki.fdiary.net/maven2/?CookBook#l31&#34;&gt;scpを使ってデプロイする@Maven2のTipsを集めるWiki – CookBook&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.nulab.co.jp/kousei/chapter5/02.html&#34;&gt;構成管理 実践入門 第5章 Maven2ベストプラクティス 社内リポジトリ – 自分たちのライブラリ置き場&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ホームディレクトリを暗号化すると公開鍵認証でログインできない</title>
+      <link>https://jkawamoto.github.io/blog-ja/encrypt-home/</link>
+      <pubDate>Wed, 03 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/encrypt-home/</guid>
+      <description>&lt;p&gt;Ubuntu 10.04 (lucid)で，深く考えずにホームディレクトリを暗号化してしまった結果，
+ssh の公開鍵認証ログインができなくなった．
+というか，ローカルコンソールでログイン済みの時は問題なく ssh でもログインできるが，
+ローカルでログインしていないと認証に失敗するようになった．
+よく考えれば，ホームディレクトリに置いている公開鍵を sshd が読めないので認証に失敗するのは当然である．&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bearmini.net/blog/View.aspx?bid=1&amp;amp;aid=173&#34;&gt;bear.mini : Ubuntu 9.10 (Karmic Koala) でホームディレクトリを暗号化すると、ssh で公開鍵認証ログインが出来ない問題（解決）&lt;/a&gt;
+や
+&lt;a href=&#34;http://fukafuka.naganoblog.jp/e326208.html&#34;&gt;MacBookの憂鬱日記 : sshの設定 その２　っていうか、追記&lt;/a&gt;
+を参考に，次のようにして解決．&lt;/p&gt;
+
+&lt;p&gt;まず，暗号化されていないディレクトリに公開鍵を配置（今回は，&lt;code&gt;/home/.ecryptfs/USERNAME/.ssh/authorized_keys&lt;/code&gt; を選んだ）
+そして，鍵置き場と公開鍵のパーミション設定（&lt;code&gt;/home/.ecryptfs/&amp;lt;username&amp;gt;/.ssh&lt;/code&gt; は 700, &lt;code&gt;authorized_keys&lt;/code&gt; は 600）．
+最後に，sshd_config の編集．具体的には，AuthorizedKeysFile の部分を次のように変更．&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sshd_config&#34;&gt;AuthorizedKeysFile      /home/.ecryptfs/%u/.ssh/authorized_keys
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -549,227 +608,6 @@ Local Arrangement Committee&lt;/li&gt;
 &lt;li&gt;2008年度 基礎情報処理演習 TA (京都大学 工学部 情報学科 1回生向け)&lt;/li&gt;
 &lt;li&gt;2008年度 情報システム設計論Ⅱ演習 TA (京都大学 情報学研究科 社会情報学専攻 修士課程 1回生向け)&lt;/li&gt;
 &lt;li&gt;2008.10 – 2009.1 地球環境観測データおよびモデル出力データに対するメタデータ管理システムに関する研究 RA&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>プロフィール</title>
-      <link>https://jkawamoto.github.io/japanese/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/japanese/</guid>
-      <description>
-
-&lt;h2 id=&#34;略歴&#34;&gt;略歴&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2013.9 - 2016.6:
-&lt;a href=&#34;http://www.kyushu-u.ac.jp&#34;&gt;九州大学&lt;/a&gt;
-&lt;a href=&#34;http://portal.isee.kyushu-u.ac.jp&#34;&gt;大学院システム情報科学研究院&lt;/a&gt;
-(&lt;a href=&#34;http://itslab.csce.kyushu-u.ac.jp/index-j.html&#34;&gt;櫻井研究室&lt;/a&gt;) 助教&lt;/li&gt;
-&lt;li&gt;2013.12 - 2016.6:
-&lt;a href=&#34;http://www.kyushu-u.ac.jp&#34;&gt;九州大学&lt;/a&gt;
-&lt;a href=&#34;http://www.eng.kyushu-u.ac.jp/&#34;&gt;工学部&lt;/a&gt;,
-&lt;a href=&#34;http://www.sci.kyushu-u.ac.jp/&#34;&gt;理学部&lt;/a&gt; 助教 （兼担）&lt;/li&gt;
-&lt;li&gt;2013.9 – 2016.3:
-&lt;a href=&#34;http://www.isit.or.jp/&#34;&gt;九州先端科学技術研究所&lt;/a&gt; 特別研究員&lt;/li&gt;
-&lt;li&gt;2012.4 – 2013.9:
-&lt;a href=&#34;http://www.tsukuba.ac.jp/&#34;&gt;筑波大学&lt;/a&gt;
-&lt;a href=&#34;http://www.sie.tsukuba.ac.jp/&#34;&gt;システム情報系&lt;/a&gt;
-(&lt;a href=&#34;http://www.mdl.cs.tsukuba.ac.jp/index_j.html&#34;&gt;機械学習･データマイニング研究室&lt;/a&gt;) 研究員&lt;/li&gt;
-&lt;li&gt;2012.1 – 2012.3:
-&lt;a href=&#34;http://www.nict.go.jp/&#34;&gt;情報通信研究機構&lt;/a&gt; 有期研究員&lt;/li&gt;
-&lt;li&gt;2009.4 – 2011.12:
-&lt;a href=&#34;http://www.jsps.go.jp/j-pd/index.html&#34;&gt;日本学術振興会 特別研究員 (DC1)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2007.4 – 2012.3:
-&lt;a href=&#34;http://www.kyoto-u.ac.jp/ja&#34;&gt;京都大学&lt;/a&gt;
-&lt;a href=&#34;http://www.i.kyoto-u.ac.jp/&#34;&gt;大学院情報学研究科&lt;/a&gt;
-&lt;a href=&#34;http://www.soc.i.kyoto-u.ac.jp/&#34;&gt;社会情報学専攻&lt;/a&gt;
-(&lt;a href=&#34;http://www.db.soc.i.kyoto-u.ac.jp/&#34;&gt;吉川研究室&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;2003.4 – 2007.3:
-&lt;a href=&#34;http://www.kyoto-u.ac.jp/ja&#34;&gt;京都大学&lt;/a&gt;
-&lt;a href=&#34;http://www.t.kyoto-u.ac.jp/ja&#34;&gt;工学部&lt;/a&gt;
-&lt;a href=&#34;http://www.s-im.t.kyoto-u.ac.jp/ja&#34;&gt;情報学科&lt;/a&gt;
-(&lt;a href=&#34;http://www.dl.kuis.kyoto-u.ac.jp/wordpress/&#34;&gt;田中研究室&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;1999.4 – 2002.3:
-&lt;a href=&#34;http://www.seifu.ac.jp/&#34;&gt;清風学園清風高等学校理数科&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;所属学会&#34;&gt;所属学会&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.ieee.org/index.html&#34;&gt;IEEE: The Institute of Electrical and Electronics Engineers&lt;/a&gt; (2013年 3月- )&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.acm.org/&#34;&gt;ACM: Association for Computing Machinery&lt;/a&gt; (2009年 4月- )&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.ipsj.or.jp/&#34;&gt;IPSJ: 情報処理学会&lt;/a&gt; (2008年 7月- )&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.dbsj.org/&#34;&gt;DBSJ: 日本データベース学会&lt;/a&gt; (2007年 5月- )&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.ai-gakkai.or.jp/jsai/&#34;&gt;JSAI: 人工知能学会&lt;/a&gt; (2006年 3月- )&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;競争的外部資金獲得実績&#34;&gt;競争的外部資金獲得実績&lt;/h2&gt;
-
-&lt;h3 id=&#34;代表&#34;&gt;代表&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jsps.go.jp/&#34;&gt;日本学術振興会&lt;/a&gt;
-学術研究助成基金助成金 若手研究 (B) (2014年度～2016年度)
-「データマイニングのためのオーダーメイドプライバシ保護」&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.airpf.or.jp/&#34;&gt;財団法人人工知能研究振興財団&lt;/a&gt;
-人工知能研究助成 (2014年度～2015年度)
-「プライバシを保護したストリームデータの統合解析技術に関する研究」&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.nakajimafound.or.jp/&#34;&gt;公益財団法人中島記念国際交流財団&lt;/a&gt;
-日本人若手研究者研究助成金 (2012年度～2013年度)
-「問合せからの情報漏洩を防ぐクラウドデータベースに関する研究」&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jsps.go.jp/&#34;&gt;日本学術振興会&lt;/a&gt;
-科学研究費補助金 特別研究員奨励費 (2009年度～2011年度)
-「アウトソーシングデータベースにおける情報漏洩防止を保証する技術の研究」&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.ipa.go.jp/&#34;&gt;情報処理推進機構&lt;/a&gt;
-2007年度第Ⅱ期未踏ソフトウェア創造事業「未踏ユース」
-「Webアプリケーションにおけるプライバシコントローラの開発」&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;分担&#34;&gt;分担&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;九州大学 P &amp;amp; P つばさプロジェクト (2015年度〜2016年度)
-「&lt;a href=&#34;http://www.chc.kyushu-u.ac.jp/~selfcare/TOP.html&#34;&gt;IT 技術を用いた大学生対象のメンタルヘルス e- ラーニングシステムの構築&lt;/a&gt;」&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jsps.go.jp/&#34;&gt;日本学術振興会&lt;/a&gt; 国間交流事業 (2014年度～2015年度)
-「暗号原理を用いたセキュア通信システムの数学的設計と解析における計算論的側面」&lt;/li&gt;
-&lt;li&gt;国立情報学研究所 共同研究 (2014年度)
-「画像等への情報隠ぺい型ではないステガノグラフイ技術の評価、および確率論的秘密分散・類似画像検索技術への適用と、アルゴリズムの確立」&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;研究プロジェクト&#34;&gt;研究プロジェクト&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2012.9 - 2016.3:
-&lt;a href=&#34;https://joras.csis.u-tokyo.ac.jp/project/show/id/490&#34;&gt;位置情報解析のためプライバシ保護手法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2013.9 - 2016.3:
-&lt;a href=&#34;http://itslab.inf.kyushu-u.ac.jp/cyber/jp/index.html&#34;&gt;国際連携によるサイバー攻撃の予知技術の研究開発&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2012.4 - 2013.8:
-&lt;a href=&#34;http://www.tkl.iis.u-tokyo.ac.jp/FIRST/&#34;&gt;超巨大データベース時代に向けた最高速データベースエンジンの開発と当該エンジンを核とする戦略的社会サービスの実証・評価&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;資格-試験&#34;&gt;資格・試験&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jitec.jp/&#34;&gt;ソフトウェア開発技術者&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jitec.jp/&#34;&gt;初級システムアドミニストレータ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.rekiken.gr.jp/&#34;&gt;歴史能力検定 – 世界史2級&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>List of publications in journals.</title>
-      <link>https://jkawamoto.github.io/publications-ja/journal/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/publications-ja/journal/</guid>
-      <description>
-
-&lt;h2 id=&#34;journal&#34;&gt;Journal&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Chunlu Chen, Hiroaki Anada, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, and Kouichi Sakurai,
-&amp;ldquo;&lt;a href=&#34;http://isyou.info/jisis/vol6/no2/jisis-2016-vol6-no2-02.pdf&#34;&gt;
-
-  &lt;img src=&#34;https://jkawamoto.github.io/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
-
-A Hybrid Encryption Scheme with Key-cloning Protection: User / Terminal Double Authentication via Attributes and Fingerprints&lt;/a&gt;,&amp;rdquo;
-Journal of Internet Services and Information Security, vol.6, issue 2, pp.23-36, May 2016.&lt;/li&gt;
-&lt;li&gt;山内 一将, &lt;em&gt;川本 淳平&lt;/em&gt;, 堀 良彰, 櫻井 幸一,
-&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1525466&#34;&gt;
-
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
-
-C&amp;amp;Cトラフィック分類のための機械学習手法の評価&lt;/a&gt;,&amp;rdquo;
-情報処理学会論文誌, Vol.56, No.9, pp.1745-1753, 2015年9月15日.
-&lt;a href=&#34;http://ci.nii.ac.jp/naid/120005651849&#34;&gt;
-
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
-
-&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;王サン, フォン ヤオカイ, &lt;em&gt;川本 淳平&lt;/em&gt;, 堀 良彰, 櫻井 幸一,
-&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1525467&#34;&gt;
-
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
-
-挙動に基づくポートスキャン検知の自動化に向けた学習アルゴリズムの提案とその性能評価&lt;/a&gt;,&amp;rdquo;
-情報処理学会論文誌,  Vol.56, No.9, pp.1770-1781, 2015年9月15日.
-&lt;a href=&#34;http://ci.nii.ac.jp/naid/120005651850&#34;&gt;
-
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
-
-&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Junpei Kawamoto&lt;/em&gt;,
-&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1498219&#34;&gt;
-
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
-
-A Locality Sensitive Hashing Filter for Encrypted Vector Databases&lt;/a&gt;,&amp;rdquo;
-&lt;a href=&#34;http://fi.mimuw.edu.pl&#34;&gt;Fundamenta Informaticae&lt;/a&gt;,
-Vol.137, No.2, pp.291-304, 2015.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, Patricia L. Gillett, 佐久間 淳,
-&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2241/119458&#34;&gt;
-
-  &lt;img src=&#34;https://jkawamoto.github.io/images/tulips.png&#34; alt=&#34;tulips&#34;/&gt;
-
-プライベート問合せにおける問合せ頻度を用いた制約緩和手法&lt;/a&gt;,&amp;rdquo;
-
-
-
-  &lt;a href=&#34;https://ipsj-tod.org/&#34;&gt;情報処理学会論文誌 データベース (TOD)&lt;/a&gt;
-
-,
-Vol. 6, No. 3, pp.50-60, 2013年6月.
-&lt;a href=&#34;http://db-event.jpn.org/webdbf2012/&#34;&gt;
-
-  &lt;img src=&#34;https://jkawamoto.github.io/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
-
-第5回 Webとデータベースに関するフォーラム&lt;/a&gt; (WebDBフォーラム 2012) 推薦論文.
-&lt;a href=&#34;http://ci.nii.ac.jp/naid/110009579665&#34;&gt;
-
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
-
-&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, &lt;a href=&#34;http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/&#34;&gt;吉川 正俊&lt;/a&gt;,
-&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2433/147391&#34;&gt;
-
-  &lt;img src=&#34;https://jkawamoto.github.io/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
-
-キー・バリュー型データベースにおける利用者のプライバシを考慮した範囲問合せの実現手法&lt;/a&gt;,&amp;rdquo;
-
-
-
-  &lt;a href=&#34;https://ipsj-tod.org/&#34;&gt;情報処理学会論文誌 データベース (TOD)&lt;/a&gt;
-
-,
-Vol.4, No.3, pp.33-44, 2011年10月.
-&lt;a href=&#34;http://ci.nii.ac.jp/naid/40019257549&#34;&gt;
-
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
-
-&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, &lt;a href=&#34;http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/&#34;&gt;吉川 正俊&lt;/a&gt;,
-&amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2433/147390&#34;&gt;
-
-  &lt;img src=&#34;https://jkawamoto.github.io/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
-
-放送暗号とクラスタリングを用いたデータ共有型Webアプリケーションにおけるプライバシ保護&lt;/a&gt;,&amp;rdquo;
-
-
-
-  &lt;a href=&#34;https://ipsj-tod.org/&#34;&gt;情報処理学会論文誌 データベース (TOD)&lt;/a&gt;
-
-,
-Vol.1, No.1, pp.79-87, 2008年6月.
-データベースとWeb情報システムに関するシンポジウム (DBWeb 2007) 推薦論文.
-&lt;a href=&#34;http://ci.nii.ac.jp/naid/110007990003&#34;&gt;
-
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
-
-&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

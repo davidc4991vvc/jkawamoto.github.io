@@ -15,6 +15,13 @@
 		
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
     <link rel="stylesheet" href="/css/custom.css">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+		  (adsbygoogle = window.adsbygoogle || []).push({
+		    google_ad_client: "ca-pub-4734862314145555",
+		    enable_page_level_ads: true
+		  });
+		</script>
 	</head>
 
 	<body id="top">
@@ -142,6 +149,35 @@ font.sans-serif : TakaoPGothic
 
 <p>と書いておけば，エラーは消える．
 本当は別のパッケージやオプションで設定すべきだとは思うが・・・．</p>
+
+        </section>
+      
+        <section>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/php-in-webcgirole/">WebCGIRoleでPHPを使う</a></h2>
+          <p>基本的な設定は，<a href="http://codezine.jp/article/detail/5518">ここ</a>を参考にすれば良い．
+しかし，Azure Cloud Tools 1.3 を使用している場合，<em>HTTP 500 Internal Server Error</em> が出ることがある．
+この場合，<code>ServiceDefinition.csdef</code> の <code>&lt;Sites&gt;</code> 要素を削除する必要があるらしい．</p>
+
+<pre><code class="language-xml">&lt;WebRole name=&quot;WebCgiRole1&quot; enableNativeCodeExecution=&quot;true&quot;&gt;
+  &lt;!--
+  &lt;Sites&gt;
+    &lt;Site name=&quot;Web&quot;&gt;
+      &lt;Bindings&gt;
+        &lt;Binding name=&quot;Endpoint1&quot; endpointName=&quot;Endpoint1&quot; /&gt;
+       &lt;/Bindings&gt;
+    &lt;/Site&gt;
+  &lt;/Sites&gt;
+  --&gt;
+  &lt;Endpoints&gt;
+    &lt;InputEndpoint name=&quot;Endpoint1&quot; protocol=&quot;http&quot; port=&quot;8080&quot; /&gt;
+  &lt;/Endpoints&gt;
+  &lt;Imports&gt;
+    &lt;Import moduleName=&quot;Diagnostics&quot; /&gt;
+   &lt;/Imports&gt;
+&lt;/WebRole&gt;
+</code></pre>
+
+<p>参考: <a href="http://bit.ly/19w63DG">Avkash Chauhan’s Blog</a></p>
 
         </section>
       
@@ -340,6 +376,28 @@ pom.xml のあるディレクトリを基底ディレクトリに，
         </section>
       
         <section>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/encrypt-home/">ホームディレクトリを暗号化すると公開鍵認証でログインできない</a></h2>
+          <p>Ubuntu 10.04 (lucid)で，深く考えずにホームディレクトリを暗号化してしまった結果，
+ssh の公開鍵認証ログインができなくなった．
+というか，ローカルコンソールでログイン済みの時は問題なく ssh でもログインできるが，
+ローカルでログインしていないと認証に失敗するようになった．
+よく考えれば，ホームディレクトリに置いている公開鍵を sshd が読めないので認証に失敗するのは当然である．</p>
+
+<p><a href="http://bearmini.net/blog/View.aspx?bid=1&amp;aid=173">bear.mini : Ubuntu 9.10 (Karmic Koala) でホームディレクトリを暗号化すると、ssh で公開鍵認証ログインが出来ない問題（解決）</a>
+や
+<a href="http://fukafuka.naganoblog.jp/e326208.html">MacBookの憂鬱日記 : sshの設定 その２　っていうか、追記</a>
+を参考に，次のようにして解決．</p>
+
+<p>まず，暗号化されていないディレクトリに公開鍵を配置（今回は，<code>/home/.ecryptfs/USERNAME/.ssh/authorized_keys</code> を選んだ）
+そして，鍵置き場と公開鍵のパーミション設定（<code>/home/.ecryptfs/&lt;username&gt;/.ssh</code> は 700, <code>authorized_keys</code> は 600）．
+最後に，sshd_config の編集．具体的には，AuthorizedKeysFile の部分を次のように変更．</p>
+
+<pre><code class="language-sshd_config">AuthorizedKeysFile      /home/.ecryptfs/%u/.ssh/authorized_keys
+</code></pre>
+
+        </section>
+      
+        <section>
           <h2><a href="https://jkawamoto.github.io/blog-ja/servlet-velocity/">Servlet で Velocity (1.6.4) を使う</a></h2>
           <p>Servlet で Velocity を使用する場合，<code>org.apache.velocity.runtime.log.ServletLogChute</code> エラーが出ることがある．
 これは，デフォルトログシステムの初期化に失敗しているからで，<code>ServletContext</code> を渡すか別のログシステムを使えば解決する．</p>
@@ -390,8 +448,6 @@ while(true){
         </section>
       
       <!-- AdSense -->
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4734862314145555"

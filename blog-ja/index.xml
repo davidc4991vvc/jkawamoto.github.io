@@ -124,6 +124,39 @@ font.sans-serif : TakaoPGothic
     </item>
     
     <item>
+      <title>WebCGIRoleでPHPを使う</title>
+      <link>https://jkawamoto.github.io/blog-ja/php-in-webcgirole/</link>
+      <pubDate>Thu, 10 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/php-in-webcgirole/</guid>
+      <description>&lt;p&gt;基本的な設定は，&lt;a href=&#34;http://codezine.jp/article/detail/5518&#34;&gt;ここ&lt;/a&gt;を参考にすれば良い．
+しかし，Azure Cloud Tools 1.3 を使用している場合，&lt;em&gt;HTTP 500 Internal Server Error&lt;/em&gt; が出ることがある．
+この場合，&lt;code&gt;ServiceDefinition.csdef&lt;/code&gt; の &lt;code&gt;&amp;lt;Sites&amp;gt;&lt;/code&gt; 要素を削除する必要があるらしい．&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;WebRole name=&amp;quot;WebCgiRole1&amp;quot; enableNativeCodeExecution=&amp;quot;true&amp;quot;&amp;gt;
+  &amp;lt;!--
+  &amp;lt;Sites&amp;gt;
+    &amp;lt;Site name=&amp;quot;Web&amp;quot;&amp;gt;
+      &amp;lt;Bindings&amp;gt;
+        &amp;lt;Binding name=&amp;quot;Endpoint1&amp;quot; endpointName=&amp;quot;Endpoint1&amp;quot; /&amp;gt;
+       &amp;lt;/Bindings&amp;gt;
+    &amp;lt;/Site&amp;gt;
+  &amp;lt;/Sites&amp;gt;
+  --&amp;gt;
+  &amp;lt;Endpoints&amp;gt;
+    &amp;lt;InputEndpoint name=&amp;quot;Endpoint1&amp;quot; protocol=&amp;quot;http&amp;quot; port=&amp;quot;8080&amp;quot; /&amp;gt;
+  &amp;lt;/Endpoints&amp;gt;
+  &amp;lt;Imports&amp;gt;
+    &amp;lt;Import moduleName=&amp;quot;Diagnostics&amp;quot; /&amp;gt;
+   &amp;lt;/Imports&amp;gt;
+&amp;lt;/WebRole&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;参考: &lt;a href=&#34;http://bit.ly/19w63DG&#34;&gt;Avkash Chauhan’s Blog&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>mod_python と mod_filter でフィルタを登録する際の注意</title>
       <link>https://jkawamoto.github.io/blog-ja/mod_python-and-mod_filter/</link>
       <pubDate>Tue, 16 Nov 2010 00:00:00 +0000</pubDate>
@@ -326,6 +359,32 @@ pom.xml のあるディレクトリを基底ディレクトリに，
 &lt;li&gt;&lt;a href=&#34;http://wiki.fdiary.net/maven2/?CookBook#l31&#34;&gt;scpを使ってデプロイする@Maven2のTipsを集めるWiki – CookBook&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.nulab.co.jp/kousei/chapter5/02.html&#34;&gt;構成管理 実践入門 第5章 Maven2ベストプラクティス 社内リポジトリ – 自分たちのライブラリ置き場&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ホームディレクトリを暗号化すると公開鍵認証でログインできない</title>
+      <link>https://jkawamoto.github.io/blog-ja/encrypt-home/</link>
+      <pubDate>Wed, 03 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/encrypt-home/</guid>
+      <description>&lt;p&gt;Ubuntu 10.04 (lucid)で，深く考えずにホームディレクトリを暗号化してしまった結果，
+ssh の公開鍵認証ログインができなくなった．
+というか，ローカルコンソールでログイン済みの時は問題なく ssh でもログインできるが，
+ローカルでログインしていないと認証に失敗するようになった．
+よく考えれば，ホームディレクトリに置いている公開鍵を sshd が読めないので認証に失敗するのは当然である．&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bearmini.net/blog/View.aspx?bid=1&amp;amp;aid=173&#34;&gt;bear.mini : Ubuntu 9.10 (Karmic Koala) でホームディレクトリを暗号化すると、ssh で公開鍵認証ログインが出来ない問題（解決）&lt;/a&gt;
+や
+&lt;a href=&#34;http://fukafuka.naganoblog.jp/e326208.html&#34;&gt;MacBookの憂鬱日記 : sshの設定 その２　っていうか、追記&lt;/a&gt;
+を参考に，次のようにして解決．&lt;/p&gt;
+
+&lt;p&gt;まず，暗号化されていないディレクトリに公開鍵を配置（今回は，&lt;code&gt;/home/.ecryptfs/USERNAME/.ssh/authorized_keys&lt;/code&gt; を選んだ）
+そして，鍵置き場と公開鍵のパーミション設定（&lt;code&gt;/home/.ecryptfs/&amp;lt;username&amp;gt;/.ssh&lt;/code&gt; は 700, &lt;code&gt;authorized_keys&lt;/code&gt; は 600）．
+最後に，sshd_config の編集．具体的には，AuthorizedKeysFile の部分を次のように変更．&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sshd_config&#34;&gt;AuthorizedKeysFile      /home/.ecryptfs/%u/.ssh/authorized_keys
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
