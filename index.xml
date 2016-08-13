@@ -11,12 +11,15 @@
     <atom:link href="https://jkawamoto.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>i18n package in Meteor</title>
+      <title>Internationalization (i18n) of Meteor applications</title>
       <link>https://jkawamoto.github.io/blogs/i18n-package-in-meteor/</link>
       <pubDate>Sat, 13 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://jkawamoto.github.io/blogs/i18n-package-in-meteor/</guid>
       <description>
+
+&lt;p&gt;How to internationalize &lt;a href=&#34;https://www.meteor.com/&#34;&gt;Meteor&lt;/a&gt; application?
+An atmosphere package &lt;a href=&#34;https://atmospherejs.com/universe/i18n&#34;&gt;universe:i18n&lt;/a&gt; helps it.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.meteor.com/&#34;&gt;Meteor&lt;/a&gt; を使った Web アプリケーションを国際化 (i18n) する際の備忘録．
 &lt;a href=&#34;https://atmospherejs.com/universe/i18n&#34;&gt;universe:i18n&lt;/a&gt; パッケージの使い方をまとめる．&lt;/p&gt;
