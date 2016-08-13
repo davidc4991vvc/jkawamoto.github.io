@@ -13,14 +13,17 @@
 		{{ with .Site.Params.sidebar.github }}
 			<li><a href="//github.com/{{ . }}" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
 		{{ end }}
+		{{ with .Site.Params.sidebar.linkedin }}
+			<li><a href="///www.linkedin.com/in/{{ . }}" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+		{{ end }}
 		{{ with .Site.Params.sidebar.dribbble }}
 			<li><a href="//dribbble.com/{{ . }}" target="_blank" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
 		{{ end }}
+		{{ with .Site.Params.sidebar.youtube }}
+			<li><a href="//www.youtube.com/channel/{{ . }}" target="_blank" class="icon fa-youtube"><span class="label">Youtube</span></a></li>
+		{{ end }}
 		{{ with .Site.Params.sidebar.flickr }}
 			<li><a href="//flickr.com/photos/{{ . }}" target="_blank" class="icon fa-flickr"><span class="label">Flickr</span></a></li>
-		{{ end }}
-		{{ with .Site.Params.sidebar.linkedin }}
-			<li><a href="///www.linkedin.com/in/{{ . }}" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 		{{ end }}
 		{{ with .Site.Params.contact.email }}
 			<li><a href="mailto:{{ . }}" class="icon fa-envelope-o"><span class="label">Email</span></a></li>

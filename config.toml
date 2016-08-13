@@ -27,12 +27,17 @@ theme = "hugo-strata-theme"
 		googleplus = ""
 		flickr = "junkawamoto"
 		linkedin = "jkawamoto"
+		youtube = "UCAImvZQSpr4dw6USxHNqDXg"
 
 		copyright = [
 			"&copy; Junpei Kawamoto",
 			"Design: [HTML5 UP](//html5up.net)",
 			"[Little Kitune studio](https://www.littlekitune.org/)"
 		]
+
+		# [[params.sidebar.nav]]
+		# 	title = "Blog"
+		# 	url = "/blogs/"
 
 		[[params.sidebar.nav]]
 			title = "Publications"
