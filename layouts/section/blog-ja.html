@@ -9,8 +9,9 @@
         <section>
           <h2><a href="{{.Permalink}}">{{ .Title }}</a></h2>
 					<div class="align-right">
+						<i class="fa fa-calendar" aria-hidden="true"></i>
 						Posted: <time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>,
-						Last updated: <time pubdate="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time>
+						Last modified: <time pubdate="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time>
 					</div>
           {{ .Content }}
         </section>

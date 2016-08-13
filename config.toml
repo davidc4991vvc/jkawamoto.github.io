@@ -25,7 +25,8 @@ theme = "hugo-strata-theme"
 		dribbble = ""
 		facebook = "junpei.kawamoto"
 		googleplus = ""
-		flickr = ""
+		flickr = "junkawamoto"
+		linkedin = "jkawamoto"
 
 		copyright = [
 			"&copy; Junpei Kawamoto",
