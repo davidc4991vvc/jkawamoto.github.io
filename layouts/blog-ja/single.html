@@ -1,0 +1,22 @@
+{{ partial "head" . }}
+	<body id="top">
+		{{ partial "header" . }}
+
+		<div id="main">
+			{{ with .Title }}
+				<h1>{{ . }}</h1>
+			{{ end }}
+			<div class="align-right">
+				<i class="fa fa-calendar" aria-hidden="true"></i>
+				Posted: <time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>,
+				Last updated: <time pubdate="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time>
+			</div>
+
+      {{ .Content }}
+
+			{{ partial "adsense" . }}
+		</div>
+
+		{{ partial "footer" . }}
+	</body>
+</html>
