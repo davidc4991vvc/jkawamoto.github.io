@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Blogs &middot; Junpei Kawamoto</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Junpei Kawamoto">
+    	<meta name="description" content="Homepage of Junpei Kawamoto.">
+    	<meta http-equiv="content-language" content="ja" />
+    	<meta name="generator" content="Hugo 0.16" />
+		
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="https://jkawamoto.github.io/css/main.css" />
+		
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+		  (adsbygoogle = window.adsbygoogle || []).push({
+		    google_ad_client: "ca-pub-4734862314145555",
+		    enable_page_level_ads: true
+		  });
+		</script>
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="#" class="image avatar"><img src="https://jkawamoto.github.io/images/avatar.jpg" alt="" /></a>
+	<h1 style="text-shadow: 1px 1px 5px black; color: rgba(255,255,255,0.7);"><strong>Junpei Kawamoto</strong>, Ph.D. in Informatics.<br>Research scientist working with data mining, security, and privacy.</h1>
+
+  <br/>
+  <ul style="list-style:none; text-shadow: 1px 1px 5px black; margin: 0em;">
+    <li style="display: inline-block;"><a href="/#main">Home</a></li>
+    
+    <li style="display: inline-block;"><a href="/publications/#main">Publications</a></li>
+    
+    <li style="display: inline-block;"><a href="/research/#main">Research</a></li>
+    
+    <li style="display: inline-block;"><a href="/lectures/#main">Lectures</a></li>
+    
+  </ul>
+	<ul style="list-style:none; text-shadow: 1px 1px 5px black;">
+    
+    <li style="display: inline-block;"><a href="/japanese/#main">日本語</a></li>
+    
+    <li style="display: inline-block;"><a href="/publications-ja/#main">論文リスト</a></li>
+    
+    <li style="display: inline-block;"><a href="/blog-ja/#main">メモ</a></li>
+    
+    <li style="display: inline-block;"><a href="/activity-ja/#main">その他の活動</a></li>
+    
+  </ul>
+
+</header>
+
+
+		<div id="main">
+			<h1>Blog</h1>
+
+      
+        <section>
+          <h2><a href="https://jkawamoto.github.io/blogs/i18n-package-in-meteor/">i18n package in Meteor</a></h2>
+					<div class="align-right">
+						<i class="fa fa-calendar" aria-hidden="true"></i>
+						Posted: <time pubdate="2016-08-13">2016-08-13</time>,
+						Last updated: <time pubdate="2016-08-13">2016-08-13</time>
+					</div>
+          
+
+<p><a href="https://www.meteor.com/">Meteor</a> を使った Web アプリケーションを国際化 (i18n) する際の備忘録．
+<a href="https://atmospherejs.com/universe/i18n">universe:i18n</a> パッケージの使い方をまとめる．</p>
+
+<h3 id="universe-i18n">universe:i18n</h3>
+
+<p><a href="https://atmospherejs.com">Atmosphere</a> に登録されている国際化パッケージの一つ．
+サポートしているロケールの一覧は，<a href="https://github.com/vazco/meteor-universe-i18n/blob/master/lib/locales.js">ここ</a>から確認できる．
+また，JSON または YAML で翻訳対応表を渡すことができる．</p>
+
+<p>インストールには，次のコマンドを実行する．</p>
+
+<pre><code class="language-sh">$ meteor add universe:i18n
+</code></pre>
+
+<p>インポートは，必要なスクリプトファイルで</p>
+
+<pre><code>import i18n from &quot;meteor/universe:i18n&quot;;
+</code></pre>
+
+<p>とすれば良い．</p>
+
+<h4 id="翻訳語の登録">翻訳語の登録</h4>
+
+<p>翻訳対応表はファイルで与えることもできるが，
+API を使って個別に登録することもできる．</p>
+
+<pre><code>i18n.addTranslation(“ロケール&quot;, “namespace&quot;, “keyword&quot;, “word&quot;);
+</code></pre>
+
+<p>の形式で登録できる．</p>
+
+<h4 id="翻訳語ファイル">翻訳語ファイル</h4>
+
+<p>前節の様に個別に <code>i18n.addTranslation</code> 関数を使って登録するのは手間なので，
+ファイルで与えることができる．
+翻訳語のファイルは JSON か YAML に対応しており，
+ファイル名がそれぞれ <code>.i18n.json</code> または <code>.i18n.yml</code> で終わる必要がある．
+ここでは，YAML 形式を使うことにする．</p>
+
+<p>翻訳ファイルは単純なキー・バリューの組み合わせを列挙する．</p>
+
+<pre><code class="language-ja.i18n.yml">ok: 決定
+cancel: キャンセル
+</code></pre>
+
+<p>また，<code>_namespace</code> 属性を使って各ファイルが属する名前空間を指定できる．</p>
+
+<pre><code class="language-ja.i18n.yml">_namespace: ui
+ok: 決定
+cancel: キャンセル
+</code></pre>
+
+<p>各翻訳ファイルがどのロケール用のものか示すには，
+ファイルのパスにロケールを含めるか，<code>_locale</code> 要素を与えるか二通りの方法がある．
+ファイルを開かなければ分からない <code>_locale</code> 要素よりは，ファイルのパスを使う方が良いだろう．</p>
+
+<p>ファイルパスは，</p>
+
+<ul>
+<li><code>en-us.i18n.yml</code></li>
+<li><code>en-us/someName.i18n.yml</code></li>
+</ul>
+
+<p>などの形式がサポートされている．
+これらのファイルは，<code>imports</code> 以外に置いておけば自動でインポートされる．</p>
+
+<h4 id="翻訳語の取得">翻訳語の取得</h4>
+
+<p>キーワードに対応する翻訳語を取得するには，
+<code>i18n.__(namespace, key)</code> メソッドを使う．</p>
+
+<pre><code class="language-js">i18n.__(“ui”, “ok”); // -&gt; 決定
+</code></pre>
+
+<h4 id="ロケールの設定-変更">ロケールの設定・変更</h4>
+
+<p>ロケールの設定・変更には，<code>i18n.setLocale(“ロケール”)</code> メソッドを使う．
+このメソッドは，非同期で翻訳データを取得する．
+<code>i18n.setLocale</code> は <code>Promise</code> を返すので，<code>.then</code> を使って新しいロケールを使った操作を行える．</p>
+
+<h3 id="angular-meteor-での利用">Angular-Meteor での利用</h3>
+
+<p><a href="http://www.angular-meteor.com/">Angular-Meteor</a> で利用する場合，
+<code>i18n.getTranslation</code> メソッドをスコープに登録してテンプレートで利用する．
+例えば，</p>
+
+<pre><code class="language-app.js">class AppCtrl {
+
+  constructor() {
+    this.translator = i18n.getTranslation;
+  }
+
+}
+</code></pre>
+
+<p>というコントローラを用意すれば，テンプレート側では，</p>
+
+<pre><code>&lt;md-button ng-click=&quot;$ctrl.onNext()” aria-label=&quot;$ctrl.translator(‘ui', ‘ok’)&quot;&gt;
+  {{$ctrl.translator(&quot;button&quot;, &quot;start&quot;)}}
+&lt;/md-button&gt;
+</code></pre>
+
+<p>と利用できる．ロケールが変更されるたびに表示を変えるためには，</p>
+
+<pre><code class="language-js">const setLocalePromise = i18n.setLocale(locale) || i18n.setLocale(&quot;en&quot;);
+setLocalePromise.then((e) =&gt; {
+   this.translator = i18n.getTranslation;
+});
+</code></pre>
+
+<p>などとすれば良い．（上の例はロケールが見つからない場合に英語設定している）</p>
+
+<p>ただし，UI イベント以外の原因で <code>setLocale</code> を呼んだ場合（例えばコンストラクタ内など）
+DOM の更新は行われない．
+この場合は，$scope.$apply() を使う必要がある．</p>
+
+<pre><code>constructor($scope) {
+
+  const setLocalePromise = i18n.setLocale(getLang()) || i18n.setLocale(&quot;en&quot;);
+  setLocalePromise.then(() =&gt; {
+    $scope.$apply( () =&gt;{
+      this.translator = i18n.getTranslation;
+    });
+  });
+
+}
+</code></pre>
+
+<p>詳細は，<a href="http://qiita.com/akkun_choi/items/22048f31f9add7fda2c5">AngularJS and scope.$apply（日本語訳）</a>．</p>
+
+<h3 id="まとめ">まとめ</h3>
+
+<p>Meteor 用国際化パッケージ <a href="https://atmospherejs.com/universe/i18n">universe:i18n</a> の
+最低限の使い方をまとめた．
+今回紹介していない API もあるので，
+<a href="https://github.com/vazco/meteor-universe-i18n">オリジナルのドキュメント</a>
+も参考にされたい．</p>
+
+        </section>
+      
+
+      <!-- AdSense -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4734862314145555"
+     data-ad-slot="7714563027"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+			
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+    	<li><a href="//facebook.com/junpei.kawamoto" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+    
+		
+			<li><a href="//twitter.com/junkawamoto" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+			<li><a href="//github.com/jkawamoto" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		
+			<li><a href="//flickr.com/photos/junkawamoto" target="_blank" class="icon fa-flickr"><span class="label">Flickr</span></a></li>
+		
+		
+			<li><a href="///www.linkedin.com/in/jkawamoto" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+		
+		
+			<li><a href="mailto:junpei.kawamoto@acm.org" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Junpei Kawamoto</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li><a href="https://www.littlekitune.org/">Little Kitune studio</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="https://jkawamoto.github.io/js/jquery.min.js"></script>
+<script src="https://jkawamoto.github.io/js/jquery.poptrox.min.js"></script>
+<script src="https://jkawamoto.github.io/js/skel.min.js"></script>
+<script src="https://jkawamoto.github.io/js/util.js"></script>
+
+<script src="https://jkawamoto.github.io/js/main.js"></script>
+
+
+<!-- Google Analytics -->
+<script>
+  var _gaq=[['_setAccount','UA-19410992-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+
+<script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+	</body>
+</html>

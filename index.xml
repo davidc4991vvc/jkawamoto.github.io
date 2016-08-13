@@ -7,8 +7,156 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
-    <lastBuildDate>Sat, 08 Nov 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Aug 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jkawamoto.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>i18n package in Meteor</title>
+      <link>https://jkawamoto.github.io/blogs/i18n-package-in-meteor/</link>
+      <pubDate>Sat, 13 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blogs/i18n-package-in-meteor/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://www.meteor.com/&#34;&gt;Meteor&lt;/a&gt; を使った Web アプリケーションを国際化 (i18n) する際の備忘録．
+&lt;a href=&#34;https://atmospherejs.com/universe/i18n&#34;&gt;universe:i18n&lt;/a&gt; パッケージの使い方をまとめる．&lt;/p&gt;
+
+&lt;h3 id=&#34;universe-i18n&#34;&gt;universe:i18n&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://atmospherejs.com&#34;&gt;Atmosphere&lt;/a&gt; に登録されている国際化パッケージの一つ．
+サポートしているロケールの一覧は，&lt;a href=&#34;https://github.com/vazco/meteor-universe-i18n/blob/master/lib/locales.js&#34;&gt;ここ&lt;/a&gt;から確認できる．
+また，JSON または YAML で翻訳対応表を渡すことができる．&lt;/p&gt;
+
+&lt;p&gt;インストールには，次のコマンドを実行する．&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ meteor add universe:i18n
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;インポートは，必要なスクリプトファイルで&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import i18n from &amp;quot;meteor/universe:i18n&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;とすれば良い．&lt;/p&gt;
+
+&lt;h4 id=&#34;翻訳語の登録&#34;&gt;翻訳語の登録&lt;/h4&gt;
+
+&lt;p&gt;翻訳対応表はファイルで与えることもできるが，
+API を使って個別に登録することもできる．&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;i18n.addTranslation(“ロケール&amp;quot;, “namespace&amp;quot;, “keyword&amp;quot;, “word&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;の形式で登録できる．&lt;/p&gt;
+
+&lt;h4 id=&#34;翻訳語ファイル&#34;&gt;翻訳語ファイル&lt;/h4&gt;
+
+&lt;p&gt;前節の様に個別に &lt;code&gt;i18n.addTranslation&lt;/code&gt; 関数を使って登録するのは手間なので，
+ファイルで与えることができる．
+翻訳語のファイルは JSON か YAML に対応しており，
+ファイル名がそれぞれ &lt;code&gt;.i18n.json&lt;/code&gt; または &lt;code&gt;.i18n.yml&lt;/code&gt; で終わる必要がある．
+ここでは，YAML 形式を使うことにする．&lt;/p&gt;
+
+&lt;p&gt;翻訳ファイルは単純なキー・バリューの組み合わせを列挙する．&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ja.i18n.yml&#34;&gt;ok: 決定
+cancel: キャンセル
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;また，&lt;code&gt;_namespace&lt;/code&gt; 属性を使って各ファイルが属する名前空間を指定できる．&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ja.i18n.yml&#34;&gt;_namespace: ui
+ok: 決定
+cancel: キャンセル
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;各翻訳ファイルがどのロケール用のものか示すには，
+ファイルのパスにロケールを含めるか，&lt;code&gt;_locale&lt;/code&gt; 要素を与えるか二通りの方法がある．
+ファイルを開かなければ分からない &lt;code&gt;_locale&lt;/code&gt; 要素よりは，ファイルのパスを使う方が良いだろう．&lt;/p&gt;
+
+&lt;p&gt;ファイルパスは，&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;en-us.i18n.yml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;en-us/someName.i18n.yml&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;などの形式がサポートされている．
+これらのファイルは，&lt;code&gt;imports&lt;/code&gt; 以外に置いておけば自動でインポートされる．&lt;/p&gt;
+
+&lt;h4 id=&#34;翻訳語の取得&#34;&gt;翻訳語の取得&lt;/h4&gt;
+
+&lt;p&gt;キーワードに対応する翻訳語を取得するには，
+&lt;code&gt;i18n.__(namespace, key)&lt;/code&gt; メソッドを使う．&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;i18n.__(“ui”, “ok”); // -&amp;gt; 決定
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;ロケールの設定-変更&#34;&gt;ロケールの設定・変更&lt;/h4&gt;
+
+&lt;p&gt;ロケールの設定・変更には，&lt;code&gt;i18n.setLocale(“ロケール”)&lt;/code&gt; メソッドを使う．
+このメソッドは，非同期で翻訳データを取得する．
+&lt;code&gt;i18n.setLocale&lt;/code&gt; は &lt;code&gt;Promise&lt;/code&gt; を返すので，&lt;code&gt;.then&lt;/code&gt; を使って新しいロケールを使った操作を行える．&lt;/p&gt;
+
+&lt;h3 id=&#34;angular-meteor-での利用&#34;&gt;Angular-Meteor での利用&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.angular-meteor.com/&#34;&gt;Angular-Meteor&lt;/a&gt; で利用する場合，
+&lt;code&gt;i18n.getTranslation&lt;/code&gt; メソッドをスコープに登録してテンプレートで利用する．
+例えば，&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-app.js&#34;&gt;class AppCtrl {
+
+  constructor() {
+    this.translator = i18n.getTranslation;
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;というコントローラを用意すれば，テンプレート側では，&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;md-button ng-click=&amp;quot;$ctrl.onNext()” aria-label=&amp;quot;$ctrl.translator(‘ui&#39;, ‘ok’)&amp;quot;&amp;gt;
+  {{$ctrl.translator(&amp;quot;button&amp;quot;, &amp;quot;start&amp;quot;)}}
+&amp;lt;/md-button&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;と利用できる．ロケールが変更されるたびに表示を変えるためには，&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const setLocalePromise = i18n.setLocale(locale) || i18n.setLocale(&amp;quot;en&amp;quot;);
+setLocalePromise.then((e) =&amp;gt; {
+   this.translator = i18n.getTranslation;
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;などとすれば良い．（上の例はロケールが見つからない場合に英語設定している）&lt;/p&gt;
+
+&lt;p&gt;ただし，UI イベント以外の原因で &lt;code&gt;setLocale&lt;/code&gt; を呼んだ場合（例えばコンストラクタ内など）
+DOM の更新は行われない．
+この場合は，$scope.$apply() を使う必要がある．&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;constructor($scope) {
+
+  const setLocalePromise = i18n.setLocale(getLang()) || i18n.setLocale(&amp;quot;en&amp;quot;);
+  setLocalePromise.then(() =&amp;gt; {
+    $scope.$apply( () =&amp;gt;{
+      this.translator = i18n.getTranslation;
+    });
+  });
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;詳細は，&lt;a href=&#34;http://qiita.com/akkun_choi/items/22048f31f9add7fda2c5&#34;&gt;AngularJS and scope.$apply（日本語訳）&lt;/a&gt;．&lt;/p&gt;
+
+&lt;h3 id=&#34;まとめ&#34;&gt;まとめ&lt;/h3&gt;
+
+&lt;p&gt;Meteor 用国際化パッケージ &lt;a href=&#34;https://atmospherejs.com/universe/i18n&#34;&gt;universe:i18n&lt;/a&gt; の
+最低限の使い方をまとめた．
+今回紹介していない API もあるので，
+&lt;a href=&#34;https://github.com/vazco/meteor-universe-i18n&#34;&gt;オリジナルのドキュメント&lt;/a&gt;
+も参考にされたい．&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Upstart で Docker コンテナを起動</title>
@@ -291,16 +439,6 @@ ChangeAnomalyDetection パッケージをインストールする場合，ルー
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;としておけば良い．&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hadoop CDH4 で hadoop-env.sh が見つからない</title>
-      <link>https://jkawamoto.github.io/blog-ja/hadoop-cdh4-missing-hadoop-env-sh/</link>
-      <pubDate>Tue, 19 Mar 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/blog-ja/hadoop-cdh4-missing-hadoop-env-sh/</guid>
-      <description>&lt;p&gt;入れ忘れていただけみたいなので，&lt;a href=&#34;http://bit.ly/1aQ2o1R&#34;&gt;ここ&lt;/a&gt;からダウンロードして &lt;code&gt;conf&lt;/code&gt; 以下におけば良い．&lt;/p&gt;
 </description>
     </item>
     
