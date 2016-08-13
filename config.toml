@@ -54,7 +54,7 @@ theme = "hugo-strata-theme"
 			url = "/publications-ja/"
 
 		[[params.sidebar.navja]]
-			title = "技術メモ"
+			title = "メモ"
 			url = "/blog-ja/"
 
 		[[params.sidebar.navja]]

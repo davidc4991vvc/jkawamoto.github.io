@@ -3,14 +3,40 @@
 		{{ partial "header" . }}
 
 		<div id="main">
-			<h1>技術メモ</h1>
-      {{ range .Data.Pages }}
+			<h1>メモ</h1>
+
+      {{ range .Paginator.Pages }}
         <section>
           <h2><a href="{{.Permalink}}">{{ .Title }}</a></h2>
+					<div class="align-right">
+						Posted: <time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>,
+						Last updated: <time pubdate="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time>
+					</div>
           {{ .Content }}
         </section>
       {{ end }}
+
       {{ partial "adsense" . }}
+
+			{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+				<section>
+					<nav class="align-center" role="pagination">
+						<ul style="list-style:none;">
+							{{ if .Paginator.HasPrev }}
+								<li style="display: inline-block;">
+									<a href="{{ .Paginator.Prev.URL }}">前へ</a>
+								</li>
+							{{ end }}
+							{{ if .Paginator.HasNext }}
+								<li style="display: inline-block;">
+									<a href="{{ .Paginator.Next.URL }}">次へ</a>
+								</li>
+							{{ end }}
+					  </ul>
+					</nav>
+				</section>
+			{{ end }}
+
 		</div>
 
 		{{ partial "footer" . }}

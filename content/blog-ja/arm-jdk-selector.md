@@ -2,6 +2,7 @@
 title: "Arm 用 OpenJDK で Selector#select の挙動がおかしい"
 lastmod: 2013-06-30
 date: "2010-09-22"
+slug: arm-jdk-selector
 ---
 ARM 用の OpenJDK VM (OpenJDK Core VM) では，
 選択できるキーが有ろうが無かろうが一つのキーも選択せずに Selector#select() が即座に返る．
