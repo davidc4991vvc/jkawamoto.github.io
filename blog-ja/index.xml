@@ -7,8 +7,38 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
-    <lastBuildDate>Sat, 08 Nov 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 May 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jkawamoto.github.io/blog-ja/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>データ解析のための統計モデリング入門 第10章 を PyMC で解く</title>
+      <link>https://jkawamoto.github.io/blog-ja/pymc-lesson-10/</link>
+      <pubDate>Tue, 24 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/pymc-lesson-10/</guid>
+      <description>&lt;script src=&#34;https://gist.github.com/jkawamoto/4a136615118fffe2930c54773389d079.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LaTeX スニペット集</title>
+      <link>https://jkawamoto.github.io/blog-ja/pymc-lesson-10/</link>
+      <pubDate>Wed, 02 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/pymc-lesson-10/</guid>
+      <description>&lt;script src=&#34;https://gist.github.com/jkawamoto/e9f73ffab91a7fda62b3.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>高度プログラミングサンプルコード</title>
+      <link>https://jkawamoto.github.io/blog-ja/pymc-lesson-10/</link>
+      <pubDate>Tue, 21 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/pymc-lesson-10/</guid>
+      <description>&lt;script src=&#34;https://gist.github.com/jkawamoto/7aca96b3ac8f96a3d769.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
     
     <item>
       <title>Upstart で Docker コンテナを起動</title>
@@ -105,7 +135,9 @@ WantedBy=multi-user.target
       <description>&lt;p&gt;for-each 要素 + when 要素で対応しようとしていたがうまく行かなかった．
 XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
 
-&lt;p&gt;XSLT 的には apply-templetes 要素を使うのが正しいかと思われる．&lt;/p&gt;
+&lt;p&gt;XSLT 的には &lt;code&gt;apply-templetes&lt;/code&gt; 要素を使うのが正しいかと思われる．&lt;/p&gt;
+
+&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=jkwf4mew-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4756140653&amp;linkId=4d5fa5b3e4e13397b4b7848042e366bc&#34;&gt;&lt;/iframe&gt;
 </description>
     </item>
     
@@ -148,8 +180,8 @@ XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
       <description>&lt;p&gt;プライバシ保護データマネジメント関連のプロジェクト&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;(OpenPDS)[&lt;a href=&#34;http://openpds.media.mit.edu/&#34;&gt;http://openpds.media.mit.edu/&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;(情報銀行コンソーシアム)[&lt;a href=&#34;http://www.information-bank.net/&#34;&gt;http://www.information-bank.net/&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://openpds.media.mit.edu/&#34;&gt;OpenPDS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.information-bank.net/&#34;&gt;情報銀行コンソーシアム&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -240,67 +272,6 @@ sudo ln -s ./9.07/Resource/Font ./font
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;が一番簡単．&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>R でのパッケージインストール</title>
-      <link>https://jkawamoto.github.io/blog-ja/installing-r-package/</link>
-      <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/blog-ja/installing-r-package/</guid>
-      <description>&lt;p&gt;もっと良い方法があるのかも知れないが・・・．
-ChangeAnomalyDetection パッケージをインストールする場合，ルートで R を起動し&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;install.packages(&amp;quot;ChangeAnomalyDetection&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;を実行する．
-依存パッケージがあるとエラーが出るので，
-そのエラーで必要と言われたパッケージを同様の方法でインストールしてから再度インストールする．&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>某 BibTeX スタイルで DOI を非表示にする</title>
-      <link>https://jkawamoto.github.io/blog-ja/disable-doi/</link>
-      <pubDate>Tue, 16 Apr 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/blog-ja/disable-doi/</guid>
-      <description>&lt;p&gt;DOI を参考文献リストに載せたくない場合，bstファイルの以下の部分&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;FUNCTION {format.doi.url}
-{ doi empty$
-    { url empty$
-     &#39;skip$
-     { format.online output.nonnull
-       format.url
-     }
-     if$
-    }
-    { format.online output.nonnull
-      &amp;quot;\doi{&amp;quot; doi &amp;quot;}&amp;quot; * *
-    }
-  if$
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;を&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;FUNCTION {format.doi.url}{}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;としておけば良い．&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hadoop CDH4 で hadoop-env.sh が見つからない</title>
-      <link>https://jkawamoto.github.io/blog-ja/hadoop-cdh4-missing-hadoop-env-sh/</link>
-      <pubDate>Tue, 19 Mar 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/blog-ja/hadoop-cdh4-missing-hadoop-env-sh/</guid>
-      <description>&lt;p&gt;入れ忘れていただけみたいなので，&lt;a href=&#34;http://bit.ly/1aQ2o1R&#34;&gt;ここ&lt;/a&gt;からダウンロードして &lt;code&gt;conf&lt;/code&gt; 以下におけば良い．&lt;/p&gt;
 </description>
     </item>
     

@@ -61,6 +61,64 @@
 
       
         <section>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/windows-python-library/">Python ライブラリ</a></h2>
+					<div class="align-right">
+						<i class="fa fa-calendar" aria-hidden="true"></i>
+						Posted: <time pubdate="2013-03-01">2013-03-01</time>,
+						Last modified: <time pubdate="2014-11-18">2014-11-18</time>
+					</div>
+          <p>Windows 用のライブラリは，<a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">ここ</a> から探す．
+ (64bit 用に自前でコンパイルするには VC コンパイラが要るため)</p>
+
+        </section>
+      
+        <section>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/not-found-pdfoutput/">pdfoutput が定義されていない問題</a></h2>
+					<div class="align-right">
+						<i class="fa fa-calendar" aria-hidden="true"></i>
+						Posted: <time pubdate="2013-03-01">2013-03-01</time>,
+						Last modified: <time pubdate="2013-06-30">2013-06-30</time>
+					</div>
+          <p><a href="http://www.vldb.org/pvldb/format.html">某 LaTeX スタイルファイル</a>を使ったとき，
+<code>pdfoutput</code> が定義されていないと言われてコンパイルが通らない．
+とりあえず，</p>
+
+<pre><code>\def\pdfoutput{0}
+</code></pre>
+
+<p>と書いておけば，エラーは消える．
+本当は別のパッケージやオプションで設定すべきだとは思うが・・・．</p>
+
+        </section>
+      
+        <section>
+          <h2><a href="https://jkawamoto.github.io/blog-ja/compiling-screen-256/">macで256色表示可能な screen をコンパイル</a></h2>
+					<div class="align-right">
+						<i class="fa fa-calendar" aria-hidden="true"></i>
+						Posted: <time pubdate="2012-06-29">2012-06-29</time>,
+						Last modified: <time pubdate="2016-08-13">2016-08-13</time>
+					</div>
+          <p>下記のコマンドを実行する．</p>
+
+<pre><code class="language-sh">git clone git://git.savannah.gnu.org/screen.git
+cd screen/src
+./autogen.sh
+./configure --enable-colors256
+make
+sudo make install
+</code></pre>
+
+<p>上記を実行するために，automake が必要．これは，brew でインストールできる．（以下は，autoconf もインストールする例）</p>
+
+<pre><code class="language-sh">sudo brew install autoconf
+sudo brew install automake
+</code></pre>
+
+<p>256色表示できているかの確認は，<a href="ftp://ftp.fau.de/netbsd/NetBSD-release-6/xsrc/external/mit/xterm/dist/vttests/256colors2.pl">256colors2.pl</a> で行える．</p>
+
+        </section>
+      
+        <section>
           <h2><a href="https://jkawamoto.github.io/blog-ja/aspell-from-emacs/">Aspell を用いたスペルチェック</a></h2>
 					<div class="align-right">
 						<i class="fa fa-calendar" aria-hidden="true"></i>
@@ -359,93 +417,6 @@ pom.xml のあるディレクトリを基底ディレクトリに，
 
         </section>
       
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/encrypt-home/">ホームディレクトリを暗号化すると公開鍵認証でログインできない</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2010-11-03">2010-11-03</time>,
-						Last modified: <time pubdate="2013-06-27">2013-06-27</time>
-					</div>
-          <p>Ubuntu 10.04 (lucid)で，深く考えずにホームディレクトリを暗号化してしまった結果，
-ssh の公開鍵認証ログインができなくなった．
-というか，ローカルコンソールでログイン済みの時は問題なく ssh でもログインできるが，
-ローカルでログインしていないと認証に失敗するようになった．
-よく考えれば，ホームディレクトリに置いている公開鍵を sshd が読めないので認証に失敗するのは当然である．</p>
-
-<p><a href="http://bearmini.net/blog/View.aspx?bid=1&amp;aid=173">bear.mini : Ubuntu 9.10 (Karmic Koala) でホームディレクトリを暗号化すると、ssh で公開鍵認証ログインが出来ない問題（解決）</a>
-や
-<a href="http://fukafuka.naganoblog.jp/e326208.html">MacBookの憂鬱日記 : sshの設定 その２　っていうか、追記</a>
-を参考に，次のようにして解決．</p>
-
-<p>まず，暗号化されていないディレクトリに公開鍵を配置（今回は，<code>/home/.ecryptfs/USERNAME/.ssh/authorized_keys</code> を選んだ）
-そして，鍵置き場と公開鍵のパーミション設定（<code>/home/.ecryptfs/&lt;username&gt;/.ssh</code> は 700, <code>authorized_keys</code> は 600）．
-最後に，sshd_config の編集．具体的には，AuthorizedKeysFile の部分を次のように変更．</p>
-
-<pre><code class="language-sshd_config">AuthorizedKeysFile      /home/.ecryptfs/%u/.ssh/authorized_keys
-</code></pre>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/servlet-velocity/">Servlet で Velocity (1.6.4) を使う</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2010-10-05">2010-10-05</time>,
-						Last modified: <time pubdate="2013-06-30">2013-06-30</time>
-					</div>
-          <p>Servlet で Velocity を使用する場合，<code>org.apache.velocity.runtime.log.ServletLogChute</code> エラーが出ることがある．
-これは，デフォルトログシステムの初期化に失敗しているからで，<code>ServletContext</code> を渡すか別のログシステムを使えば解決する．</p>
-
-<p>ServletContext を渡す場合，次のようにすれば良い．</p>
-
-<pre><code class="language-java">VelocityEngine engine = new VelocityEngine();
-engine.setApplicationAttribute(
-    ServletContext.class.getName(), servletContext);
-engine.init();
-</code></pre>
-
-<p>また，別のログシステムを使用する場合は，<code>runtime.log.logsystem.class</code> プロパティに設定する．</p>
-
-<ul>
-<li>参考: <a href="http://bit.ly/9vALBn">Apache</a></li>
-</ul>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/arm-jdk-selector/">Arm 用 OpenJDK で Selector#select の挙動がおかしい</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2010-09-22">2010-09-22</time>,
-						Last modified: <time pubdate="2013-06-30">2013-06-30</time>
-					</div>
-          <p>ARM 用の OpenJDK VM (OpenJDK Core VM) では，
-選択できるキーが有ろうが無かろうが一つのキーも選択せずに Selector#select() が即座に返る．
-そして CPU 使用率がどんどん上がっていく．</p>
-
-<pre><code class="language-java">final Selector sel = Selector.open();
-final ServerSocketChannel s = ServerSocketChannel.open();
-s.configureBlocking(false);
-s.socket().bind(address);
-s.register(sel, SelectionKey.OP_ACCEPT);
-while(true){
-  // nc は常に 0
-  final int nc = sel.select();
-
-  for(final SelectionKey key : sel.selectedKeys()){
-      if(key.isAcceptable()){
-      // 適当に accept する
-      ((ServerSocketChannel)key.channel()).accept();
-    }
-  }
-}
-</code></pre>
-
-<p>選択できるキーが無い場合はともかく，実際に繋ぎに来ている場合でも無視されるので使い物にならない．
-なお，別の VM (OpenJDK Zero VM) に切り替えたところ正常に動いた．</p>
-
-        </section>
-      
 
       <!-- AdSense -->
 <ins class="adsbygoogle"
@@ -467,6 +438,10 @@ while(true){
 									<a href="/blog-ja/page/2/">前へ</a>
 								</li>
 							
+							
+								<li style="display: inline-block;">
+									<a href="/blog-ja/page/4/">次へ</a>
+								</li>
 							
 					  </ul>
 					</nav>
