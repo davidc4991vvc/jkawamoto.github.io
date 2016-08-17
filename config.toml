@@ -100,6 +100,33 @@ theme = "hugo-strata-theme"
 	[School of Informatics and Mathematical Science](http://www.s-im.t.kyoto-u.ac.jp/en?set_language=en),
 	[Faculty of Eng.](http://www.t.kyoto-u.ac.jp/en),
 	[Kyoto University](http://www.kyoto-u.ac.jp/en).
+
+## Software
+### Cloud Computing
+- [roadie](https://jkawamoto.github.io/roadie/):
+	A easy way to run your programs on Google Cloud Platform
+- [roadie-gcp](https://jkawamoto.github.io/roadie-gcp/):
+	A helper container to execute a program on Google Cloud Platform
+- [ambassadors](https://jkawamoto.github.io/ambassadors/):
+	Yet another Ambassador pattern over SSH
+
+### Open Data & Linked Data
+- [fukuoka-city-community-space-finder](https://jkawamoto.github.io/fukuoka-city-community-space-finder/):
+	Find Community Spaces in Fukuoka City and check reservation status of them.
+
+### IoT
+- [fplug-logger](https://jkawamoto.github.io/fplug-logger/):
+	Continuously reporting data from Fujitsu's F-Plug
+
+### Utilities
+- [dsargparse](https://jkawamoto.github.io/dsargparse/):
+	docstring based argparse
+- [fgo](https://jkawamoto.github.io/fgo/):
+	Build, upload, and create brew formula for golang application.
+- [loci](https://jkawamoto.github.io/loci/):
+	Testing remote CI scripts locally
+- [gii](https://jkawamoto.github.io/gii/):
+	Set repositories which doesn't belong golang project to .goimportsignore.
 """
 
 	[params.portfolio]
