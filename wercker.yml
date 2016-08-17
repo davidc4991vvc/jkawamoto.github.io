@@ -9,7 +9,7 @@ build:
         version: "0.15"
 deploy:
   steps:
-    - jkawamoto/ghp-import@0.1.0:
+    - jkawamoto/ghp-import:
         token: $GIT_TOKEN
         basedir: public
         branch: master
