@@ -60,13 +60,16 @@
 			
 				<h1>mod_python と mod_filter でフィルタを登録する際の注意</h1>
 			
+			
+
 			<div class="align-right">
 				<i class="fa fa-calendar" aria-hidden="true"></i>
 				Posted: <time pubdate="2010-11-16">2010-11-16</time>,
 				Last updated: <time pubdate="2013-06-30">2013-06-30</time>
 			</div>
 
-      <p>Apache 2.2 で mod_python と mod_filter を用いてフィルタを作成する際の注意というかバグ．
+			<section>
+      	<p>Apache 2.2 で mod_python と mod_filter を用いてフィルタを作成する際の注意というかバグ．
 Python スクリプトをフィルタとして使う場合，まず，python 関数をフィルタプロバイダとして登録する．
 そのために，<a href="http://www.python.jp/doc/contrib/modpython/dir-filter-of.html">PythonOutputFilter ディレクティブ</a>を使用し，
 書式は次の通りになる．</p>
@@ -111,8 +114,10 @@ FilterChain image_compressor
 mod_filter と組み合わせて使用する場合も provider_name と filter_name が同じでなければならない．
 mod_filter のどこかで， provider_name と filter_name を取り違えてるんじゃないかと思われるがソースコードは読んでないので不明．</p>
 
+			</section>
 
-			<!-- AdSense -->
+			<section>
+				<!-- AdSense -->
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4734862314145555"
@@ -121,6 +126,8 @@ mod_filter のどこかで， provider_name と filter_name を取り違えて�
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
+			</section>
 
 		</div>
 

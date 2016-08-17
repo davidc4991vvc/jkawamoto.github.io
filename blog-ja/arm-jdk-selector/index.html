@@ -60,13 +60,16 @@
 			
 				<h1>Arm 用 OpenJDK で Selector#select の挙動がおかしい</h1>
 			
+			
+
 			<div class="align-right">
 				<i class="fa fa-calendar" aria-hidden="true"></i>
 				Posted: <time pubdate="2010-09-22">2010-09-22</time>,
 				Last updated: <time pubdate="2013-06-30">2013-06-30</time>
 			</div>
 
-      <p>ARM 用の OpenJDK VM (OpenJDK Core VM) では，
+			<section>
+      	<p>ARM 用の OpenJDK VM (OpenJDK Core VM) では，
 選択できるキーが有ろうが無かろうが一つのキーも選択せずに Selector#select() が即座に返る．
 そして CPU 使用率がどんどん上がっていく．</p>
 
@@ -91,8 +94,10 @@ while(true){
 <p>選択できるキーが無い場合はともかく，実際に繋ぎに来ている場合でも無視されるので使い物にならない．
 なお，別の VM (OpenJDK Zero VM) に切り替えたところ正常に動いた．</p>
 
+			</section>
 
-			<!-- AdSense -->
+			<section>
+				<!-- AdSense -->
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4734862314145555"
@@ -101,6 +106,8 @@ while(true){
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
+			</section>
 
 		</div>
 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Junpei Kawamoto</title>
+    <link>https://jkawamoto.github.io/tags/docker/</link>
+    <description>Recent content in Docker on Junpei Kawamoto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
+    <lastBuildDate>Wed, 10 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jkawamoto.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>bashでIPとPORT番号を取得</title>
+      <link>https://jkawamoto.github.io/blog-ja/qiita-2014-12-10/</link>
+      <pubDate>Wed, 10 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/qiita-2014-12-10/</guid>
+      <description>
+
+&lt;p&gt;&lt;code&gt;docker run&lt;/code&gt; コマンドの &lt;code&gt;link&lt;/code&gt; オプションで受け取った環境変数を bash スクリプト内で解析する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+URL=tcp://127.0.0.1:80
+IPPORT=${URL#*//}
+
+# IP
+echo ${IPPORT%:*}
+# Port
+echo ${IPPORT#*:}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;参考:47af2e49b17f04e7b38ce80b18151268&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/ozuma/20130928/1380380390&#34;&gt;shとbashでの変数内の文字列置換など | ろば電子が詰まっている&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

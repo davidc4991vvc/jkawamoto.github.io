@@ -7,8 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
-    <lastBuildDate>Tue, 24 May 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Aug 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jkawamoto.github.io/blog-ja/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>講義ビデオ: 形式言語とオートマトン</title>
+      <link>https://jkawamoto.github.io/blog-ja/2016-08-17/</link>
+      <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/2016-08-17/</guid>
+      <description>&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/2hib899vlGM&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/PoGX-d4dePc&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/81V_txlnQCE&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/MOydFottvIc&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/P92FTTBL4sw&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/W6L9mIhfkYk&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/sJmS9hRmcMc&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/g_tnwhYoOjo&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/WOU3XGn23Ck&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/avqMn9ykuR0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://bit.ly/2b024rd&#34;&gt;講義ページ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>データ解析のための統計モデリング入門 第10章 を PyMC で解く</title>
@@ -22,21 +45,49 @@
     
     <item>
       <title>LaTeX スニペット集</title>
-      <link>https://jkawamoto.github.io/blog-ja/pymc-lesson-10/</link>
+      <link>https://jkawamoto.github.io/blog-ja/latex-snippets/</link>
       <pubDate>Wed, 02 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/pymc-lesson-10/</guid>
+      <guid>https://jkawamoto.github.io/blog-ja/latex-snippets/</guid>
       <description>&lt;script src=&#34;https://gist.github.com/jkawamoto/e9f73ffab91a7fda62b3.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
     <item>
       <title>高度プログラミングサンプルコード</title>
-      <link>https://jkawamoto.github.io/blog-ja/pymc-lesson-10/</link>
+      <link>https://jkawamoto.github.io/blog-ja/programming-sample-codes/</link>
       <pubDate>Tue, 21 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/pymc-lesson-10/</guid>
+      <guid>https://jkawamoto.github.io/blog-ja/programming-sample-codes/</guid>
       <description>&lt;script src=&#34;https://gist.github.com/jkawamoto/7aca96b3ac8f96a3d769.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>bashでIPとPORT番号を取得</title>
+      <link>https://jkawamoto.github.io/blog-ja/qiita-2014-12-10/</link>
+      <pubDate>Wed, 10 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blog-ja/qiita-2014-12-10/</guid>
+      <description>
+
+&lt;p&gt;&lt;code&gt;docker run&lt;/code&gt; コマンドの &lt;code&gt;link&lt;/code&gt; オプションで受け取った環境変数を bash スクリプト内で解析する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+URL=tcp://127.0.0.1:80
+IPPORT=${URL#*//}
+
+# IP
+echo ${IPPORT%:*}
+# Port
+echo ${IPPORT#*:}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;参考:47af2e49b17f04e7b38ce80b18151268&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/ozuma/20130928/1380380390&#34;&gt;shとbashでの変数内の文字列置換など | ろば電子が詰まっている&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -132,12 +183,18 @@ WantedBy=multi-user.target
       <pubDate>Tue, 23 Sep 2014 00:00:00 +0000</pubDate>
       
       <guid>https://jkawamoto.github.io/blog-ja/switching-action-in-xslt/</guid>
-      <description>&lt;p&gt;for-each 要素 + when 要素で対応しようとしていたがうまく行かなかった．
+      <description>
+
+&lt;p&gt;for-each 要素 + when 要素で対応しようとしていたがうまく行かなかった．
 XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
 
 &lt;p&gt;XSLT 的には &lt;code&gt;apply-templetes&lt;/code&gt; 要素を使うのが正しいかと思われる．&lt;/p&gt;
 
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=jkwf4mew-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4756140653&amp;linkId=4d5fa5b3e4e13397b4b7848042e366bc&#34;&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;参考:1f1ae7033ee5f696a9cb6314e126a8bc&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2biXHm6&#34;&gt;XSLT実践ガイド―XSLTスタイルシートによるXML文書の活用法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -245,33 +302,6 @@ sudo ln -s ./9.07/Resource/Font ./font
       
       <guid>https://jkawamoto.github.io/blog-ja/reading-rss-by-python/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://pypi.python.org/pypi/feedparser&#34;&gt;feedparser&lt;/a&gt; が良さそう&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Deep Learning ライブラリのリンク集</title>
-      <link>https://jkawamoto.github.io/blog-ja/deep-learning-libraries/</link>
-      <pubDate>Mon, 09 Dec 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/blog-ja/deep-learning-libraries/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;deeplearning.net&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>改行をカンマに置換</title>
-      <link>https://jkawamoto.github.io/blog-ja/replacing-newlines/</link>
-      <pubDate>Tue, 06 Aug 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/blog-ja/replacing-newlines/</guid>
-      <description>&lt;p&gt;sed で変換するのは色々面倒で，&lt;a href=&#34;http://unicus.jp/skmk/archives/315&#34;&gt;ここ&lt;/a&gt;によると，&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ tr &#39;\n&#39; &#39;,&#39; &amp;lt; filename
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;が一番簡単．&lt;/p&gt;
 </description>
     </item>
     

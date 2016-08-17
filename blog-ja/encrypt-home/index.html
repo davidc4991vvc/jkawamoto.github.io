@@ -60,13 +60,16 @@
 			
 				<h1>ホームディレクトリを暗号化すると公開鍵認証でログインできない</h1>
 			
+			
+
 			<div class="align-right">
 				<i class="fa fa-calendar" aria-hidden="true"></i>
 				Posted: <time pubdate="2010-11-03">2010-11-03</time>,
 				Last updated: <time pubdate="2013-06-27">2013-06-27</time>
 			</div>
 
-      <p>Ubuntu 10.04 (lucid)で，深く考えずにホームディレクトリを暗号化してしまった結果，
+			<section>
+      	<p>Ubuntu 10.04 (lucid)で，深く考えずにホームディレクトリを暗号化してしまった結果，
 ssh の公開鍵認証ログインができなくなった．
 というか，ローカルコンソールでログイン済みの時は問題なく ssh でもログインできるが，
 ローカルでログインしていないと認証に失敗するようになった．
@@ -84,8 +87,10 @@ ssh の公開鍵認証ログインができなくなった．
 <pre><code class="language-sshd_config">AuthorizedKeysFile      /home/.ecryptfs/%u/.ssh/authorized_keys
 </code></pre>
 
+			</section>
 
-			<!-- AdSense -->
+			<section>
+				<!-- AdSense -->
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4734862314145555"
@@ -94,6 +99,8 @@ ssh の公開鍵認証ログインができなくなった．
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
+			</section>
 
 		</div>
 

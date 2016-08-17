@@ -60,13 +60,16 @@
 			
 				<h1>Servlet で Velocity (1.6.4) を使う</h1>
 			
+			
+
 			<div class="align-right">
 				<i class="fa fa-calendar" aria-hidden="true"></i>
 				Posted: <time pubdate="2010-10-05">2010-10-05</time>,
 				Last updated: <time pubdate="2013-06-30">2013-06-30</time>
 			</div>
 
-      <p>Servlet で Velocity を使用する場合，<code>org.apache.velocity.runtime.log.ServletLogChute</code> エラーが出ることがある．
+			<section>
+      	<p>Servlet で Velocity を使用する場合，<code>org.apache.velocity.runtime.log.ServletLogChute</code> エラーが出ることがある．
 これは，デフォルトログシステムの初期化に失敗しているからで，<code>ServletContext</code> を渡すか別のログシステムを使えば解決する．</p>
 
 <p>ServletContext を渡す場合，次のようにすれば良い．</p>
@@ -83,8 +86,10 @@ engine.init();
 <li>参考: <a href="http://bit.ly/9vALBn">Apache</a></li>
 </ul>
 
+			</section>
 
-			<!-- AdSense -->
+			<section>
+				<!-- AdSense -->
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4734862314145555"
@@ -93,6 +98,8 @@ engine.init();
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
+			</section>
 
 		</div>
 

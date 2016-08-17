@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>PDF から EPS への変換 &middot; Junpei Kawamoto</title>
+		<title>Bash &middot; Junpei Kawamoto</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Junpei Kawamoto">
@@ -57,45 +57,31 @@
 
 
 		<div id="main">
-			
-				<h1>PDF から EPS への変換</h1>
-			
-			
+			<h1></h1>
+      
+        <section>
+          
 
-			<div class="align-right">
-				<i class="fa fa-calendar" aria-hidden="true"></i>
-				Posted: <time pubdate="2014-03-09">2014-03-09</time>,
-				Last updated: <time pubdate="2014-03-09">2014-03-09</time>
-			</div>
+<p><code>docker run</code> コマンドの <code>link</code> オプションで受け取った環境変数を bash スクリプト内で解析する。</p>
 
-			<section>
-      	<pre><code class="language-sh">brew install xpdf
-pdftops -eps hoge.pdf piyo.eps
+<pre><code class="language-bash">#!/bin/bash
+URL=tcp://127.0.0.1:80
+IPPORT=${URL#*//}
+
+# IP
+echo ${IPPORT%:*}
+# Port
+echo ${IPPORT#*:}
 </code></pre>
 
-<p>フォントの問題がある場合は，</p>
+<h2 id="参考:47af2e49b17f04e7b38ce80b18151268">参考</h2>
 
-<pre><code class="language-sh">cd /usr/local/ghostscript
-sudo ln -s ./9.07/Resource/Font ./font
-</code></pre>
+<ul>
+<li><a href="http://d.hatena.ne.jp/ozuma/20130928/1380380390">shとbashでの変数内の文字列置換など | ろば電子が詰まっている</a></li>
+</ul>
 
-<p>と <code>/usr/local/etc/xpdfrc</code> を編集してフォント設定のコメントを有効にする．</p>
-
-			</section>
-
-			<section>
-				<!-- AdSense -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4734862314145555"
-     data-ad-slot="7714563027"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-			</section>
-
+        </section>
+      
 		</div>
 
 		<!-- Footer -->

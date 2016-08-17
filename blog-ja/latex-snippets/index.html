@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>PDF から EPS への変換 &middot; Junpei Kawamoto</title>
+		<title>LaTeX スニペット集 &middot; Junpei Kawamoto</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Junpei Kawamoto">
@@ -58,28 +58,18 @@
 
 		<div id="main">
 			
-				<h1>PDF から EPS への変換</h1>
+				<h1>LaTeX スニペット集</h1>
 			
 			
 
 			<div class="align-right">
 				<i class="fa fa-calendar" aria-hidden="true"></i>
-				Posted: <time pubdate="2014-03-09">2014-03-09</time>,
-				Last updated: <time pubdate="2014-03-09">2014-03-09</time>
+				Posted: <time pubdate="2015-09-02">2015-09-02</time>,
+				Last updated: <time pubdate="2015-09-02">2015-09-02</time>
 			</div>
 
 			<section>
-      	<pre><code class="language-sh">brew install xpdf
-pdftops -eps hoge.pdf piyo.eps
-</code></pre>
-
-<p>フォントの問題がある場合は，</p>
-
-<pre><code class="language-sh">cd /usr/local/ghostscript
-sudo ln -s ./9.07/Resource/Font ./font
-</code></pre>
-
-<p>と <code>/usr/local/etc/xpdfrc</code> を編集してフォント設定のコメントを有効にする．</p>
+      	<script src="https://gist.github.com/jkawamoto/e9f73ffab91a7fda62b3.js"></script>
 
 			</section>
 

@@ -59,375 +59,71 @@
 		<div id="main">
 			<h1>メモ</h1>
 
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/windows-python-library/">Python ライブラリ</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2013-03-01">2013-03-01</time>,
-						Last modified: <time pubdate="2014-11-18">2014-11-18</time>
-					</div>
-          <p>Windows 用のライブラリは，<a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">ここ</a> から探す．
- (64bit 用に自前でコンパイルするには VC コンパイラが要るため)</p>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/not-found-pdfoutput/">pdfoutput が定義されていない問題</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2013-03-01">2013-03-01</time>,
-						Last modified: <time pubdate="2013-06-30">2013-06-30</time>
-					</div>
-          <p><a href="http://www.vldb.org/pvldb/format.html">某 LaTeX スタイルファイル</a>を使ったとき，
-<code>pdfoutput</code> が定義されていないと言われてコンパイルが通らない．
-とりあえず，</p>
-
-<pre><code>\def\pdfoutput{0}
-</code></pre>
-
-<p>と書いておけば，エラーは消える．
-本当は別のパッケージやオプションで設定すべきだとは思うが・・・．</p>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/compiling-screen-256/">macで256色表示可能な screen をコンパイル</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2012-06-29">2012-06-29</time>,
-						Last modified: <time pubdate="2016-08-13">2016-08-13</time>
-					</div>
-          <p>下記のコマンドを実行する．</p>
-
-<pre><code class="language-sh">git clone git://git.savannah.gnu.org/screen.git
-cd screen/src
-./autogen.sh
-./configure --enable-colors256
-make
-sudo make install
-</code></pre>
-
-<p>上記を実行するために，automake が必要．これは，brew でインストールできる．（以下は，autoconf もインストールする例）</p>
-
-<pre><code class="language-sh">sudo brew install autoconf
-sudo brew install automake
-</code></pre>
-
-<p>256色表示できているかの確認は，<a href="ftp://ftp.fau.de/netbsd/NetBSD-release-6/xsrc/external/mit/xterm/dist/vttests/256colors2.pl">256colors2.pl</a> で行える．</p>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/aspell-from-emacs/">Aspell を用いたスペルチェック</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2012-03-06">2012-03-06</time>,
-						Last modified: <time pubdate="2014-09-18">2014-09-18</time>
-					</div>
-          <p>emacs コマンドリスト</p>
-
-<ul>
-<li>M-$ (ispell-word): カーソルの位置にある単語のチェック</li>
-<li>M-x ispell-region: リージョン内のスペルチェック</li>
-<li>M-x ispell-buffer: バッファ内すべての単語のチェック</li>
-<li>M-x ispell: 範囲選択されていれば範囲内の，そうでなければバッファ内のチェック</li>
-<li>M-x ispell-complete-word: カーソルの位置にある単語の補完</li>
-</ul>
-
-<p>スペル候補表示中のコマンドは，</p>
-
-<ul>
-<li>x: 選択一覧から抜ける</li>
-<li>q: Aspellのプロセスを中断</li>
-</ul>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/getting-gnu-make/">GNU Make を入手する</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2012-03-06">2012-03-06</time>,
-						Last modified: <time pubdate="2014-09-25">2014-09-25</time>
-					</div>
-          <p>GetGunWin32を<a href="http://sourceforge.net/projects/getgnuwin32/">ここ</a>からダウンロードする．</p>
-
-<p>GetGunWin32.exe を実行すると，GetGnuWin32フォルダが作られる．
-<code>GetGnuWin32\download.bat</code> を実行して必要なパッケージをダウンロードする．</p>
-
-<p>ダウンロードが完了したら，<code>GetGnuWin32\install.bat</code> を実行する．
-ここでインストール先を指定できる．</p>
-
-<p>あとは，環境変数にインストール先を追加すれば良い．</p>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/pull-via-proxy/">プロキシ環境から magit で pull する</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2012-03-06">2012-03-06</time>,
-						Last modified: <time pubdate="2014-09-18">2014-09-18</time>
-					</div>
-          <p>PuTTY が設定してあれば，msysgit の <code>bin/ssh.exe</code> を PuTTY の <code>plink.exe</code> に置き換えれば良い．</p>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/php-in-webcgirole/">WebCGIRoleでPHPを使う</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2011-02-10">2011-02-10</time>,
-						Last modified: <time pubdate="2013-06-30">2013-06-30</time>
-					</div>
-          <p>基本的な設定は，<a href="http://codezine.jp/article/detail/5518">ここ</a>を参考にすれば良い．
-しかし，Azure Cloud Tools 1.3 を使用している場合，<em>HTTP 500 Internal Server Error</em> が出ることがある．
-この場合，<code>ServiceDefinition.csdef</code> の <code>&lt;Sites&gt;</code> 要素を削除する必要があるらしい．</p>
-
-<pre><code class="language-xml">&lt;WebRole name=&quot;WebCgiRole1&quot; enableNativeCodeExecution=&quot;true&quot;&gt;
-  &lt;!--
-  &lt;Sites&gt;
-    &lt;Site name=&quot;Web&quot;&gt;
-      &lt;Bindings&gt;
-        &lt;Binding name=&quot;Endpoint1&quot; endpointName=&quot;Endpoint1&quot; /&gt;
-       &lt;/Bindings&gt;
-    &lt;/Site&gt;
-  &lt;/Sites&gt;
-  --&gt;
-  &lt;Endpoints&gt;
-    &lt;InputEndpoint name=&quot;Endpoint1&quot; protocol=&quot;http&quot; port=&quot;8080&quot; /&gt;
-  &lt;/Endpoints&gt;
-  &lt;Imports&gt;
-    &lt;Import moduleName=&quot;Diagnostics&quot; /&gt;
-   &lt;/Imports&gt;
-&lt;/WebRole&gt;
-</code></pre>
-
-<p>参考: <a href="http://bit.ly/19w63DG">Avkash Chauhan’s Blog</a></p>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/mod_python-and-mod_filter/">mod_python と mod_filter でフィルタを登録する際の注意</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2010-11-16">2010-11-16</time>,
-						Last modified: <time pubdate="2013-06-30">2013-06-30</time>
-					</div>
-          <p>Apache 2.2 で mod_python と mod_filter を用いてフィルタを作成する際の注意というかバグ．
-Python スクリプトをフィルタとして使う場合，まず，python 関数をフィルタプロバイダとして登録する．
-そのために，<a href="http://www.python.jp/doc/contrib/modpython/dir-filter-of.html">PythonOutputFilter ディレクティブ</a>を使用し，
-書式は次の通りになる．</p>
-
-<pre><code>PythonOutputFilter module_name provider_name
-</code></pre>
-
-<p>なお，provider_name は mod_filter 側で参照する名前である．</p>
-
-<p>mod_filter側の設定は，例えばコンテンツタイプに image が含まれるレスポンス用のフィルタを登録する場合，</p>
-
-<pre><code>FilterProvider filter_name provider_name resp=Content-Type $image
-FilterChain filter_name
-</code></pre>
-
-<p>のようになり，先ほど provider_name として登録したフィルタプロバイダを適用条件を指定してフィルタに登録する．
-二行目の FilterChain ディレクティブはフィルタの適用順序を指定している．</p>
-
-<p>適用条件毎に異なるフィルタプロバイダを登録できることが mod_filter のポイントである．
-例えば，次のようにすれば，画像フォーマット別に実行するスクリプトを切り替えることができる．</p>
-
-<pre><code>PythonOutputFilter png PNG_COMPRESSOR
-PythonOutputFilter jpg JPG_COMPRESSOR
-
-FilterProvider image_compressor PNG_COMPRESSOR resp=Content-Type image/png
-FilterProvider image_compressor JPG_COMPRESSOR resp=Content-Type image/jpeg
-FilterChain image_compressor
-</code></pre>
-
-<p>この場合，PNG には png.outputfilter 関数が，JPEG には jpg.outputfilter 関数が呼ばれる．</p>
-
-<p>前置きが長くなったが，実際には上のようなフィルタを作成することができなかった．
-そもそも，provider_name と filter_name が異なってると，</p>
-
-<pre><code>python_filter: Could not find registered filter.
-</code></pre>
-
-<p>などと言われてしまう．
-結局，一つのフィルタプロバイダごとに一つのフィルタを作成せねばならず，冗長な設定が増えるばかりである．</p>
-
-<p>なお，<a href="http://httpd.apache.org/docs/2.2/mod/mod_ext_filter.html">mod_ext_filter</a>にて登録したフィルタを
-mod_filter と組み合わせて使用する場合も provider_name と filter_name が同じでなければならない．
-mod_filter のどこかで， provider_name と filter_name を取り違えてるんじゃないかと思われるがソースコードは読んでないので不明．</p>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/historic-vs-historical/">historic と historical の違い</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2010-11-04">2010-11-04</time>,
-						Last modified: <time pubdate="2013-06-27">2013-06-27</time>
-					</div>
-          <p>今日，TLに，</p>
-
-<blockquote>
-<p>民主党大敗を報じる The Washington Timesの見出しはThe Democrats are on the verge of a historical defeat。
-やはり格落ちの所はhistoricとhistoricalを使い分けられないようで。
-(<a href="https://twitter.com/hinatakiyoto/status/29625944666">@hinatakiyoto</a>)</p>
-</blockquote>
-
-<p>というツイートがあって，historic と historical の違いが気になったので調べてみた（正確には聞いてみた）．
-詳細は，</p>
-
-<blockquote>
-<p>Historic and historical have different usages, though their senses overlap.
-Historic refers to what is important in history: the historic first voyage to the moon.
-It is also used of what is famous or interesting because of its association
-with persons or events in history: a historic house.Historical refers to whatever existed in the past,
-whether regarded as important or not: a minor historical character.
-Historical also refers to anything concerned with history or the study of the past: a historical novel;
-historical discoveries. While these distinctions are useful,
-these words are often used interchangeably, as in historic times or historical times.
-(<a href="http://www.thefreedictionary.com/historic">the Free Online Dictionary, Thesaurus and Encyclopedia.</a>)</p>
-</blockquote>
-
-<p>ということで，historical defeat だと，歴史的な方法で負けたとか古典的な戦術に負けたとかの意味になるのだろうか．
-ちなみに，-ic と -ical でどう意味が変わるのかの決まったルールは無いらしいので，個別に覚えていくしかなさそう．</p>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/scp-with-m2eclipse/">m2eclipse を使って scp でデプロイ</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2010-11-04">2010-11-04</time>,
-						Last modified: <time pubdate="2013-06-30">2013-06-30</time>
-					</div>
-          
-
-<p>Maven2 のプライベートリポジトリを作成し，
-公開鍵認証を行う scp プロトコルを用いて eclipse の <a href="http://m2eclipse.sonatype.org/]">m2eclipse プラグイン</a> からデプロイする設定のメモ．
-なお，m2eclipse version 0.10.0 に含まれる <strong>Maven 3.0-SNAPSHOT では scp 認証に失敗する</strong>．
-別途 Maven 2 系を <a href="http://maven.apache.org/">ダウンロード</a> して，eclipse のウインドウ → 設定 → Maven → インストールに追加しデフォルトに設定しておく必要がある．</p>
-
-<p>準備が整えば，scp でアクセスする Maven リポジトリの作成から始める．作成するリポジトリの ID 及び，URL は次の通りとする．</p>
-
-<ul>
-<li>ID: foo.org</li>
-<li>リポジトリ URL: scp://foo.org/var/maven2/repo</li>
-<li>スナップショットリポジトリ URL: scp://foo.org/var/maven2/reposnap</li>
-</ul>
-
-<p>つまり，/var/maven2/repo と /var/maven2/reposnap 以下にそれぞれのリポジトリ内容物を格納する．
-そのため，リポジトリを利用するユーザに /var/maven2/repo と /var/maven2/reposnap への読み書き権限を与える．</p>
-
-<p>scp プロトコルを使用するためには，wagon-ssh エクステンションが必要となるので，pom.xml の build – extendsions に以下を追加する．</p>
-
-<pre><code class="language-xml">&lt;build&gt;
-  &lt;extension&gt;
-    &lt;groupId&gt;org.apache.maven.wagon&lt;/groupId&gt;
-    &lt;artifactId&gt;wagon-ssh&lt;/artifactId&gt;
-    &lt;version&gt;1.0-beta-6&lt;/version&gt;
-  &lt;/extension&gt;
-&lt;/build&gt;
-</code></pre>
-
-<p>次に，デプロイ先の情報を登録する．pom.xml の project に以下を追加．</p>
-
-<pre><code class="language-xml">&lt;distributionManagement&gt;
-  &lt;repository&gt;
-    &lt;uniqueVersion&gt;false&lt;/uniqueVersion&gt;
-    &lt;id&gt;foo.org&lt;/id&gt;
-    &lt;name&gt;Foo.org Repository&lt;/name&gt;
-    &lt;url&gt;scp://foo.org/var/maven2/repo&lt;/url&gt;
-    &lt;layout&gt;default&lt;/layout&gt;
-  &lt;/repository&gt;
-  &lt;snapshotRepository&gt;
-    &lt;uniqueVersion&gt;true&lt;/uniqueVersion&gt;
-    &lt;id&gt;snapshot.foo.org&lt;/id&gt;
-    &lt;name&gt;Foo.org Snapshot repository&lt;/name&gt;
-    &lt;url&gt;scp://foo.org/var/maven2/reposnap&lt;/url&gt;
-    &lt;layout&gt;legacy&lt;/layout&gt;
-  &lt;/snapshotRepository&gt;
-&lt;/distributionManagement&gt;
-</code></pre>
-
-<p>最後に，ssh のログイン情報を setting.xml に記述．なお，このファイルの場所は，eclipse のウインドウ → 設定 → Maven → User Settings に書いてあるが，デフォルトでは作成されない．もしなければ自分で作成し，下記の通り書き込めば良い．</p>
-
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;settings xmlns=&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;
-          xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-          xsi:schemaLocation=&quot;http://maven.apache.org/SETTINGS/1.0.0
-          http://maven.apache.org/xsd/settings-1.0.0.xsd&quot;&gt;
-  &lt;servers&gt;
-    &lt;server&gt;
-      &lt;id&gt;foo.org&lt;/id&gt;
-      &lt;username&gt;USERNAME&lt;/username&gt;
-      &lt;privateKey&gt;PRIVATEKEY&lt;/privateKey&gt;
-      &lt;filePermissions&gt;664&lt;/filePermissions&gt;
-      &lt;directoryPermissions&gt;775&lt;/directoryPermissions&gt;
-    &lt;/server&gt;
-    &lt;server&gt;
-      &lt;id&gt;snapshot.foo.org&lt;/id&gt;
-      &lt;username&gt;USERNAME&lt;/username&gt;
-      &lt;privateKey&gt;PRIVATEKEY&lt;/privateKey&gt;
-      &lt;filePermissions&gt;664&lt;/filePermissions&gt;
-      &lt;directoryPermissions&gt;775&lt;/directoryPermissions&gt;
-    &lt;/server&gt;
-  &lt;/servers&gt;
-&lt;/settings&gt;
-</code></pre>
-
-<p>なお，USERNAME はログインユーザ名，PRIVATEKEY は秘密鍵 (openssl 形式) へのパスである．Putty 形式の秘密鍵ではエラーになるので注意．</p>
-
-<p>以上で，実行 → 実行構成 → Maven Build にて新規実行構成を追加し，
-pom.xml のあるディレクトリを基底ディレクトリに，
-ゴールをdeployに，Mavenランタイムに3.0-SNAPSHOTではなく2系列を選択して実行すればデプロイされる．うまくいかない場合は， c:/Users/<user>/.ssh に known_hosts を作成し，</p>
-
-<pre><code class="language-xml">&lt;file * known_hosts&gt;foo.org ssh-rsa PUBLICKEY&lt;/file&gt;
-</code></pre>
-
-<p>などと書く．PUBLICKEY は公開鍵，ssh-rsa の部分は鍵の種類によって変わる．公開鍵を調べるのが面倒な場合は TeraTerm の ssh_known_hosts ファイルなどからコピーすれば良い．</p>
-
-<p>作成したプライベートリポジトリを使用する場合は，pom.xml の repositories に以下を追加する．</p>
-
-<pre><code class="language-xml">&lt;repository&gt;
-  &lt;id&gt;foo.org&lt;/id&gt;
-  &lt;name&gt;Foo.org Repository&lt;/name&gt;
-  &lt;url&gt;scp://foo.org/var/maven2/repo&lt;/url&gt;
-  &lt;layout&gt;default&lt;/layout&gt;
-&lt;/repository&gt;
-&lt;repository&gt;
-  &lt;id&gt;snapshot.foo.org&lt;/id&gt;
-  &lt;name&gt;Foo.org Snapshot repository&lt;/name&gt;
-  &lt;url&gt;scp://foo.org/var/maven2/reposnap&lt;/url&gt;
-  &lt;layout&gt;legacy&lt;/layout&gt;
-&lt;/repository&gt;
-</code></pre>
-
-<p>これは，distributionManagement に記述した物とほぼ同じである．</p>
-
-<h2 id="参考:9ce9dc7ae32ddd0f457c0562548ec408">参考：</h2>
-
-<ul>
-<li><a href="http://wiki.fdiary.net/maven2/?CookBook#l31">scpを使ってデプロイする@Maven2のTipsを集めるWiki – CookBook</a></li>
-<li><a href="http://www.nulab.co.jp/kousei/chapter5/02.html">構成管理 実践入門 第5章 Maven2ベストプラクティス 社内リポジトリ – 自分たちのライブラリ置き場</a></li>
-</ul>
-
-        </section>
-      
-
-      <!-- AdSense -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4734862314145555"
-     data-ad-slot="7714563027"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
+			<section>
+				<ul>
+					
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/msra-open-dataset/">MSRA 公開の移動履歴データセット</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2013-03-14">2013-03-14</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/matplotlib-in-japanese/">matplotlib で日本語を使う</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2013-03-13">2013-03-13</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/windows-python-library/">Python ライブラリ</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2013-03-01">2013-03-01</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/not-found-pdfoutput/">pdfoutput が定義されていない問題</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2013-03-01">2013-03-01</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/compiling-screen-256/">macで256色表示可能な screen をコンパイル</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2012-06-29">2012-06-29</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/aspell-from-emacs/">Aspell を用いたスペルチェック</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2012-03-06">2012-03-06</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/getting-gnu-make/">GNU Make を入手する</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2012-03-06">2012-03-06</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/pull-via-proxy/">プロキシ環境から magit で pull する</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2012-03-06">2012-03-06</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/php-in-webcgirole/">WebCGIRoleでPHPを使う</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2011-02-10">2011-02-10</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/mod_python-and-mod_filter/">mod_python と mod_filter でフィルタを登録する際の注意</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2010-11-16">2010-11-16</time>
+						</li>
+		      
+				</ul>
+			</section>
 
 			
 				<section>
@@ -447,6 +143,17 @@ pom.xml のあるディレクトリを基底ディレクトリに，
 					</nav>
 				</section>
 			
+
+			<!-- AdSense -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4734862314145555"
+     data-ad-slot="7714563027"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 
 		</div>
 

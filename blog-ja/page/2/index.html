@@ -59,213 +59,71 @@
 		<div id="main">
 			<h1>メモ</h1>
 
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/lecture-notes-of-cryptography/">伊豆さんの楕円曲線暗号資料</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2014-02-11">2014-02-11</time>,
-						Last modified: <time pubdate="2014-02-11">2014-02-11</time>
-					</div>
-          <p>どこで公開されていたのか忘れやすいのでメモ．</p>
-
-<ul>
-<li><a href="http://researchmap.jp/mulzrkzae-42427/#_42427">http://researchmap.jp/mulzrkzae-42427/#_42427</a></li>
-</ul>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/windows8-networkname/">Windows8 でネットワーク名を変更する</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2013-12-16">2013-12-16</time>,
-						Last modified: <time pubdate="2013-12-16">2013-12-16</time>
-					</div>
-          <p>コンテキストメニューに「名前変更」を付ければ良いだけのことなのに，
-かなり面倒な手続きを踏まないと変更できない．</p>
-
-<p>まず，コントロールパネルから管理ツールを開き，ローカルセキュリティポリシーを起動．
-ネットワークリストマネージャの中に接続先のリストがあるので，変更したい接続のプロパティを開いて変更する．</p>
-
-<p>しかし，これ名前変更ではなくてエイリアスを作っているだけな気がする．
-ローカルセキュリティポリシー上では，「ネットワーク 2」 や「ネットワーク 3」のままで，
-どこの設定か分かりにくいし「説明」欄は変更できないようす．酷い設計である．</p>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/reading-rss-by-python/">python で RSS フィードを読む</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2013-12-12">2013-12-12</time>,
-						Last modified: <time pubdate="2013-12-12">2013-12-12</time>
-					</div>
-          <p><a href="https://pypi.python.org/pypi/feedparser">feedparser</a> が良さそう</p>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/deep-learning-libraries/">Deep Learning ライブラリのリンク集</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2013-12-09">2013-12-09</time>,
-						Last modified: <time pubdate="2013-12-12">2013-12-12</time>
-					</div>
-          <ul>
-<li>deeplearning.net</li>
-</ul>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/replacing-newlines/">改行をカンマに置換</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2013-08-06">2013-08-06</time>,
-						Last modified: <time pubdate="2013-08-06">2013-08-06</time>
-					</div>
-          <p>sed で変換するのは色々面倒で，<a href="http://unicus.jp/skmk/archives/315">ここ</a>によると，</p>
-
-<pre><code class="language-sh">$ tr '\n' ',' &lt; filename
-</code></pre>
-
-<p>が一番簡単．</p>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/installing-r-package/">R でのパッケージインストール</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2013-06-12">2013-06-12</time>,
-						Last modified: <time pubdate="2013-06-30">2013-06-30</time>
-					</div>
-          <p>もっと良い方法があるのかも知れないが・・・．
-ChangeAnomalyDetection パッケージをインストールする場合，ルートで R を起動し</p>
-
-<pre><code>install.packages(&quot;ChangeAnomalyDetection&quot;)
-</code></pre>
-
-<p>を実行する．
-依存パッケージがあるとエラーが出るので，
-そのエラーで必要と言われたパッケージを同様の方法でインストールしてから再度インストールする．</p>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/disable-doi/">某 BibTeX スタイルで DOI を非表示にする</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2013-04-16">2013-04-16</time>,
-						Last modified: <time pubdate="2015-12-23">2015-12-23</time>
-					</div>
-          <p>DOI を参考文献リストに載せたくない場合，bstファイルの以下の部分</p>
-
-<pre><code>FUNCTION {format.doi.url}
-{ doi empty$
-    { url empty$
-     'skip$
-     { format.online output.nonnull
-       format.url
-     }
-     if$
-    }
-    { format.online output.nonnull
-      &quot;\doi{&quot; doi &quot;}&quot; * *
-    }
-  if$
-}
-</code></pre>
-
-<p>を</p>
-
-<pre><code>FUNCTION {format.doi.url}{}
-</code></pre>
-
-<p>としておけば良い．</p>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/hadoop-cdh4-missing-hadoop-env-sh/">Hadoop CDH4 で hadoop-env.sh が見つからない</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2013-03-19">2013-03-19</time>,
-						Last modified: <time pubdate="2013-06-27">2013-06-27</time>
-					</div>
-          <p>入れ忘れていただけみたいなので，<a href="http://bit.ly/1aQ2o1R">ここ</a>からダウンロードして <code>conf</code> 以下におけば良い．</p>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/msra-open-dataset/">MSRA 公開の移動履歴データセット</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2013-03-14">2013-03-14</time>,
-						Last modified: <time pubdate="2013-08-05">2013-08-05</time>
-					</div>
-          <ul>
-<li><a href="http://research.microsoft.com/en-us/downloads/b16d359d-d164-469e-9fd4-daa38f2b2e13/">GeoLife GPS Trajectories</a></li>
-</ul>
-
-<p>Last.fm データセット</p>
-
-<ul>
-<li><a href="http://mtg.upf.edu/node/1671">Last.fm dataset 360K</a></li>
-<li><a href="http://www.dtic.upf.edu/~ocelma/MusicRecommendationDataset/lastfm-1K.html">Last.fm Dataset - 1K users</a></li>
-</ul>
-
-        </section>
-      
-        <section>
-          <h2><a href="https://jkawamoto.github.io/blog-ja/matplotlib-in-japanese/">matplotlib で日本語を使う</a></h2>
-					<div class="align-right">
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2013-03-13">2013-03-13</time>,
-						Last modified: <time pubdate="2013-06-30">2013-06-30</time>
-					</div>
-          <ol>
-<li>日本語フォントのインストール
-
-<ul>
-<li>Takao Fonts を <code>Python\Lib\site-packages\matplotlib\mpl-data\fonts\ttf</code> へ．</li>
-</ul></li>
-<li>設定ファイルの編集
-
-<ul>
-<li><code>Python\Lib\site-packages\matplotlib\mpl-data\matplotlibrc</code> を <code>~/.matplotlib/</code> にコピー</li>
-<li>FONT セクションに下記を追加 (もちろん別のフォントを使う場合はそちらを指定)</li>
-</ul></li>
-</ol>
-
-<pre><code>font.serif : TakaoPMincho
-font.sans-serif : TakaoPGothic
-</code></pre>
-
-<ol>
-<li>フォントキャッシュの削除
-
-<ul>
-<li><code>~/.matplotlib/fontList.cache</code> を削除</li>
-</ul></li>
-</ol>
-
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=jkwf4mew-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4873117488&linkId=1c608fce49e114d898097d9ea9e403c7"></iframe>
-
-        </section>
-      
-
-      <!-- AdSense -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4734862314145555"
-     data-ad-slot="7714563027"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
+			<section>
+				<ul>
+					
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/ppdm-projects/">プライバシ保護データマネジメント関連のプロジェクト</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2014-07-12">2014-07-12</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/converting-pdf-to-eps/">PDF から EPS への変換</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2014-03-09">2014-03-09</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/lecture-notes-of-cryptography/">伊豆さんの楕円曲線暗号資料</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2014-02-11">2014-02-11</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/windows8-networkname/">Windows8 でネットワーク名を変更する</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2013-12-16">2013-12-16</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/reading-rss-by-python/">python で RSS フィードを読む</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2013-12-12">2013-12-12</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/deep-learning-libraries/">Deep Learning ライブラリのリンク集</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2013-12-09">2013-12-09</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/replacing-newlines/">改行をカンマに置換</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2013-08-06">2013-08-06</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/installing-r-package/">R でのパッケージインストール</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2013-06-12">2013-06-12</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/disable-doi/">某 BibTeX スタイルで DOI を非表示にする</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2013-04-16">2013-04-16</time>
+						</li>
+		      
+						<li>
+							<a href="https://jkawamoto.github.io/blog-ja/hadoop-cdh4-missing-hadoop-env-sh/">Hadoop CDH4 で hadoop-env.sh が見つからない</a>
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							Posted: <time pubdate="2013-03-19">2013-03-19</time>
+						</li>
+		      
+				</ul>
+			</section>
 
 			
 				<section>
@@ -285,6 +143,17 @@ font.sans-serif : TakaoPGothic
 					</nav>
 				</section>
 			
+
+			<!-- AdSense -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4734862314145555"
+     data-ad-slot="7714563027"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 
 		</div>
 

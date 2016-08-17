@@ -60,13 +60,16 @@
 			
 				<h1>Upstart で Docker コンテナを起動</h1>
 			
+			
+
 			<div class="align-right">
 				<i class="fa fa-calendar" aria-hidden="true"></i>
 				Posted: <time pubdate="2014-11-08">2014-11-08</time>,
 				Last updated: <time pubdate="2014-12-07">2014-12-07</time>
 			</div>
 
-      <p>合っているのかイマイチ分かっていないけれど，下記の方法でとりあえず動いていると思う．</p>
+			<section>
+      	<p>合っているのかイマイチ分かっていないけれど，下記の方法でとりあえず動いていると思う．</p>
 
 <pre><code>start on filesystem and started docker.io
 stop on runlevel [!2345]
@@ -88,8 +91,10 @@ end script
 exec /usr/local/bin/docker run —name=foo -v /data:/var/data bar:latest
 </code></pre>
 
+			</section>
 
-			<!-- AdSense -->
+			<section>
+				<!-- AdSense -->
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4734862314145555"
@@ -98,6 +103,8 @@ exec /usr/local/bin/docker run —name=foo -v /data:/var/data bar:latest
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
+			</section>
 
 		</div>
 
