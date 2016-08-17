@@ -3,19 +3,21 @@
 		{{ partial "header" . }}
 
 		<div id="main">
-			<h1>メモ</h1>
+			<h1>Blog</h1>
 
-			<section>
-				<ul>
-					{{ range .Paginator.Pages }}
-						<li>
-							<a href="{{.Permalink}}">{{ .Title }}</a>
-							<i class="fa fa-calendar" aria-hidden="true"></i>
-							Posted: <time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-						</li>
-		      {{ end }}
-				</ul>
-			</section>
+      {{ range .Paginator.Pages }}
+        <section>
+          <h2><a href="{{.Permalink}}">{{ .Title }}</a></h2>
+					<div class="align-right">
+						<i class="fa fa-calendar" aria-hidden="true"></i>
+						Posted: <time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>,
+						Last updated: <time pubdate="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time>
+					</div>
+          {{ .Content }}
+        </section>
+      {{ end }}
+
+      {{ partial "adsense" . }}
 
 			{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
 				<section>
@@ -35,8 +37,6 @@
 					</nav>
 				</section>
 			{{ end }}
-
-			{{ partial "adsense" . }}
 
 		</div>
 

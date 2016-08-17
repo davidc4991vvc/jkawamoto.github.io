@@ -13,3 +13,8 @@ deploy:
         token: $GIT_TOKEN
         basedir: public
         branch: master
+  after-steps:
+    - kobim/notify-pushover:
+        token: $PUSHOVER_APP_TOKEN
+        user: $PUSHOVER_USER_TOKEN
+        title: Finish deploying roadie

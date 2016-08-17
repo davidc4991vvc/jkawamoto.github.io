@@ -6,15 +6,29 @@
 			{{ with .Title }}
 				<h1>{{ . }}</h1>
 			{{ end }}
+			{{ with .Params.tags }}
+			<div>
+				<i class="fa fa-tags" aria-hidden="true"></i>
+				{{ range . }}
+				{{.}}
+				{{ end }}
+			</div>
+			{{ end }}
+
 			<div class="align-right">
 				<i class="fa fa-calendar" aria-hidden="true"></i>
 				Posted: <time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>,
 				Last updated: <time pubdate="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time>
 			</div>
 
-      {{ .Content }}
+			<section>
+      	{{ .Content }}
+			</section>
 
-			{{ partial "adsense" . }}
+			<section>
+				{{ partial "adsense" . }}
+			</section>
+
 		</div>
 
 		{{ partial "footer" . }}
