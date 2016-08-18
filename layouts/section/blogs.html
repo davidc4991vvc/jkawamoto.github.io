@@ -5,10 +5,14 @@
 		<div id="main">
 			<h1>Blog</h1>
 
+			<p>
+				{{ partial "adsense" . }}
+			</p>
+
 			<ul>
 				{{ range .Paginator.Pages }}
 					<li>
-						<a href="{{.Permalink}}">{{ .Title }}</a>
+						<a href="{{.Permalink}}#main">{{ .Title }}</a>
 						&nbsp;
 						<i class="fa fa-calendar" aria-hidden="true"></i>
 						<time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
@@ -36,7 +40,6 @@
 				  </ul>
 				</nav>
 			{{ end }}
-
 
 		</div>
 
