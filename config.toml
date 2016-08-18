@@ -35,9 +35,9 @@ theme = "hugo-strata-theme"
 			"[Little Kitune studio](https://www.littlekitune.org/)"
 		]
 
-		# [[params.sidebar.nav]]
-		# 	title = "Blog"
-		# 	url = "/blogs/"
+		[[params.sidebar.nav]]
+			title = "Blog"
+			url = "/blogs/"
 
 		[[params.sidebar.nav]]
 			title = "Publications"

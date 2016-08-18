@@ -5,38 +5,37 @@
 		<div id="main">
 			<h1>メモ</h1>
 
-			<section>
-				<ul>
-					{{ range .Paginator.Pages }}
-						<li>
-							<a href="{{.Permalink}}">{{ .Title }}</a>
-							<i class="fa fa-calendar" aria-hidden="true"></i>
-							Posted: <time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-						</li>
-		      {{ end }}
-				</ul>
-			</section>
+			<ul>
+				{{ range .Paginator.Pages }}
+					<li>
+						<a href="{{.Permalink}}">{{ .Title }}</a>
+						<i class="fa fa-calendar" aria-hidden="true"></i>
+						<time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+					</li>
+	      {{ end }}
+			</ul>
+
+			<p>
+				{{ partial "adsense" . }}
+			</p>
 
 			{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-				<section>
-					<nav class="align-center" role="pagination">
-						<ul style="list-style:none;">
-							{{ if .Paginator.HasPrev }}
-								<li style="display: inline-block;">
-									<a href="{{ .Paginator.Prev.URL }}">前へ</a>
-								</li>
-							{{ end }}
-							{{ if .Paginator.HasNext }}
-								<li style="display: inline-block;">
-									<a href="{{ .Paginator.Next.URL }}">次へ</a>
-								</li>
-							{{ end }}
-					  </ul>
-					</nav>
-				</section>
+				<nav class="align-center" role="pagination">
+					<ul style="list-style:none;">
+						{{ if .Paginator.HasPrev }}
+							<li style="display: inline-block;">
+								<a href="{{ .Paginator.Prev.URL }}">前へ</a>
+							</li>
+						{{ end }}
+						{{ if .Paginator.HasNext }}
+							<li style="display: inline-block;">
+								<a href="{{ .Paginator.Next.URL }}">次へ</a>
+							</li>
+						{{ end }}
+				  </ul>
+				</nav>
 			{{ end }}
 
-			{{ partial "adsense" . }}
 
 		</div>
 

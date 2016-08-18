@@ -276,7 +276,7 @@ jsai:
   "[{{%img tulips%}}プライバシを考慮した移動系列情報解析のための安全性](http://hdl.handle.net/2241/119467),"
   {{% link scis2013 %}},
   2C2-4, 京都, 2013年1月22日～25日.
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/ss-16200430)
+  [{{%img SlideShare%}}](/blog-ja/scis2013-slide/)
 * 照屋 唯紀, *川本 淳平*, 佐久間 淳,
   "指数メカニズムによる秘密計算の出力における差分プライバシの保証,"
   {{% link scis2013 %}},
@@ -295,7 +295,7 @@ jsai:
   "[{{%img pdf%}}位置情報解析のためプライバシ保護手法](http://www.csis.u-tokyo.ac.jp/csisdays2012/csisdays2012-ra-pdf/D08.pdf),"
   [2012年度　全国共同利用研究発表大会「CSIS DAYS 2012」](http://www.csis.u-tokyo.ac.jp/csisdays2012/),
   D08, 千葉, 2012年11月3日．(Poster Paper)
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/ss-15024493)
+  [{{%img SlideShare%}}](/blog-ja/csis2012-slide/)
   [{{%img Scribd%}}](http://www.scribd.com/doc/112007635/CSIS-Poster)
 * 俵本 一輝, *川本 淳平*, 浅野 泰仁, 吉川 正俊,
   "[{{%img pdf%}}集団評価の二部グラフモデルと相互強化型解析手法](http://db-event.jpn.org/deim2011/proceedings/pdf/b10-3.pdf),"
@@ -314,7 +314,7 @@ jsai:
   [情報処理学会 研究報告「データベースシステム」(iDBフォーラム 2008)](http://db-event.jpn.org/idb2008/),
   Vol.2008, No.88, pp.79-84, 福島, 2008年9月21日～23日.
   [{{%img CiNii%}}](http://ci.nii.ac.jp/naid/110006980276)
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/idb2008)
+  [{{%img SlideShare%}}](/blog-ja/idb2008-slide/)
 * *川本 淳平*, 吉川 正俊,
   "データベースアウトソーシングにおける社会的情報漏洩防止,"
   [電子情報通信学会 技術研究報告「データ工学」(iDBフォーラム 2008)](http://db-event.jpn.org/idb2008/),
