@@ -7,8 +7,91 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
-    <lastBuildDate>Wed, 17 Aug 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Aug 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jkawamoto.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Compiling Sphinx document on Wercker</title>
+      <link>https://jkawamoto.github.io/blogs/sphinx-on-wercker/</link>
+      <pubDate>Thu, 18 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/blogs/sphinx-on-wercker/</guid>
+      <description>
+
+&lt;p&gt;After import your repository, application page looks like this. Move on the workflow tab.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-1.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-1.png&#34; alt=&#34;Fig. 1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Open configuration of the &lt;code&gt;build&lt;/code&gt; pipeline.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-2.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-2.png&#34; alt=&#34;Fig. 2&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In the configuration of the build pipeline, scroll down to Permission level.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-3.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-3.png&#34; alt=&#34;Fig. 3&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And choose &lt;code&gt;execute pipeline&lt;/code&gt; in order to prevent someone starting pipeline and see detailed logs.
+Also set &lt;code&gt;gh-pages&lt;/code&gt; to Ignore branches so that Wercker will not start building documents after pushing to &lt;code&gt;gh-pages&lt;/code&gt; branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-4.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-4.png&#34; alt=&#34;Fig. 4&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, back to the workflow tab and add a new pipeline.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-5.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-5.png&#34; alt=&#34;Fig. 5&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, we name the new pipeline &lt;code&gt;deploy&lt;/code&gt;, and hook type should be default to be chained to the build pipeline.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-6.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-6.png&#34; alt=&#34;Fig. 6&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In order to push built documents to GitHub, this pipeline should know an access token of GitHub.
+Add such key with name &lt;code&gt;GIT_TOKEN&lt;/code&gt; and protected option in the environment variables section of &lt;code&gt;deploy&lt;/code&gt; pipeline.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-7.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-7.png&#34; alt=&#34;Fig. 7&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The token can be obtained in &lt;a href=&#34;https://github.com/settings/tokens&#34;&gt;https://github.com/settings/tokens&lt;/a&gt;.
+If your repository is public, you only need a token with &lt;code&gt;public_repo&lt;/code&gt; scope. Otherwise, you may need a token with &lt;code&gt;repo&lt;/code&gt; scope.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-8.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-8.png&#34; alt=&#34;Fig. 8&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;After adding &lt;code&gt;GIT_TOKEN&lt;/code&gt;, check Permission level is Execute pipelines.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-9.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-9.png&#34; alt=&#34;Fig. 9&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, make a workflow connecting the &lt;code&gt;deploy&lt;/code&gt; pipeline to the &lt;code&gt;build&lt;/code&gt; one in Workflow tab. Make sure this workflow only runs on master branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-10.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-10.png&#34; alt=&#34;Fig. 10&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In the end, the workflow looks like the followings.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-11.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-11.png&#34; alt=&#34;Fig. 11&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, you need to add &lt;code&gt;wercker.yml&lt;/code&gt; in your branch root.
+You use Sphinx to build documents of which sources are in &lt;code&gt;docs&lt;/code&gt;. &lt;code&gt;wercker.yml&lt;/code&gt; may be there.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-wercker.yml&#34;&gt;box: jkawamoto/ghp-box
+build:
+  steps:
+    - jkawamoto/sphinx:
+        basedir: docs
+        packages: sphinx_rtd_theme
+deploy:
+  steps:
+    - jkawamoto/ghp-import:
+        token: $GIT_TOKEN
+        basedir: docs/build/html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It also specifies to install &lt;code&gt;sphinx_rtd_theme&lt;/code&gt;. Make sure after running &lt;code&gt;make html&lt;/code&gt; in &lt;code&gt;doc&lt;/code&gt; folder, your documents are in &lt;code&gt;docs/build/html&lt;/code&gt;. Otherwise, edit &lt;code&gt;basedir&lt;/code&gt; in the last line.&lt;/p&gt;
+
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jkawamoto/dockerfiles/tree/master/wercker-ghp-box&#34;&gt;jkawamoto/ghp-box&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jkawamoto/wercker-sphinx-step&#34;&gt;jkawamoto/sphinx&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jkawamoto/wercker-ghp-import-step&#34;&gt;jkawamoto/ghp-import&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>講義ビデオ: 形式言語とオートマトン</title>
@@ -83,7 +166,7 @@ echo ${IPPORT%:*}
 echo ${IPPORT#*:}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;参考:47af2e49b17f04e7b38ce80b18151268&#34;&gt;参考&lt;/h2&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/ozuma/20130928/1380380390&#34;&gt;shとbashでの変数内の文字列置換など | ろば電子が詰まっている&lt;/a&gt;&lt;/li&gt;
@@ -129,13 +212,13 @@ exec /usr/local/bin/docker run —name=foo -v /data:/var/data bar:latest
       <guid>https://jkawamoto.github.io/blog-ja/systemd-configurations/</guid>
       <description>
 
-&lt;h3 id=&#34;マウントユニット:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;マウントユニット&lt;/h3&gt;
+&lt;h3 id=&#34;マウントユニット&#34;&gt;マウントユニット&lt;/h3&gt;
 
 &lt;p&gt;ファイルシステムのマウントを設定する．
 ユニットファイルはマウントポイントによって決まり拡張子は &lt;code&gt;.mount&lt;/code&gt;．例えば，/var/data にマウントする場合，
 ユニットファイル名は &lt;code&gt;var-data.mount&lt;/code&gt; と / を - に置き換える．パスに - が含まれている場合はエスケープする．&lt;/p&gt;
 
-&lt;h4 id=&#34;nfs-を用いてマウントする例:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;NFS を用いてマウントする例&lt;/h4&gt;
+&lt;h4 id=&#34;nfs-を用いてマウントする例&#34;&gt;NFS を用いてマウントする例&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-conf&#34;&gt;[Unit]
 Description=some network hdd
@@ -150,7 +233,7 @@ Options=nolock
 WantedBy=multi-user.target
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;サービスユニット:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;サービスユニット&lt;/h3&gt;
+&lt;h3 id=&#34;サービスユニット&#34;&gt;サービスユニット&lt;/h3&gt;
 
 &lt;p&gt;Docker 用サービスを起動する設定．docker イメージの作成から行えるが，今回は既にあるイメージを起動する．&lt;/p&gt;
 
@@ -170,7 +253,7 @@ ExecStop /usr/bin/docker stop apache2
 WantedBy=multi-user.target
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;ユニットの有効化:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;ユニットの有効化&lt;/h3&gt;
+&lt;h3 id=&#34;ユニットの有効化&#34;&gt;ユニットの有効化&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ sudo systemctl enable /etc/systemd/system/var-data.mount
 &lt;/code&gt;&lt;/pre&gt;
@@ -190,7 +273,7 @@ XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
 
 &lt;p&gt;XSLT 的には &lt;code&gt;apply-templetes&lt;/code&gt; 要素を使うのが正しいかと思われる．&lt;/p&gt;
 
-&lt;h2 id=&#34;参考:1f1ae7033ee5f696a9cb6314e126a8bc&#34;&gt;参考&lt;/h2&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://amzn.to/2biXHm6&#34;&gt;XSLT実践ガイド―XSLTスタイルシートによるXML文書の活用法&lt;/a&gt;&lt;/li&gt;
@@ -292,16 +375,6 @@ sudo ln -s ./9.07/Resource/Font ./font
 &lt;p&gt;しかし，これ名前変更ではなくてエイリアスを作っているだけな気がする．
 ローカルセキュリティポリシー上では，「ネットワーク 2」 や「ネットワーク 3」のままで，
 どこの設定か分かりにくいし「説明」欄は変更できないようす．酷い設計である．&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>python で RSS フィードを読む</title>
-      <link>https://jkawamoto.github.io/blog-ja/reading-rss-by-python/</link>
-      <pubDate>Thu, 12 Dec 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/blog-ja/reading-rss-by-python/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://pypi.python.org/pypi/feedparser&#34;&gt;feedparser&lt;/a&gt; が良さそう&lt;/p&gt;
 </description>
     </item>
     

@@ -1,20 +1,19 @@
 <!DOCTYPE HTML>
-
 <html>
 	<head>
 		<title>Arm 用 OpenJDK で Selector#select の挙動がおかしい &middot; Junpei Kawamoto</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Junpei Kawamoto">
-    	<meta name="description" content="Homepage of Junpei Kawamoto.">
-    	<meta http-equiv="content-language" content="ja" />
-    	<meta name="generator" content="Hugo 0.15" />
+  	<meta name="description" content="Homepage of Junpei Kawamoto.">
+  	<meta http-equiv="content-language" content="ja" />
+  	<meta name="generator" content="Hugo 0.16" />
 		
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
 		<link rel="stylesheet" href="https://jkawamoto.github.io/css/main.css" />
 		
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
-    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="https://jkawamoto.github.io/css/custom.css">
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<script>
 		  (adsbygoogle = window.adsbygoogle || []).push({
@@ -33,6 +32,8 @@
   <br/>
   <ul style="list-style:none; text-shadow: 1px 1px 5px black; margin: 0em;">
     <li style="display: inline-block;"><a href="/#main">Home</a></li>
+    
+    <li style="display: inline-block;"><a href="/blogs/#main">Blog</a></li>
     
     <li style="display: inline-block;"><a href="/publications/#main">Publications</a></li>
     
@@ -60,16 +61,30 @@
 			
 				<h1>Arm 用 OpenJDK で Selector#select の挙動がおかしい</h1>
 			
-			
 
-			<div class="align-right">
-				<i class="fa fa-calendar" aria-hidden="true"></i>
-				Posted: <time pubdate="2010-09-22">2010-09-22</time>,
-				Last updated: <time pubdate="2013-06-30">2013-06-30</time>
-			</div>
+			<p>
+				<span>
+					<i class="fa fa-calendar" aria-hidden="true"></i>
+					Posted: <time pubdate="2010-09-22">2010-09-22</time>,
+					Modified: <time pubdate="2013-06-30">2013-06-30</time>
+				</span>
+				&nbsp;
+				
+			</p>
 
-			<section>
-      	<p>ARM 用の OpenJDK VM (OpenJDK Core VM) では，
+			<p>
+				<!-- AdSense -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4734862314145555"
+     data-ad-slot="7714563027"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+			</p>
+    	<p>ARM 用の OpenJDK VM (OpenJDK Core VM) では，
 選択できるキーが有ろうが無かろうが一つのキーも選択せずに Selector#select() が即座に返る．
 そして CPU 使用率がどんどん上がっていく．</p>
 
@@ -94,9 +109,7 @@ while(true){
 <p>選択できるキーが無い場合はともかく，実際に繋ぎに来ている場合でも無視されるので使い物にならない．
 なお，別の VM (OpenJDK Zero VM) に切り替えたところ正常に動いた．</p>
 
-			</section>
-
-			<section>
+			<p>
 				<!-- AdSense -->
 <ins class="adsbygoogle"
      style="display:block"
@@ -107,7 +120,7 @@ while(true){
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-			</section>
+			</p>
 
 		</div>
 

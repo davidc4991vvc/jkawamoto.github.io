@@ -83,7 +83,7 @@ echo ${IPPORT%:*}
 echo ${IPPORT#*:}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;参考:47af2e49b17f04e7b38ce80b18151268&#34;&gt;参考&lt;/h2&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/ozuma/20130928/1380380390&#34;&gt;shとbashでの変数内の文字列置換など | ろば電子が詰まっている&lt;/a&gt;&lt;/li&gt;
@@ -129,13 +129,13 @@ exec /usr/local/bin/docker run —name=foo -v /data:/var/data bar:latest
       <guid>https://jkawamoto.github.io/blog-ja/systemd-configurations/</guid>
       <description>
 
-&lt;h3 id=&#34;マウントユニット:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;マウントユニット&lt;/h3&gt;
+&lt;h3 id=&#34;マウントユニット&#34;&gt;マウントユニット&lt;/h3&gt;
 
 &lt;p&gt;ファイルシステムのマウントを設定する．
 ユニットファイルはマウントポイントによって決まり拡張子は &lt;code&gt;.mount&lt;/code&gt;．例えば，/var/data にマウントする場合，
 ユニットファイル名は &lt;code&gt;var-data.mount&lt;/code&gt; と / を - に置き換える．パスに - が含まれている場合はエスケープする．&lt;/p&gt;
 
-&lt;h4 id=&#34;nfs-を用いてマウントする例:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;NFS を用いてマウントする例&lt;/h4&gt;
+&lt;h4 id=&#34;nfs-を用いてマウントする例&#34;&gt;NFS を用いてマウントする例&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-conf&#34;&gt;[Unit]
 Description=some network hdd
@@ -150,7 +150,7 @@ Options=nolock
 WantedBy=multi-user.target
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;サービスユニット:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;サービスユニット&lt;/h3&gt;
+&lt;h3 id=&#34;サービスユニット&#34;&gt;サービスユニット&lt;/h3&gt;
 
 &lt;p&gt;Docker 用サービスを起動する設定．docker イメージの作成から行えるが，今回は既にあるイメージを起動する．&lt;/p&gt;
 
@@ -170,7 +170,7 @@ ExecStop /usr/bin/docker stop apache2
 WantedBy=multi-user.target
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;ユニットの有効化:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;ユニットの有効化&lt;/h3&gt;
+&lt;h3 id=&#34;ユニットの有効化&#34;&gt;ユニットの有効化&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ sudo systemctl enable /etc/systemd/system/var-data.mount
 &lt;/code&gt;&lt;/pre&gt;
@@ -190,7 +190,7 @@ XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
 
 &lt;p&gt;XSLT 的には &lt;code&gt;apply-templetes&lt;/code&gt; 要素を使うのが正しいかと思われる．&lt;/p&gt;
 
-&lt;h2 id=&#34;参考:1f1ae7033ee5f696a9cb6314e126a8bc&#34;&gt;参考&lt;/h2&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://amzn.to/2biXHm6&#34;&gt;XSLT実践ガイド―XSLTスタイルシートによるXML文書の活用法&lt;/a&gt;&lt;/li&gt;

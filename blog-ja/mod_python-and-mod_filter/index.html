@@ -1,20 +1,19 @@
 <!DOCTYPE HTML>
-
 <html>
 	<head>
 		<title>mod_python と mod_filter でフィルタを登録する際の注意 &middot; Junpei Kawamoto</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Junpei Kawamoto">
-    	<meta name="description" content="Homepage of Junpei Kawamoto.">
-    	<meta http-equiv="content-language" content="ja" />
-    	<meta name="generator" content="Hugo 0.15" />
+  	<meta name="description" content="Homepage of Junpei Kawamoto.">
+  	<meta http-equiv="content-language" content="ja" />
+  	<meta name="generator" content="Hugo 0.16" />
 		
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
 		<link rel="stylesheet" href="https://jkawamoto.github.io/css/main.css" />
 		
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
-    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="https://jkawamoto.github.io/css/custom.css">
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<script>
 		  (adsbygoogle = window.adsbygoogle || []).push({
@@ -33,6 +32,8 @@
   <br/>
   <ul style="list-style:none; text-shadow: 1px 1px 5px black; margin: 0em;">
     <li style="display: inline-block;"><a href="/#main">Home</a></li>
+    
+    <li style="display: inline-block;"><a href="/blogs/#main">Blog</a></li>
     
     <li style="display: inline-block;"><a href="/publications/#main">Publications</a></li>
     
@@ -60,16 +61,30 @@
 			
 				<h1>mod_python と mod_filter でフィルタを登録する際の注意</h1>
 			
-			
 
-			<div class="align-right">
-				<i class="fa fa-calendar" aria-hidden="true"></i>
-				Posted: <time pubdate="2010-11-16">2010-11-16</time>,
-				Last updated: <time pubdate="2013-06-30">2013-06-30</time>
-			</div>
+			<p>
+				<span>
+					<i class="fa fa-calendar" aria-hidden="true"></i>
+					Posted: <time pubdate="2010-11-16">2010-11-16</time>,
+					Modified: <time pubdate="2013-06-30">2013-06-30</time>
+				</span>
+				&nbsp;
+				
+			</p>
 
-			<section>
-      	<p>Apache 2.2 で mod_python と mod_filter を用いてフィルタを作成する際の注意というかバグ．
+			<p>
+				<!-- AdSense -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4734862314145555"
+     data-ad-slot="7714563027"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+			</p>
+    	<p>Apache 2.2 で mod_python と mod_filter を用いてフィルタを作成する際の注意というかバグ．
 Python スクリプトをフィルタとして使う場合，まず，python 関数をフィルタプロバイダとして登録する．
 そのために，<a href="http://www.python.jp/doc/contrib/modpython/dir-filter-of.html">PythonOutputFilter ディレクティブ</a>を使用し，
 書式は次の通りになる．</p>
@@ -114,9 +129,7 @@ FilterChain image_compressor
 mod_filter と組み合わせて使用する場合も provider_name と filter_name が同じでなければならない．
 mod_filter のどこかで， provider_name と filter_name を取り違えてるんじゃないかと思われるがソースコードは読んでないので不明．</p>
 
-			</section>
-
-			<section>
+			<p>
 				<!-- AdSense -->
 <ins class="adsbygoogle"
      style="display:block"
@@ -127,7 +140,7 @@ mod_filter のどこかで， provider_name と filter_name を取り違えて�
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-			</section>
+			</p>
 
 		</div>
 

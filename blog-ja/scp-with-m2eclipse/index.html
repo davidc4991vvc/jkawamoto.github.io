@@ -1,20 +1,19 @@
 <!DOCTYPE HTML>
-
 <html>
 	<head>
 		<title>m2eclipse を使って scp でデプロイ &middot; Junpei Kawamoto</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Junpei Kawamoto">
-    	<meta name="description" content="Homepage of Junpei Kawamoto.">
-    	<meta http-equiv="content-language" content="ja" />
-    	<meta name="generator" content="Hugo 0.15" />
+  	<meta name="description" content="Homepage of Junpei Kawamoto.">
+  	<meta http-equiv="content-language" content="ja" />
+  	<meta name="generator" content="Hugo 0.16" />
 		
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
 		<link rel="stylesheet" href="https://jkawamoto.github.io/css/main.css" />
 		
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
-    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="https://jkawamoto.github.io/css/custom.css">
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<script>
 		  (adsbygoogle = window.adsbygoogle || []).push({
@@ -33,6 +32,8 @@
   <br/>
   <ul style="list-style:none; text-shadow: 1px 1px 5px black; margin: 0em;">
     <li style="display: inline-block;"><a href="/#main">Home</a></li>
+    
+    <li style="display: inline-block;"><a href="/blogs/#main">Blog</a></li>
     
     <li style="display: inline-block;"><a href="/publications/#main">Publications</a></li>
     
@@ -60,16 +61,30 @@
 			
 				<h1>m2eclipse を使って scp でデプロイ</h1>
 			
-			
 
-			<div class="align-right">
-				<i class="fa fa-calendar" aria-hidden="true"></i>
-				Posted: <time pubdate="2010-11-04">2010-11-04</time>,
-				Last updated: <time pubdate="2013-06-30">2013-06-30</time>
-			</div>
+			<p>
+				<span>
+					<i class="fa fa-calendar" aria-hidden="true"></i>
+					Posted: <time pubdate="2010-11-04">2010-11-04</time>,
+					Modified: <time pubdate="2013-06-30">2013-06-30</time>
+				</span>
+				&nbsp;
+				
+			</p>
 
-			<section>
-      	
+			<p>
+				<!-- AdSense -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4734862314145555"
+     data-ad-slot="7714563027"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+			</p>
+    	
 
 <p>Maven2 のプライベートリポジトリを作成し，
 公開鍵認証を行う scp プロトコルを用いて eclipse の <a href="http://m2eclipse.sonatype.org/]">m2eclipse プラグイン</a> からデプロイする設定のメモ．
@@ -173,16 +188,14 @@ pom.xml のあるディレクトリを基底ディレクトリに，
 
 <p>これは，distributionManagement に記述した物とほぼ同じである．</p>
 
-<h2 id="参考:9ce9dc7ae32ddd0f457c0562548ec408">参考：</h2>
+<h2 id="参考">参考：</h2>
 
 <ul>
 <li><a href="http://wiki.fdiary.net/maven2/?CookBook#l31">scpを使ってデプロイする@Maven2のTipsを集めるWiki – CookBook</a></li>
 <li><a href="http://www.nulab.co.jp/kousei/chapter5/02.html">構成管理 実践入門 第5章 Maven2ベストプラクティス 社内リポジトリ – 自分たちのライブラリ置き場</a></li>
 </ul>
 
-			</section>
-
-			<section>
+			<p>
 				<!-- AdSense -->
 <ins class="adsbygoogle"
      style="display:block"
@@ -193,7 +206,7 @@ pom.xml のあるディレクトリを基底ディレクトリに，
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-			</section>
+			</p>
 
 		</div>
 
