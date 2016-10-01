@@ -17,4 +17,4 @@ deploy:
     - kobim/notify-pushover:
         token: $PUSHOVER_APP_TOKEN
         user: $PUSHOVER_USER_TOKEN
-        title: Finish deploying roadie
+        title: Finish deployment
