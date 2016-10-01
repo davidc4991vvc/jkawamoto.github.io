@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Docker on Junpei Kawamoto</title>
-    <link>https://jkawamoto.github.io/tags/docker/</link>
-    <description>Recent content in Docker on Junpei Kawamoto</description>
+    <title>Qiita on Junpei Kawamoto</title>
+    <link>https://jkawamoto.github.io/categories/qiita/</link>
+    <description>Recent content in Qiita on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
     <lastBuildDate>Wed, 10 Dec 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://jkawamoto.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jkawamoto.github.io/categories/qiita/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>bashでIPとPORT番号を取得</title>

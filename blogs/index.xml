@@ -83,7 +83,7 @@ deploy:
 
 &lt;p&gt;It also specifies to install &lt;code&gt;sphinx_rtd_theme&lt;/code&gt;. Make sure after running &lt;code&gt;make html&lt;/code&gt; in &lt;code&gt;doc&lt;/code&gt; folder, your documents are in &lt;code&gt;docs/build/html&lt;/code&gt;. Otherwise, edit &lt;code&gt;basedir&lt;/code&gt; in the last line.&lt;/p&gt;
 
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;h2 id=&#34;references:621771da372dad7b0cf1aa19329621c9&#34;&gt;References&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/jkawamoto/dockerfiles/tree/master/wercker-ghp-box&#34;&gt;jkawamoto/ghp-box&lt;/a&gt;&lt;/li&gt;

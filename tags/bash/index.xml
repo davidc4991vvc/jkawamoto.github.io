@@ -30,7 +30,7 @@ echo ${IPPORT%:*}
 echo ${IPPORT#*:}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;h2 id=&#34;参考:47af2e49b17f04e7b38ce80b18151268&#34;&gt;参考&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/ozuma/20130928/1380380390&#34;&gt;shとbashでの変数内の文字列置換など | ろば電子が詰まっている&lt;/a&gt;&lt;/li&gt;

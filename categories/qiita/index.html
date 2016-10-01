@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>python で RSS フィードを読む &middot; Junpei Kawamoto</title>
+		<title>Qiita &middot; Junpei Kawamoto</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Junpei Kawamoto">
@@ -58,47 +58,31 @@
 
 
 		<div id="main">
-			
-				<h1>python で RSS フィードを読む</h1>
-			
+			<h1></h1>
+      
+        <section>
+          
 
-			<p>
-				<span>
-					<i class="fa fa-calendar" aria-hidden="true"></i>
-					Posted: <time pubdate="2013-12-12">2013-12-12</time>,
-					Modified: <time pubdate="2013-12-12">2013-12-12</time>
-				</span>
-				&nbsp;
-				
-			</p>
+<p><code>docker run</code> コマンドの <code>link</code> オプションで受け取った環境変数を bash スクリプト内で解析する。</p>
 
-			<p>
-				<!-- AdSense -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4734862314145555"
-     data-ad-slot="7714563027"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<pre><code class="language-bash">#!/bin/bash
+URL=tcp://127.0.0.1:80
+IPPORT=${URL#*//}
 
-			</p>
-    	<p><a href="https://pypi.python.org/pypi/feedparser">feedparser</a> が良さそう</p>
+# IP
+echo ${IPPORT%:*}
+# Port
+echo ${IPPORT#*:}
+</code></pre>
 
-			<p>
-				<!-- AdSense -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4734862314145555"
-     data-ad-slot="7714563027"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<h2 id="参考:47af2e49b17f04e7b38ce80b18151268">参考</h2>
 
-			</p>
+<ul>
+<li><a href="http://d.hatena.ne.jp/ozuma/20130928/1380380390">shとbashでの変数内の文字列置換など | ろば電子が詰まっている</a></li>
+</ul>
 
+        </section>
+      
 		</div>
 
 		<!-- Footer -->
