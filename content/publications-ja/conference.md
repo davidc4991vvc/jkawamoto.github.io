@@ -80,7 +80,7 @@ weight: 2
   (**[Best paper award](http://icdim.org/icdim2011/bpaper.php)**)
   [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/private-range-query-by-perturbation-and-matrix-based-encryption)
 * Kazuki Tawaramoto, *Junpei Kawamoto*,
-  [|Yasuhito Asano](http://www.iedu.i.kyoto-u.ac.jp/intro/member/asano),
+  [Yasuhito Asano](http://www.iedu.i.kyoto-u.ac.jp/intro/member/asano),
   and [Masatoshi Yoshikawa](http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/),
   "A Bipartite Graph Model and Mutually Reinforcing Analysis for Review Sites,"
   Proc. of [the 22nd International Conference on Database and Expert Systems Applications](http://www.dexa.org/) (DEXA 2011),
