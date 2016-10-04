@@ -18,6 +18,7 @@ weight: 2
   "[{{%img qir%}}An Analysis of IT Assessment Security Maturity in Higher Education Institution](http://hdl.handle.net/2324/1566107),"
   Proc. of the International Conference on Information Science and Applications,
   pp.701-713, Vietnam, Feb. 15-18, 2016.
+  [{{%img Springer%}}](http://www.anrdoezrs.net/links/8186671/type/dlg/http://link.springer.com/chapter/10.1007%2F978-981-10-0557-2_69)
 * *Junpei Kawamoto*,
   "An Implementation of Privacy Preserving Stream Integration System",
   Proc. of the 30th International Conference on Information Networking (ICOIN 2016),
@@ -30,6 +31,7 @@ weight: 2
   "[{{%img qir%}}Hybrid Encryption Scheme using Terminal Fingerprint and its Application to Attribute-based Encryption without Key Misuse](http://hdl.handle.net/2324/1544167),"
   Proc. of the 2015 Asian Conference on Availability, Reliability and Security,
   pp.255-264, Korea, Oct. 4-7, 2015.
+  [{{%img Springer%}}](http://www.anrdoezrs.net/links/8186671/type/dlg/http://link.springer.com/chapter/10.1007%2F978-3-319-24315-3_26)
 * Zhongqiang Zhang, Hiroaki Anada, *Junpei Kawamoto*, and Kouichi Sakurai,
   "[{{%img qir%}}Detection of Illegal Players in MMORPG by Classification Algorithms](http://hdl.handle.net/2324/1498305),"
   Proc. of [the 29th IEEE International Conference on Advanced Information Networking and Applications](http://voyager.ce.fit.ac.jp/conf/aina/2015/) (AINA 2015),
@@ -42,6 +44,7 @@ weight: 2
   "[{{%img qir%}}Identity-Embedding Method for Decentralized Public-Key Infrastructure](http://hdl.handle.net/2324/1498306),"
   Proc. of [the 6th International Conference on Trustworthy Systems](http://crypto.fudan.edu.cn/intrust2014/) (InTrust 2014),
   Beijing, China, December 16-17, 2014.
+  [{{%img Springer%}}](http://www.anrdoezrs.net/links/8186671/type/dlg/http://link.springer.com/chapter/10.1007%2F978-3-319-27998-5_1)
 * *Junpei Kawamoto*, and Kouichi Sakurai,
   "[{{%img qir%}}Privacy-Aware Cloud-based Input Method Editor](http://hdl.handle.net/2324/1498307),"
   Proc. of the [IEEE/CIC ICCC 2014 Symposium on Privacy and Security in Commutations](http://www.ieee-iccc.org/) (ICCC 2014 PSC),
@@ -54,6 +57,7 @@ weight: 2
   "[{{%img qir%}}Reconstructing and Visualizing Evidence of Artifact from Firefox SessionStorage](http://hdl.handle.net/2324/1498290),"
   Proc. of [the 15th International Workshop on Information Security Applications](http://www.wisa.or.kr/),
   pp. 83-94, Jeju Island, Korea, August 25-27, 2014.
+  [{{%img Springer%}}](http://www.anrdoezrs.net/links/8186671/type/dlg/http://link.springer.com/chapter/10.1007%2F978-3-319-15087-1_7)
 * *Junpei Kawamoto* and Patricia L. Gillett,
   "[{{%img qir%}}Frequency-based Constraint Relaxation for Private Query Processing in Cloud Databases](http://hdl.handle.net/2324/1445771),"
   Proc. of [the 27th Annual IEEE Canadian Conference on Electrical and Computer Engineering](http://www.ccece2014.org/) (CCECE 2014),
@@ -82,7 +86,7 @@ weight: 2
 * Kazuki Tawaramoto, *Junpei Kawamoto*,
   [Yasuhito Asano](http://www.iedu.i.kyoto-u.ac.jp/intro/member/asano),
   and [Masatoshi Yoshikawa](http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/),
-  "A Bipartite Graph Model and Mutually Reinforcing Analysis for Review Sites,"
+  "[{{%img Springer%}}A Bipartite Graph Model and Mutually Reinforcing Analysis for Review Sites](http://www.anrdoezrs.net/links/8186671/type/dlg/http://link.springer.com/chapter/10.1007%2F978-3-642-23088-2_25),"
   Proc. of [the 22nd International Conference on Database and Expert Systems Applications](http://www.dexa.org/) (DEXA 2011),
   pp.341-348, Toulouse, France, August 31, 2011. (Acceptance rate 25%)
 * *Junpei Kawamoto* and [Masatoshi Yoshikawa](http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/),
@@ -106,7 +110,6 @@ weight: 2
   [Satoshi Oyama](https://sites.google.com/site/oyamasatoshij/), *Junpei Kawamoto*,
   [Keishi Tajima](http://www.dl.soc.i.kyoto-u.ac.jp/~tajima/index-jp.html),
   and [Katsumi Tanaka](http://www.dl.kuis.kyoto-u.ac.jp/~tanaka/index_j.html),
-  "ReCQ: Real-world Context-aware Querying,"
+  "[{{%img Springer%}}ReCQ: Real-world Context-aware Querying](http://www.anrdoezrs.net/links/8186671/type/dlg/http://link.springer.com/chapter/10.1007%2F978-3-540-74255-5_19),"
   Proc. of [the Sixth International and Interdisciplinary Conference on Modeling and Using Context](http://context-07.ruc.dk/) (CONTEXT 2007),
   LNAI Vol.4635, pp.248-262, Roskilde University, Denmark, August 20-24, 2007. (Acceptance rate 35%) (Poster Paper)
-  [{{%img Springer%}}](http://www.springerlink.com/index/k46n523225w40395)

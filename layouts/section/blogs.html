@@ -5,9 +5,11 @@
 		<div id="main">
 			<h1>Blog</h1>
 
-			<p>
-				{{ partial "adsense" . }}
-			</p>
+			<div style="padding: 10px;">
+				<p>
+					{{ partial "adsense" . }}
+				</p>
+			</div>
 
 			<ul>
 				{{ range .Paginator.Pages }}
@@ -19,6 +21,10 @@
 					</li>
 	      {{ end }}
 			</ul>
+
+			<p>
+				{{ partial "adsense" . }}
+			</p>
 
 			{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
 				<nav class="align-center" role="pagination">
