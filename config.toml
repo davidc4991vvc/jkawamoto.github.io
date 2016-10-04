@@ -110,6 +110,9 @@ theme = "hugo-strata-theme"
 - [ambassadors](https://jkawamoto.github.io/ambassadors/):
 	Yet another Ambassador pattern over SSH
 
+### Data mining
+- [Review Graph Mining](https://rgmining.github.io): Finding fraud reviewers from review data in online shops.
+
 ### Open Data & Linked Data
 - [fukuoka-city-community-space-finder](https://jkawamoto.github.io/fukuoka-city-community-space-finder/):
 	Find Community Spaces in Fukuoka City and check reservation status of them.
