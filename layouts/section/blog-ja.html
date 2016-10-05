@@ -15,15 +15,18 @@
 				{{ range .Paginator.Pages }}
 					<li>
 						<a href="{{.Permalink}}#main">{{ .Title }}</a>
+						&nbsp;
 						<i class="fa fa-calendar" aria-hidden="true"></i>
 						<time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
 					</li>
 	      {{ end }}
 			</ul>
 
-			<p>
-				{{ partial "adsense" . }}
-			</p>
+			<div style="padding: 0 10px;">
+				<p>
+					{{ partial "adsense" . }}
+				</p>
+			</div>
 
 			{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
 				<nav class="align-center" role="pagination">

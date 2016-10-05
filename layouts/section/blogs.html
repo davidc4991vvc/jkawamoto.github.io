@@ -22,9 +22,11 @@
 	      {{ end }}
 			</ul>
 
-			<p>
-				{{ partial "adsense" . }}
-			</p>
+			<div style="padding: 0 10px;">
+				<p>
+					{{ partial "adsense" . }}
+				</p>
+			</div>
 
 			{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
 				<nav class="align-center" role="pagination">
