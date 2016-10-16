@@ -6,7 +6,7 @@ theme = "hugo-strata-theme"
 
 [params]
 	# To provide some metadata for search engines feel free to add a few
-    # information about you and your website.
+  # information about you and your website.
 	name = "Junpei Kawamoto"
 	description = "Homepage of Junpei Kawamoto."
 
@@ -69,7 +69,7 @@ theme = "hugo-strata-theme"
 
 	[params.about]
 		title = "Profile"
-		content = """
+		content = '''
 ## Experience
 - 2013.9 - 2016.6: Assist. Prof. at
 	[Faculty of Information Science and Electrical Engineering](http://portal.isee.kyushu-u.ac.jp/e/),
@@ -130,7 +130,7 @@ theme = "hugo-strata-theme"
 	Testing remote CI scripts locally
 - [gii](https://jkawamoto.github.io/gii/):
 	Set repositories which doesn't belong golang project to .goimportsignore.
-"""
+'''
 
 	[params.portfolio]
 		title = "Recent Work"

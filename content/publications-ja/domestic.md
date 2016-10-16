@@ -2,6 +2,9 @@
 title: List of publications to domestic workshops.
 description: List of publications to domestic workshops.
 weight: 3
+css2016:
+  title: コンピュータセキュリティシンポジウム2016 (CSS 2016)
+  link: http://www.iwsec.org/css/2016/
 scis2016:
   title: 2016年暗号と情報セキュリティシンポジウム (SCIS 2016)
   link: http://www.iwsec.org/scis/2016/index.html
@@ -58,6 +61,22 @@ jsai:
 
 ### Not Refereed
 #### 2016
+
+* 西郷里 拓, *川本 淳平*, 櫻井 幸一, "筆画のクラスタリングを考慮した署名認証手法,"
+  {{% link css2016 %}},
+  1C4-3, 秋田, 10月11日～13日.
+* 宮崎 亮輔, *川本 淳平*, 松本 晋一, 櫻井 幸一,
+  "分散処理によるOpenFlowを用いた端末非依存なネットワーク攻撃検知手法,"
+  {{% link css2016 %}},
+  2F4-2, 秋田, 10月11日～13日.
+* 李 子怡, *川本 淳平*, フォン ヤオカイ, 櫻井 幸一,
+  "コメントの親子関係を利用したネットいじめコメントの検出,"
+  {{% link css2016 %}},
+  3E3-4, 秋田, 10月11日～13日.
+* 西郷里 拓, 櫻井 幸一, *川本 淳平*,
+  "永字八法を利用した署名認証の精度向上,"
+  [平成28年度（第69回）電気・情報関係学会九州支部連合大会](http://www.jceee-kyushu.jp/),
+  08-1A-02, 宮崎, 2015年9月29日〜30日.
 * 呂 良, フォン ヤオカイ, *川本 淳平*, 櫻井 幸一,
   "[{{%img qir%}}ランダムフォレストを用いたボットネットの検出](http://hdl.handle.net/2324/1661855),"
   2016年電子情報通信学会総合大会,
