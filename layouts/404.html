@@ -1,0 +1,42 @@
+{{ partial "head" . }}
+	<body id="top">
+		{{ partial "header" . }}
+
+		{{ "<!-- Main -->" | safeHTML }}
+		<div id="main">
+      <section id="one">
+      	<header class="major">
+      		<h2>{{ .Title }}</h2>
+      	</header>
+        <p>
+          The requested page was not found.
+          Please refer navigation links in the left column or search
+          from the following box.
+        </p>
+      </section>
+      <div>
+        <script>
+          (function() {
+            var cx = '008519838287938992645:-rrd07eyyq0';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+        </script>
+        <gcse:search></gcse:search>
+      </div>
+      <p>
+        ページが見つかりません．
+        左のナビゲーションリンクを参照するか上の検索 Box をお使いください．
+      </p>
+      <div>
+        {{ partial "adsense" . }}
+      </div>
+		</div>
+
+		{{ partial "footer" . }}
+	</body>
+</html>
