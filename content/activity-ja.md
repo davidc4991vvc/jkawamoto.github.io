@@ -1,7 +1,6 @@
 ---
 title: その他の活動
 ---
-
 ## 学会活動
 * 2013年 5月 - present:
   [電子情報通信学会](http://www.ieice.org/jpn/index.html) 査読委員
@@ -50,9 +49,9 @@ title: その他の活動
 ### 京都大学ICTイノベーション
 * 2010年 Webサービスとサービス連携におけるプライバシ
 * 2009年 クラウドコンピューティングにおける個人情報と関係情報の保護
-  [ [配布資料](http://bit.ly/Px3Ygq) ]
+  [{{%img Scribd%}}](/posters/icti2009/)
 * 2008年 Webアプリケーションにおけるプライバシー保護
-  [ [配布資料](http://bit.ly/RAoxZf) ]
+  [{{%img Scribd%}}](/posters/icti2008/)
 
 ### IPAX
 * 2008年 Webアプリケーションにおけるプライバシコントローラの開発
