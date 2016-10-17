@@ -6,7 +6,7 @@ weight: 2
 
 ## Conference/Workshop
 * Yuxuan Gao, Yaokai Feng, *Junpei Kawamoto*, and Kouichi Sakurai,
-"[{{%img qir%}}A Machine Learning Based Approach for Detecting DRDoS Attacks and Its Performance Evaluation](http://hdl.handle.net/2324/1661854),"
+  "[{{%img qir%}}A Machine Learning Based Approach for Detecting DRDoS Attacks and Its Performance Evaluation](http://hdl.handle.net/2324/1661854),"
   Proc. of the 11th Asia Joint Conference on Information Security, Fukuoka, Japan, 2016. (to appear)
 * Longzhu Cai, Yaokai Feng, *Junpei Kawamoto*, and Kouichi Sakurai,
   "[{{%img qir%}}A Behavior-based Method for Detecting DNS Amplification Attacks](http://hdl.handle.net/2324/1657554),"
@@ -62,12 +62,12 @@ weight: 2
   "[{{%img qir%}}Frequency-based Constraint Relaxation for Private Query Processing in Cloud Databases](http://hdl.handle.net/2324/1445771),"
   Proc. of [the 27th Annual IEEE Canadian Conference on Electrical and Computer Engineering](http://www.ccece2014.org/) (CCECE 2014),
   pp.1275-1280, Toronto, Canada, May 4-7, 2014.
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/frequencybased-constraint-relaxation-for-private-query-processing-in-cloud-databases)
+  [{{%img SlideShare%}}](/slides/ccece2014/)
 * *Junpei Kawamoto* and Kouichi Sakurai,
   "Privacy for Continual Data Publishing,"
   Proc. of [the Seventh Workshop among Asian Information Security Labs](http://wais2014.fudan.edu.cn/) (WAIS 2014),
   Shanghai, China, January 10-11, 2014.
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/wais2014)
+  [{{%img SlideShare%}}](/slides/wais2014/)
 * Motoki Kitahara, *Junpei Kawamoto*, and Kouichi Sakurai,
   "[{{%img qir%}}A Method of Digital Rights Management based on Electric Commerce Protocol](http://hdl.handle.net/2324/1498293),"
   Proc. of [the 8th International Conference on Ubiquitous Information Management and Communication](http://www.icuimc.org/) (IMCOM 2014),
@@ -76,13 +76,13 @@ weight: 2
   "A Locality Sensitive Hashing Filter for Encrypted Vector Databases,"
   Proc. of [International Workshop on Privacy-AwaRe Intelligent Systems](http://www.ciise.concordia.ca/newsandevents/2012/PARIS12/index.htm) (PARIS 2012),
   Macau, December, 2012. (Acceptance rate 15.8%)
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/paris2012-kawamoto)
+  [{{%img SlideShare%}}](/slides/paris2012/)
 * *Junpei Kawamoto* and [Masatoshi Yoshikawa](http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/),
   "[{{%img kurenai%}}Private Range Query by Perturbation and Matrix Based Encryption](http://hdl.handle.net/2433/147946),"
   Proc. of [the Sixth IEEE International Conference on Digital Information Management](http://www.icdim.org/) (ICDIM 2011),
   pp.211-216, Melbourne, Australia, September, 2011. (Acceptance rate 32%)
   (**[Best paper award](http://icdim.org/icdim2011/bpaper.php)**)
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/private-range-query-by-perturbation-and-matrix-based-encryption)
+  [{{%img SlideShare%}}](/slides/icdim2011/)
 * Kazuki Tawaramoto, *Junpei Kawamoto*,
   [Yasuhito Asano](http://www.iedu.i.kyoto-u.ac.jp/intro/member/asano),
   and [Masatoshi Yoshikawa](http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/),
@@ -93,7 +93,7 @@ weight: 2
   "[{{%img kurenai%}}Security of Social Information from Query Analysis in DaaS](http://hdl.handle.net/2433/148038),"
   Proc. of [the 2009 EDBT/ICDT Workshops](http://cscdb.nku.edu/pais/) (PAIS 2009),
   pp.148-152, Saint-Petersburg, Russia, March 22, 2009.
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/security-of-social-information-from-query-analysis-in-daas)
+  [{{%img SlideShare%}}](/slides/pais2009/)
 * *Junpei Kawamoto* and [Masatoshi Yoshikawa](http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/),
   "Protection of Social Information in Database Outsourcing,"
   Proc. of [the Fourth Korea-Japan Database Workshop](http://www.kde.cs.tsukuba.ac.jp/kjdb2008/) (KJDB 2008),
@@ -103,7 +103,7 @@ weight: 2
   "[{{%img kurenai%}}Reducing Data Decryption Cost by Broadcast Encryption and Account Assignment for Web Applications](http://hdl.handle.net/2433/147945),"
   Proc. of the Ninth International Conference on Web-Age Information Management (WAIM 2008),
   pp.449-454, Zhangjiajie, China, July 20-22, 2008. (Acceptance rate 33.5%) (Short Paper)
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/reducing-data-decryption-cost-by-broadcast-encryption-and-account-assignment-for-web-applications)
+  [{{%img SlideShare%}}](/slides/waim2008/)
 * [Shun Hattori](http://www2.teu.ac.jp/kmdit/~hattori/index.html),
   [Taro Tezuka](http://xi.kc.tsukuba.ac.jp/taro_e.html),
   [Hiroaki Ohshima](http://www.dl.kuis.kyoto-u.ac.jp/~ohshima/wiki/),

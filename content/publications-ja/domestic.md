@@ -43,21 +43,21 @@ jsai:
   "[{{%img tulips%}}プライベート問合せにおける問合せ頻度を用いた制約緩和手法](http://hdl.handle.net/2241/119465),"
   [第5回 Webとデータベースに関するフォーラム](http://db-event.jpn.org/webdbf2012/) (WebDBフォーラム 2012),
   情報処理学会シンポジウムシリーズ Vol.2012, No.5, A2-1, 東京, 2012年11月20日～21日.
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/ss-16208040)
-  [{{%img Scribd%}}](http://bit.ly/TnB5RH)
+  [{{%img SlideShare%}}](/slides/webdbf2012/)
+  [{{%img Scribd%}}](/posters/webdbf2012/)
 * *川本 淳平*, [吉川 正俊](http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/),
   "[{{%img kurenai%}}データ共有型 Web アプリケーションにおけるサーバ暗号化](http://hdl.handle.net/2433/147388),"
   データベースとWeb情報システムに関するシンポジウム (DBWeb 2007),
   情報処理学会シンポジウムシリーズ, Vol.2007, No.3, 3A-1, 東京, 2007年11月27日～28日.
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/db-web2007)
+  [{{%img SlideShare%}}](/slides/dbweb2007/)
 * *川本 淳平*, [田中 克己](http://www.dl.kuis.kyoto-u.ac.jp/~tanaka/index_j.html),
   [田島 敬史](http://www.dl.soc.i.kyoto-u.ac.jp/~tajima/index-jp.html),
   "[{{%img kurenai%}}クエリログとナビゲーション履歴からの探索意図抽出による協調探索支援](http://hdl.handle.net/2433/147392),"
   [電子情報通信学会 第18回データ工学ワークショップ](http://www.dbsj.org/dews2007/) (DEWS 2007),
   C7-6, 広島, 2007年2月28日～3月2日.
   [{{%img CiNii%}}](http://ci.nii.ac.jp/naid/120003437082)
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/dews2007-30243656)
-  [{{%img Scribd%}}](http://bit.ly/U0h6ah)
+  [{{%img SlideShare%}}](/slides/dews2007/)
+  [{{%img Scribd%}}](/posters/dews2007/)
 
 ### Not Refereed
 #### 2016
@@ -97,7 +97,7 @@ jsai:
 * *川本 淳平*, 浅野 泰仁, 俵本 一輝, 吉川 正俊,
   "[{{%img pdf%}}レビューサイトにおける不均質性を考慮した特異なレビュアー発見とレビューサマリの推測](http://db-event.jpn.org/deim2016/papers/357.pdf),"
   第8回データ工学と情報マネジメントに関するフォーラム, G6-3, 福岡, 2016年2月29日～3月2日.
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/ss-59672505)
+  [{{%img SlideShare%}}](/slides/deim2016/)
 * 宮崎 亮輔, *川本 淳平*, 松本 晋一, 櫻井 幸一,
   "[{{%img qir%}}実ネットワーク環境におけるOpenFlowを用いた端末非依存型検知方式の評価](http://hdl.handle.net/2324/1661858),"
   {{% link scis2016 %}},
@@ -167,7 +167,7 @@ jsai:
   "[{{%img pdf%}}初期レビューを用いた長期間評価推定](http://db-event.jpn.org/deim2015/paper/253.pdf),"
   [第7回データ工学と情報マネジメントに関するフォーラム](http://db-event.jpn.org/deim2015),
   D3-6, 福島, 2015年3月2日～4日.
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/deim2015-45470497)
+  [{{%img SlideShare%}}](/slides/deim2015/)
 * 王 サン, フォン ヤオカイ, *川本 淳平*, 堀 良彰, 櫻井 幸一,
   "[{{%img qir%}}挙動に基づくポートスキャン検知手法に向けたパラメータなしの学習アルゴリズムの提案とその性能評価](http://hdl.handle.net/2324/1662073),"
   {{% link scis2015 %}},
@@ -243,7 +243,7 @@ jsai:
   "[{{%img qir%}}暗号化データベースモデルにおける問合せの関連情報を秘匿する範囲検索](http://hdl.handle.net/2324/1398220),"
   {{% link scis2014 %}},
   1B2-4, 鹿児島, 2014年 1月.
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/scis2014)
+  [{{%img SlideShare%}}](/slides/scis2014/)
 * 北原 基貴, *川本 淳平*, 櫻井 幸一,
   "[{{%img qir%}}Bitcoin プロトコルの拡張による著作権管理方式の提案](http://hdl.handle.net/2324/1662106),"
   {{% link scis2014 %}},
@@ -262,8 +262,8 @@ jsai:
   [{{%img qir%}}暗号化ベクトルデータベースのための索引構造](http://hdl.handle.net/2241/119980),"
   {{% link css2013 %}},
   3B4-1, 高松, 2013年10月23日.
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/css2013)
   [{{%img CiNii%}}](http://ci.nii.ac.jp/naid/170000080867)
+  [{{%img SlideShare%}}](/slides/css2013/)
 * 北原 基貴, *川本 淳平*, 櫻井 幸一,
   "[{{%img qir%}}電子現金プロトコルを用いた著作権管理システムの提案](http://hdl.handle.net/2324/1662079),"
   {{% link css2013 %}},
@@ -274,7 +274,7 @@ jsai:
   [情報処理学会 第157回データベースシステム・第111回情報基礎とアクセス技術合同研究発表会](http://www.ipsj.or.jp/kenkyukai/event/dbs157ifat111.html),
   札幌, 2013年7月22日.
   [{{%img CiNii%}}](http://ci.nii.ac.jp/naid/40019733242)
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/dbs2013)
+  [{{%img SlideShare%}}](/slides/dbs2013-slide/)
 * Shuang Wu, *Junpei Kawamoto*, Hiroaki Kikuchi, Jun Sakuma,
   "Privacy-preserving Online Logistic Regression Based on Homomorphic Encryption",
   [電子情報通信学会 第13回 情報論的学習理論と機械学習研究会](http://ibisml.org/),
@@ -285,7 +285,7 @@ jsai:
   {{% link jsai2013 %}},
   1C4-3, 富山, 2013年6月4日～7日.
   [{{%img CiNii%}}](http://ci.nii.ac.jp/naid/40020295573)
-  [{{%img SlideShare%}}](http://www.slideshare.net/jkawamoto/jsai2013-22423016)
+  [{{%img SlideShare%}}](/slides/jsai2013-slide/)
 * Shuang Wu, Tadanori Teruya, *Junpei Kawamoto*, Jun Sakuma, Hiroaki Kikuchi,
   "[{{%img pdf%}}Privacy-preserving Logistic Regression](https://kaigi.org/jsai/webprogram/2013/pdf/596.pdf),"
   {{% link jsai2013 %}},
@@ -294,7 +294,7 @@ jsai:
   "[{{%img tulips%}}プライバシを考慮した移動系列情報解析のための安全性](http://hdl.handle.net/2241/119467),"
   {{% link scis2013 %}},
   2C2-4, 京都, 2013年1月22日～25日.
-  [{{%img SlideShare%}}](/blog-ja/scis2013-slide/)
+  [{{%img SlideShare%}}](/slides/scis2013-slide/)
 * 照屋 唯紀, *川本 淳平*, 佐久間 淳,
   "指数メカニズムによる秘密計算の出力における差分プライバシの保証,"
   {{% link scis2013 %}},
@@ -313,8 +313,8 @@ jsai:
   "[{{%img pdf%}}位置情報解析のためプライバシ保護手法](http://www.csis.u-tokyo.ac.jp/csisdays2012/csisdays2012-ra-pdf/D08.pdf),"
   [2012年度　全国共同利用研究発表大会「CSIS DAYS 2012」](http://www.csis.u-tokyo.ac.jp/csisdays2012/),
   D08, 千葉, 2012年11月3日．(Poster Paper)
-  [{{%img SlideShare%}}](/blog-ja/csis2012-slide/)
-  [{{%img Scribd%}}](http://www.scribd.com/doc/112007635/CSIS-Poster)
+  [{{%img SlideShare%}}](/slides/csis2012-slide/)
+  [{{%img Scribd%}}](/posters/csisdays2012/)
 * 俵本 一輝, *川本 淳平*, 浅野 泰仁, 吉川 正俊,
   "[{{%img pdf%}}集団評価の二部グラフモデルと相互強化型解析手法](http://db-event.jpn.org/deim2011/proceedings/pdf/b10-3.pdf),"
   [第3回データ工学と情報マネジメントに関するフォーラム (DEIM 2011)](http://db-event.jpn.org/deim2011/),
@@ -332,13 +332,13 @@ jsai:
   [情報処理学会 研究報告「データベースシステム」(iDBフォーラム 2008)](http://db-event.jpn.org/idb2008/),
   Vol.2008, No.88, pp.79-84, 福島, 2008年9月21日～23日.
   [{{%img CiNii%}}](http://ci.nii.ac.jp/naid/110006980276)
-  [{{%img SlideShare%}}](/blog-ja/idb2008-slide/)
+  [{{%img SlideShare%}}](/slides/idb2008-slide/)
 * *川本 淳平*, 吉川 正俊,
   "データベースアウトソーシングにおける社会的情報漏洩防止,"
   [電子情報通信学会 技術研究報告「データ工学」(iDBフォーラム 2008)](http://db-event.jpn.org/idb2008/),
   Vol.108, No.211, pp.13-14, 福島, 2008年9月21日～23日. (Poster Paper)
   [{{%img CiNii%}}](http://ci.nii.ac.jp/naid/110007100394)
-  [{{%img Scribd%}}](http://bit.ly/YlVsom)
+  [{{%img Scribd%}}](/posters/idb2008/)
 * *川本 淳平*, 吉川 正俊,
   "[{{%img kurenai%}}Webアプリケーションにおけるプライバシ保護のためのフィルタリングシステムの開発](http://hdl.handle.net/2433/148001),"
   電子情報通信学会 第10回 [Webインテリジェンスとインタラクション研究会](http://www.ieice.org/~wi2/),
