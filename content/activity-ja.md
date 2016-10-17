@@ -59,7 +59,7 @@ title: その他の活動
 ## 未踏ソフトウェア
 * IPA 2007年度第Ⅱ期未踏ソフトウェア創造事業「未踏ユース」,
   “Webアプリケーションにおけるプライバシコントローラの開発”
-  [ [資料](http://www.ipa.go.jp/about/jigyoseika/07fy-pro/youth/2007-0849a.pdf) ]
+  [{{%img pdf%}}](http://www.ipa.go.jp/about/jigyoseika/07fy-pro/youth/2007-0849a.pdf)
 
 ## TA/RA
 * 2009年度 計算機科学実験及演習2 – ソフトウェア TA (京都大学 工学部 情報学科 2回生向け)
