@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>https://jkawamoto.github.io/slides/deim2016/</loc>
+    <lastmod>2016-02-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jkawamoto.github.io/blog-ja/latex-snippets/</loc>
     <lastmod>2015-09-02T00:00:00+00:00</lastmod>
   </url>
@@ -30,6 +35,11 @@
   <url>
     <loc>https://jkawamoto.github.io/blog-ja/programming-sample-codes/</loc>
     <lastmod>2015-07-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/slides/deim2015/</loc>
+    <lastmod>2015-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -68,6 +78,11 @@
   </url>
   
   <url>
+    <loc>https://jkawamoto.github.io/slides/ccece2014/</loc>
+    <lastmod>2014-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jkawamoto.github.io/blog-ja/converting-pdf-to-eps/</loc>
     <lastmod>2014-03-09T00:00:00+00:00</lastmod>
   </url>
@@ -75,6 +90,16 @@
   <url>
     <loc>https://jkawamoto.github.io/blog-ja/lecture-notes-of-cryptography/</loc>
     <lastmod>2014-02-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/slides/scis2014/</loc>
+    <lastmod>2014-01-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/slides/wais2014/</loc>
+    <lastmod>2014-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -93,13 +118,28 @@
   </url>
   
   <url>
+    <loc>https://jkawamoto.github.io/slides/css2013/</loc>
+    <lastmod>2013-10-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jkawamoto.github.io/blog-ja/replacing-newlines/</loc>
     <lastmod>2013-08-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://jkawamoto.github.io/slides/dbs2013-slide/</loc>
+    <lastmod>2013-07-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jkawamoto.github.io/blog-ja/installing-r-package/</loc>
     <lastmod>2013-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/slides/jsai2013-slide/</loc>
+    <lastmod>2013-06-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -133,12 +173,32 @@
   </url>
   
   <url>
-    <loc>https://jkawamoto.github.io/blog-ja/scis2013-slide/</loc>
+    <loc>https://jkawamoto.github.io/slides/scis2013-slide/</loc>
     <lastmod>2013-01-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jkawamoto.github.io/blog-ja/csis2012-slide/</loc>
+    <loc>https://jkawamoto.github.io/slides/paris2012/</loc>
+    <lastmod>2012-12-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/posters/webdbf2012/</loc>
+    <lastmod>2012-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/slides/webdbf2012/</loc>
+    <lastmod>2012-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/posters/csisdays2012/</loc>
+    <lastmod>2012-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/slides/csis2012-slide/</loc>
     <lastmod>2012-11-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -160,6 +220,11 @@
   <url>
     <loc>https://jkawamoto.github.io/blog-ja/pull-via-proxy/</loc>
     <lastmod>2014-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/slides/icdim2011/</loc>
+    <lastmod>2011-09-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -198,8 +263,38 @@
   </url>
   
   <url>
-    <loc>https://jkawamoto.github.io/blog-ja/idb2008-slide/</loc>
+    <loc>https://jkawamoto.github.io/slides/pais2009/</loc>
+    <lastmod>2009-03-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/slides/idb2008-slide/</loc>
     <lastmod>2008-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/posters/idb2008/</loc>
+    <lastmod>2008-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/slides/waim2008/</loc>
+    <lastmod>2008-07-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/slides/dbweb2007/</loc>
+    <lastmod>2007-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/posters/dews2007/</loc>
+    <lastmod>2007-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jkawamoto.github.io/slides/dews2007/</loc>
+    <lastmod>2007-02-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>

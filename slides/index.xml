@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Slide on Junpei Kawamoto</title>
-    <link>https://jkawamoto.github.io/categories/slide/</link>
-    <description>Recent content in Slide on Junpei Kawamoto</description>
+    <title>Slides on Junpei Kawamoto</title>
+    <link>https://jkawamoto.github.io/slides/</link>
+    <description>Recent content in Slides on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
     <lastBuildDate>Mon, 29 Feb 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://jkawamoto.github.io/categories/slide/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jkawamoto.github.io/slides/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>レビューサイトにおける不均質性を考慮した特異なレビュアー発見とレビューサマリの推測</title>
@@ -91,6 +91,16 @@
     </item>
     
     <item>
+      <title>プライバシを考慮した移動系列情報解析のための安全性の提案</title>
+      <link>https://jkawamoto.github.io/slides/scis2013-slide/</link>
+      <pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/slides/scis2013-slide/</guid>
+      <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/4HvIBftg3QjbRu&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
       <title>A Locality Sensitive Hashing Filter for Encrypted Vector Databases</title>
       <link>https://jkawamoto.github.io/slides/paris2012/</link>
       <pubDate>Tue, 04 Dec 2012 00:00:00 +0000</pubDate>
@@ -107,6 +117,16 @@
       
       <guid>https://jkawamoto.github.io/slides/webdbf2012/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/44q9fswJik1xnm&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>位置情報解析のためプライバシ保護手法</title>
+      <link>https://jkawamoto.github.io/slides/csis2012-slide/</link>
+      <pubDate>Sat, 03 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/slides/csis2012-slide/</guid>
+      <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/quCb5J44hoIyUY&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt;
 </description>
     </item>
     
@@ -137,26 +157,6 @@
       
       <guid>https://jkawamoto.github.io/slides/idb2008-slide/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/3bv0266I1d9E6Z&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Reducing Data Decryption Cost by Broadcast Encryption and Account Assignment for Web Applications</title>
-      <link>https://jkawamoto.github.io/slides/waim2008/</link>
-      <pubDate>Tue, 22 Jul 2008 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/slides/waim2008/</guid>
-      <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/dgXdohCJhQmzkU&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; 
-</description>
-    </item>
-    
-    <item>
-      <title>データ共有型 Web アプリケーションにおけるサーバ暗号化</title>
-      <link>https://jkawamoto.github.io/slides/dbweb2007/</link>
-      <pubDate>Tue, 27 Nov 2007 00:00:00 +0000</pubDate>
-      
-      <guid>https://jkawamoto.github.io/slides/dbweb2007/</guid>
-      <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/47aingX5RszHKE&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; 
 </description>
     </item>
     
