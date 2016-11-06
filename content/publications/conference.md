@@ -5,15 +5,26 @@ weight: 2
 ---
 
 ## Conference/Workshop
+* Ryosuke Miyazaki, *Junpei Kawamoto*, Shinichi Matsumoto, and Kouichi Sakurai,
+  "Host Independent and Distributed Detection System of the Network Attack by Using OpenFlow,"
+  Proc. of the 31st International Conference on Information Networking (ICOIN 2017),
+  Vietnam, 2017. (to appear).
+* Ziyi Li, *Junpei Kawamoto*, Yaokai Feng, and Kouichi Sakurai,
+  "Cyberbullying Detection Using Parent-Child Relationship between Comments,"
+  Proc. of the 18th International Conference on Information Integration and Web-based Applications & Services (iiWAS2016),
+  Singapore, Nov. 23-30, 2016. (to appear)
 * Yuxuan Gao, Yaokai Feng, *Junpei Kawamoto*, and Kouichi Sakurai,
   "[{{%img qir%}}A Machine Learning Based Approach for Detecting DRDoS Attacks and Its Performance Evaluation](http://hdl.handle.net/2324/1661854),"
-  Proc. of the 11th Asia Joint Conference on Information Security, Fukuoka, Japan, 2016. (to appear)
+  Proc. of [the 11th Asia Joint Conference on Information Security](http://ipsr.ynu.ac.jp/asiajcis2016/index.html),
+  Fukuoka, Japan, Aug.4-5, 2016.
 * Longzhu Cai, Yaokai Feng, *Junpei Kawamoto*, and Kouichi Sakurai,
   "[{{%img qir%}}A Behavior-based Method for Detecting DNS Amplification Attacks](http://hdl.handle.net/2324/1657554),"
-  Proc. of the 10th International Workshop on Advances in Infromation Security, Fukuoka, Japan, 2016. (to appear)
+  Proc. of [the 10th International Workshop on Advances in Information Security](http://voyager.ce.fit.ac.jp/conf/WAIS/2016/),
+  Fukuoka, Japan, July 6, 2016.
 * Pengfei Li, Yaokai Feng, *Junpei Kawamoto*, and Kouichi Sakurai,
   "[{{%img qir%}}A Proposal for Cyber-Attack Trace-back Using Packet Marking and Logging](http://hdl.handle.net/2324/1657555),"
-  Proc. of the 10th International Workshop on Advances in Infromation Security, Fukuoka, Japan, 2016. (to appear)
+  Proc. of [the 10th International Workshop on Advances in Information Security](http://voyager.ce.fit.ac.jp/conf/WAIS/2016/),
+  Fukuoka, Japan, July 6, 2016.
 * Misni Harjo Suwito, Shinchi Matsumoto, *Junpei Kawamoto*, Dieter Gollmann, and Kouichi Sakurai,
   "[{{%img qir%}}An Analysis of IT Assessment Security Maturity in Higher Education Institution](http://hdl.handle.net/2324/1566107),"
   Proc. of the International Conference on Information Science and Applications,
