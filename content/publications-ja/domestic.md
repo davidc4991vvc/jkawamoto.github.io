@@ -349,7 +349,7 @@ jsai:
 
 ## Others
 * *川本 淳平*, 須賀 祐治,
-  "IEEE Symposium on Security and Privacy 2014 参加報告,"
+  "[{{%img ipsj%}}IEEE Symposium on Security and Privacy 2014 参加報告](http://id.nii.ac.jp/1001/00106673/),"
   {{% link css2014 %}},
   北海道, 3E4-2, 2014年10月22日～24日.
   [{{%img CiNii%}}](http://ci.nii.ac.jp/naid/170000087416)
