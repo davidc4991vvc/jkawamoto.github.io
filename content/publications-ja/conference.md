@@ -5,10 +5,14 @@ weight: 2
 ---
 
 ## Conference/Workshop
+* Taku Nishigori, *Junpei Kawamoto*, and Kouichi Sakurai,
+  "Improving the accuracy of signature authentication using the Eight Principles of Yong,"
+  Proc. of the 11th International Conference on Ubiquitous Information Management and Communication (IMCOM 2017),
+  Oita, Japan, 2017. (to appear)
 * Ryosuke Miyazaki, *Junpei Kawamoto*, Shinichi Matsumoto, and Kouichi Sakurai,
   "Host Independent and Distributed Detection System of the Network Attack by Using OpenFlow,"
   Proc. of the 31st International Conference on Information Networking (ICOIN 2017),
-  Vietnam, 2017. (to appear).
+  Vietnam, 2017. (to appear)
 * Ziyi Li, *Junpei Kawamoto*, Yaokai Feng, and Kouichi Sakurai,
   "Cyberbullying Detection Using Parent-Child Relationship between Comments,"
   Proc. of the 18th International Conference on Information Integration and Web-based Applications & Services (iiWAS2016),
