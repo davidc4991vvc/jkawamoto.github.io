@@ -1,47 +1,50 @@
 {{ partial "head" . }}
 	<body id="top">
-		{{ partial "header" . }}
+		<div class="remodal-bg">
+			{{ partial "header" . }}
 
-		<div id="main">
-			{{ with .Title }}
-				<h1>{{ . }}</h1>
-			{{ end }}
-
-			<p>
-				<span>
-					<i class="fa fa-calendar" aria-hidden="true"></i>
-					Posted: <time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>,
-					Modified: <time pubdate="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time>
-				</span>
-				&nbsp;
-				{{ with .Params.tags }}
-				<spna>
-					<i class="fa fa-tags" aria-hidden="true"></i>
-					{{ range . }}
-					{{.}}
-					{{ end }}
-				</span>
+			<div id="main">
+				{{ with .Title }}
+					<h1>{{ . }}</h1>
 				{{ end }}
-			</p>
 
-			<div class="addthis_inline_share_toolbox"></div>
-
-			<div style="padding: 10px;">
 				<p>
-					{{ partial "responsive-ad" . }}
+					<span>
+						<i class="fa fa-calendar" aria-hidden="true"></i>
+						Posted: <time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>,
+						Modified: <time pubdate="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time>
+					</span>
+					&nbsp;
+					{{ with .Params.tags }}
+					<spna>
+						<i class="fa fa-tags" aria-hidden="true"></i>
+						{{ range . }}
+						{{.}}
+						{{ end }}
+					</span>
+					{{ end }}
 				</p>
+
+				<div class="addthis_inline_share_toolbox"></div>
+
+				<div style="padding: 10px;">
+					<p>
+						{{ partial "responsive-ad" . }}
+					</p>
+				</div>
+
+	    	{{ .Content }}
+
+				<div class="addthis_relatedposts_inline"></div>
+
+				<p>
+					{{ partial "rectangle-ad" . }}
+				</p>
+
 			</div>
 
-    	{{ .Content }}
-
-			<div class="addthis_relatedposts_inline"></div>
-
-			<p>
-				{{ partial "rectangle-ad" . }}
-			</p>
-
+			{{ partial "footer" . }}
 		</div>
-
-		{{ partial "footer" . }}
+		{{ partial "wallet" . }}
 	</body>
 </html>

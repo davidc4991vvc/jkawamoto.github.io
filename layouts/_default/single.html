@@ -1,17 +1,20 @@
 {{ partial "head" . }}
 	<body id="top">
-		{{ partial "header" . }}
+		<div class="remodal-bg">
+			{{ partial "header" . }}
 
-		<div id="main">
-			{{ with .Title }}
-				<h1>{{ . }}</h1>
-			{{ end }}
+			<div id="main">
+				{{ with .Title }}
+					<h1>{{ . }}</h1>
+				{{ end }}
 
-      {{ .Content }}
+	      {{ .Content }}
 
-			{{ partial "responsive-ad" . }}
+				{{ partial "responsive-ad" . }}
+			</div>
+
+			{{ partial "footer" . }}
 		</div>
-
-		{{ partial "footer" . }}
+		{{ partial "wallet" . }}
 	</body>
 </html>
