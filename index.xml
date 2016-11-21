@@ -2,68 +2,68 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Junpei Kawamoto</title>
-    <link>https://jkawamoto.github.io/</link>
+    <link>https://www.jkawamoto.info/</link>
     <description>Recent content on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
     <lastBuildDate>Thu, 18 Aug 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://jkawamoto.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.jkawamoto.info/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Compiling Sphinx document on Wercker</title>
-      <link>https://jkawamoto.github.io/blogs/sphinx-on-wercker/</link>
+      <title>Compiling a Sphinx document on Wercker</title>
+      <link>https://www.jkawamoto.info/blogs/sphinx-on-wercker/</link>
       <pubDate>Thu, 18 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blogs/sphinx-on-wercker/</guid>
+      <guid>https://www.jkawamoto.info/blogs/sphinx-on-wercker/</guid>
       <description>
 
 &lt;p&gt;After import your repository, application page looks like this. Move on the workflow tab.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-1.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-1.png&#34; alt=&#34;Fig. 1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-1.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-1.png&#34; alt=&#34;Fig. 1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Open configuration of the &lt;code&gt;build&lt;/code&gt; pipeline.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-2.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-2.png&#34; alt=&#34;Fig. 2&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-2.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-2.png&#34; alt=&#34;Fig. 2&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;In the configuration of the build pipeline, scroll down to Permission level.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-3.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-3.png&#34; alt=&#34;Fig. 3&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-3.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-3.png&#34; alt=&#34;Fig. 3&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;And choose &lt;code&gt;execute pipeline&lt;/code&gt; in order to prevent someone starting pipeline and see detailed logs.
 Also set &lt;code&gt;gh-pages&lt;/code&gt; to Ignore branches so that Wercker will not start building documents after pushing to &lt;code&gt;gh-pages&lt;/code&gt; branch.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-4.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-4.png&#34; alt=&#34;Fig. 4&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-4.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-4.png&#34; alt=&#34;Fig. 4&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Then, back to the workflow tab and add a new pipeline.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-5.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-5.png&#34; alt=&#34;Fig. 5&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-5.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-5.png&#34; alt=&#34;Fig. 5&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Now, we name the new pipeline &lt;code&gt;deploy&lt;/code&gt;, and hook type should be default to be chained to the build pipeline.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-6.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-6.png&#34; alt=&#34;Fig. 6&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-6.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-6.png&#34; alt=&#34;Fig. 6&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;In order to push built documents to GitHub, this pipeline should know an access token of GitHub.
 Add such key with name &lt;code&gt;GIT_TOKEN&lt;/code&gt; and protected option in the environment variables section of &lt;code&gt;deploy&lt;/code&gt; pipeline.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-7.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-7.png&#34; alt=&#34;Fig. 7&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-7.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-7.png&#34; alt=&#34;Fig. 7&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The token can be obtained in &lt;a href=&#34;https://github.com/settings/tokens&#34;&gt;https://github.com/settings/tokens&lt;/a&gt;.
 If your repository is public, you only need a token with &lt;code&gt;public_repo&lt;/code&gt; scope. Otherwise, you may need a token with &lt;code&gt;repo&lt;/code&gt; scope.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-8.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-8.png&#34; alt=&#34;Fig. 8&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-8.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-8.png&#34; alt=&#34;Fig. 8&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;After adding &lt;code&gt;GIT_TOKEN&lt;/code&gt;, check Permission level is Execute pipelines.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-9.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-9.png&#34; alt=&#34;Fig. 9&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-9.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-9.png&#34; alt=&#34;Fig. 9&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Next, make a workflow connecting the &lt;code&gt;deploy&lt;/code&gt; pipeline to the &lt;code&gt;build&lt;/code&gt; one in Workflow tab. Make sure this workflow only runs on master branch.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-10.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-10.png&#34; alt=&#34;Fig. 10&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-10.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-10.png&#34; alt=&#34;Fig. 10&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;In the end, the workflow looks like the followings.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-11.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-11.png&#34; alt=&#34;Fig. 11&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-11.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-11.png&#34; alt=&#34;Fig. 11&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Next, you need to add &lt;code&gt;wercker.yml&lt;/code&gt; in your branch root.
 You use Sphinx to build documents of which sources are in &lt;code&gt;docs&lt;/code&gt;. &lt;code&gt;wercker.yml&lt;/code&gt; may be there.&lt;/p&gt;
@@ -95,10 +95,10 @@ deploy:
     
     <item>
       <title>講義ビデオ: 形式言語とオートマトン</title>
-      <link>https://jkawamoto.github.io/blog-ja/2016-08-17/</link>
+      <link>https://www.jkawamoto.info/blog-ja/2016-08-17/</link>
       <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/2016-08-17/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/2016-08-17/</guid>
       <description>
 
 &lt;h2 id=&#34;教科書:1717e42594624ea816033f0095022e9c&#34;&gt;教科書&lt;/h2&gt;
@@ -127,10 +127,10 @@ deploy:
     
     <item>
       <title>データ解析のための統計モデリング入門 第10章 を PyMC で解く</title>
-      <link>https://jkawamoto.github.io/blog-ja/pymc-lesson-10/</link>
+      <link>https://www.jkawamoto.info/blog-ja/pymc-lesson-10/</link>
       <pubDate>Tue, 24 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/pymc-lesson-10/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/pymc-lesson-10/</guid>
       <description>
 
 &lt;script src=&#34;https://gist.github.com/jkawamoto/4a136615118fffe2930c54773389d079.js&#34;&gt;&lt;/script&gt;
@@ -143,50 +143,50 @@ deploy:
     
     <item>
       <title>レビューサイトにおける不均質性を考慮した特異なレビュアー発見とレビューサマリの推測</title>
-      <link>https://jkawamoto.github.io/slides/deim2016/</link>
+      <link>https://www.jkawamoto.info/slides/deim2016/</link>
       <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/deim2016/</guid>
+      <guid>https://www.jkawamoto.info/slides/deim2016/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/ifpVDK856yUGec&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; 
 </description>
     </item>
     
     <item>
       <title>LaTeX スニペット集</title>
-      <link>https://jkawamoto.github.io/blog-ja/latex-snippets/</link>
+      <link>https://www.jkawamoto.info/blog-ja/latex-snippets/</link>
       <pubDate>Wed, 02 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/latex-snippets/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/latex-snippets/</guid>
       <description>&lt;script src=&#34;https://gist.github.com/jkawamoto/e9f73ffab91a7fda62b3.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
     <item>
       <title>高度プログラミングサンプルコード</title>
-      <link>https://jkawamoto.github.io/blog-ja/programming-sample-codes/</link>
+      <link>https://www.jkawamoto.info/blog-ja/programming-sample-codes/</link>
       <pubDate>Tue, 21 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/programming-sample-codes/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/programming-sample-codes/</guid>
       <description>&lt;script src=&#34;https://gist.github.com/jkawamoto/7aca96b3ac8f96a3d769.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
     <item>
       <title>初期レビューを用いた長期間評価推定</title>
-      <link>https://jkawamoto.github.io/slides/deim2015/</link>
+      <link>https://www.jkawamoto.info/slides/deim2015/</link>
       <pubDate>Mon, 02 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/deim2015/</guid>
+      <guid>https://www.jkawamoto.info/slides/deim2015/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/4qJ5i65s5WhdRO&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; 
 </description>
     </item>
     
     <item>
       <title>bashでIPとPORT番号を取得</title>
-      <link>https://jkawamoto.github.io/blog-ja/qiita-2014-12-10/</link>
+      <link>https://www.jkawamoto.info/blog-ja/qiita-2014-12-10/</link>
       <pubDate>Wed, 10 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/qiita-2014-12-10/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/qiita-2014-12-10/</guid>
       <description>
 
 &lt;p&gt;&lt;code&gt;docker run&lt;/code&gt; コマンドの &lt;code&gt;link&lt;/code&gt; オプションで受け取った環境変数を bash スクリプト内で解析する。&lt;/p&gt;
@@ -211,10 +211,10 @@ echo ${IPPORT#*:}
     
     <item>
       <title>Upstart で Docker コンテナを起動</title>
-      <link>https://jkawamoto.github.io/blog-ja/starting-docker-container-via-upstart/</link>
+      <link>https://www.jkawamoto.info/blog-ja/starting-docker-container-via-upstart/</link>
       <pubDate>Sat, 08 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/starting-docker-container-via-upstart/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/starting-docker-container-via-upstart/</guid>
       <description>&lt;p&gt;合っているのかイマイチ分かっていないけれど，下記の方法でとりあえず動いていると思う．&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;start on filesystem and started docker.io
@@ -241,10 +241,10 @@ exec /usr/local/bin/docker run —name=foo -v /data:/var/data bar:latest
     
     <item>
       <title>Systemd の設定</title>
-      <link>https://jkawamoto.github.io/blog-ja/systemd-configurations/</link>
+      <link>https://www.jkawamoto.info/blog-ja/systemd-configurations/</link>
       <pubDate>Thu, 25 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/systemd-configurations/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/systemd-configurations/</guid>
       <description>
 
 &lt;h3 id=&#34;マウントユニット:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;マウントユニット&lt;/h3&gt;
@@ -297,10 +297,10 @@ WantedBy=multi-user.target
     
     <item>
       <title>XSLT にてノード名別に処理を切り替える</title>
-      <link>https://jkawamoto.github.io/blog-ja/switching-action-in-xslt/</link>
+      <link>https://www.jkawamoto.info/blog-ja/switching-action-in-xslt/</link>
       <pubDate>Tue, 23 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/switching-action-in-xslt/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/switching-action-in-xslt/</guid>
       <description>
 
 &lt;p&gt;for-each 要素 + when 要素で対応しようとしていたがうまく行かなかった．
@@ -318,10 +318,10 @@ XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
     
     <item>
       <title>パブリックデータセット</title>
-      <link>https://jkawamoto.github.io/blog-ja/public-dataset-list/</link>
+      <link>https://www.jkawamoto.info/blog-ja/public-dataset-list/</link>
       <pubDate>Sun, 13 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/public-dataset-list/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/public-dataset-list/</guid>
       <description>&lt;p&gt;パブリックデータセットまとめページのリスト。&lt;/p&gt;
 
 &lt;ul&gt;
@@ -334,10 +334,10 @@ XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
     
     <item>
       <title>個人情報の固まり</title>
-      <link>https://jkawamoto.github.io/blog-ja/lots-of-private-information/</link>
+      <link>https://www.jkawamoto.info/blog-ja/lots-of-private-information/</link>
       <pubDate>Sun, 13 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/lots-of-private-information/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/lots-of-private-information/</guid>
       <description>&lt;p&gt;電話長などで公開されているデータだと思うけれど，住所氏名電話番号が簡単に手に入るウェブページ．&lt;/p&gt;
 
 &lt;ul&gt;
@@ -348,10 +348,10 @@ XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
     
     <item>
       <title>プライバシ保護データマネジメント関連のプロジェクト</title>
-      <link>https://jkawamoto.github.io/blog-ja/ppdm-projects/</link>
+      <link>https://www.jkawamoto.info/blog-ja/ppdm-projects/</link>
       <pubDate>Sat, 12 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/ppdm-projects/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/ppdm-projects/</guid>
       <description>&lt;p&gt;プライバシ保護データマネジメント関連のプロジェクト&lt;/p&gt;
 
 &lt;ul&gt;
@@ -363,10 +363,10 @@ XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
     
     <item>
       <title>Frequency-based Constraint Relaxation for Private Query Processing in Cloud Databases</title>
-      <link>https://jkawamoto.github.io/slides/ccece2014/</link>
+      <link>https://www.jkawamoto.info/slides/ccece2014/</link>
       <pubDate>Sun, 04 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/ccece2014/</guid>
+      <guid>https://www.jkawamoto.info/slides/ccece2014/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/3J9PTutslDXtTq&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; 
 </description>
     </item>

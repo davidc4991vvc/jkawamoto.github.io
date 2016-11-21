@@ -2,68 +2,68 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Junpei Kawamoto</title>
-    <link>https://jkawamoto.github.io/blogs/</link>
+    <link>https://www.jkawamoto.info/blogs/</link>
     <description>Recent content in Blogs on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
     <lastBuildDate>Thu, 18 Aug 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://jkawamoto.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.jkawamoto.info/blogs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Compiling Sphinx document on Wercker</title>
-      <link>https://jkawamoto.github.io/blogs/sphinx-on-wercker/</link>
+      <title>Compiling a Sphinx document on Wercker</title>
+      <link>https://www.jkawamoto.info/blogs/sphinx-on-wercker/</link>
       <pubDate>Thu, 18 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blogs/sphinx-on-wercker/</guid>
+      <guid>https://www.jkawamoto.info/blogs/sphinx-on-wercker/</guid>
       <description>
 
 &lt;p&gt;After import your repository, application page looks like this. Move on the workflow tab.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-1.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-1.png&#34; alt=&#34;Fig. 1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-1.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-1.png&#34; alt=&#34;Fig. 1&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Open configuration of the &lt;code&gt;build&lt;/code&gt; pipeline.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-2.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-2.png&#34; alt=&#34;Fig. 2&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-2.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-2.png&#34; alt=&#34;Fig. 2&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;In the configuration of the build pipeline, scroll down to Permission level.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-3.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-3.png&#34; alt=&#34;Fig. 3&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-3.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-3.png&#34; alt=&#34;Fig. 3&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;And choose &lt;code&gt;execute pipeline&lt;/code&gt; in order to prevent someone starting pipeline and see detailed logs.
 Also set &lt;code&gt;gh-pages&lt;/code&gt; to Ignore branches so that Wercker will not start building documents after pushing to &lt;code&gt;gh-pages&lt;/code&gt; branch.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-4.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-4.png&#34; alt=&#34;Fig. 4&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-4.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-4.png&#34; alt=&#34;Fig. 4&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Then, back to the workflow tab and add a new pipeline.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-5.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-5.png&#34; alt=&#34;Fig. 5&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-5.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-5.png&#34; alt=&#34;Fig. 5&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Now, we name the new pipeline &lt;code&gt;deploy&lt;/code&gt;, and hook type should be default to be chained to the build pipeline.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-6.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-6.png&#34; alt=&#34;Fig. 6&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-6.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-6.png&#34; alt=&#34;Fig. 6&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;In order to push built documents to GitHub, this pipeline should know an access token of GitHub.
 Add such key with name &lt;code&gt;GIT_TOKEN&lt;/code&gt; and protected option in the environment variables section of &lt;code&gt;deploy&lt;/code&gt; pipeline.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-7.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-7.png&#34; alt=&#34;Fig. 7&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-7.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-7.png&#34; alt=&#34;Fig. 7&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The token can be obtained in &lt;a href=&#34;https://github.com/settings/tokens&#34;&gt;https://github.com/settings/tokens&lt;/a&gt;.
 If your repository is public, you only need a token with &lt;code&gt;public_repo&lt;/code&gt; scope. Otherwise, you may need a token with &lt;code&gt;repo&lt;/code&gt; scope.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-8.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-8.png&#34; alt=&#34;Fig. 8&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-8.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-8.png&#34; alt=&#34;Fig. 8&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;After adding &lt;code&gt;GIT_TOKEN&lt;/code&gt;, check Permission level is Execute pipelines.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-9.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-9.png&#34; alt=&#34;Fig. 9&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-9.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-9.png&#34; alt=&#34;Fig. 9&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Next, make a workflow connecting the &lt;code&gt;deploy&lt;/code&gt; pipeline to the &lt;code&gt;build&lt;/code&gt; one in Workflow tab. Make sure this workflow only runs on master branch.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-10.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-10.png&#34; alt=&#34;Fig. 10&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-10.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-10.png&#34; alt=&#34;Fig. 10&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;In the end, the workflow looks like the followings.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://jkawamoto.github.io/fig/2016-08-18-11.png&#34;&gt;&lt;img src=&#34;https://jkawamoto.github.io/fig/2016-08-18-11.png&#34; alt=&#34;Fig. 11&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jkawamoto.info/fig/2016-08-18-11.png&#34;&gt;&lt;img src=&#34;https://www.jkawamoto.info/fig/2016-08-18-11.png&#34; alt=&#34;Fig. 11&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Next, you need to add &lt;code&gt;wercker.yml&lt;/code&gt; in your branch root.
 You use Sphinx to build documents of which sources are in &lt;code&gt;docs&lt;/code&gt;. &lt;code&gt;wercker.yml&lt;/code&gt; may be there.&lt;/p&gt;

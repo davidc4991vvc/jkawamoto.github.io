@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog-jas on Junpei Kawamoto</title>
-    <link>https://jkawamoto.github.io/blog-ja/</link>
+    <link>https://www.jkawamoto.info/blog-ja/</link>
     <description>Recent content in Blog-jas on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
     <lastBuildDate>Wed, 17 Aug 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://jkawamoto.github.io/blog-ja/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.jkawamoto.info/blog-ja/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>講義ビデオ: 形式言語とオートマトン</title>
-      <link>https://jkawamoto.github.io/blog-ja/2016-08-17/</link>
+      <link>https://www.jkawamoto.info/blog-ja/2016-08-17/</link>
       <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/2016-08-17/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/2016-08-17/</guid>
       <description>
 
 &lt;h2 id=&#34;教科書:1717e42594624ea816033f0095022e9c&#34;&gt;教科書&lt;/h2&gt;
@@ -44,10 +44,10 @@
     
     <item>
       <title>データ解析のための統計モデリング入門 第10章 を PyMC で解く</title>
-      <link>https://jkawamoto.github.io/blog-ja/pymc-lesson-10/</link>
+      <link>https://www.jkawamoto.info/blog-ja/pymc-lesson-10/</link>
       <pubDate>Tue, 24 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/pymc-lesson-10/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/pymc-lesson-10/</guid>
       <description>
 
 &lt;script src=&#34;https://gist.github.com/jkawamoto/4a136615118fffe2930c54773389d079.js&#34;&gt;&lt;/script&gt;
@@ -60,30 +60,30 @@
     
     <item>
       <title>LaTeX スニペット集</title>
-      <link>https://jkawamoto.github.io/blog-ja/latex-snippets/</link>
+      <link>https://www.jkawamoto.info/blog-ja/latex-snippets/</link>
       <pubDate>Wed, 02 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/latex-snippets/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/latex-snippets/</guid>
       <description>&lt;script src=&#34;https://gist.github.com/jkawamoto/e9f73ffab91a7fda62b3.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
     <item>
       <title>高度プログラミングサンプルコード</title>
-      <link>https://jkawamoto.github.io/blog-ja/programming-sample-codes/</link>
+      <link>https://www.jkawamoto.info/blog-ja/programming-sample-codes/</link>
       <pubDate>Tue, 21 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/programming-sample-codes/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/programming-sample-codes/</guid>
       <description>&lt;script src=&#34;https://gist.github.com/jkawamoto/7aca96b3ac8f96a3d769.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
     <item>
       <title>bashでIPとPORT番号を取得</title>
-      <link>https://jkawamoto.github.io/blog-ja/qiita-2014-12-10/</link>
+      <link>https://www.jkawamoto.info/blog-ja/qiita-2014-12-10/</link>
       <pubDate>Wed, 10 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/qiita-2014-12-10/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/qiita-2014-12-10/</guid>
       <description>
 
 &lt;p&gt;&lt;code&gt;docker run&lt;/code&gt; コマンドの &lt;code&gt;link&lt;/code&gt; オプションで受け取った環境変数を bash スクリプト内で解析する。&lt;/p&gt;
@@ -108,10 +108,10 @@ echo ${IPPORT#*:}
     
     <item>
       <title>Upstart で Docker コンテナを起動</title>
-      <link>https://jkawamoto.github.io/blog-ja/starting-docker-container-via-upstart/</link>
+      <link>https://www.jkawamoto.info/blog-ja/starting-docker-container-via-upstart/</link>
       <pubDate>Sat, 08 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/starting-docker-container-via-upstart/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/starting-docker-container-via-upstart/</guid>
       <description>&lt;p&gt;合っているのかイマイチ分かっていないけれど，下記の方法でとりあえず動いていると思う．&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;start on filesystem and started docker.io
@@ -138,10 +138,10 @@ exec /usr/local/bin/docker run —name=foo -v /data:/var/data bar:latest
     
     <item>
       <title>Systemd の設定</title>
-      <link>https://jkawamoto.github.io/blog-ja/systemd-configurations/</link>
+      <link>https://www.jkawamoto.info/blog-ja/systemd-configurations/</link>
       <pubDate>Thu, 25 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/systemd-configurations/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/systemd-configurations/</guid>
       <description>
 
 &lt;h3 id=&#34;マウントユニット:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;マウントユニット&lt;/h3&gt;
@@ -194,10 +194,10 @@ WantedBy=multi-user.target
     
     <item>
       <title>XSLT にてノード名別に処理を切り替える</title>
-      <link>https://jkawamoto.github.io/blog-ja/switching-action-in-xslt/</link>
+      <link>https://www.jkawamoto.info/blog-ja/switching-action-in-xslt/</link>
       <pubDate>Tue, 23 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/switching-action-in-xslt/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/switching-action-in-xslt/</guid>
       <description>
 
 &lt;p&gt;for-each 要素 + when 要素で対応しようとしていたがうまく行かなかった．
@@ -215,10 +215,10 @@ XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
     
     <item>
       <title>パブリックデータセット</title>
-      <link>https://jkawamoto.github.io/blog-ja/public-dataset-list/</link>
+      <link>https://www.jkawamoto.info/blog-ja/public-dataset-list/</link>
       <pubDate>Sun, 13 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/public-dataset-list/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/public-dataset-list/</guid>
       <description>&lt;p&gt;パブリックデータセットまとめページのリスト。&lt;/p&gt;
 
 &lt;ul&gt;
@@ -231,10 +231,10 @@ XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
     
     <item>
       <title>個人情報の固まり</title>
-      <link>https://jkawamoto.github.io/blog-ja/lots-of-private-information/</link>
+      <link>https://www.jkawamoto.info/blog-ja/lots-of-private-information/</link>
       <pubDate>Sun, 13 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/lots-of-private-information/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/lots-of-private-information/</guid>
       <description>&lt;p&gt;電話長などで公開されているデータだと思うけれど，住所氏名電話番号が簡単に手に入るウェブページ．&lt;/p&gt;
 
 &lt;ul&gt;
@@ -245,10 +245,10 @@ XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
     
     <item>
       <title>プライバシ保護データマネジメント関連のプロジェクト</title>
-      <link>https://jkawamoto.github.io/blog-ja/ppdm-projects/</link>
+      <link>https://www.jkawamoto.info/blog-ja/ppdm-projects/</link>
       <pubDate>Sat, 12 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/ppdm-projects/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/ppdm-projects/</guid>
       <description>&lt;p&gt;プライバシ保護データマネジメント関連のプロジェクト&lt;/p&gt;
 
 &lt;ul&gt;
@@ -260,10 +260,10 @@ XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
     
     <item>
       <title>PDF から EPS への変換</title>
-      <link>https://jkawamoto.github.io/blog-ja/converting-pdf-to-eps/</link>
+      <link>https://www.jkawamoto.info/blog-ja/converting-pdf-to-eps/</link>
       <pubDate>Sun, 09 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/converting-pdf-to-eps/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/converting-pdf-to-eps/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;brew install xpdf
 pdftops -eps hoge.pdf piyo.eps
 &lt;/code&gt;&lt;/pre&gt;
@@ -280,10 +280,10 @@ sudo ln -s ./9.07/Resource/Font ./font
     
     <item>
       <title>伊豆さんの楕円曲線暗号資料</title>
-      <link>https://jkawamoto.github.io/blog-ja/lecture-notes-of-cryptography/</link>
+      <link>https://www.jkawamoto.info/blog-ja/lecture-notes-of-cryptography/</link>
       <pubDate>Tue, 11 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/lecture-notes-of-cryptography/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/lecture-notes-of-cryptography/</guid>
       <description>&lt;p&gt;どこで公開されていたのか忘れやすいのでメモ．&lt;/p&gt;
 
 &lt;ul&gt;
@@ -294,10 +294,10 @@ sudo ln -s ./9.07/Resource/Font ./font
     
     <item>
       <title>Windows8 でネットワーク名を変更する</title>
-      <link>https://jkawamoto.github.io/blog-ja/windows8-networkname/</link>
+      <link>https://www.jkawamoto.info/blog-ja/windows8-networkname/</link>
       <pubDate>Mon, 16 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/windows8-networkname/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/windows8-networkname/</guid>
       <description>&lt;p&gt;コンテキストメニューに「名前変更」を付ければ良いだけのことなのに，
 かなり面倒な手続きを踏まないと変更できない．&lt;/p&gt;
 
@@ -312,10 +312,10 @@ sudo ln -s ./9.07/Resource/Font ./font
     
     <item>
       <title>python で RSS フィードを読む</title>
-      <link>https://jkawamoto.github.io/blog-ja/reading-rss-by-python/</link>
+      <link>https://www.jkawamoto.info/blog-ja/reading-rss-by-python/</link>
       <pubDate>Thu, 12 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/blog-ja/reading-rss-by-python/</guid>
+      <guid>https://www.jkawamoto.info/blog-ja/reading-rss-by-python/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://pypi.python.org/pypi/feedparser&#34;&gt;feedparser&lt;/a&gt; が良さそう&lt;/p&gt;
 </description>
     </item>

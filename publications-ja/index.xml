@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications-jas on Junpei Kawamoto</title>
-    <link>https://jkawamoto.github.io/publications-ja/</link>
+    <link>https://www.jkawamoto.info/publications-ja/</link>
     <description>Recent content in Publications-jas on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
-    <atom:link href="https://jkawamoto.github.io/publications-ja/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.jkawamoto.info/publications-ja/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>List of publications in journals.</title>
-      <link>https://jkawamoto.github.io/publications-ja/journal/</link>
+      <link>https://www.jkawamoto.info/publications-ja/journal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/publications-ja/journal/</guid>
+      <guid>https://www.jkawamoto.info/publications-ja/journal/</guid>
       <description>
 
 &lt;h2 id=&#34;journal:73c9b0342715f88a87dd788563688eac&#34;&gt;Journal&lt;/h2&gt;
@@ -23,38 +23,38 @@
 &lt;li&gt;Chunlu Chen, Hiroaki Anada, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, and Kouichi Sakurai,
 &amp;ldquo;&lt;a href=&#34;http://isyou.info/jisis/vol6/no2/jisis-2016-vol6-no2-02.pdf&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
 
 A Hybrid Encryption Scheme with Key-cloning Protection: User / Terminal Double Authentication via Attributes and Fingerprints&lt;/a&gt;,&amp;rdquo;
 Journal of Internet Services and Information Security, vol.6, issue 2, pp.23-36, May 2016.&lt;/li&gt;
 &lt;li&gt;山内 一将, &lt;em&gt;川本 淳平&lt;/em&gt;, 堀 良彰, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1525466&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 C&amp;amp;Cトラフィック分類のための機械学習手法の評価&lt;/a&gt;,&amp;rdquo;
 情報処理学会論文誌, Vol.56, No.9, pp.1745-1753, 2015年9月15日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/120005651849&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;王サン, フォン ヤオカイ, &lt;em&gt;川本 淳平&lt;/em&gt;, 堀 良彰, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1525467&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 挙動に基づくポートスキャン検知の自動化に向けた学習アルゴリズムの提案とその性能評価&lt;/a&gt;,&amp;rdquo;
 情報処理学会論文誌,  Vol.56, No.9, pp.1770-1781, 2015年9月15日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/120005651850&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Junpei Kawamoto&lt;/em&gt;,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1498219&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 A Locality Sensitive Hashing Filter for Encrypted Vector Databases&lt;/a&gt;,&amp;rdquo;
 &lt;a href=&#34;http://fi.mimuw.edu.pl&#34;&gt;Fundamenta Informaticae&lt;/a&gt;,
@@ -62,7 +62,7 @@ Vol.137, No.2, pp.291-304, 2015.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, Patricia L. Gillett, 佐久間 淳,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2241/119458&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/tulips.png&#34; alt=&#34;tulips&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/tulips.png&#34; alt=&#34;tulips&#34;/&gt;
 
 プライベート問合せにおける問合せ頻度を用いた制約緩和手法&lt;/a&gt;,&amp;rdquo;
 
@@ -74,18 +74,18 @@ Vol.137, No.2, pp.291-304, 2015.&lt;/li&gt;
 Vol. 6, No. 3, pp.50-60, 2013年6月.
 &lt;a href=&#34;http://db-event.jpn.org/webdbf2012/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
 
 第5回 Webとデータベースに関するフォーラム&lt;/a&gt; (WebDBフォーラム 2012) 推薦論文.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/110009579665&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, &lt;a href=&#34;http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/&#34;&gt;吉川 正俊&lt;/a&gt;,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2433/147391&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
 
 キー・バリュー型データベースにおける利用者のプライバシを考慮した範囲問合せの実現手法&lt;/a&gt;,&amp;rdquo;
 
@@ -97,13 +97,13 @@ Vol. 6, No. 3, pp.50-60, 2013年6月.
 Vol.4, No.3, pp.33-44, 2011年10月.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/40019257549&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, &lt;a href=&#34;http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/&#34;&gt;吉川 正俊&lt;/a&gt;,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2433/147390&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
 
 放送暗号とクラスタリングを用いたデータ共有型Webアプリケーションにおけるプライバシ保護&lt;/a&gt;,&amp;rdquo;
 
@@ -116,7 +116,7 @@ Vol.1, No.1, pp.79-87, 2008年6月.
 データベースとWeb情報システムに関するシンポジウム (DBWeb 2007) 推薦論文.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/110007990003&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -125,10 +125,10 @@ Vol.1, No.1, pp.79-87, 2008年6月.
     
     <item>
       <title>List of publications in international conferences.</title>
-      <link>https://jkawamoto.github.io/publications-ja/conference/</link>
+      <link>https://www.jkawamoto.info/publications-ja/conference/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/publications-ja/conference/</guid>
+      <guid>https://www.jkawamoto.info/publications-ja/conference/</guid>
       <description>
 
 &lt;h2 id=&#34;conference-workshop:b5ada10c3d3f70226b97ae7a2cbdf975&#34;&gt;Conference/Workshop&lt;/h2&gt;
@@ -149,7 +149,7 @@ Singapore, Nov. 23-30, 2016. (to appear)&lt;/li&gt;
 &lt;li&gt;Yuxuan Gao, Yaokai Feng, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, and Kouichi Sakurai,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1661854&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 A Machine Learning Based Approach for Detecting DRDoS Attacks and Its Performance Evaluation&lt;/a&gt;,&amp;rdquo;
 Proc. of &lt;a href=&#34;http://ipsr.ynu.ac.jp/asiajcis2016/index.html&#34;&gt;the 11th Asia Joint Conference on Information Security&lt;/a&gt;,
@@ -157,7 +157,7 @@ Fukuoka, Japan, Aug.4-5, 2016.&lt;/li&gt;
 &lt;li&gt;Longzhu Cai, Yaokai Feng, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, and Kouichi Sakurai,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1657554&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 A Behavior-based Method for Detecting DNS Amplification Attacks&lt;/a&gt;,&amp;rdquo;
 Proc. of &lt;a href=&#34;http://voyager.ce.fit.ac.jp/conf/WAIS/2016/&#34;&gt;the 10th International Workshop on Advances in Information Security&lt;/a&gt;,
@@ -165,7 +165,7 @@ Fukuoka, Japan, July 6, 2016.&lt;/li&gt;
 &lt;li&gt;Pengfei Li, Yaokai Feng, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, and Kouichi Sakurai,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1657555&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 A Proposal for Cyber-Attack Trace-back Using Packet Marking and Logging&lt;/a&gt;,&amp;rdquo;
 Proc. of &lt;a href=&#34;http://voyager.ce.fit.ac.jp/conf/WAIS/2016/&#34;&gt;the 10th International Workshop on Advances in Information Security&lt;/a&gt;,
@@ -173,14 +173,14 @@ Fukuoka, Japan, July 6, 2016.&lt;/li&gt;
 &lt;li&gt;Misni Harjo Suwito, Shinchi Matsumoto, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, Dieter Gollmann, and Kouichi Sakurai,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1566107&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 An Analysis of IT Assessment Security Maturity in Higher Education Institution&lt;/a&gt;,&amp;rdquo;
 Proc. of the International Conference on Information Science and Applications,
 pp.701-713, Vietnam, Feb. 15-18, 2016.
 &lt;a href=&#34;http://www.anrdoezrs.net/links/8186671/type/dlg/http://link.springer.com/chapter/10.1007%2F978-981-10-0557-2_69&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/springer.png&#34; alt=&#34;Springer&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/springer.png&#34; alt=&#34;Springer&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Junpei Kawamoto&lt;/em&gt;,
@@ -190,7 +190,7 @@ O3-1, Malaysia, Jan. 13-15, 2016.&lt;/li&gt;
 &lt;li&gt;Chenyutao Ke, Hiroaki Anada, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, Kirill Morozov, and Kouichi Sakurai,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1563374&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 Cross-group Secret Sharing for Secure Cloud Storage Service&lt;/a&gt;,&amp;rdquo;
 Proc. of the Annual International Conference on Ubiquitous Information Management and Communication (IMCOM 2016),
@@ -198,20 +198,20 @@ Proc. of the Annual International Conference on Ubiquitous Information Managemen
 &lt;li&gt;Chunlu Chen, Hiroaki Anada, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, and Kouichi Sakurai,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1544167&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 Hybrid Encryption Scheme using Terminal Fingerprint and its Application to Attribute-based Encryption without Key Misuse&lt;/a&gt;,&amp;rdquo;
 Proc. of the 2015 Asian Conference on Availability, Reliability and Security,
 pp.255-264, Korea, Oct. 4-7, 2015.
 &lt;a href=&#34;http://www.anrdoezrs.net/links/8186671/type/dlg/http://link.springer.com/chapter/10.1007%2F978-3-319-24315-3_26&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/springer.png&#34; alt=&#34;Springer&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/springer.png&#34; alt=&#34;Springer&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Zhongqiang Zhang, Hiroaki Anada, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, and Kouichi Sakurai,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1498305&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 Detection of Illegal Players in MMORPG by Classification Algorithms&lt;/a&gt;,&amp;rdquo;
 Proc. of &lt;a href=&#34;http://voyager.ce.fit.ac.jp/conf/aina/2015/&#34;&gt;the 29th IEEE International Conference on Advanced Information Networking and Applications&lt;/a&gt; (AINA 2015),
@@ -219,7 +219,7 @@ Korea, March 25-27, 2015.&lt;/li&gt;
 &lt;li&gt;Naoya Kajiwara, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, Shinichi Matsumoto, Yoshiaki Hori, and Kouichi Sakurai,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1498304&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 Detection of Android Ad Library Focusing on HTTP Connections and View Object Redraw Behaviors&lt;/a&gt;,&amp;rdquo;
 Proc. of the 29th International Conference on Information Networking (ICOIN 2015),
@@ -227,20 +227,20 @@ pp.104-109, Cambodia, January12-14, 2015.&lt;/li&gt;
 &lt;li&gt;Hiroaki Anada, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, Jian Weng, and Kouichi Sakurai,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1498306&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 Identity-Embedding Method for Decentralized Public-Key Infrastructure&lt;/a&gt;,&amp;rdquo;
 Proc. of &lt;a href=&#34;http://crypto.fudan.edu.cn/intrust2014/&#34;&gt;the 6th International Conference on Trustworthy Systems&lt;/a&gt; (InTrust 2014),
 Beijing, China, December 16-17, 2014.
 &lt;a href=&#34;http://www.anrdoezrs.net/links/8186671/type/dlg/http://link.springer.com/chapter/10.1007%2F978-3-319-27998-5_1&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/springer.png&#34; alt=&#34;Springer&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/springer.png&#34; alt=&#34;Springer&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Junpei Kawamoto&lt;/em&gt;, and Kouichi Sakurai,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1498307&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 Privacy-Aware Cloud-based Input Method Editor&lt;/a&gt;,&amp;rdquo;
 Proc. of the &lt;a href=&#34;http://www.ieee-iccc.org/&#34;&gt;IEEE/CIC ICCC 2014 Symposium on Privacy and Security in Commutations&lt;/a&gt; (ICCC 2014 PSC),
@@ -248,7 +248,7 @@ pp.209-213, Shanghai, China, October 14-16, 2014.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Can Wang, Yaokai Feng, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, Yoshiaki Hori and Kouichi Sakurai,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1498300&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 A Parameterless Learning Algorithm  for Behavior-based Detection&lt;/a&gt;,&amp;rdquo;
 Proc. of &lt;a href=&#34;http://is.hbut.edu.cn/asiajcis2014/&#34;&gt;the 9th Asia Joint Conference on Information Security&lt;/a&gt; (AsiaJCIS 2014),
@@ -256,42 +256,42 @@ pp.11-18, Wuhan, China, Semptember 3-5, 2014.&lt;/li&gt;
 &lt;li&gt;Shinichi Matsumoto, Yuya Onitsuka, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, and Kouichi Sakurai,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1498290&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 Reconstructing and Visualizing Evidence of Artifact from Firefox SessionStorage&lt;/a&gt;,&amp;rdquo;
 Proc. of &lt;a href=&#34;http://www.wisa.or.kr/&#34;&gt;the 15th International Workshop on Information Security Applications&lt;/a&gt;,
 pp. 83-94, Jeju Island, Korea, August 25-27, 2014.
 &lt;a href=&#34;http://www.anrdoezrs.net/links/8186671/type/dlg/http://link.springer.com/chapter/10.1007%2F978-3-319-15087-1_7&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/springer.png&#34; alt=&#34;Springer&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/springer.png&#34; alt=&#34;Springer&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Junpei Kawamoto&lt;/em&gt; and Patricia L. Gillett,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1445771&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 Frequency-based Constraint Relaxation for Private Query Processing in Cloud Databases&lt;/a&gt;,&amp;rdquo;
 Proc. of &lt;a href=&#34;http://www.ccece2014.org/&#34;&gt;the 27th Annual IEEE Canadian Conference on Electrical and Computer Engineering&lt;/a&gt; (CCECE 2014),
 pp.1275-1280, Toronto, Canada, May 4-7, 2014.
-&lt;a href=&#34;https://jkawamoto.github.io/slides/ccece2014/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/ccece2014/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Junpei Kawamoto&lt;/em&gt; and Kouichi Sakurai,
 &amp;ldquo;Privacy for Continual Data Publishing,&amp;rdquo;
 Proc. of &lt;a href=&#34;http://wais2014.fudan.edu.cn/&#34;&gt;the Seventh Workshop among Asian Information Security Labs&lt;/a&gt; (WAIS 2014),
 Shanghai, China, January 10-11, 2014.
-&lt;a href=&#34;https://jkawamoto.github.io/slides/wais2014/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/wais2014/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Motoki Kitahara, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, and Kouichi Sakurai,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1498293&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 A Method of Digital Rights Management based on Electric Commerce Protocol&lt;/a&gt;,&amp;rdquo;
 Proc. of &lt;a href=&#34;http://www.icuimc.org/&#34;&gt;the 8th International Conference on Ubiquitous Information Management and Communication&lt;/a&gt; (IMCOM 2014),
@@ -300,23 +300,23 @@ pp.84:1&amp;ndash;84:6, Cambodia, January 9-11, 2014. (Acceptance rate  29%)&lt;
 &amp;ldquo;A Locality Sensitive Hashing Filter for Encrypted Vector Databases,&amp;rdquo;
 Proc. of &lt;a href=&#34;http://www.ciise.concordia.ca/newsandevents/2012/PARIS12/index.htm&#34;&gt;International Workshop on Privacy-AwaRe Intelligent Systems&lt;/a&gt; (PARIS 2012),
 Macau, December, 2012. (Acceptance rate 15.8%)
-&lt;a href=&#34;https://jkawamoto.github.io/slides/paris2012/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/paris2012/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Junpei Kawamoto&lt;/em&gt; and &lt;a href=&#34;http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/&#34;&gt;Masatoshi Yoshikawa&lt;/a&gt;,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2433/147946&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
 
 Private Range Query by Perturbation and Matrix Based Encryption&lt;/a&gt;,&amp;rdquo;
 Proc. of &lt;a href=&#34;http://www.icdim.org/&#34;&gt;the Sixth IEEE International Conference on Digital Information Management&lt;/a&gt; (ICDIM 2011),
 pp.211-216, Melbourne, Australia, September, 2011. (Acceptance rate 32%)
 (&lt;strong&gt;&lt;a href=&#34;http://icdim.org/icdim2011/bpaper.php&#34;&gt;Best paper award&lt;/a&gt;&lt;/strong&gt;)
-&lt;a href=&#34;https://jkawamoto.github.io/slides/icdim2011/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/icdim2011/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Kazuki Tawaramoto, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;,
@@ -324,7 +324,7 @@ pp.211-216, Melbourne, Australia, September, 2011. (Acceptance rate 32%)
 and &lt;a href=&#34;http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/&#34;&gt;Masatoshi Yoshikawa&lt;/a&gt;,
 &amp;ldquo;&lt;a href=&#34;http://www.anrdoezrs.net/links/8186671/type/dlg/http://link.springer.com/chapter/10.1007%2F978-3-642-23088-2_25&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/springer.png&#34; alt=&#34;Springer&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/springer.png&#34; alt=&#34;Springer&#34;/&gt;
 
 A Bipartite Graph Model and Mutually Reinforcing Analysis for Review Sites&lt;/a&gt;,&amp;rdquo;
 Proc. of &lt;a href=&#34;http://www.dexa.org/&#34;&gt;the 22nd International Conference on Database and Expert Systems Applications&lt;/a&gt; (DEXA 2011),
@@ -332,14 +332,14 @@ pp.341-348, Toulouse, France, August 31, 2011. (Acceptance rate 25%)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Junpei Kawamoto&lt;/em&gt; and &lt;a href=&#34;http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/&#34;&gt;Masatoshi Yoshikawa&lt;/a&gt;,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2433/148038&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
 
 Security of Social Information from Query Analysis in DaaS&lt;/a&gt;,&amp;rdquo;
 Proc. of &lt;a href=&#34;http://cscdb.nku.edu/pais/&#34;&gt;the 2009 EDBT/ICDT Workshops&lt;/a&gt; (PAIS 2009),
 pp.148-152, Saint-Petersburg, Russia, March 22, 2009.
-&lt;a href=&#34;https://jkawamoto.github.io/slides/pais2009/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/pais2009/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Junpei Kawamoto&lt;/em&gt; and &lt;a href=&#34;http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/&#34;&gt;Masatoshi Yoshikawa&lt;/a&gt;,
@@ -350,14 +350,14 @@ Fukushima, Japan, September 20, 2008.&lt;/li&gt;
 and &lt;a href=&#34;http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/&#34;&gt;Masatoshi Yoshikawa&lt;/a&gt;,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2433/147945&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
 
 Reducing Data Decryption Cost by Broadcast Encryption and Account Assignment for Web Applications&lt;/a&gt;,&amp;rdquo;
 Proc. of the Ninth International Conference on Web-Age Information Management (WAIM 2008),
 pp.449-454, Zhangjiajie, China, July 20-22, 2008. (Acceptance rate 33.5%) (Short Paper)
-&lt;a href=&#34;https://jkawamoto.github.io/slides/waim2008/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/waim2008/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www2.teu.ac.jp/kmdit/~hattori/index.html&#34;&gt;Shun Hattori&lt;/a&gt;,
@@ -368,7 +368,7 @@ pp.449-454, Zhangjiajie, China, July 20-22, 2008. (Acceptance rate 33.5%) (Short
 and &lt;a href=&#34;http://www.dl.kuis.kyoto-u.ac.jp/~tanaka/index_j.html&#34;&gt;Katsumi Tanaka&lt;/a&gt;,
 &amp;ldquo;&lt;a href=&#34;http://www.anrdoezrs.net/links/8186671/type/dlg/http://link.springer.com/chapter/10.1007%2F978-3-540-74255-5_19&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/springer.png&#34; alt=&#34;Springer&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/springer.png&#34; alt=&#34;Springer&#34;/&gt;
 
 ReCQ: Real-world Context-aware Querying&lt;/a&gt;,&amp;rdquo;
 Proc. of &lt;a href=&#34;http://context-07.ruc.dk/&#34;&gt;the Sixth International and Interdisciplinary Conference on Modeling and Using Context&lt;/a&gt; (CONTEXT 2007),
@@ -379,10 +379,10 @@ LNAI Vol.4635, pp.248-262, Roskilde University, Denmark, August 20-24, 2007. (Ac
     
     <item>
       <title>List of publications to domestic workshops.</title>
-      <link>https://jkawamoto.github.io/publications-ja/domestic/</link>
+      <link>https://www.jkawamoto.info/publications-ja/domestic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/publications-ja/domestic/</guid>
+      <guid>https://www.jkawamoto.info/publications-ja/domestic/</guid>
       <description>
 
 &lt;h2 id=&#34;domestic-workshop:51c1c2f8c32172c8129d4f10dab72631&#34;&gt;Domestic Workshop&lt;/h2&gt;
@@ -393,56 +393,56 @@ LNAI Vol.4635, pp.248-262, Roskilde University, Denmark, August 20-24, 2007. (Ac
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, Patricia L. Gillett, 佐久間 淳,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2241/119465&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/tulips.png&#34; alt=&#34;tulips&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/tulips.png&#34; alt=&#34;tulips&#34;/&gt;
 
 プライベート問合せにおける問合せ頻度を用いた制約緩和手法&lt;/a&gt;,&amp;rdquo;
 &lt;a href=&#34;http://db-event.jpn.org/webdbf2012/&#34;&gt;第5回 Webとデータベースに関するフォーラム&lt;/a&gt; (WebDBフォーラム 2012),
 情報処理学会シンポジウムシリーズ Vol.2012, No.5, A2-1, 東京, 2012年11月20日～21日.
-&lt;a href=&#34;https://jkawamoto.github.io/slides/webdbf2012/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/webdbf2012/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;
-&lt;a href=&#34;https://jkawamoto.github.io/posters/webdbf2012/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/posters/webdbf2012/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/scribd.png&#34; alt=&#34;Scribd&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/scribd.png&#34; alt=&#34;Scribd&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, &lt;a href=&#34;http://www.db.soc.i.kyoto-u.ac.jp/~yoshikawa/&#34;&gt;吉川 正俊&lt;/a&gt;,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2433/147388&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
 
 データ共有型 Web アプリケーションにおけるサーバ暗号化&lt;/a&gt;,&amp;rdquo;
 データベースとWeb情報システムに関するシンポジウム (DBWeb 2007),
 情報処理学会シンポジウムシリーズ, Vol.2007, No.3, 3A-1, 東京, 2007年11月27日～28日.
-&lt;a href=&#34;https://jkawamoto.github.io/slides/dbweb2007/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/dbweb2007/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, &lt;a href=&#34;http://www.dl.kuis.kyoto-u.ac.jp/~tanaka/index_j.html&#34;&gt;田中 克己&lt;/a&gt;,
 &lt;a href=&#34;http://www.dl.soc.i.kyoto-u.ac.jp/~tajima/index-jp.html&#34;&gt;田島 敬史&lt;/a&gt;,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2433/147392&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
 
 クエリログとナビゲーション履歴からの探索意図抽出による協調探索支援&lt;/a&gt;,&amp;rdquo;
 &lt;a href=&#34;http://www.dbsj.org/dews2007/&#34;&gt;電子情報通信学会 第18回データ工学ワークショップ&lt;/a&gt; (DEWS 2007),
 C7-6, 広島, 2007年2月28日～3月2日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/120003437082&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;
-&lt;a href=&#34;https://jkawamoto.github.io/slides/dews2007/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/dews2007/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;
-&lt;a href=&#34;https://jkawamoto.github.io/posters/dews2007/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/posters/dews2007/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/scribd.png&#34; alt=&#34;Scribd&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/scribd.png&#34; alt=&#34;Scribd&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -455,7 +455,7 @@ C7-6, 広島, 2007年2月28日～3月2日.
 &lt;li&gt;西郷里 拓, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://id.nii.ac.jp/1001/00175697/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
 
 筆画のクラスタリングを考慮した署名認証手法&lt;/a&gt;,&amp;rdquo;
 
@@ -468,7 +468,7 @@ C7-6, 広島, 2007年2月28日～3月2日.
 &lt;li&gt;宮崎 亮輔, &lt;em&gt;川本 淳平&lt;/em&gt;, 松本 晋一, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://id.nii.ac.jp/1001/00175777/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
 
 分散処理によるOpenFlowを用いた端末非依存なネットワーク攻撃検知手法&lt;/a&gt;,&amp;rdquo;
 
@@ -481,7 +481,7 @@ C7-6, 広島, 2007年2月28日～3月2日.
 &lt;li&gt;李 子怡, &lt;em&gt;川本 淳平&lt;/em&gt;, フォン ヤオカイ, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://id.nii.ac.jp/1001/00175833/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
 
 コメントの親子関係を利用したネットいじめコメントの検出&lt;/a&gt;,&amp;rdquo;
 
@@ -498,14 +498,14 @@ C7-6, 広島, 2007年2月28日～3月2日.
 &lt;li&gt;呂 良, フォン ヤオカイ, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1661855&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 ランダムフォレストを用いたボットネットの検出&lt;/a&gt;,&amp;rdquo;
 2016年電子情報通信学会総合大会,
 A-7-11, 福岡, 2016年3月15日～18日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/110010023136&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;溝口 誠一郎, 宮崎 亮輔, 松中 隆志, 山田 明, 窪田 歩, 松本 晋一, &lt;em&gt;川本 淳平&lt;/em&gt;, 堀 良彰, 櫻井 幸一,
@@ -513,46 +513,46 @@ A-7-11, 福岡, 2016年3月15日～18日.
 2016年電子情報通信学会総合大会, D-19-6, 福岡, 2016年3月15日～18日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/110010036492&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;韓 燦洙, 松本 晋一, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1661856&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 Android マルウェアの API 処理ロギングによる個人情報漏えい検知及び分類&lt;/a&gt;,&amp;rdquo;
 火の国情報シンポジウム2016, 3A-4, 宮崎, 2016年3月2日～3日.&lt;/li&gt;
 &lt;li&gt;松島 智洋, 穴田 啓晃, &lt;em&gt;川本 淳平&lt;/em&gt;, Bag Samiran, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1661857&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 グラフクリーク探索問題に対するビットコイン・マイニングの評価&lt;/a&gt;,&amp;rdquo;
 火の国情報シンポジウム2016, 4B-2, 宮崎, 2016年3月2日～3日.&lt;/li&gt;
 &lt;li&gt;李 子怡, &lt;em&gt;川本 淳平&lt;/em&gt;, フォン ヤオカイ, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://db-event.jpn.org/deim2016/papers/208.pdf&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
 
 コメントの親子関係を利用したビデオ共有サイトにおけるネットいじめコメントの検出&lt;/a&gt;,&amp;rdquo;
 第8回データ工学と情報マネジメントに関するフォーラム, B6-2, 福岡, 2016年2月29日～3月2日.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, 浅野 泰仁, 俵本 一輝, 吉川 正俊,
 &amp;ldquo;&lt;a href=&#34;http://db-event.jpn.org/deim2016/papers/357.pdf&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
 
 レビューサイトにおける不均質性を考慮した特異なレビュアー発見とレビューサマリの推測&lt;/a&gt;,&amp;rdquo;
 第8回データ工学と情報マネジメントに関するフォーラム, G6-3, 福岡, 2016年2月29日～3月2日.
-&lt;a href=&#34;https://jkawamoto.github.io/slides/deim2016/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/deim2016/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;宮崎 亮輔, &lt;em&gt;川本 淳平&lt;/em&gt;, 松本 晋一, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1661858&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 実ネットワーク環境におけるOpenFlowを用いた端末非依存型検知方式の評価&lt;/a&gt;,&amp;rdquo;
 
@@ -565,7 +565,7 @@ Android マルウェアの API 処理ロギングによる個人情報漏えい�
 &lt;li&gt;柯 陳毓トウ, 穴田 啓晃, &lt;em&gt;川本 淳平&lt;/em&gt;, Kirill Morozov, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1661859&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 複数プロバイダに亘る分散ストレージのためのグループ横断秘密分散法&lt;/a&gt;,&amp;rdquo;
 
@@ -578,7 +578,7 @@ Android マルウェアの API 処理ロギングによる個人情報漏えい�
 &lt;li&gt;肖 玲歓, 松本 晋一, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1661860&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 セカンドオーダーSQLインジェクション攻撃に対する情報理論を用いた検知手法&lt;/a&gt;,&amp;rdquo;
 
@@ -600,7 +600,7 @@ Android マルウェアの API 処理ロギングによる個人情報漏えい�
 &lt;li&gt;張 忠強, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1661861&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 オンラインゲームにおける不正プレイヤー検出のための関数データ解析による欠損データ復元&lt;/a&gt;,&amp;rdquo;
 
@@ -613,7 +613,7 @@ Android マルウェアの API 処理ロギングによる個人情報漏えい�
 &lt;li&gt;高 宇軒, フォン ヤオカイ, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1661862&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 機械学習を利用したDRDoS攻撃検知の提案とその性能実証&lt;/a&gt;,&amp;rdquo;
 
@@ -631,7 +631,7 @@ Android マルウェアの API 処理ロギングによる個人情報漏えい�
 &lt;li&gt;陳 春璐, 穴田 啓晃, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662063&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 端末フィンガープリント情報を用いた鍵乱用を防止可能なハイブリッド暗号化方式&lt;/a&gt;,&amp;rdquo;
 
@@ -644,7 +644,7 @@ Android マルウェアの API 処理ロギングによる個人情報漏えい�
 &lt;li&gt;蔡 龍洙, フォン ヤオカイ, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662064&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 挙動に基づくDNSアンプ攻撃の検知&lt;/a&gt;,&amp;rdquo;
 
@@ -657,7 +657,7 @@ Android マルウェアの API 処理ロギングによる個人情報漏えい�
 &lt;li&gt;西郷里 拓, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662065&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 モバイル端末における署名認証のための入力環境情報を用いた改良型 DTW&lt;/a&gt;,&amp;rdquo;
 
@@ -670,7 +670,7 @@ Android マルウェアの API 処理ロギングによる個人情報漏えい�
 &lt;li&gt;フォン ヤオカイ, 松本 晋一, 穴田 啓晃, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://id.nii.ac.jp/1001/00146911/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
 
 次世代暗号通貨プラットフォーム Ethereum の実験的評価&lt;/a&gt;,&amp;rdquo;
 
@@ -683,7 +683,7 @@ Android マルウェアの API 処理ロギングによる個人情報漏えい�
 &lt;li&gt;李 鵬飛, フォン ヤオカイ, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662066&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 パケットマーキングとロギングを用いたサイバー攻撃に対するトレースバック&lt;/a&gt;,&amp;rdquo;
 
@@ -696,28 +696,28 @@ Android マルウェアの API 処理ロギングによる個人情報漏えい�
 &lt;li&gt;陳 春璐, 穴田 啓晃, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662067&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 端末フィンガープリント情報を用いたハイブリッド暗号化方式&lt;/a&gt;,&amp;rdquo;
 平成27年度（第68回）電気・情報関係学会九州支部連合大会, 09-2P-04, 福岡, 2015年9月26日〜27日.&lt;/li&gt;
 &lt;li&gt;宮崎 亮輔, &lt;em&gt;川本 淳平&lt;/em&gt;, 松本 晋一, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662068&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 OpenFlowを用いた端末非依存型検知方式における負荷分散法&lt;/a&gt;,&amp;rdquo;
 平成27年度（第68回）電気・情報関係学会九州支部連合大会, 09-2P-07, 福岡, 2015年9月26日〜27日.&lt;/li&gt;
 &lt;li&gt;西郷里 拓, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662069&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 モバイル端末の署名認証に向けた加速度情報を考慮した改良DTWの提案&lt;/a&gt;,&amp;rdquo;
 平成27年度（第68回）電気・情報関係学会九州支部連合大会, 11-2P-07, 福岡, 2015年9月26日〜27日.&lt;/li&gt;
 &lt;li&gt;宮崎 亮輔, &lt;em&gt;川本 淳平&lt;/em&gt;, 松本 晋一, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662070&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 ネットワーク攻撃に対する端末非依存型検知方式のOpenFlowコントローラ上への実装と評価&lt;/a&gt;,&amp;rdquo;
 &lt;a href=&#34;http://dicomo.org/&#34;&gt;マルチメディア, 分散, 協調とモバイルシンポジウム&lt;/a&gt;,
@@ -725,34 +725,34 @@ pp.918-926, 岩手, 2015年7月8日〜10日. (&lt;strong&gt;優秀論文賞&lt;/
 &lt;li&gt;宮崎 亮輔, &lt;em&gt;川本 淳平&lt;/em&gt;, 松本 晋一, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662071&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 攻撃検知のための端末非依存型システムを実現するOpenFlowコントローラの実装と評価&lt;/a&gt;,&amp;rdquo;
 火の国情報シンポジウム2015, 3B-3, 佐賀, 2015年3月5日～6日.&lt;/li&gt;
 &lt;li&gt;西郷 里拓, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662072&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 加速度センサを用いたスマートフォンの筆跡認証の性能向上&lt;/a&gt;,&amp;rdquo;
 火の国情報シンポジウム2015, 1B-1, 佐賀, 2015年3月5日～6日.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, 俵本 一輝, 浅野 泰仁, 吉川 正俊,
 &amp;ldquo;&lt;a href=&#34;http://db-event.jpn.org/deim2015/paper/253.pdf&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
 
 初期レビューを用いた長期間評価推定&lt;/a&gt;,&amp;rdquo;
 &lt;a href=&#34;http://db-event.jpn.org/deim2015&#34;&gt;第7回データ工学と情報マネジメントに関するフォーラム&lt;/a&gt;,
 D3-6, 福島, 2015年3月2日～4日.
-&lt;a href=&#34;https://jkawamoto.github.io/slides/deim2015/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/deim2015/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;王 サン, フォン ヤオカイ, &lt;em&gt;川本 淳平&lt;/em&gt;, 堀 良彰, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662073&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 挙動に基づくポートスキャン検知手法に向けたパラメータなしの学習アルゴリズムの提案とその性能評価&lt;/a&gt;,&amp;rdquo;
 
@@ -774,7 +774,7 @@ D3-6, 福島, 2015年3月2日～4日.
 &lt;li&gt;山内 一将, &lt;em&gt;川本 淳平&lt;/em&gt;, 堀 良彰, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662074&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 近年のハニーポット取得データ解析による C&amp;amp;C トラフィック分類評価&lt;/a&gt;,&amp;rdquo;
 
@@ -787,7 +787,7 @@ D3-6, 福島, 2015年3月2日～4日.
 &lt;li&gt;梶原 直也, &lt;em&gt;川本 淳平&lt;/em&gt;, 松本 晋一, 堀 良彰, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662075&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 通信と描画挙動の動的解析を用いたAndroid 広告ライブラリの検知手法&lt;/a&gt;,&amp;rdquo;
 
@@ -805,7 +805,7 @@ D3-6, 福島, 2015年3月2日～4日.
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;,
 &amp;ldquo;&lt;a href=&#34;http://www.csis.u-tokyo.ac.jp/csisdays2014/csisdays2014-ra-pdf/CSISDAYS2014_Abstract.pdf&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
 
 位置情報における変化点検出のためのプライバシ保護&lt;/a&gt;&amp;rdquo;,
 &lt;a href=&#34;http://www.csis.u-tokyo.ac.jp/csisdays2014/&#34;&gt;CSIS DAYS 2014「全国共同利用研究発表大会」&lt;/a&gt;,
@@ -813,7 +813,7 @@ D16, 東京, 2014年11月21日～22日.&lt;/li&gt;
 &lt;li&gt;張 忠強, 穴田 啓晃, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662100&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 クラスタリングによるオンラインゲームにおける不正プレーヤー候補の検出&lt;/a&gt;,&amp;rdquo;
 
@@ -825,13 +825,13 @@ D16, 東京, 2014年11月21日～22日.&lt;/li&gt;
 北海道, pp.228-235, 2014年10月22日～24日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/170000087273&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, &lt;a href=&#34;http://users.encs.concordia.ca/~daghir/&#34;&gt;Gaby G. Dagher&lt;/a&gt;,
 &amp;ldquo;&lt;a href=&#34;http://id.nii.ac.jp/1001/00106618/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
 
 プライバシを考慮したクラウド翻訳システムにむけて&lt;/a&gt;,&amp;rdquo;
 
@@ -843,13 +843,13 @@ D16, 東京, 2014年11月21日～22日.&lt;/li&gt;
 北海道, 3D1-4, 2014年10月22日～24日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/170000087361&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;穴田 啓晃, &lt;em&gt;川本 淳平&lt;/em&gt;, 翁 健 , 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://id.nii.ac.jp/1001/00106639/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
 
 分散型アイデンティティ管理スキームとその RSA 及び離散対数系暗号による実現&lt;/a&gt;,&amp;rdquo;
 
@@ -861,13 +861,13 @@ D16, 東京, 2014年11月21日～22日.&lt;/li&gt;
 北海道, 3E2-1, 2014年10月22日～24日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/170000087382&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;山内 一将, &lt;em&gt;川本 淳平&lt;/em&gt;, 松本 晋一, 堀 良彰, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662101&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 OpenFlow を用いたハニーポットの動的配置手法&lt;/a&gt;,&amp;rdquo;
 平成26年度(第67回)電気・情報関係学会九州支部連合大会, 鹿児島, 2014年9月18日～19日.&lt;/li&gt;
@@ -877,7 +877,7 @@ OpenFlow を用いたハニーポットの動的配置手法&lt;/a&gt;,&amp;rdqu
 &lt;li&gt;陳 春璐, 穴田 啓晃, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662102&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 P2P 技術に基づくデジタル著作権管理の特徴と電子マネー比較よる考察&lt;/a&gt;,&amp;rdquo;
 平成26年度(第67回)電気・情報関係学会九州支部連合大会, 鹿児島, 2014年9月18日～19日.&lt;/li&gt;
@@ -887,14 +887,14 @@ P2P 技術に基づくデジタル著作権管理の特徴と電子マネー比�
 &lt;li&gt;柯 陳毓弢, 穴田 啓晃, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662103&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 クラウドサービスにおける盗聴防止及び改ざん検知の一方式&lt;/a&gt;,&amp;rdquo;
 平成26年度(第67回)電気・情報関係学会九州支部連合大会, 鹿児島, 2014年9月18日～19日.&lt;/li&gt;
 &lt;li&gt;北原 基貴, 穴田 啓晃, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662104&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 RSA暗号の公開鍵への所有者情報埋め込み手法とその著作権管理システムへの応用&lt;/a&gt;,&amp;rdquo;
 
@@ -906,13 +906,13 @@ RSA暗号の公開鍵への所有者情報埋め込み手法とその著作権�
 大分, 2014年 5月22日～23日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/110009902301&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;松本 晋一, 鬼塚 雄也, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://id.nii.ac.jp/1001/00101276/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
 
 デジタルフォレンジクスの為のWeb閲覧履歴可視化方式の提案&lt;/a&gt;,&amp;rdquo;
 
@@ -924,26 +924,26 @@ RSA暗号の公開鍵への所有者情報埋め込み手法とその著作権�
 大分, 2014年 5月22日～23日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/110009772692&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://id.nii.ac.jp/1001/00101131/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
 
 プライバシを考慮したクラウド型 IME&lt;/a&gt;,&amp;rdquo;
 &lt;a href=&#34;http://www.ipsj.or.jp/kenkyukai/event/gn92spt9.html&#34;&gt;情報処理学会　第92回グループウェアとネットワークサービス・第9回セキュリティ心理学とトラスト合同研究発表会&lt;/a&gt;,
 東京, 2014年 5月15日〜16日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/110009902333&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;鬼塚 雄也, 松本 晋一, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662105&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 フォレンジクス支援の為の Web 閲覧履歴構造化手法&lt;/a&gt;,&amp;rdquo;
 &lt;a href=&#34;https://www.ipsj-kyushu.jp/events/hinokuni-init&#34;&gt;火の国情報シンポジウム2014&lt;/a&gt;,
@@ -951,7 +951,7 @@ RSA暗号の公開鍵への所有者情報埋め込み手法とその著作権�
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1398220&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 暗号化データベースモデルにおける問合せの関連情報を秘匿する範囲検索&lt;/a&gt;,&amp;rdquo;
 
@@ -961,15 +961,15 @@ RSA暗号の公開鍵への所有者情報埋め込み手法とその著作権�
 
 ,
 1B2-4, 鹿児島, 2014年 1月.
-&lt;a href=&#34;https://jkawamoto.github.io/slides/scis2014/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/scis2014/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;北原 基貴, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662106&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 Bitcoin プロトコルの拡張による著作権管理方式の提案&lt;/a&gt;,&amp;rdquo;
 
@@ -982,7 +982,7 @@ Bitcoin プロトコルの拡張による著作権管理方式の提案&lt;/a
 &lt;li&gt;王 サン, フォン ヤオカイ, &lt;em&gt;川本 淳平&lt;/em&gt;, 堀 良彰, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662107&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 ポートのアクセス数分布によるポートスキャン検知&lt;/a&gt;,&amp;rdquo;
 
@@ -995,7 +995,7 @@ Bitcoin プロトコルの拡張による著作権管理方式の提案&lt;/a
 &lt;li&gt;山内 一将, &lt;em&gt;川本 淳平&lt;/em&gt;, 堀 良彰, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662108&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 機械学習を用いたセッション分類による C&amp;amp;C トラフィック抽出&lt;/a&gt;,&amp;rdquo;
 
@@ -1013,7 +1013,7 @@ Bitcoin プロトコルの拡張による著作権管理方式の提案&lt;/a
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;,
 &lt;a href=&#34;http://hdl.handle.net/2241/119980&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 暗号化ベクトルデータベースのための索引構造&lt;/a&gt;,&amp;rdquo;
 
@@ -1025,18 +1025,18 @@ Bitcoin プロトコルの拡張による著作権管理方式の提案&lt;/a
 3B4-1, 高松, 2013年10月23日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/170000080867&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;
-&lt;a href=&#34;https://jkawamoto.github.io/slides/css2013/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/css2013/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;北原 基貴, &lt;em&gt;川本 淳平&lt;/em&gt;, 櫻井 幸一,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2324/1662079&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/qir.png&#34; alt=&#34;qir&#34;/&gt;
 
 電子現金プロトコルを用いた著作権管理システムの提案&lt;/a&gt;,&amp;rdquo;
 
@@ -1048,25 +1048,25 @@ Bitcoin プロトコルの拡張による著作権管理方式の提案&lt;/a
 3D2-3, 高松, 2013年10月23日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/170000080847&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, 佐久間 淳,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2241/119516&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/tulips.png&#34; alt=&#34;tulips&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/tulips.png&#34; alt=&#34;tulips&#34;/&gt;
 
 マルコフ過程を用いた位置情報継続開示のためのアドバーザリアルプライバシ&lt;/a&gt;,&amp;rdquo;
 &lt;a href=&#34;http://www.ipsj.or.jp/kenkyukai/event/dbs157ifat111.html&#34;&gt;情報処理学会 第157回データベースシステム・第111回情報基礎とアクセス技術合同研究発表会&lt;/a&gt;,
 札幌, 2013年7月22日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/40019733242&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;
-&lt;a href=&#34;https://jkawamoto.github.io/slides/dbs2013-slide/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/dbs2013-slide/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Shuang Wu, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, Hiroaki Kikuchi, Jun Sakuma,
@@ -1075,13 +1075,13 @@ Bitcoin プロトコルの拡張による著作権管理方式の提案&lt;/a
 2013年7月18日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/40019733161&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, 福地 一斗, 佐久間 淳,
 &amp;ldquo;&lt;a href=&#34;https://kaigi.org/jsai/webprogram/2013/pdf/595.pdf&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
 
 マルコフモデルを仮定した位置情報開示のためのアドバーザリアルプライバシ&lt;/a&gt;,&amp;rdquo;
 
@@ -1093,18 +1093,18 @@ Bitcoin プロトコルの拡張による著作権管理方式の提案&lt;/a
 1C4-3, 富山, 2013年6月4日～7日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/40020295573&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;
-&lt;a href=&#34;https://jkawamoto.github.io/slides/jsai2013-slide/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/jsai2013-slide/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Shuang Wu, Tadanori Teruya, &lt;em&gt;Junpei Kawamoto&lt;/em&gt;, Jun Sakuma, Hiroaki Kikuchi,
 &amp;ldquo;&lt;a href=&#34;https://kaigi.org/jsai/webprogram/2013/pdf/596.pdf&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
 
 Privacy-preserving Logistic Regression&lt;/a&gt;,&amp;rdquo;
 
@@ -1117,7 +1117,7 @@ Privacy-preserving Logistic Regression&lt;/a&gt;,&amp;rdquo;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, 福地 一斗, 照屋 唯紀, 佐久間 淳,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2241/119467&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/tulips.png&#34; alt=&#34;tulips&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/tulips.png&#34; alt=&#34;tulips&#34;/&gt;
 
 プライバシを考慮した移動系列情報解析のための安全性&lt;/a&gt;,&amp;rdquo;
 
@@ -1127,9 +1127,9 @@ Privacy-preserving Logistic Regression&lt;/a&gt;,&amp;rdquo;
 
 ,
 2C2-4, 京都, 2013年1月22日～25日.
-&lt;a href=&#34;https://jkawamoto.github.io/slides/scis2013-slide/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/scis2013-slide/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;照屋 唯紀, &lt;em&gt;川本 淳平&lt;/em&gt;, 佐久間 淳,
@@ -1167,25 +1167,25 @@ Privacy-preserving Logistic Regression&lt;/a&gt;,&amp;rdquo;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, 佐久間 淳,
 &amp;ldquo;&lt;a href=&#34;http://www.csis.u-tokyo.ac.jp/csisdays2012/csisdays2012-ra-pdf/D08.pdf&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
 
 位置情報解析のためプライバシ保護手法&lt;/a&gt;,&amp;rdquo;
 &lt;a href=&#34;http://www.csis.u-tokyo.ac.jp/csisdays2012/&#34;&gt;2012年度　全国共同利用研究発表大会「CSIS DAYS 2012」&lt;/a&gt;,
 D08, 千葉, 2012年11月3日．(Poster Paper)
-&lt;a href=&#34;https://jkawamoto.github.io/slides/csis2012-slide/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/csis2012-slide/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;
-&lt;a href=&#34;https://jkawamoto.github.io/posters/csisdays2012/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/posters/csisdays2012/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/scribd.png&#34; alt=&#34;Scribd&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/scribd.png&#34; alt=&#34;Scribd&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;俵本 一輝, &lt;em&gt;川本 淳平&lt;/em&gt;, 浅野 泰仁, 吉川 正俊,
 &amp;ldquo;&lt;a href=&#34;http://db-event.jpn.org/deim2011/proceedings/pdf/b10-3.pdf&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
 
 集団評価の二部グラフモデルと相互強化型解析手法&lt;/a&gt;,&amp;rdquo;
 &lt;a href=&#34;http://db-event.jpn.org/deim2011/&#34;&gt;第3回データ工学と情報マネジメントに関するフォーラム (DEIM 2011)&lt;/a&gt;,
@@ -1193,7 +1193,7 @@ B10-3, 静岡, 2011年2月27日～3月1日.&lt;/li&gt;
 &lt;li&gt;俵本 一輝, &lt;em&gt;川本 淳平&lt;/em&gt;, 浅野 泰仁, 吉川 正俊,
 &amp;ldquo;&lt;a href=&#34;http://db-event.jpn.org/deim2010/proceedings/files/C4-1.pdf&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/pdf.png&#34; alt=&#34;pdf&#34;/&gt;
 
 感情解析のための分布モデルと相互強化型解析手法&lt;/a&gt;,&amp;rdquo;
 &lt;a href=&#34;http://db-event.jpn.org/deim2010/&#34;&gt;第2回データ工学と情報マネジメントに関するフォーラム (DEIM 2010)&lt;/a&gt;,
@@ -1201,7 +1201,7 @@ C4-1, 兵庫, 2010年2月28日～3月2日.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, 吉川 正俊,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2433/147393&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
 
 暗号化データベースモデルにおける関係情報推定を防ぐ索引手法&lt;/a&gt;,&amp;rdquo;
 &lt;a href=&#34;http://scis2010.z.nitech.ac.jp/index.html&#34;&gt;2010年 暗号と情報セキュリティシンポジウム (SCIS 2010)&lt;/a&gt;,
@@ -1209,19 +1209,19 @@ C4-1, 兵庫, 2010年2月28日～3月2日.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, 吉川 正俊,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2433/147389&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
 
 データベースアウトソーシングにおける問合せ解析からの社会的情報漏洩防止&lt;/a&gt;,&amp;rdquo;
 &lt;a href=&#34;http://db-event.jpn.org/idb2008/&#34;&gt;情報処理学会 研究報告「データベースシステム」(iDBフォーラム 2008)&lt;/a&gt;,
 Vol.2008, No.88, pp.79-84, 福島, 2008年9月21日～23日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/110006980276&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;
-&lt;a href=&#34;https://jkawamoto.github.io/slides/idb2008-slide/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/slides/idb2008-slide/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/slideshare.png&#34; alt=&#34;SlideShare&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, 吉川 正俊,
@@ -1230,25 +1230,25 @@ Vol.2008, No.88, pp.79-84, 福島, 2008年9月21日～23日.
 Vol.108, No.211, pp.13-14, 福島, 2008年9月21日～23日. (Poster Paper)
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/110007100394&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;
-&lt;a href=&#34;https://jkawamoto.github.io/posters/idb2008/&#34;&gt;
+&lt;a href=&#34;https://www.jkawamoto.info/posters/idb2008/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/scribd.png&#34; alt=&#34;Scribd&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/scribd.png&#34; alt=&#34;Scribd&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, 吉川 正俊,
 &amp;ldquo;&lt;a href=&#34;http://hdl.handle.net/2433/148001&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/kurenai.png&#34; alt=&#34;kurenai&#34;/&gt;
 
 Webアプリケーションにおけるプライバシ保護のためのフィルタリングシステムの開発&lt;/a&gt;,&amp;rdquo;
 電子情報通信学会 第10回 &lt;a href=&#34;http://www.ieice.org/~wi2/&#34;&gt;Webインテリジェンスとインタラクション研究会&lt;/a&gt;,
 pp.75-76, 東京, 2007年12月12日～13日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/120003437130&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1259,7 +1259,7 @@ pp.75-76, 東京, 2007年12月12日～13日.
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, 須賀 祐治,
 &amp;ldquo;&lt;a href=&#34;http://id.nii.ac.jp/1001/00106673/&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/ipsj.png&#34; alt=&#34;ipsj&#34;/&gt;
 
 IEEE Symposium on Security and Privacy 2014 参加報告&lt;/a&gt;,&amp;rdquo;
 
@@ -1271,7 +1271,7 @@ IEEE Symposium on Security and Privacy 2014 参加報告&lt;/a&gt;,&amp;rdquo;
 北海道, 3E4-2, 2014年10月22日～24日.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/170000087416&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, &amp;ldquo;プライバシに配慮したデータ処理技術の研究動向 （EDBT 2014 参加報告）,&amp;rdquo;
@@ -1279,7 +1279,7 @@ IEEE Symposium on Security and Privacy 2014 参加報告&lt;/a&gt;,&amp;rdquo;
 函館, 2014年 7月.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/110009945928&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, &amp;ldquo;位置情報サービスにおけるプライバシ保護技術,&amp;rdquo;
@@ -1287,7 +1287,7 @@ IEEE Symposium on Security and Privacy 2014 参加報告&lt;/a&gt;,&amp;rdquo;
 富山, 2013年 6月, 招待講演.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/40020296352&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, 忠鉢 洋輔,
@@ -1301,7 +1301,7 @@ IEEE Symposium on Security and Privacy 2014 参加報告&lt;/a&gt;,&amp;rdquo;
 Vol.26, No.6, pp.694-699, 2011.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/110008762242&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, 加藤 誠,
@@ -1315,7 +1315,7 @@ Vol.26, No.6, pp.694-699, 2011.
 Vol.26, No.1, pp.104-107, 2011.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/110008143700&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, &amp;ldquo;迷ったらやってみよう (&amp;lt;特集&amp;gt;編集委員今年の抱負2011),&amp;rdquo;
@@ -1328,7 +1328,7 @@ Vol.26, No.1, pp.104-107, 2011.
 Vol.26, No.1, p.37, 2011.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/110008143657&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, 忠鉢 洋輔,
@@ -1342,7 +1342,7 @@ Vol.26, No.1, p.37, 2011.
 Vol.25, No.6, pp.906-909, 2010.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/110007880924&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, 田中 美里,
@@ -1356,7 +1356,7 @@ Vol.25, No.6, pp.906-909, 2010.
 Vol.25, No.2, pp.297-300, 2010.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/110007580607&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;山本 祐輔, &lt;em&gt;川本 淳平&lt;/em&gt;,
@@ -1370,7 +1370,7 @@ Vol.25, No.2, pp.297-300, 2010.
 Vol.24, No.2, pp.315-317, 2009.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/110007114498&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;川本 淳平&lt;/em&gt;, &amp;ldquo;ユーザにとっての安心とは何か (特集「編集委員今年の抱負2009 : 経糸から横糸まで」),&amp;rdquo;
@@ -1383,7 +1383,7 @@ Vol.24, No.2, pp.315-317, 2009.
 Vol.24, No.1, p.42, 2009.
 &lt;a href=&#34;http://ci.nii.ac.jp/naid/110007029826&#34;&gt;
 
-  &lt;img src=&#34;https://jkawamoto.github.io/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
+  &lt;img src=&#34;https://www.jkawamoto.info/images/cinii.png&#34; alt=&#34;CiNii&#34;/&gt;
 
 &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1392,10 +1392,10 @@ Vol.24, No.1, p.42, 2009.
     
     <item>
       <title>List of thesis.</title>
-      <link>https://jkawamoto.github.io/publications-ja/thesis/</link>
+      <link>https://www.jkawamoto.info/publications-ja/thesis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/publications-ja/thesis/</guid>
+      <guid>https://www.jkawamoto.info/publications-ja/thesis/</guid>
       <description>
 
 &lt;h2 id=&#34;thesis:47f6daafdded5bbba9cec3e260115ccb&#34;&gt;Thesis&lt;/h2&gt;
@@ -1428,10 +1428,10 @@ Vol.24, No.1, p.42, 2009.
     
     <item>
       <title>List of links to indexing sites.</title>
-      <link>https://jkawamoto.github.io/publications-ja/link/</link>
+      <link>https://www.jkawamoto.info/publications-ja/link/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/publications-ja/link/</guid>
+      <guid>https://www.jkawamoto.info/publications-ja/link/</guid>
       <description>
 
 &lt;h2 id=&#34;link:35369cacd92ce7c7b36c676959175aad&#34;&gt;Link&lt;/h2&gt;

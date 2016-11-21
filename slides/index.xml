@@ -2,160 +2,160 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Slides on Junpei Kawamoto</title>
-    <link>https://jkawamoto.github.io/slides/</link>
+    <link>https://www.jkawamoto.info/slides/</link>
     <description>Recent content in Slides on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
     <lastBuildDate>Mon, 29 Feb 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://jkawamoto.github.io/slides/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.jkawamoto.info/slides/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>レビューサイトにおける不均質性を考慮した特異なレビュアー発見とレビューサマリの推測</title>
-      <link>https://jkawamoto.github.io/slides/deim2016/</link>
+      <link>https://www.jkawamoto.info/slides/deim2016/</link>
       <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/deim2016/</guid>
+      <guid>https://www.jkawamoto.info/slides/deim2016/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/ifpVDK856yUGec&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; 
 </description>
     </item>
     
     <item>
       <title>初期レビューを用いた長期間評価推定</title>
-      <link>https://jkawamoto.github.io/slides/deim2015/</link>
+      <link>https://www.jkawamoto.info/slides/deim2015/</link>
       <pubDate>Mon, 02 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/deim2015/</guid>
+      <guid>https://www.jkawamoto.info/slides/deim2015/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/4qJ5i65s5WhdRO&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; 
 </description>
     </item>
     
     <item>
       <title>Frequency-based Constraint Relaxation for Private Query Processing in Cloud Databases</title>
-      <link>https://jkawamoto.github.io/slides/ccece2014/</link>
+      <link>https://www.jkawamoto.info/slides/ccece2014/</link>
       <pubDate>Sun, 04 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/ccece2014/</guid>
+      <guid>https://www.jkawamoto.info/slides/ccece2014/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/3J9PTutslDXtTq&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; 
 </description>
     </item>
     
     <item>
       <title>暗号化データベースモデルにおける問合せの関連情報を秘匿する範囲検索</title>
-      <link>https://jkawamoto.github.io/slides/scis2014/</link>
+      <link>https://www.jkawamoto.info/slides/scis2014/</link>
       <pubDate>Tue, 21 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/scis2014/</guid>
+      <guid>https://www.jkawamoto.info/slides/scis2014/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/e7T0YeNk6KZIlb&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; 
 </description>
     </item>
     
     <item>
       <title>Privacy for Continual Data Publishing</title>
-      <link>https://jkawamoto.github.io/slides/wais2014/</link>
+      <link>https://www.jkawamoto.info/slides/wais2014/</link>
       <pubDate>Fri, 10 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/wais2014/</guid>
+      <guid>https://www.jkawamoto.info/slides/wais2014/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/FwxJBFsHaRpCkp&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt;
 </description>
     </item>
     
     <item>
       <title>暗号化ベクトルデータベースのための索引構造</title>
-      <link>https://jkawamoto.github.io/slides/css2013/</link>
+      <link>https://www.jkawamoto.info/slides/css2013/</link>
       <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/css2013/</guid>
+      <guid>https://www.jkawamoto.info/slides/css2013/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/2EDkxZ8Y3eM9e5&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt;
 </description>
     </item>
     
     <item>
       <title>マルコフ過程を用いた位置情報継続開示のためのアドバーザリアルプライバシ</title>
-      <link>https://jkawamoto.github.io/slides/dbs2013-slide/</link>
+      <link>https://www.jkawamoto.info/slides/dbs2013-slide/</link>
       <pubDate>Mon, 22 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/dbs2013-slide/</guid>
+      <guid>https://www.jkawamoto.info/slides/dbs2013-slide/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/sxLuQIpPrSFC2n&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt;
 </description>
     </item>
     
     <item>
       <title>マルコフモデルを仮定した位置情報開示のためのアドバーザリアルプライバシ</title>
-      <link>https://jkawamoto.github.io/slides/jsai2013-slide/</link>
+      <link>https://www.jkawamoto.info/slides/jsai2013-slide/</link>
       <pubDate>Tue, 04 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/jsai2013-slide/</guid>
+      <guid>https://www.jkawamoto.info/slides/jsai2013-slide/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/1aMFLKa0t95uRS&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; 
 </description>
     </item>
     
     <item>
       <title>プライバシを考慮した移動系列情報解析のための安全性の提案</title>
-      <link>https://jkawamoto.github.io/slides/scis2013-slide/</link>
+      <link>https://www.jkawamoto.info/slides/scis2013-slide/</link>
       <pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/scis2013-slide/</guid>
+      <guid>https://www.jkawamoto.info/slides/scis2013-slide/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/4HvIBftg3QjbRu&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt;
 </description>
     </item>
     
     <item>
       <title>A Locality Sensitive Hashing Filter for Encrypted Vector Databases</title>
-      <link>https://jkawamoto.github.io/slides/paris2012/</link>
+      <link>https://www.jkawamoto.info/slides/paris2012/</link>
       <pubDate>Tue, 04 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/paris2012/</guid>
+      <guid>https://www.jkawamoto.info/slides/paris2012/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/vXwulau8a2xmE2&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; 
 </description>
     </item>
     
     <item>
       <title>プライベート問合せにおける問合せ頻度を用いた制約緩和手法</title>
-      <link>https://jkawamoto.github.io/slides/webdbf2012/</link>
+      <link>https://www.jkawamoto.info/slides/webdbf2012/</link>
       <pubDate>Tue, 20 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/webdbf2012/</guid>
+      <guid>https://www.jkawamoto.info/slides/webdbf2012/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/44q9fswJik1xnm&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt;
 </description>
     </item>
     
     <item>
       <title>位置情報解析のためプライバシ保護手法</title>
-      <link>https://jkawamoto.github.io/slides/csis2012-slide/</link>
+      <link>https://www.jkawamoto.info/slides/csis2012-slide/</link>
       <pubDate>Sat, 03 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/csis2012-slide/</guid>
+      <guid>https://www.jkawamoto.info/slides/csis2012-slide/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/quCb5J44hoIyUY&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt;
 </description>
     </item>
     
     <item>
       <title>Private Range Query by Perturbation and Matrix Based Encryption</title>
-      <link>https://jkawamoto.github.io/slides/icdim2011/</link>
+      <link>https://www.jkawamoto.info/slides/icdim2011/</link>
       <pubDate>Mon, 26 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/icdim2011/</guid>
+      <guid>https://www.jkawamoto.info/slides/icdim2011/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/tFFPoG4re9dHVw&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; 
 </description>
     </item>
     
     <item>
       <title>Security of Social Information from Query Analysis in DaaS</title>
-      <link>https://jkawamoto.github.io/slides/pais2009/</link>
+      <link>https://www.jkawamoto.info/slides/pais2009/</link>
       <pubDate>Sun, 22 Mar 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/pais2009/</guid>
+      <guid>https://www.jkawamoto.info/slides/pais2009/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/vBVDarcoqZj4WU&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; 
 </description>
     </item>
     
     <item>
       <title>データベースアウトソーシングにおける問合せ解析からの社会的情報漏洩防止</title>
-      <link>https://jkawamoto.github.io/slides/idb2008-slide/</link>
+      <link>https://www.jkawamoto.info/slides/idb2008-slide/</link>
       <pubDate>Sun, 21 Sep 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/slides/idb2008-slide/</guid>
+      <guid>https://www.jkawamoto.info/slides/idb2008-slide/</guid>
       <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/3bv0266I1d9E6Z&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt;
 </description>
     </item>
