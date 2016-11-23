@@ -38,25 +38,4 @@
 		{{ end }}
 	</ul>
 </footer>
-
-{{ "<!-- Scripts -->" | safeHTML }}
-<script src="/js/jquery.min.js"></script>
-<script src="/js/jquery.poptrox.min.js"></script>
-<script src="/js/skel.min.js"></script>
-<script src="/js/util.js"></script>
-<!--[if lte IE 8]><script src="{{ .Site.BaseURL }}js/ie/respond.min.js"></script><![endif]-->
-<script src="/js/main.js"></script>
-
-{{ with .Site.Params.googleAnalytics }}
-{{ "<!-- Google Analytics -->" | safeHTML }}
-<script>
-  var _gaq=[['_setAccount','{{ . }}'],['_trackPageview']];
-  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-  s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
-{{ end }}
-
-<script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57f285f012d45509"></script>
+{{ partial "scripts" . }}
