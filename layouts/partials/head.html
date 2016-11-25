@@ -1,29 +1,46 @@
 <!DOCTYPE HTML>
 <html>
 	<head prefix="og: http://ogp.me/ns#">
-		<title>{{ .Title }} &middot; {{ .Site.Title }}</title>
-		<base href="{{ .Site.BaseURL }}"/>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="author" content="{{ with .Site.Params.name }}{{ . }}{{ end }}">
-  	<meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}">
-  	<meta http-equiv="content-language" content="{{ with .Site.LanguageCode }}{{ . }}{{ end }}" />
+		<meta http-equiv="content-language" content="{{ with .Site.LanguageCode }}{{ . }}{{ end }}" />
 
-		<meta property="og:title" content="{{ .Title }} &middot; {{ .Site.Title }}" />
+		<title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+		<base href="{{ .Site.BaseURL }}" />
+		{{ .Hugo.Generator }}
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="{{ with .Site.Params.name }}{{ . }}{{ end }}" />
+
+		{{ if isset .Params "description" }}
+		<meta name="description" content="{{ .Params.description }}" />
+		{{ else }}
+		<meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}" />
+		{{ end }}
+
+		{{ with .Params.tags }}
+		<meta name=”keywords” content=”{{ delimit . "," }}” />
+		{{ end }}
+
 		<meta property="og:type" content="article" />
-		<meta property="og:url" content="{{ .Permalink }}" />
+		<meta property="og:title" content="{{ .Title }} &middot; {{ .Site.Title }}" />
+		{{ if isset .Params "description" }}
+		<meta name="og:description" content="{{ .Params.description }}" />
+		{{ else }}
+		<meta name="og:description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}" />
+		{{ end }}
 		<meta property="og:image" content="/images/wordcloud.png" />
 		<meta property="og:site_name"  content="{{ .Site.Title }}" />
-		<meta name="twitter:site" content="@junkawamoto" />
-  	{{ .Hugo.Generator }}
-		{{ with .Params.tags }}
-		<meta name=”keywords” content=”{{ delimit . "," }}”/>
+
+		{{ if isset .Params "description" }}
+		<meta name="twitter:card" content="{{ .Params.description }}" />
+		{{ else }}
+		<meta name="twitter:card" content="{{ with .Site.Params.description }}{{ . }}{{ end }}" />
 		{{ end }}
+		<meta name="twitter:site" content="@junkawamoto" />
 
 		<!--[if lte IE 8]><script src="{{ .Site.BaseURL }}js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
 		<link rel="stylesheet" href="/css/main.css" />
-		<!-- <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" /> -->
 		<!--[if lte IE 8]><link rel="stylesheet" href="{{ .Site.BaseURL }}/css/ie8.css" /><![endif]-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
 		<link rel="stylesheet" href="/css/remodal.css">
