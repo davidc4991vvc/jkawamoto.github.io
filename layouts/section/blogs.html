@@ -23,12 +23,6 @@
 		      {{ end }}
 				</ul>
 
-				<div style="padding: 0 10px;">
-					<p>
-						{{ partial "responsive-ad" . }}
-					</p>
-				</div>
-
 				{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
 					<nav class="align-center" role="pagination">
 						<ul style="list-style:none;">
@@ -45,6 +39,11 @@
 					  </ul>
 					</nav>
 				{{ end }}
+
+				<div class="addthis_relatedposts_inline"></div>
+				<p>
+					{{ partial "rectangle-ad" . }}
+				</p>
 
 			</div>
 
