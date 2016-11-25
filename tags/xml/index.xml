@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xml on Junpei Kawamoto</title>
+    <link>https://www.jkawamoto.info/tags/xml/</link>
+    <description>Recent content in Xml on Junpei Kawamoto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
+    <lastBuildDate>Tue, 23 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.jkawamoto.info/tags/xml/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>XSLT にてノード名別に処理を切り替える</title>
+      <link>https://www.jkawamoto.info/blog-ja/switching-action-in-xslt/</link>
+      <pubDate>Tue, 23 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/blog-ja/switching-action-in-xslt/</guid>
+      <description>
+
+&lt;p&gt;for-each 要素 + when 要素で対応しようとしていたがうまく行かなかった．
+XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
+
+&lt;p&gt;XSLT 的には &lt;code&gt;apply-templetes&lt;/code&gt; 要素を使うのが正しいかと思われる．&lt;/p&gt;
+
+&lt;h2 id=&#34;参考書籍:1f1ae7033ee5f696a9cb6314e126a8bc&#34;&gt;参考書籍&lt;/h2&gt;
+
+&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=jkwf4mew-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4756140653&amp;linkId=b2835df657e267763950c4c934907627&#34;&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

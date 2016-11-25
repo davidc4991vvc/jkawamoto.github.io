@@ -1,0 +1,352 @@
+<!DOCTYPE HTML>
+<html>
+	<head prefix="og: http://ogp.me/ns#">
+		<title>Internationalization (i18n) of Meteor applications &middot; Junpei Kawamoto</title>
+		<base href="https://www.jkawamoto.info/"/>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Junpei Kawamoto">
+  	<meta name="description" content="Homepage of Junpei Kawamoto.">
+  	<meta http-equiv="content-language" content="ja" />
+
+		<meta property="og:title" content="Internationalization (i18n) of Meteor applications &middot; Junpei Kawamoto" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="https://www.jkawamoto.info/blogs/i18n-package-in-meteor/" />
+		<meta property="og:image" content="/images/wordcloud.png" />
+		<meta property="og:site_name"  content="Junpei Kawamoto" />
+		<meta name="twitter:site" content="@junkawamoto" />
+  	<meta name="generator" content="Hugo 0.15" />
+		
+		<meta name=”keywords” content=”Meteor,i18n”/>
+		
+
+		
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="/css/main.css" />
+		
+		
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
+		<link rel="stylesheet" href="/css/remodal.css">
+		<link rel="stylesheet" href="/css/remodal-default-theme.css">
+    <link rel="stylesheet" href="/css/custom.css">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+		  (adsbygoogle = window.adsbygoogle || []).push({
+		    google_ad_client: "ca-pub-4734862314145555",
+		    enable_page_level_ads: true
+		  });
+		</script>
+	</head>
+
+	<body id="top">
+		<div class="remodal-bg">
+			<!-- Header -->
+<header id="header">
+	<a href="#" class="image avatar"><img src="/images/avatar.jpg" alt="" /></a>
+	<h1 style="text-shadow: 1px 1px 5px black; color: rgba(255,255,255,0.7);"><strong>Junpei Kawamoto</strong>, Ph.D. in Informatics.<br>Research scientist working with data mining, security, and privacy.</h1>
+
+  <br/>
+  <ul style="list-style:none; text-shadow: 1px 1px 5px black; margin: 0em;">
+    <li style="display: inline-block;"><a href="/#main">Home</a></li>
+    
+    <li style="display: inline-block;"><a href="/blogs/#main">Blog</a></li>
+    
+    <li style="display: inline-block;"><a href="/publications/#main">Publications</a></li>
+    
+    <li style="display: inline-block;"><a href="/research/#main">Research</a></li>
+    
+    <li style="display: inline-block;"><a href="/lectures/#main">Lectures</a></li>
+    
+  </ul>
+	<ul style="list-style:none; text-shadow: 1px 1px 5px black;">
+    
+    <li style="display: inline-block;"><a href="/japanese/#main">日本語</a></li>
+    
+    <li style="display: inline-block;"><a href="/publications-ja/#main">論文リスト</a></li>
+    
+    <li style="display: inline-block;"><a href="/blog-ja/#main">メモ</a></li>
+    
+    <li style="display: inline-block;"><a href="/activity-ja/#main">その他の活動</a></li>
+    
+  </ul>
+
+</header>
+
+
+			<div id="main">
+				
+					<h1>Internationalization (i18n) of Meteor applications</h1>
+				
+
+				<p>
+					<span>
+						<i class="fa fa-calendar" aria-hidden="true"></i>
+						Posted: <time pubdate="2016-08-13">2016-08-13</time>,
+						Modified: <time pubdate="2016-08-13">2016-08-13</time>
+					</span>
+					&nbsp;
+					
+					<spna>
+						<i class="fa fa-tags" aria-hidden="true"></i>
+						
+						Meteor
+						
+						i18n
+						
+					</span>
+					
+				</p>
+
+				<div class="addthis_inline_share_toolbox"></div>
+
+				<div style="padding: 10px;">
+					<p>
+						<!-- AdSense -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4734862314145555"
+     data-ad-slot="7714563027"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+					</p>
+				</div>
+	    	
+
+<h2 id="universe-i18n:b29d758a8384a43dccfcfc35d604f1ac">universe:i18n</h2>
+
+<p>How to internationalize <a href="https://www.meteor.com/">Meteor</a> application?
+An <a href="https://atmospherejs.com">atmosphere</a> package <a href="https://atmospherejs.com/universe/i18n">universe:i18n</a> helps it.
+It supports locales in <a href="https://github.com/vazco/meteor-universe-i18n/blob/master/lib/locales.js">the list</a>,
+and JSON and YAML formats for bilingual corpuses.</p>
+
+<p>To install <a href="https://atmospherejs.com/universe/i18n">universe:i18n</a>, run</p>
+
+<pre><code class="language-sh">$ meteor add universe:i18n
+</code></pre>
+
+<p>and add the following in script files to import it:</p>
+
+<pre><code>import i18n from &quot;meteor/universe:i18n&quot;;
+</code></pre>
+
+<h3 id="register-corpuses:b29d758a8384a43dccfcfc35d604f1ac">Register corpuses</h3>
+
+<p>You can add corpuses with APIs in <a href="https://atmospherejs.com/universe/i18n">universe:i18n</a>.
+The following line adds a word associated with a namespace and a keyword to a locale.</p>
+
+<pre><code>i18n.addTranslation(“locale&quot;, “namespace&quot;, “keyword&quot;, “word&quot;);
+</code></pre>
+
+<h3 id="corpus-file:b29d758a8384a43dccfcfc35d604f1ac">Corpus file</h3>
+
+<p>It is hard to add corpuses by <code>i18n.addTranslation</code> function.
+You can add corpuses with JSON and YAML files,
+and such file names must end with <code>.i18n.json</code> and <code>.i18n.yml</code>, respectively.</p>
+
+<p>For example, a YAML corpus file consists of key-value pairs such as</p>
+
+<pre><code class="language-ja.i18n.yml">ok: 決定
+cancel: キャンセル
+</code></pre>
+
+<p>You can specify namespace of a corpus file with adding <code>_namespace</code> key.
+The following example is a set of corpuses for namespace <code>ui</code>:</p>
+
+<pre><code class="language-ja.i18n.yml">_namespace: ui
+ok: 決定
+cancel: キャンセル
+</code></pre>
+
+<p>Which locale a corpus file belongs to is specified by <code>_locale</code> key or file name.
+The following file belongs to locale <code>ja</code></p>
+
+<pre><code class="language-ja.i18n.yml">_locale: ja
+ok: 決定
+cancel: キャンセル
+</code></pre>
+
+<p>You need to open each corpus files to check locale if using <code>_locale</code> key.
+I think it is better to use file name to specify locale.
+For example, a corpus file which belongs to <code>en-US</code> locale should be following
+one of the two formats.</p>
+
+<ul>
+<li><code>en-us.i18n.yml</code></li>
+<li><code>en-us/someName.i18n.yml</code></li>
+</ul>
+
+<p>Note that corpus files must not be in <code>imports</code> directory.</p>
+
+<h3 id="get-a-translated-word:b29d758a8384a43dccfcfc35d604f1ac">Get a translated word</h3>
+
+<p><code>i18n.__(namespace, key)</code> function returns a translated word associated with <code>namespace</code> and <code>key</code>.</p>
+
+<pre><code class="language-js">i18n.__(“ui”, “ok”); // -&gt; 決定 (in locale ja)
+</code></pre>
+
+<h4 id="change-locale:b29d758a8384a43dccfcfc35d604f1ac">Change locale</h4>
+
+<p><code>i18n.setLocale(&quot;locale&quot;)</code> function sets a new locale <code>locale</code>,
+and downloads the corpus associated with the locale asynchronously.
+The function returns a <code>Promise</code> and <code>.then</code> method is available to run some commands after receiving the corpus.</p>
+
+<h3 id="use-universe-i18n-in-angular-meteor:b29d758a8384a43dccfcfc35d604f1ac">Use universe:i18n in Angular-Meteor</h3>
+
+<p>To use universe:i18n in <a href="http://www.angular-meteor.com/">Angular-Meteor</a> template,
+add <code>i18n.getTranslation</code> method in a scope.
+Foe example, the following controller</p>
+
+<pre><code class="language-app.js">class AppCtrl {
+
+  constructor() {
+    this.translator = i18n.getTranslation;
+  }
+
+}
+</code></pre>
+
+<p>provides <code>translator</code> method and a template</p>
+
+<pre><code>&lt;md-button ng-click=&quot;$ctrl.onNext()” aria-label=&quot;$ctrl.translator(‘ui', ‘ok’)&quot;&gt;
+  {{$ctrl.translator(&quot;button&quot;, &quot;start&quot;)}}
+&lt;/md-button&gt;
+</code></pre>
+
+<p>inserts a word associated with <code>button</code> namespace and <code>start</code> key.
+To update such words when locale is changed, use the following commands:</p>
+
+<pre><code class="language-js">const setLocalePromise = i18n.setLocale(locale) || i18n.setLocale(&quot;en&quot;);
+setLocalePromise.then((e) =&gt; {
+   this.translator = i18n.getTranslation;
+});
+</code></pre>
+
+<p>But if you call <code>setLocale</code> function without an UI event, for example in a constructor, DOM won&rsquo;t be updated.
+You need to use <code>$scope.$apply()</code>:</p>
+
+<pre><code>constructor($scope) {
+
+  const setLocalePromise = i18n.setLocale(getLang()) || i18n.setLocale(&quot;en&quot;);
+  setLocalePromise.then(() =&gt; {
+    $scope.$apply( () =&gt;{
+      this.translator = i18n.getTranslation;
+    });
+  });
+
+}
+</code></pre>
+
+<p>See <a href="http://jimhoskins.com/2012/12/17/angularjs-and-apply.html">AngularJS and scope.$apply</a> for more information.</p>
+
+
+				<div class="addthis_relatedposts_inline"></div>
+
+				<p>
+					<!-- AdSense -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-4734862314145555"
+     data-ad-slot="3140329829"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-4734862314145555"
+     data-ad-slot="3140329829"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+				</p>
+
+			</div>
+
+			<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+    	<li><a href="//facebook.com/junpei.kawamoto" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+    
+		
+			<li><a href="//twitter.com/junkawamoto" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		
+		
+			<li><a href="//github.com/jkawamoto" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+			<li><a href="///www.linkedin.com/in/jkawamoto" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+		
+		
+		
+			<li><a href="//www.youtube.com/channel/UCAImvZQSpr4dw6USxHNqDXg" target="_blank" class="icon fa-youtube"><span class="label">Youtube</span></a></li>
+		
+		
+			<li><a href="//flickr.com/photos/junkawamoto" target="_blank" class="icon fa-flickr"><span class="label">Flickr</span></a></li>
+		
+		
+			<li><a href="mailto:junpei.kawamoto@acm.org" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+		
+  		<li><a href="#" data-remodal-target="wallet" class="icon fa-btc"><span class="label">BTC</span></a></li>
+		
+
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; Junpei Kawamoto</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li><a href="https://www.littlekitune.org/">Little Kitune studio</a></li>
+		
+	</ul>
+</footer>
+<!-- Scripts -->
+<aside>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery.poptrox.min.js"></script>
+  <script src="/js/skel.min.js"></script>
+  <script src="/js/util.js"></script>
+  
+  <script src="/js/main.js"></script>
+
+  
+  <!-- Google Analytics -->
+  <script>
+    var _gaq=[['_setAccount','UA-19410992-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  
+
+  <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57f285f012d45509"></script>
+</aside>
+
+
+		</div>
+		<div class="remodal" data-remodal-id="wallet">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <h1>Bitcoin wallet</h1>
+  <p>
+    My wallet address:
+    <span>1625kBbXoGRWRh92XcgLFik5E6PgV482sm</span>
+    <br/>
+    <img src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=bitcoin:1625kBbXoGRWRh92XcgLFik5E6PgV482sm"/>
+  </p>
+  <br/>
+  <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
+</div>
+<script src="https://www.jkawamoto.info/js/remodal.min.js"></script>
+
+	</body>
+</html>

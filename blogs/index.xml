@@ -93,5 +93,141 @@ deploy:
 </description>
     </item>
     
+    <item>
+      <title>Internationalization (i18n) of Meteor applications</title>
+      <link>https://www.jkawamoto.info/blogs/i18n-package-in-meteor/</link>
+      <pubDate>Sat, 13 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/blogs/i18n-package-in-meteor/</guid>
+      <description>
+
+&lt;h2 id=&#34;universe-i18n:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;universe:i18n&lt;/h2&gt;
+
+&lt;p&gt;How to internationalize &lt;a href=&#34;https://www.meteor.com/&#34;&gt;Meteor&lt;/a&gt; application?
+An &lt;a href=&#34;https://atmospherejs.com&#34;&gt;atmosphere&lt;/a&gt; package &lt;a href=&#34;https://atmospherejs.com/universe/i18n&#34;&gt;universe:i18n&lt;/a&gt; helps it.
+It supports locales in &lt;a href=&#34;https://github.com/vazco/meteor-universe-i18n/blob/master/lib/locales.js&#34;&gt;the list&lt;/a&gt;,
+and JSON and YAML formats for bilingual corpuses.&lt;/p&gt;
+
+&lt;p&gt;To install &lt;a href=&#34;https://atmospherejs.com/universe/i18n&#34;&gt;universe:i18n&lt;/a&gt;, run&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ meteor add universe:i18n
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and add the following in script files to import it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import i18n from &amp;quot;meteor/universe:i18n&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;register-corpuses:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Register corpuses&lt;/h3&gt;
+
+&lt;p&gt;You can add corpuses with APIs in &lt;a href=&#34;https://atmospherejs.com/universe/i18n&#34;&gt;universe:i18n&lt;/a&gt;.
+The following line adds a word associated with a namespace and a keyword to a locale.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;i18n.addTranslation(“locale&amp;quot;, “namespace&amp;quot;, “keyword&amp;quot;, “word&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;corpus-file:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Corpus file&lt;/h3&gt;
+
+&lt;p&gt;It is hard to add corpuses by &lt;code&gt;i18n.addTranslation&lt;/code&gt; function.
+You can add corpuses with JSON and YAML files,
+and such file names must end with &lt;code&gt;.i18n.json&lt;/code&gt; and &lt;code&gt;.i18n.yml&lt;/code&gt;, respectively.&lt;/p&gt;
+
+&lt;p&gt;For example, a YAML corpus file consists of key-value pairs such as&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ja.i18n.yml&#34;&gt;ok: 決定
+cancel: キャンセル
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can specify namespace of a corpus file with adding &lt;code&gt;_namespace&lt;/code&gt; key.
+The following example is a set of corpuses for namespace &lt;code&gt;ui&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ja.i18n.yml&#34;&gt;_namespace: ui
+ok: 決定
+cancel: キャンセル
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Which locale a corpus file belongs to is specified by &lt;code&gt;_locale&lt;/code&gt; key or file name.
+The following file belongs to locale &lt;code&gt;ja&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ja.i18n.yml&#34;&gt;_locale: ja
+ok: 決定
+cancel: キャンセル
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You need to open each corpus files to check locale if using &lt;code&gt;_locale&lt;/code&gt; key.
+I think it is better to use file name to specify locale.
+For example, a corpus file which belongs to &lt;code&gt;en-US&lt;/code&gt; locale should be following
+one of the two formats.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;en-us.i18n.yml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;en-us/someName.i18n.yml&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note that corpus files must not be in &lt;code&gt;imports&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;h3 id=&#34;get-a-translated-word:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Get a translated word&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;i18n.__(namespace, key)&lt;/code&gt; function returns a translated word associated with &lt;code&gt;namespace&lt;/code&gt; and &lt;code&gt;key&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;i18n.__(“ui”, “ok”); // -&amp;gt; 決定 (in locale ja)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;change-locale:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Change locale&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;i18n.setLocale(&amp;quot;locale&amp;quot;)&lt;/code&gt; function sets a new locale &lt;code&gt;locale&lt;/code&gt;,
+and downloads the corpus associated with the locale asynchronously.
+The function returns a &lt;code&gt;Promise&lt;/code&gt; and &lt;code&gt;.then&lt;/code&gt; method is available to run some commands after receiving the corpus.&lt;/p&gt;
+
+&lt;h3 id=&#34;use-universe-i18n-in-angular-meteor:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Use universe:i18n in Angular-Meteor&lt;/h3&gt;
+
+&lt;p&gt;To use universe:i18n in &lt;a href=&#34;http://www.angular-meteor.com/&#34;&gt;Angular-Meteor&lt;/a&gt; template,
+add &lt;code&gt;i18n.getTranslation&lt;/code&gt; method in a scope.
+Foe example, the following controller&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-app.js&#34;&gt;class AppCtrl {
+
+  constructor() {
+    this.translator = i18n.getTranslation;
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;provides &lt;code&gt;translator&lt;/code&gt; method and a template&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;md-button ng-click=&amp;quot;$ctrl.onNext()” aria-label=&amp;quot;$ctrl.translator(‘ui&#39;, ‘ok’)&amp;quot;&amp;gt;
+  {{$ctrl.translator(&amp;quot;button&amp;quot;, &amp;quot;start&amp;quot;)}}
+&amp;lt;/md-button&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;inserts a word associated with &lt;code&gt;button&lt;/code&gt; namespace and &lt;code&gt;start&lt;/code&gt; key.
+To update such words when locale is changed, use the following commands:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const setLocalePromise = i18n.setLocale(locale) || i18n.setLocale(&amp;quot;en&amp;quot;);
+setLocalePromise.then((e) =&amp;gt; {
+   this.translator = i18n.getTranslation;
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But if you call &lt;code&gt;setLocale&lt;/code&gt; function without an UI event, for example in a constructor, DOM won&amp;rsquo;t be updated.
+You need to use &lt;code&gt;$scope.$apply()&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;constructor($scope) {
+
+  const setLocalePromise = i18n.setLocale(getLang()) || i18n.setLocale(&amp;quot;en&amp;quot;);
+  setLocalePromise.then(() =&amp;gt; {
+    $scope.$apply( () =&amp;gt;{
+      this.translator = i18n.getTranslation;
+    });
+  });
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;See &lt;a href=&#34;http://jimhoskins.com/2012/12/17/angularjs-and-apply.html&#34;&gt;AngularJS and scope.$apply&lt;/a&gt; for more information.&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
