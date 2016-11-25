@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head prefix="og: http://ogp.me/ns#">
-		<title>Internationalization (i18n) of Meteor applications &middot; Junpei Kawamoto</title>
+		<title>Include GitHub repositories to requirements.txt &middot; Junpei Kawamoto</title>
 		<base href="https://www.jkawamoto.info/"/>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,15 +9,15 @@
   	<meta name="description" content="Homepage of Junpei Kawamoto.">
   	<meta http-equiv="content-language" content="ja" />
 
-		<meta property="og:title" content="Internationalization (i18n) of Meteor applications &middot; Junpei Kawamoto" />
+		<meta property="og:title" content="Include GitHub repositories to requirements.txt &middot; Junpei Kawamoto" />
 		<meta property="og:type" content="article" />
-		<meta property="og:url" content="https://www.jkawamoto.info/blogs/i18n-package-in-meteor/" />
+		<meta property="og:url" content="https://www.jkawamoto.info/blogs/include-github-repositories-to-requirements-txt/" />
 		<meta property="og:image" content="/images/wordcloud.png" />
 		<meta property="og:site_name"  content="Junpei Kawamoto" />
 		<meta name="twitter:site" content="@junkawamoto" />
   	<meta name="generator" content="Hugo 0.15" />
 		
-		<meta name=”keywords” content=”Meteor,i18n”/>
+		<meta name=”keywords” content=”python,github”/>
 		
 
 		
@@ -75,23 +75,23 @@
 
 			<div id="main">
 				
-					<h1>Internationalization (i18n) of Meteor applications</h1>
+					<h1>Include GitHub repositories to requirements.txt</h1>
 				
 
 				<p>
 					<span>
 						<i class="fa fa-calendar" aria-hidden="true"></i>
-						Posted: <time pubdate="2016-08-13">2016-08-13</time>,
-						Modified: <time pubdate="2016-11-24">2016-11-24</time>
+						Posted: <time pubdate="2016-10-19">2016-10-19</time>,
+						Modified: <time pubdate="2016-11-25">2016-11-25</time>
 					</span>
 					&nbsp;
 					
 					<spna>
 						<i class="fa fa-tags" aria-hidden="true"></i>
 						
-						Meteor
+						python
 						
-						i18n
+						github
 						
 					</span>
 					
@@ -115,131 +115,73 @@
 				</div>
 	    	
 
-<h2 id="universe-i18n:b29d758a8384a43dccfcfc35d604f1ac">universe:i18n</h2>
+<h2 id="summary:a0ee9d0ea8575a88500eea9bd15cac6b">Summary</h2>
 
-<p>How to internationalize <a href="https://www.meteor.com/">Meteor</a> application?
-An <a href="https://atmospherejs.com">atmosphere</a> package <a href="https://atmospherejs.com/universe/i18n">universe:i18n</a> helps it.
-It supports locales in <a href="https://github.com/vazco/meteor-universe-i18n/blob/master/lib/locales.js">the list</a>,
-and JSON and YAML formats for bilingual corpuses.</p>
+<p>This document explains how to include packages hosted in GitHub
+but not not registered in <a href="https://pypi.python.org/pypi">PyPI</a> into <code>requirements.txt</code>,
+and how to configure <code>setup.py</code> referring <code>requirements.txt</code>.</p>
 
-<p>To install <a href="https://atmospherejs.com/universe/i18n">universe:i18n</a>, run</p>
+<h2 id="requirements-txt:a0ee9d0ea8575a88500eea9bd15cac6b">requirements.txt</h2>
 
-<pre><code class="language-sh">$ meteor add universe:i18n
+<p>Supposing <a href="https://github.com/rgmining/common">https://github.com/rgmining/common</a> as the GitHub repository to be added to <code>requirements.txt</code>,
+the package information for the repository is</p>
+
+<pre><code class="language-requirements.txt">-e git+https://github.com/rgmining/common.git#egg=rgmining_common-0.9.0
 </code></pre>
 
-<p>and add the following in script files to import it:</p>
+<p>The format after <code>#egg=</code> shoule be <code>&lt;package name&gt;-&lt;version&gt;</code>.
+If you&rsquo;re using <code>pip-tools</code> to compile <code>requirements.txt</code>,
+your <code>requirements.in</code> should have the same clause.</p>
 
-<pre><code>import i18n from &quot;meteor/universe:i18n&quot;;
+<h2 id="setup-py:a0ee9d0ea8575a88500eea9bd15cac6b">setup.py</h2>
+
+<p>To include <code>requirements.txt</code> in <code>setup.py</code>,
+give the following <code>load_requires_from_file</code> function to <code>install_requires</code> attribute:</p>
+
+<pre><code class="language-setup.py">from setuptools import setup, find_packages
+
+def load_requires_from_file(filepath):
+    with open(filepath) as fp:
+        return [pkg_name.strip() for pkg_name in fp.readlines()]
+
+setup(
+    # Other clauses are omitted.
+    install_requires=load_requires_from_file(&quot;requirements.txt&quot;)
+)
 </code></pre>
 
-<h3 id="register-corpuses:b29d758a8384a43dccfcfc35d604f1ac">Register corpuses</h3>
+<p>If your <code>requirements.txt</code> has URLs,
+<code>load_requires_from_file</code> function should be the following:</p>
 
-<p>You can add corpuses with APIs in <a href="https://atmospherejs.com/universe/i18n">universe:i18n</a>.
-The following line adds a word associated with a namespace and a keyword to a locale.</p>
+<pre><code class="language-setup.py">def take_package_name(name):
+    if name.startswith(&quot;-e&quot;):
+        return name[name.find(&quot;=&quot;)+1:name.rfind(&quot;-&quot;)]
+    else:
+        return name.strip()
 
-<pre><code>i18n.addTranslation(“locale&quot;, “namespace&quot;, “keyword&quot;, “word&quot;);
+def load_requires_from_file(filepath):
+    with open(filepath) as fp:
+        return [take_package_name(pkg_name) for pkg_name in fp.readlines()]
 </code></pre>
 
-<h3 id="corpus-file:b29d758a8384a43dccfcfc35d604f1ac">Corpus file</h3>
+<p>and give those URLs via <code>dependency_link</code> attribute in <code>setup</code> function:</p>
 
-<p>It is hard to add corpuses by <code>i18n.addTranslation</code> function.
-You can add corpuses with JSON and YAML files,
-and such file names must end with <code>.i18n.json</code> and <code>.i18n.yml</code>, respectively.</p>
+<pre><code class="language-setup.py">def load_links_from_file(filepath):
+    res = []
+    with open(filepath) as fp:
+        for pkg_name in fp.readlines():
+            if pkg_name.startswith(&quot;-e&quot;):
+                res.append(pkg_name.split(&quot; &quot;)[1])
+    return res
 
-<p>For example, a YAML corpus file consists of key-value pairs such as</p>
-
-<pre><code class="language-ja.i18n.yml">ok: 決定
-cancel: キャンセル
+setup(
+    # Other clauses are omitted.
+    install_requires=load_requires_from_file(&quot;requirements.txt&quot;),
+    dependency_links=load_links_from_file(&quot;requirements.txt&quot;),
+)
 </code></pre>
 
-<p>You can specify namespace of a corpus file with adding <code>_namespace</code> key.
-The following example is a set of corpuses for namespace <code>ui</code>:</p>
-
-<pre><code class="language-ja.i18n.yml">_namespace: ui
-ok: 決定
-cancel: キャンセル
-</code></pre>
-
-<p>Which locale a corpus file belongs to is specified by <code>_locale</code> key or file name.
-The following file belongs to locale <code>ja</code></p>
-
-<pre><code class="language-ja.i18n.yml">_locale: ja
-ok: 決定
-cancel: キャンセル
-</code></pre>
-
-<p>You need to open each corpus files to check locale if using <code>_locale</code> key.
-I think it is better to use file name to specify locale.
-For example, a corpus file which belongs to <code>en-US</code> locale should be following
-one of the two formats.</p>
-
-<ul>
-<li><code>en-us.i18n.yml</code></li>
-<li><code>en-us/someName.i18n.yml</code></li>
-</ul>
-
-<p>Note that corpus files must not be in <code>imports</code> directory.</p>
-
-<h3 id="get-a-translated-word:b29d758a8384a43dccfcfc35d604f1ac">Get a translated word</h3>
-
-<p><code>i18n.__(namespace, key)</code> function returns a translated word associated with <code>namespace</code> and <code>key</code>.</p>
-
-<pre><code class="language-js">i18n.__(“ui”, “ok”); // -&gt; 決定 (in locale ja)
-</code></pre>
-
-<h4 id="change-locale:b29d758a8384a43dccfcfc35d604f1ac">Change locale</h4>
-
-<p><code>i18n.setLocale(&quot;locale&quot;)</code> function sets a new locale <code>locale</code>,
-and downloads the corpus associated with the locale asynchronously.
-The function returns a <code>Promise</code> and <code>.then</code> method is available to run some commands after receiving the corpus.</p>
-
-<h3 id="use-universe-i18n-in-angular-meteor:b29d758a8384a43dccfcfc35d604f1ac">Use universe:i18n in Angular-Meteor</h3>
-
-<p>To use universe:i18n in <a href="http://www.angular-meteor.com/">Angular-Meteor</a> template,
-add <code>i18n.getTranslation</code> method in a scope.
-Foe example, the following controller</p>
-
-<pre><code class="language-app.js">class AppCtrl {
-
-  constructor() {
-    this.translator = i18n.getTranslation;
-  }
-
-}
-</code></pre>
-
-<p>provides <code>translator</code> method and a template</p>
-
-<pre><code>&lt;md-button ng-click=&quot;$ctrl.onNext()” aria-label=&quot;$ctrl.translator(‘ui', ‘ok’)&quot;&gt;
-  {{$ctrl.translator(&quot;button&quot;, &quot;start&quot;)}}
-&lt;/md-button&gt;
-</code></pre>
-
-<p>inserts a word associated with <code>button</code> namespace and <code>start</code> key.
-To update such words when locale is changed, use the following commands:</p>
-
-<pre><code class="language-js">const setLocalePromise = i18n.setLocale(locale) || i18n.setLocale(&quot;en&quot;);
-setLocalePromise.then((e) =&gt; {
-   this.translator = i18n.getTranslation;
-});
-</code></pre>
-
-<p>But if you call <code>setLocale</code> function without an UI event, for example in a constructor, DOM won&rsquo;t be updated.
-You need to use <code>$scope.$apply()</code>:</p>
-
-<pre><code>constructor($scope) {
-
-  const setLocalePromise = i18n.setLocale(getLang()) || i18n.setLocale(&quot;en&quot;);
-  setLocalePromise.then(() =&gt; {
-    $scope.$apply( () =&gt;{
-      this.translator = i18n.getTranslation;
-    });
-  });
-
-}
-</code></pre>
-
-<p>See <a href="http://jimhoskins.com/2012/12/17/angularjs-and-apply.html">AngularJS and scope.$apply</a> for more information.</p>
+<p>Finally, <code>python setup.py test</code> downloads packages from GitHub and runs tests.</p>
 
 
 				<div class="addthis_relatedposts_inline"></div>

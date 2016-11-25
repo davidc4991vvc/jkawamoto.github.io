@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head prefix="og: http://ogp.me/ns#">
-		<title>Blogs &middot; Junpei Kawamoto</title>
+		<title>Github &middot; Junpei Kawamoto</title>
 		<base href="https://www.jkawamoto.info/"/>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,9 +9,9 @@
   	<meta name="description" content="Homepage of Junpei Kawamoto.">
   	<meta http-equiv="content-language" content="ja" />
 
-		<meta property="og:title" content="Blogs &middot; Junpei Kawamoto" />
+		<meta property="og:title" content="Github &middot; Junpei Kawamoto" />
 		<meta property="og:type" content="article" />
-		<meta property="og:url" content="https://www.jkawamoto.info/blogs/" />
+		<meta property="og:url" content="https://www.jkawamoto.info/tags/github/" />
 		<meta property="og:image" content="/images/wordcloud.png" />
 		<meta property="og:site_name"  content="Junpei Kawamoto" />
 		<meta name="twitter:site" content="@junkawamoto" />
@@ -72,71 +72,81 @@
 
 
 			<div id="main">
-				<h1>Blog</h1>
+				<h1></h1>
+	      
+	        <section>
+	          
 
-				<div style="padding: 10px;">
-					<p>
-						<!-- AdSense -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4734862314145555"
-     data-ad-slot="7714563027"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<h2 id="summary:a0ee9d0ea8575a88500eea9bd15cac6b">Summary</h2>
 
-					</p>
-				</div>
+<p>This document explains how to include packages hosted in GitHub
+but not not registered in <a href="https://pypi.python.org/pypi">PyPI</a> into <code>requirements.txt</code>,
+and how to configure <code>setup.py</code> referring <code>requirements.txt</code>.</p>
 
-				<ul>
-					
-						<li>
-							<a href="https://www.jkawamoto.info/blogs/include-github-repositories-to-requirements-txt/#main">Include GitHub repositories to requirements.txt</a>
-							&nbsp;
-							<i class="fa fa-calendar" aria-hidden="true"></i>
-							<time pubdate="2016-10-19">2016-10-19</time>
-						</li>
-		      
-						<li>
-							<a href="https://www.jkawamoto.info/blogs/sphinx-on-wercker/#main">Compiling a Sphinx document on Wercker</a>
-							&nbsp;
-							<i class="fa fa-calendar" aria-hidden="true"></i>
-							<time pubdate="2016-08-18">2016-08-18</time>
-						</li>
-		      
-						<li>
-							<a href="https://www.jkawamoto.info/blogs/i18n-package-in-meteor/#main">Internationalization (i18n) of Meteor applications</a>
-							&nbsp;
-							<i class="fa fa-calendar" aria-hidden="true"></i>
-							<time pubdate="2016-08-13">2016-08-13</time>
-						</li>
-		      
-				</ul>
+<h2 id="requirements-txt:a0ee9d0ea8575a88500eea9bd15cac6b">requirements.txt</h2>
 
-				
+<p>Supposing <a href="https://github.com/rgmining/common">https://github.com/rgmining/common</a> as the GitHub repository to be added to <code>requirements.txt</code>,
+the package information for the repository is</p>
 
-				<div class="addthis_relatedposts_inline"></div>
-				<p>
-					<!-- AdSense -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:336px;height:280px"
-     data-ad-client="ca-pub-4734862314145555"
-     data-ad-slot="3140329829"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<pre><code class="language-requirements.txt">-e git+https://github.com/rgmining/common.git#egg=rgmining_common-0.9.0
+</code></pre>
 
-<ins class="adsbygoogle"
-     style="display:inline-block;width:336px;height:280px"
-     data-ad-client="ca-pub-4734862314145555"
-     data-ad-slot="3140329829"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<p>The format after <code>#egg=</code> shoule be <code>&lt;package name&gt;-&lt;version&gt;</code>.
+If you&rsquo;re using <code>pip-tools</code> to compile <code>requirements.txt</code>,
+your <code>requirements.in</code> should have the same clause.</p>
 
-				</p>
+<h2 id="setup-py:a0ee9d0ea8575a88500eea9bd15cac6b">setup.py</h2>
 
+<p>To include <code>requirements.txt</code> in <code>setup.py</code>,
+give the following <code>load_requires_from_file</code> function to <code>install_requires</code> attribute:</p>
+
+<pre><code class="language-setup.py">from setuptools import setup, find_packages
+
+def load_requires_from_file(filepath):
+    with open(filepath) as fp:
+        return [pkg_name.strip() for pkg_name in fp.readlines()]
+
+setup(
+    # Other clauses are omitted.
+    install_requires=load_requires_from_file(&quot;requirements.txt&quot;)
+)
+</code></pre>
+
+<p>If your <code>requirements.txt</code> has URLs,
+<code>load_requires_from_file</code> function should be the following:</p>
+
+<pre><code class="language-setup.py">def take_package_name(name):
+    if name.startswith(&quot;-e&quot;):
+        return name[name.find(&quot;=&quot;)+1:name.rfind(&quot;-&quot;)]
+    else:
+        return name.strip()
+
+def load_requires_from_file(filepath):
+    with open(filepath) as fp:
+        return [take_package_name(pkg_name) for pkg_name in fp.readlines()]
+</code></pre>
+
+<p>and give those URLs via <code>dependency_link</code> attribute in <code>setup</code> function:</p>
+
+<pre><code class="language-setup.py">def load_links_from_file(filepath):
+    res = []
+    with open(filepath) as fp:
+        for pkg_name in fp.readlines():
+            if pkg_name.startswith(&quot;-e&quot;):
+                res.append(pkg_name.split(&quot; &quot;)[1])
+    return res
+
+setup(
+    # Other clauses are omitted.
+    install_requires=load_requires_from_file(&quot;requirements.txt&quot;),
+    dependency_links=load_links_from_file(&quot;requirements.txt&quot;),
+)
+</code></pre>
+
+<p>Finally, <code>python setup.py test</code> downloads packages from GitHub and runs tests.</p>
+
+	        </section>
+	      
 			</div>
 
 			<!-- Footer -->

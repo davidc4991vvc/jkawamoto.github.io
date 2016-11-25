@@ -7,8 +7,86 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
-    <lastBuildDate>Thu, 18 Aug 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Oct 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.jkawamoto.info/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Include GitHub repositories to requirements.txt</title>
+      <link>https://www.jkawamoto.info/blogs/include-github-repositories-to-requirements-txt/</link>
+      <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/blogs/include-github-repositories-to-requirements-txt/</guid>
+      <description>
+
+&lt;h2 id=&#34;summary:a0ee9d0ea8575a88500eea9bd15cac6b&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;This document explains how to include packages hosted in GitHub
+but not not registered in &lt;a href=&#34;https://pypi.python.org/pypi&#34;&gt;PyPI&lt;/a&gt; into &lt;code&gt;requirements.txt&lt;/code&gt;,
+and how to configure &lt;code&gt;setup.py&lt;/code&gt; referring &lt;code&gt;requirements.txt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;requirements-txt:a0ee9d0ea8575a88500eea9bd15cac6b&#34;&gt;requirements.txt&lt;/h2&gt;
+
+&lt;p&gt;Supposing &lt;a href=&#34;https://github.com/rgmining/common&#34;&gt;https://github.com/rgmining/common&lt;/a&gt; as the GitHub repository to be added to &lt;code&gt;requirements.txt&lt;/code&gt;,
+the package information for the repository is&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-requirements.txt&#34;&gt;-e git+https://github.com/rgmining/common.git#egg=rgmining_common-0.9.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The format after &lt;code&gt;#egg=&lt;/code&gt; shoule be &lt;code&gt;&amp;lt;package name&amp;gt;-&amp;lt;version&amp;gt;&lt;/code&gt;.
+If you&amp;rsquo;re using &lt;code&gt;pip-tools&lt;/code&gt; to compile &lt;code&gt;requirements.txt&lt;/code&gt;,
+your &lt;code&gt;requirements.in&lt;/code&gt; should have the same clause.&lt;/p&gt;
+
+&lt;h2 id=&#34;setup-py:a0ee9d0ea8575a88500eea9bd15cac6b&#34;&gt;setup.py&lt;/h2&gt;
+
+&lt;p&gt;To include &lt;code&gt;requirements.txt&lt;/code&gt; in &lt;code&gt;setup.py&lt;/code&gt;,
+give the following &lt;code&gt;load_requires_from_file&lt;/code&gt; function to &lt;code&gt;install_requires&lt;/code&gt; attribute:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-setup.py&#34;&gt;from setuptools import setup, find_packages
+
+def load_requires_from_file(filepath):
+    with open(filepath) as fp:
+        return [pkg_name.strip() for pkg_name in fp.readlines()]
+
+setup(
+    # Other clauses are omitted.
+    install_requires=load_requires_from_file(&amp;quot;requirements.txt&amp;quot;)
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If your &lt;code&gt;requirements.txt&lt;/code&gt; has URLs,
+&lt;code&gt;load_requires_from_file&lt;/code&gt; function should be the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-setup.py&#34;&gt;def take_package_name(name):
+    if name.startswith(&amp;quot;-e&amp;quot;):
+        return name[name.find(&amp;quot;=&amp;quot;)+1:name.rfind(&amp;quot;-&amp;quot;)]
+    else:
+        return name.strip()
+
+def load_requires_from_file(filepath):
+    with open(filepath) as fp:
+        return [take_package_name(pkg_name) for pkg_name in fp.readlines()]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and give those URLs via &lt;code&gt;dependency_link&lt;/code&gt; attribute in &lt;code&gt;setup&lt;/code&gt; function:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-setup.py&#34;&gt;def load_links_from_file(filepath):
+    res = []
+    with open(filepath) as fp:
+        for pkg_name in fp.readlines():
+            if pkg_name.startswith(&amp;quot;-e&amp;quot;):
+                res.append(pkg_name.split(&amp;quot; &amp;quot;)[1])
+    return res
+
+setup(
+    # Other clauses are omitted.
+    install_requires=load_requires_from_file(&amp;quot;requirements.txt&amp;quot;),
+    dependency_links=load_links_from_file(&amp;quot;requirements.txt&amp;quot;),
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally, &lt;code&gt;python setup.py test&lt;/code&gt; downloads packages from GitHub and runs tests.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Compiling a Sphinx document on Wercker</title>
@@ -476,21 +554,6 @@ XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://atamaga.jp/whitepage/2012/index.html&#34;&gt;住所でポン！2012&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>プライバシ保護データマネジメント関連のプロジェクト</title>
-      <link>https://www.jkawamoto.info/blog-ja/ppdm-projects/</link>
-      <pubDate>Sat, 12 Jul 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.jkawamoto.info/blog-ja/ppdm-projects/</guid>
-      <description>&lt;p&gt;プライバシ保護データマネジメント関連のプロジェクト&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://openpds.media.mit.edu/&#34;&gt;OpenPDS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.information-bank.net/&#34;&gt;情報銀行コンソーシアム&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

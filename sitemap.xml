@@ -3,8 +3,13 @@
   
   <url>
     <loc>https://www.jkawamoto.info/</loc>
-    <lastmod>2016-08-18T00:00:00+00:00</lastmod>
+    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.jkawamoto.info/blogs/include-github-repositories-to-requirements-txt/</loc>
+    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -19,7 +24,7 @@
   
   <url>
     <loc>https://www.jkawamoto.info/blogs/i18n-package-in-meteor/</loc>
-    <lastmod>2016-08-13T00:00:00+00:00</lastmod>
+    <lastmod>2016-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
