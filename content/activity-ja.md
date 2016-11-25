@@ -1,5 +1,8 @@
 ---
 title: その他の活動
+isCJKLanguage: True
+categories:
+- ja
 ---
 ## 学会活動
 * 2013年 5月 - present:

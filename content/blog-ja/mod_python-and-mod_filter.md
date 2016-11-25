@@ -2,6 +2,7 @@
 title: "mod_python と mod_filter でフィルタを登録する際の注意"
 lastmod: 2013-06-30
 date: "2010-11-16"
+isCJKLanguage: true
 ---
 Apache 2.2 で mod_python と mod_filter を用いてフィルタを作成する際の注意というかバグ．
 Python スクリプトをフィルタとして使う場合，まず，python 関数をフィルタプロバイダとして登録する．

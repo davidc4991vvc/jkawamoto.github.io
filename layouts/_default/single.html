@@ -8,7 +8,13 @@
 					<h1>{{ . }}</h1>
 				{{ end }}
 
-	      {{ .Content }}
+				{{ if in .Params.categories "ja" }}
+				<div class="ja">
+				{{ .Content }}
+				</div>
+				{{ else }}
+				{{ .Content }}
+				{{ end }}
 
 				{{ partial "responsive-ad" . }}
 			</div>

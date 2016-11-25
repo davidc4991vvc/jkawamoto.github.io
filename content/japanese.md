@@ -1,5 +1,8 @@
 ---
 title: プロフィール
+isCJKLanguage: True
+categories:
+- ja
 ---
 
 ## 略歴

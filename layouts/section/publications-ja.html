@@ -5,7 +5,9 @@
 
 			<div id="main">
 				<h1>Publications</h1>
+				<div class="ja">
 	      {{ range .Data.Pages }} {{ .Content }} {{ end }}
+				</div>
 
 				{{ partial "responsive-ad" . }}
 			</div>
