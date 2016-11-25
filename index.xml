@@ -340,6 +340,364 @@ You need to use &lt;code&gt;$scope.$apply()&lt;/code&gt;:&lt;/p&gt;
     </item>
     
     <item>
+      <title>Use fullPage.js in AngularJS</title>
+      <link>https://www.jkawamoto.info/blogs/fullpagejs-in-angularjs/</link>
+      <pubDate>Fri, 12 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/blogs/fullpagejs-in-angularjs/</guid>
+      <description>
+
+&lt;h2 id=&#34;summary:69b24904d2568082afd340a9b334aca2&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/hellsan631/angular-fullpage.js&#34;&gt;angular-fullpage.js&lt;/a&gt; is a library
+to use &lt;a href=&#34;http://alvarotrigo.com/fullPage/&#34;&gt;fullPage.js&lt;/a&gt; in &lt;a href=&#34;http://angularjs.org/&#34;&gt;AngularJS&lt;/a&gt;,
+but the &lt;a href=&#34;https://www.npmjs.com/package/angular-fullpage.js&#34;&gt;npm&lt;/a&gt; version has a problem in event handling,
+and you need to use GitHub version.&lt;/p&gt;
+
+&lt;p&gt;Although fullPage.js also assumes every section is a child of a same parent node, it is difficult in AngularJS.
+I &lt;a href=&#34;https://github.com/jkawamoto/fullPage.js&#34;&gt;modified fullPage.js&lt;/a&gt; to solve this problem.&lt;/p&gt;
+
+&lt;p&gt;This entry explains how to use my fullPage.js in AngularJS.&lt;/p&gt;
+
+&lt;h2 id=&#34;angular-fullpage-js:69b24904d2568082afd340a9b334aca2&#34;&gt;angular-fullpage.js&lt;/h2&gt;
+
+&lt;p&gt;The current version of angular-fullpage.js in npm has a problem in event handling,
+and you need to use the newest source code from GitHub.
+&lt;code&gt;dependencies&lt;/code&gt; in &lt;code&gt;package.json&lt;/code&gt; allows GitHub repositores, i.e.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;dependencies&amp;quot;: {
+    &amp;quot;angular-fullpage.js&amp;quot;: &amp;quot;hellsan631/angular-fullpage.js&amp;quot;,
+    ...
+  },
+  ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and &lt;code&gt;npm install&lt;/code&gt; downloads the newest source code from GitHub.&lt;/p&gt;
+
+&lt;p&gt;To activate fullPage.js, you need to add &lt;code&gt;full-page&lt;/code&gt; attribute to the parent node&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div full-page&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 1&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 2&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 3&amp;lt;/div&amp;gt;
+  …
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and give options through &lt;code&gt;options&lt;/code&gt; attribute.
+For example, make a controller&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;class FullpageCtrl {
+
+  constructor() {
+
+    this.options = {
+      sectionsColor: [&#39;#1bbc9b&#39;, &#39;#4BBFC3&#39;, &#39;#7BAABE&#39;],
+      scrollingSpeed: 1000,
+      onLeave: (index, nextIndex, direction) =&amp;gt; {
+        // do something
+      }
+    };
+
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and use it from a template&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div full-page options=&amp;quot;$ctrl.options&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 1&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 2&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 3&amp;lt;/div&amp;gt;
+  ...
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;apply-fullpage-js-for-not-sibling-nodes:69b24904d2568082afd340a9b334aca2&#34;&gt;Apply fullPage.js for not sibling nodes&lt;/h2&gt;
+
+&lt;p&gt;fullpage.js assumes every section is a child of a same parent node, for example&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div full-page&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 1&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 2&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 3&amp;lt;/div&amp;gt;
+  ...
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This constraint might be a problem when you combine components providing sections.
+Suppose two components &lt;code&gt;component1&lt;/code&gt; and &lt;code&gt;component2&lt;/code&gt;, and those templates are&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;section&amp;quot; ng-repeat=&amp;quot;item in $ctrl.items&amp;quot;&amp;gt;
+  &amp;lt;!-- some contents --&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;section&amp;quot; ng-repeat=&amp;quot;item in $ctrl.items&amp;quot;&amp;gt;
+  &amp;lt;!-- some contents --&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In this case, a parent node of fullpage.js is&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div full-page&amp;gt;
+  &amp;lt;component1&amp;gt;&amp;lt;/component1&amp;gt;
+  &amp;lt;component2&amp;gt;&amp;lt;/component2&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This template is extended to&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div full-page&amp;gt;
+  &amp;lt;component1&amp;gt;
+    &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;
+     &amp;lt;!-- some contents --&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;
+     &amp;lt;!-- some contents --&amp;gt;
+    &amp;lt;/div&amp;gt;
+    ...
+  &amp;lt;/component1&amp;gt;
+  &amp;lt;component2&amp;gt;
+    &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;
+      &amp;lt;!-- some contents --&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;
+      &amp;lt;!-- some contents --&amp;gt;
+    &amp;lt;/div&amp;gt;
+    ...
+  &amp;lt;/component2&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and those sections are not children of a same parent node,
+which means fullPage.js doesn&amp;rsquo;t work in such case.&lt;/p&gt;
+
+&lt;p&gt;I fixed this problem and my source code is available in &lt;a href=&#34;https://github.com/jkawamoto/fullPage.js&#34;&gt;GitHub&lt;/a&gt;.
+To use my version, your &lt;code&gt;package.json&lt;/code&gt; should have a link to my repository like&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;dependencies&amp;quot;: {
+    &amp;quot;fullpage.js&amp;quot;: &amp;quot;jkawamoto/fullPage.js#deeper-section-spike&amp;quot;,
+    ...
+  },
+  ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This version searches all nodes to find sections and it might be slower than original version.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Use Chart.js in AngularJS</title>
+      <link>https://www.jkawamoto.info/blogs/chartjs-in-angularjs/</link>
+      <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/blogs/chartjs-in-angularjs/</guid>
+      <description>
+
+&lt;h2 id=&#34;angular-chart:7c8787ac68b82ab2b2fa23384bd6e453&#34;&gt;Angular Chart&lt;/h2&gt;
+
+&lt;p&gt;This entry explains how to use &lt;a href=&#34;http://www.chartjs.org/&#34;&gt;Chart.js&lt;/a&gt; in &lt;a href=&#34;http://angularjs.org/&#34;&gt;AngularJS&lt;/a&gt;.
+The answer is simple and use &lt;a href=&#34;http://jtblin.github.io/angular-chart.js/&#34;&gt;Angular Chart&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To add a chart in your application, you need to add a &lt;code&gt;canvas&lt;/code&gt; element with &lt;code&gt;chart&lt;/code&gt; class and a class depended on chart type you want to add.
+Suppose we are adding a bar chart in an application, for example, we need to add a &lt;code&gt;canvas&lt;/code&gt; element with &lt;code&gt;class=&amp;quot;chart chart-bar&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;In Angular Chart, data to be plotted are given through &lt;code&gt;chart-data&lt;/code&gt;, &lt;code&gt;chart-labels&lt;/code&gt;, &lt;code&gt;chart-series&lt;/code&gt;, and &lt;code&gt;chart-dataset-override&lt;/code&gt; elements.
+This design is little bit different from one of original &lt;a href=&#34;http://www.chartjs.org/&#34;&gt;Chart.js&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;chart-data&lt;/code&gt; attribute is associated with &lt;code&gt;data.datasets&lt;/code&gt; in &lt;code&gt;Chart.js&lt;/code&gt;, but it only takes a list or 2-dimensions list,
+although &lt;code&gt;data.datasets&lt;/code&gt; takes a more complex object, including labels, color information, etc.
+Here is an example object in &lt;code&gt;Chart.js&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;datasets: [{
+  label: &#39;# of Votes&#39;,
+  data: [12, 19, 3, 5, 2, 3],
+  backgroundColor: [
+    &#39;rgba(255, 99, 132, 0.2)&#39;,
+    &#39;rgba(54, 162, 235, 0.2)&#39;,
+    &#39;rgba(255, 206, 86, 0.2)&#39;,
+    &#39;rgba(75, 192, 192, 0.2)&#39;,
+    &#39;rgba(153, 102, 255, 0.2)&#39;,
+    &#39;rgba(255, 159, 64, 0.2)&#39;
+  ],
+  borderColor: [
+    &#39;rgba(255,99,132,1)&#39;,
+    &#39;rgba(54, 162, 235, 1)&#39;,
+    &#39;rgba(255, 206, 86, 1)&#39;,
+    &#39;rgba(75, 192, 192, 1)&#39;,
+    &#39;rgba(153, 102, 255, 1)&#39;,
+    &#39;rgba(255, 159, 64, 1)&#39;
+  ],
+  borderWidth: 1
+},
+...
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In Angular Chart, the data given to &lt;code&gt;chart-data&lt;/code&gt; attribute must consist of only data attribute in the above object,
+i.e. the constructor of our controller is&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;class GraphCtrl{
+  constructor() {
+    this.data = [
+      [12, 19, 3, 5, 2, 3],
+      ...
+    ];
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and our template is &lt;code&gt;&amp;lt;canvas class=&amp;quot;chart chart-bar&amp;quot; chart-data=&amp;quot;$ctrl.data&amp;quot; /&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Label information is given through &lt;code&gt;chart-series&lt;/code&gt; attribute,
+and the attribute takes a list consists of label names.&lt;/p&gt;
+
+&lt;p&gt;The other information such as &lt;code&gt;backgroundColor&lt;/code&gt;, &lt;code&gt;borderColor&lt;/code&gt;, &lt;code&gt;borderWidth&lt;/code&gt;, etc. is given through &lt;code&gt;chart-dataset-override&lt;/code&gt; attribute.
+This attribute takes as same object as one in &lt;code&gt;Chart.js&lt;/code&gt; without &lt;code&gt;data&lt;/code&gt; and &lt;code&gt;label&lt;/code&gt; attributes.&lt;/p&gt;
+
+&lt;p&gt;Note that, &lt;code&gt;chart-data&lt;/code&gt; attribute is required and you shouldn&amp;rsquo;t give data through &lt;code&gt;chart-dataset-override&lt;/code&gt; attaribute.&lt;/p&gt;
+
+&lt;h3 id=&#34;example:7c8787ac68b82ab2b2fa23384bd6e453&#34;&gt;Example&lt;/h3&gt;
+
+&lt;p&gt;In this example, we&amp;rsquo;ll convert &lt;a href=&#34;(http://www.chartjs.org/docs/#getting-started-creating-a-chart&#34;&gt;a bar chart example&lt;/a&gt;) given
+in Chart.js&amp;rsquo;s document for Angular Chart.&lt;/p&gt;
+
+&lt;h4 id=&#34;chart-js-version:7c8787ac68b82ab2b2fa23384bd6e453&#34;&gt;Chart.js version&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var myChart = new Chart(ctx, {
+  type: &#39;bar&#39;,
+  data: {
+    labels: [&amp;quot;Red&amp;quot;, &amp;quot;Blue&amp;quot;, &amp;quot;Yellow&amp;quot;, &amp;quot;Green&amp;quot;, &amp;quot;Purple&amp;quot;, &amp;quot;Orange&amp;quot;],
+    datasets: [{
+      label: &#39;# of Votes&#39;,
+      data: [12, 19, 3, 5, 2, 3],
+      backgroundColor: [
+        &#39;rgba(255, 99, 132, 0.2)&#39;,
+        &#39;rgba(54, 162, 235, 0.2)&#39;,
+        &#39;rgba(255, 206, 86, 0.2)&#39;,
+        &#39;rgba(75, 192, 192, 0.2)&#39;,
+        &#39;rgba(153, 102, 255, 0.2)&#39;,
+        &#39;rgba(255, 159, 64, 0.2)&#39;
+      ],
+      borderColor: [
+        &#39;rgba(255,99,132,1)&#39;,
+        &#39;rgba(54, 162, 235, 1)&#39;,
+        &#39;rgba(255, 206, 86, 1)&#39;,
+        &#39;rgba(75, 192, 192, 1)&#39;,
+        &#39;rgba(153, 102, 255, 1)&#39;,
+        &#39;rgba(255, 159, 64, 1)&#39;
+      ],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;angular-chart-version:7c8787ac68b82ab2b2fa23384bd6e453&#34;&gt;Angular Chart version&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;chart.js&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js:chart.js&#34;&gt;class ChartCtrl{
+
+  constructor(){
+
+    this.labels = [&amp;quot;Red&amp;quot;, &amp;quot;Blue&amp;quot;, &amp;quot;Yellow&amp;quot;, &amp;quot;Green&amp;quot;, &amp;quot;Purple&amp;quot;, &amp;quot;Orange&amp;quot;];
+    this.data = [
+      [12, 19, 3, 5, 2, 3]
+    ];
+    this.seriese = [&amp;quot;# of Votes&amp;quot;];
+    this.datasets = [
+      {
+        backgroundColor: [
+          &#39;rgba(255, 99, 132, 0.2)&#39;,
+          &#39;rgba(54, 162, 235, 0.2)&#39;,
+          &#39;rgba(255, 206, 86, 0.2)&#39;,
+          &#39;rgba(75, 192, 192, 0.2)&#39;,
+          &#39;rgba(153, 102, 255, 0.2)&#39;,
+          &#39;rgba(255, 159, 64, 0.2)&#39;
+        ],
+        borderColor: [
+          &#39;rgba(255,99,132,1)&#39;,
+          &#39;rgba(54, 162, 235, 1)&#39;,
+          &#39;rgba(255, 206, 86, 1)&#39;,
+          &#39;rgba(75, 192, 192, 1)&#39;,
+          &#39;rgba(153, 102, 255, 1)&#39;,
+          &#39;rgba(255, 159, 64, 1)&#39;
+        ],
+        borderWidth: 1
+      }
+    ];
+    this.options = {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    };
+
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;chart.html&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-chart.html&#34;&gt;&amp;lt;canvas class=&amp;quot;chart chart-bar&amp;quot;
+  chart-data=&amp;quot;$ctrl.data&amp;quot;
+  chart-labels=&amp;quot;$ctrl.labels&amp;quot;
+  chart-series=&amp;quot;$ctrl.seriese&amp;quot;
+  chart-dataset-override=&amp;quot;$ctrl.datasets&amp;quot;
+  chart-options=&amp;quot;$ctrl.options&amp;quot;
+/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If &lt;code&gt;datasets&lt;/code&gt; has only one sequence as the above example, &lt;code&gt;data&lt;/code&gt; and &lt;code&gt;datasets&lt;/code&gt; shouldn&amp;rsquo;t be lists.
+But, in this case, &lt;code&gt;chart-series&lt;/code&gt; attribute will be ignored,
+and don&amp;rsquo;t forget to add &lt;code&gt;label: &amp;quot;# of Votes&amp;quot;&lt;/code&gt; attribute.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;this.data = [12, 19, 3, 5, 2, 3];
+this.datasets = {
+  label: &amp;quot;# of Votes&amp;quot;,
+  backgroundColor: [
+    &#39;rgba(255, 99, 132, 0.2)&#39;,
+    &#39;rgba(54, 162, 235, 0.2)&#39;,
+    &#39;rgba(255, 206, 86, 0.2)&#39;,
+    &#39;rgba(75, 192, 192, 0.2)&#39;,
+    &#39;rgba(153, 102, 255, 0.2)&#39;,
+    &#39;rgba(255, 159, 64, 0.2)&#39;
+  ],
+  borderColor: [
+    &#39;rgba(255,99,132,1)&#39;,
+    &#39;rgba(54, 162, 235, 1)&#39;,
+    &#39;rgba(255, 206, 86, 1)&#39;,
+    &#39;rgba(75, 192, 192, 1)&#39;,
+    &#39;rgba(153, 102, 255, 1)&#39;,
+    &#39;rgba(255, 159, 64, 1)&#39;
+  ],
+  borderWidth: 1
+};
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>データ解析のための統計モデリング入門 第10章 を PyMC で解く</title>
       <link>https://www.jkawamoto.info/blog-ja/pymc-lesson-10/</link>
       <pubDate>Tue, 24 May 2016 00:00:00 +0000</pubDate>
@@ -525,36 +883,6 @@ XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
 &lt;h2 id=&#34;参考書籍:1f1ae7033ee5f696a9cb6314e126a8bc&#34;&gt;参考書籍&lt;/h2&gt;
 
 &lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=jkwf4mew-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4756140653&amp;linkId=b2835df657e267763950c4c934907627&#34;&gt;&lt;/iframe&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>パブリックデータセット</title>
-      <link>https://www.jkawamoto.info/blog-ja/public-dataset-list/</link>
-      <pubDate>Sun, 13 Jul 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.jkawamoto.info/blog-ja/public-dataset-list/</guid>
-      <description>&lt;p&gt;パブリックデータセットまとめページのリスト。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.kdnuggets.com/datasets/index.html&#34;&gt;Datasets for Data Mining and Data Science&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://aws.amazon.com/datasets&#34;&gt;Amazon Public Datasets&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.datawrangling.com/some-datasets-available-on-the-web&#34;&gt;Some Datasets Available on the Web&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>個人情報の固まり</title>
-      <link>https://www.jkawamoto.info/blog-ja/lots-of-private-information/</link>
-      <pubDate>Sun, 13 Jul 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.jkawamoto.info/blog-ja/lots-of-private-information/</guid>
-      <description>&lt;p&gt;電話長などで公開されているデータだと思うけれど，住所氏名電話番号が簡単に手に入るウェブページ．&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://atamaga.jp/whitepage/2012/index.html&#34;&gt;住所でポン！2012&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

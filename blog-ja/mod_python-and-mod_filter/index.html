@@ -1,27 +1,38 @@
 <!DOCTYPE HTML>
 <html>
 	<head prefix="og: http://ogp.me/ns#">
-		<title>mod_python と mod_filter でフィルタを登録する際の注意 &middot; Junpei Kawamoto</title>
-		<base href="https://www.jkawamoto.info/"/>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="author" content="Junpei Kawamoto">
-  	<meta name="description" content="Homepage of Junpei Kawamoto.">
-  	<meta http-equiv="content-language" content="ja" />
+		<meta http-equiv="content-language" content="ja" />
 
-		<meta property="og:title" content="mod_python と mod_filter でフィルタを登録する際の注意 &middot; Junpei Kawamoto" />
+		<title>mod_python と mod_filter でフィルタを登録する際の注意 &middot; Junpei Kawamoto</title>
+		<base href="https://www.jkawamoto.info/" />
+		<meta name="generator" content="Hugo 0.15" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Junpei Kawamoto" />
+
+		
+		<meta name="description" content="Homepage of Junpei Kawamoto." />
+		
+
+		
+
 		<meta property="og:type" content="article" />
-		<meta property="og:url" content="https://www.jkawamoto.info/blog-ja/mod_python-and-mod_filter/" />
+		<meta property="og:title" content="mod_python と mod_filter でフィルタを登録する際の注意 &middot; Junpei Kawamoto" />
+		
+		<meta name="og:description" content="Homepage of Junpei Kawamoto." />
+		
 		<meta property="og:image" content="/images/wordcloud.png" />
 		<meta property="og:site_name"  content="Junpei Kawamoto" />
-		<meta name="twitter:site" content="@junkawamoto" />
-  	<meta name="generator" content="Hugo 0.15" />
+
 		
+		<meta name="twitter:card" content="Homepage of Junpei Kawamoto." />
+		
+		<meta name="twitter:site" content="@junkawamoto" />
 
 		
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
 		<link rel="stylesheet" href="/css/main.css" />
-		
 		
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
 		<link rel="stylesheet" href="/css/remodal.css">
@@ -103,6 +114,7 @@
 					</p>
 				</div>
 
+				<div class="ja">
 	    	<p>Apache 2.2 で mod_python と mod_filter を用いてフィルタを作成する際の注意というかバグ．
 Python スクリプトをフィルタとして使う場合，まず，python 関数をフィルタプロバイダとして登録する．
 そのために，<a href="http://www.python.jp/doc/contrib/modpython/dir-filter-of.html">PythonOutputFilter ディレクティブ</a>を使用し，
@@ -148,6 +160,7 @@ FilterChain image_compressor
 mod_filter と組み合わせて使用する場合も provider_name と filter_name が同じでなければならない．
 mod_filter のどこかで， provider_name と filter_name を取り違えてるんじゃないかと思われるがソースコードは読んでないので不明．</p>
 
+				</div>
 
 				<div class="addthis_relatedposts_inline"></div>
 

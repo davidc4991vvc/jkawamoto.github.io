@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Privacy on Junpei Kawamoto</title>
+    <link>https://www.jkawamoto.info/tags/privacy/</link>
+    <description>Recent content in Privacy on Junpei Kawamoto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
+    <lastBuildDate>Sun, 04 May 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.jkawamoto.info/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Frequency-based Constraint Relaxation for Private Query Processing in Cloud Databases</title>
+      <link>https://www.jkawamoto.info/slides/ccece2014/</link>
+      <pubDate>Sun, 04 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/slides/ccece2014/</guid>
+      <description>&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/3J9PTutslDXtTq&#34; width=&#34;595&#34; height=&#34;485&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

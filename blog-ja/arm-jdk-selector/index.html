@@ -1,27 +1,38 @@
 <!DOCTYPE HTML>
 <html>
 	<head prefix="og: http://ogp.me/ns#">
-		<title>Arm 用 OpenJDK で Selector#select の挙動がおかしい &middot; Junpei Kawamoto</title>
-		<base href="https://www.jkawamoto.info/"/>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="author" content="Junpei Kawamoto">
-  	<meta name="description" content="Homepage of Junpei Kawamoto.">
-  	<meta http-equiv="content-language" content="ja" />
+		<meta http-equiv="content-language" content="ja" />
 
-		<meta property="og:title" content="Arm 用 OpenJDK で Selector#select の挙動がおかしい &middot; Junpei Kawamoto" />
+		<title>Arm 用 OpenJDK で Selector#select の挙動がおかしい &middot; Junpei Kawamoto</title>
+		<base href="https://www.jkawamoto.info/" />
+		<meta name="generator" content="Hugo 0.15" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Junpei Kawamoto" />
+
+		
+		<meta name="description" content="Homepage of Junpei Kawamoto." />
+		
+
+		
+
 		<meta property="og:type" content="article" />
-		<meta property="og:url" content="https://www.jkawamoto.info/blog-ja/arm-jdk-selector/" />
+		<meta property="og:title" content="Arm 用 OpenJDK で Selector#select の挙動がおかしい &middot; Junpei Kawamoto" />
+		
+		<meta name="og:description" content="Homepage of Junpei Kawamoto." />
+		
 		<meta property="og:image" content="/images/wordcloud.png" />
 		<meta property="og:site_name"  content="Junpei Kawamoto" />
-		<meta name="twitter:site" content="@junkawamoto" />
-  	<meta name="generator" content="Hugo 0.15" />
+
 		
+		<meta name="twitter:card" content="Homepage of Junpei Kawamoto." />
+		
+		<meta name="twitter:site" content="@junkawamoto" />
 
 		
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
 		<link rel="stylesheet" href="/css/main.css" />
-		
 		
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
 		<link rel="stylesheet" href="/css/remodal.css">
@@ -103,6 +114,7 @@
 					</p>
 				</div>
 
+				<div class="ja">
 	    	<p>ARM 用の OpenJDK VM (OpenJDK Core VM) では，
 選択できるキーが有ろうが無かろうが一つのキーも選択せずに Selector#select() が即座に返る．
 そして CPU 使用率がどんどん上がっていく．</p>
@@ -128,6 +140,7 @@ while(true){
 <p>選択できるキーが無い場合はともかく，実際に繋ぎに来ている場合でも無視されるので使い物にならない．
 なお，別の VM (OpenJDK Zero VM) に切り替えたところ正常に動いた．</p>
 
+				</div>
 
 				<div class="addthis_relatedposts_inline"></div>
 

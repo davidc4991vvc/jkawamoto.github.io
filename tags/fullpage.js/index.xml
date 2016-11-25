@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fullpage.Js on Junpei Kawamoto</title>
+    <link>https://www.jkawamoto.info/tags/fullpage/index.js/</link>
+    <description>Recent content in Fullpage.Js on Junpei Kawamoto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
+    <lastBuildDate>Fri, 12 Aug 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.jkawamoto.info/tags/fullpage.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Use fullPage.js in AngularJS</title>
+      <link>https://www.jkawamoto.info/blogs/fullpagejs-in-angularjs/</link>
+      <pubDate>Fri, 12 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/blogs/fullpagejs-in-angularjs/</guid>
+      <description>
+
+&lt;h2 id=&#34;summary:69b24904d2568082afd340a9b334aca2&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/hellsan631/angular-fullpage.js&#34;&gt;angular-fullpage.js&lt;/a&gt; is a library
+to use &lt;a href=&#34;http://alvarotrigo.com/fullPage/&#34;&gt;fullPage.js&lt;/a&gt; in &lt;a href=&#34;http://angularjs.org/&#34;&gt;AngularJS&lt;/a&gt;,
+but the &lt;a href=&#34;https://www.npmjs.com/package/angular-fullpage.js&#34;&gt;npm&lt;/a&gt; version has a problem in event handling,
+and you need to use GitHub version.&lt;/p&gt;
+
+&lt;p&gt;Although fullPage.js also assumes every section is a child of a same parent node, it is difficult in AngularJS.
+I &lt;a href=&#34;https://github.com/jkawamoto/fullPage.js&#34;&gt;modified fullPage.js&lt;/a&gt; to solve this problem.&lt;/p&gt;
+
+&lt;p&gt;This entry explains how to use my fullPage.js in AngularJS.&lt;/p&gt;
+
+&lt;h2 id=&#34;angular-fullpage-js:69b24904d2568082afd340a9b334aca2&#34;&gt;angular-fullpage.js&lt;/h2&gt;
+
+&lt;p&gt;The current version of angular-fullpage.js in npm has a problem in event handling,
+and you need to use the newest source code from GitHub.
+&lt;code&gt;dependencies&lt;/code&gt; in &lt;code&gt;package.json&lt;/code&gt; allows GitHub repositores, i.e.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;dependencies&amp;quot;: {
+    &amp;quot;angular-fullpage.js&amp;quot;: &amp;quot;hellsan631/angular-fullpage.js&amp;quot;,
+    ...
+  },
+  ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and &lt;code&gt;npm install&lt;/code&gt; downloads the newest source code from GitHub.&lt;/p&gt;
+
+&lt;p&gt;To activate fullPage.js, you need to add &lt;code&gt;full-page&lt;/code&gt; attribute to the parent node&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div full-page&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 1&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 2&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 3&amp;lt;/div&amp;gt;
+  …
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and give options through &lt;code&gt;options&lt;/code&gt; attribute.
+For example, make a controller&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;class FullpageCtrl {
+
+  constructor() {
+
+    this.options = {
+      sectionsColor: [&#39;#1bbc9b&#39;, &#39;#4BBFC3&#39;, &#39;#7BAABE&#39;],
+      scrollingSpeed: 1000,
+      onLeave: (index, nextIndex, direction) =&amp;gt; {
+        // do something
+      }
+    };
+
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and use it from a template&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div full-page options=&amp;quot;$ctrl.options&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 1&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 2&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 3&amp;lt;/div&amp;gt;
+  ...
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;apply-fullpage-js-for-not-sibling-nodes:69b24904d2568082afd340a9b334aca2&#34;&gt;Apply fullPage.js for not sibling nodes&lt;/h2&gt;
+
+&lt;p&gt;fullpage.js assumes every section is a child of a same parent node, for example&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div full-page&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 1&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 2&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;Section 3&amp;lt;/div&amp;gt;
+  ...
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This constraint might be a problem when you combine components providing sections.
+Suppose two components &lt;code&gt;component1&lt;/code&gt; and &lt;code&gt;component2&lt;/code&gt;, and those templates are&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;section&amp;quot; ng-repeat=&amp;quot;item in $ctrl.items&amp;quot;&amp;gt;
+  &amp;lt;!-- some contents --&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;section&amp;quot; ng-repeat=&amp;quot;item in $ctrl.items&amp;quot;&amp;gt;
+  &amp;lt;!-- some contents --&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In this case, a parent node of fullpage.js is&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div full-page&amp;gt;
+  &amp;lt;component1&amp;gt;&amp;lt;/component1&amp;gt;
+  &amp;lt;component2&amp;gt;&amp;lt;/component2&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This template is extended to&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div full-page&amp;gt;
+  &amp;lt;component1&amp;gt;
+    &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;
+     &amp;lt;!-- some contents --&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;
+     &amp;lt;!-- some contents --&amp;gt;
+    &amp;lt;/div&amp;gt;
+    ...
+  &amp;lt;/component1&amp;gt;
+  &amp;lt;component2&amp;gt;
+    &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;
+      &amp;lt;!-- some contents --&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;quot;section&amp;quot;&amp;gt;
+      &amp;lt;!-- some contents --&amp;gt;
+    &amp;lt;/div&amp;gt;
+    ...
+  &amp;lt;/component2&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and those sections are not children of a same parent node,
+which means fullPage.js doesn&amp;rsquo;t work in such case.&lt;/p&gt;
+
+&lt;p&gt;I fixed this problem and my source code is available in &lt;a href=&#34;https://github.com/jkawamoto/fullPage.js&#34;&gt;GitHub&lt;/a&gt;.
+To use my version, your &lt;code&gt;package.json&lt;/code&gt; should have a link to my repository like&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;dependencies&amp;quot;: {
+    &amp;quot;fullpage.js&amp;quot;: &amp;quot;jkawamoto/fullPage.js#deeper-section-spike&amp;quot;,
+    ...
+  },
+  ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This version searches all nodes to find sections and it might be slower than original version.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chart.Js on Junpei Kawamoto</title>
+    <link>https://www.jkawamoto.info/tags/chart/index.js/</link>
+    <description>Recent content in Chart.Js on Junpei Kawamoto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
+    <lastBuildDate>Thu, 11 Aug 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.jkawamoto.info/tags/chart.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Use Chart.js in AngularJS</title>
+      <link>https://www.jkawamoto.info/blogs/chartjs-in-angularjs/</link>
+      <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/blogs/chartjs-in-angularjs/</guid>
+      <description>
+
+&lt;h2 id=&#34;angular-chart:7c8787ac68b82ab2b2fa23384bd6e453&#34;&gt;Angular Chart&lt;/h2&gt;
+
+&lt;p&gt;This entry explains how to use &lt;a href=&#34;http://www.chartjs.org/&#34;&gt;Chart.js&lt;/a&gt; in &lt;a href=&#34;http://angularjs.org/&#34;&gt;AngularJS&lt;/a&gt;.
+The answer is simple and use &lt;a href=&#34;http://jtblin.github.io/angular-chart.js/&#34;&gt;Angular Chart&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To add a chart in your application, you need to add a &lt;code&gt;canvas&lt;/code&gt; element with &lt;code&gt;chart&lt;/code&gt; class and a class depended on chart type you want to add.
+Suppose we are adding a bar chart in an application, for example, we need to add a &lt;code&gt;canvas&lt;/code&gt; element with &lt;code&gt;class=&amp;quot;chart chart-bar&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;In Angular Chart, data to be plotted are given through &lt;code&gt;chart-data&lt;/code&gt;, &lt;code&gt;chart-labels&lt;/code&gt;, &lt;code&gt;chart-series&lt;/code&gt;, and &lt;code&gt;chart-dataset-override&lt;/code&gt; elements.
+This design is little bit different from one of original &lt;a href=&#34;http://www.chartjs.org/&#34;&gt;Chart.js&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;chart-data&lt;/code&gt; attribute is associated with &lt;code&gt;data.datasets&lt;/code&gt; in &lt;code&gt;Chart.js&lt;/code&gt;, but it only takes a list or 2-dimensions list,
+although &lt;code&gt;data.datasets&lt;/code&gt; takes a more complex object, including labels, color information, etc.
+Here is an example object in &lt;code&gt;Chart.js&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;datasets: [{
+  label: &#39;# of Votes&#39;,
+  data: [12, 19, 3, 5, 2, 3],
+  backgroundColor: [
+    &#39;rgba(255, 99, 132, 0.2)&#39;,
+    &#39;rgba(54, 162, 235, 0.2)&#39;,
+    &#39;rgba(255, 206, 86, 0.2)&#39;,
+    &#39;rgba(75, 192, 192, 0.2)&#39;,
+    &#39;rgba(153, 102, 255, 0.2)&#39;,
+    &#39;rgba(255, 159, 64, 0.2)&#39;
+  ],
+  borderColor: [
+    &#39;rgba(255,99,132,1)&#39;,
+    &#39;rgba(54, 162, 235, 1)&#39;,
+    &#39;rgba(255, 206, 86, 1)&#39;,
+    &#39;rgba(75, 192, 192, 1)&#39;,
+    &#39;rgba(153, 102, 255, 1)&#39;,
+    &#39;rgba(255, 159, 64, 1)&#39;
+  ],
+  borderWidth: 1
+},
+...
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In Angular Chart, the data given to &lt;code&gt;chart-data&lt;/code&gt; attribute must consist of only data attribute in the above object,
+i.e. the constructor of our controller is&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;class GraphCtrl{
+  constructor() {
+    this.data = [
+      [12, 19, 3, 5, 2, 3],
+      ...
+    ];
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and our template is &lt;code&gt;&amp;lt;canvas class=&amp;quot;chart chart-bar&amp;quot; chart-data=&amp;quot;$ctrl.data&amp;quot; /&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Label information is given through &lt;code&gt;chart-series&lt;/code&gt; attribute,
+and the attribute takes a list consists of label names.&lt;/p&gt;
+
+&lt;p&gt;The other information such as &lt;code&gt;backgroundColor&lt;/code&gt;, &lt;code&gt;borderColor&lt;/code&gt;, &lt;code&gt;borderWidth&lt;/code&gt;, etc. is given through &lt;code&gt;chart-dataset-override&lt;/code&gt; attribute.
+This attribute takes as same object as one in &lt;code&gt;Chart.js&lt;/code&gt; without &lt;code&gt;data&lt;/code&gt; and &lt;code&gt;label&lt;/code&gt; attributes.&lt;/p&gt;
+
+&lt;p&gt;Note that, &lt;code&gt;chart-data&lt;/code&gt; attribute is required and you shouldn&amp;rsquo;t give data through &lt;code&gt;chart-dataset-override&lt;/code&gt; attaribute.&lt;/p&gt;
+
+&lt;h3 id=&#34;example:7c8787ac68b82ab2b2fa23384bd6e453&#34;&gt;Example&lt;/h3&gt;
+
+&lt;p&gt;In this example, we&amp;rsquo;ll convert &lt;a href=&#34;(http://www.chartjs.org/docs/#getting-started-creating-a-chart&#34;&gt;a bar chart example&lt;/a&gt;) given
+in Chart.js&amp;rsquo;s document for Angular Chart.&lt;/p&gt;
+
+&lt;h4 id=&#34;chart-js-version:7c8787ac68b82ab2b2fa23384bd6e453&#34;&gt;Chart.js version&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var myChart = new Chart(ctx, {
+  type: &#39;bar&#39;,
+  data: {
+    labels: [&amp;quot;Red&amp;quot;, &amp;quot;Blue&amp;quot;, &amp;quot;Yellow&amp;quot;, &amp;quot;Green&amp;quot;, &amp;quot;Purple&amp;quot;, &amp;quot;Orange&amp;quot;],
+    datasets: [{
+      label: &#39;# of Votes&#39;,
+      data: [12, 19, 3, 5, 2, 3],
+      backgroundColor: [
+        &#39;rgba(255, 99, 132, 0.2)&#39;,
+        &#39;rgba(54, 162, 235, 0.2)&#39;,
+        &#39;rgba(255, 206, 86, 0.2)&#39;,
+        &#39;rgba(75, 192, 192, 0.2)&#39;,
+        &#39;rgba(153, 102, 255, 0.2)&#39;,
+        &#39;rgba(255, 159, 64, 0.2)&#39;
+      ],
+      borderColor: [
+        &#39;rgba(255,99,132,1)&#39;,
+        &#39;rgba(54, 162, 235, 1)&#39;,
+        &#39;rgba(255, 206, 86, 1)&#39;,
+        &#39;rgba(75, 192, 192, 1)&#39;,
+        &#39;rgba(153, 102, 255, 1)&#39;,
+        &#39;rgba(255, 159, 64, 1)&#39;
+      ],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;angular-chart-version:7c8787ac68b82ab2b2fa23384bd6e453&#34;&gt;Angular Chart version&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;chart.js&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js:chart.js&#34;&gt;class ChartCtrl{
+
+  constructor(){
+
+    this.labels = [&amp;quot;Red&amp;quot;, &amp;quot;Blue&amp;quot;, &amp;quot;Yellow&amp;quot;, &amp;quot;Green&amp;quot;, &amp;quot;Purple&amp;quot;, &amp;quot;Orange&amp;quot;];
+    this.data = [
+      [12, 19, 3, 5, 2, 3]
+    ];
+    this.seriese = [&amp;quot;# of Votes&amp;quot;];
+    this.datasets = [
+      {
+        backgroundColor: [
+          &#39;rgba(255, 99, 132, 0.2)&#39;,
+          &#39;rgba(54, 162, 235, 0.2)&#39;,
+          &#39;rgba(255, 206, 86, 0.2)&#39;,
+          &#39;rgba(75, 192, 192, 0.2)&#39;,
+          &#39;rgba(153, 102, 255, 0.2)&#39;,
+          &#39;rgba(255, 159, 64, 0.2)&#39;
+        ],
+        borderColor: [
+          &#39;rgba(255,99,132,1)&#39;,
+          &#39;rgba(54, 162, 235, 1)&#39;,
+          &#39;rgba(255, 206, 86, 1)&#39;,
+          &#39;rgba(75, 192, 192, 1)&#39;,
+          &#39;rgba(153, 102, 255, 1)&#39;,
+          &#39;rgba(255, 159, 64, 1)&#39;
+        ],
+        borderWidth: 1
+      }
+    ];
+    this.options = {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    };
+
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;chart.html&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-chart.html&#34;&gt;&amp;lt;canvas class=&amp;quot;chart chart-bar&amp;quot;
+  chart-data=&amp;quot;$ctrl.data&amp;quot;
+  chart-labels=&amp;quot;$ctrl.labels&amp;quot;
+  chart-series=&amp;quot;$ctrl.seriese&amp;quot;
+  chart-dataset-override=&amp;quot;$ctrl.datasets&amp;quot;
+  chart-options=&amp;quot;$ctrl.options&amp;quot;
+/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If &lt;code&gt;datasets&lt;/code&gt; has only one sequence as the above example, &lt;code&gt;data&lt;/code&gt; and &lt;code&gt;datasets&lt;/code&gt; shouldn&amp;rsquo;t be lists.
+But, in this case, &lt;code&gt;chart-series&lt;/code&gt; attribute will be ignored,
+and don&amp;rsquo;t forget to add &lt;code&gt;label: &amp;quot;# of Votes&amp;quot;&lt;/code&gt; attribute.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;this.data = [12, 19, 3, 5, 2, 3];
+this.datasets = {
+  label: &amp;quot;# of Votes&amp;quot;,
+  backgroundColor: [
+    &#39;rgba(255, 99, 132, 0.2)&#39;,
+    &#39;rgba(54, 162, 235, 0.2)&#39;,
+    &#39;rgba(255, 206, 86, 0.2)&#39;,
+    &#39;rgba(75, 192, 192, 0.2)&#39;,
+    &#39;rgba(153, 102, 255, 0.2)&#39;,
+    &#39;rgba(255, 159, 64, 0.2)&#39;
+  ],
+  borderColor: [
+    &#39;rgba(255,99,132,1)&#39;,
+    &#39;rgba(54, 162, 235, 1)&#39;,
+    &#39;rgba(255, 206, 86, 1)&#39;,
+    &#39;rgba(75, 192, 192, 1)&#39;,
+    &#39;rgba(153, 102, 255, 1)&#39;,
+    &#39;rgba(255, 159, 64, 1)&#39;
+  ],
+  borderWidth: 1
+};
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
