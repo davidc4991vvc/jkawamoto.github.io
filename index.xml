@@ -698,6 +698,65 @@ this.datasets = {
     </item>
     
     <item>
+      <title>Install numba to mac</title>
+      <link>https://www.jkawamoto.info/blogs/install-numba-to-mac/</link>
+      <pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/blogs/install-numba-to-mac/</guid>
+      <description>
+
+&lt;h2 id=&#34;summary:1b715a24da2f354c147ae9b254f6ecd1&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://numba.pydata.org/&#34;&gt;numba&lt;/a&gt; provides an easy optimization for python codes
+but &lt;code&gt;pip&lt;/code&gt; doesn&amp;rsquo;t work to install numba.
+This entry explains installation and import way of numba.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation:1b715a24da2f354c147ae9b254f6ecd1&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;numba requires &lt;a href=&#34;http://llvm.org/&#34;&gt;&lt;code&gt;llvm&lt;/code&gt;&lt;/a&gt; and &lt;code&gt;enum34&lt;/code&gt;,
+and the required version of llvm isn&amp;rsquo;t the newest version 3.8.x but version 3.7.x.
+To install such version, you need to tap &lt;code&gt;homebrew/versions&lt;/code&gt; and set environ variable &lt;code&gt;LLVM_CONFIG&lt;/code&gt;.
+The following steps do that.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ brew tap homebrew/versions
+$ brew install homebrew/versions/llvm37
+$ export LLVM_CONFIG=/usr/local/Cellar/llvm37/3.7.1/bin/llvm-config-3.7
+
+$ pip install enum34
+$ pip install numba
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;import-numba:1b715a24da2f354c147ae9b254f6ecd1&#34;&gt;Import numba&lt;/h2&gt;
+
+&lt;p&gt;We should prepare import even if our source code will run without numba,
+and we replace no-op decorate if numba cannot be imported.
+The following source code do that:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;try:
+    from numba import jit
+except ImportError:
+    def jit(*args, **_kwargs):
+        if len(args) &amp;gt; 0 and hasattr(args[0], &amp;quot;__call__&amp;quot;):
+            return args[0]
+        else:
+            def _(func):
+                return func
+            return _
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If your code has other decorators than &lt;code&gt;@jit&lt;/code&gt;, you need to define those decorators,
+and in this case, you need to give types as texts not objects.&lt;/p&gt;
+
+&lt;h2 id=&#34;references:1b715a24da2f354c147ae9b254f6ecd1&#34;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.slideshare.net/teoliphant/numba-siam-2013&#34;&gt;http://www.slideshare.net/teoliphant/numba-siam-2013&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://dl.acm.org/citation.cfm?id=2833162&#34;&gt;http://dl.acm.org/citation.cfm?id=2833162&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>データ解析のための統計モデリング入門 第10章 を PyMC で解く</title>
       <link>https://www.jkawamoto.info/blog-ja/pymc-lesson-10/</link>
       <pubDate>Tue, 24 May 2016 00:00:00 +0000</pubDate>
@@ -864,25 +923,6 @@ WantedBy=multi-user.target
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ sudo systemctl enable /etc/systemd/system/var-data.mount
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>XSLT にてノード名別に処理を切り替える</title>
-      <link>https://www.jkawamoto.info/blog-ja/switching-action-in-xslt/</link>
-      <pubDate>Tue, 23 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.jkawamoto.info/blog-ja/switching-action-in-xslt/</guid>
-      <description>
-
-&lt;p&gt;for-each 要素 + when 要素で対応しようとしていたがうまく行かなかった．
-XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
-
-&lt;p&gt;XSLT 的には &lt;code&gt;apply-templetes&lt;/code&gt; 要素を使うのが正しいかと思われる．&lt;/p&gt;
-
-&lt;h2 id=&#34;参考書籍:1f1ae7033ee5f696a9cb6314e126a8bc&#34;&gt;参考書籍&lt;/h2&gt;
-
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=jkwf4mew-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4756140653&amp;linkId=b2835df657e267763950c4c934907627&#34;&gt;&lt;/iframe&gt;
 </description>
     </item>
     

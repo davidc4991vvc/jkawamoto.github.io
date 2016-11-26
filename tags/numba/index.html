@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="content-language" content="ja" />
 
-		<title>Python &middot; Junpei Kawamoto</title>
+		<title>Numba &middot; Junpei Kawamoto</title>
 		<base href="https://www.jkawamoto.info/" />
 		<meta name="generator" content="Hugo 0.15" />
 
@@ -18,7 +18,7 @@
 		
 
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Python &middot; Junpei Kawamoto" />
+		<meta property="og:title" content="Numba &middot; Junpei Kawamoto" />
 		
 		<meta name="og:description" content="Homepage of Junpei Kawamoto." />
 		
@@ -87,79 +87,6 @@
 
 			<div id="main">
 				<h1></h1>
-	      
-	        <section>
-	          
-
-<h2 id="summary:a0ee9d0ea8575a88500eea9bd15cac6b">Summary</h2>
-
-<p>This document explains how to include packages hosted in GitHub
-but not not registered in <a href="https://pypi.python.org/pypi">PyPI</a> into <code>requirements.txt</code>,
-and how to configure <code>setup.py</code> referring <code>requirements.txt</code>.</p>
-
-<h2 id="requirements-txt:a0ee9d0ea8575a88500eea9bd15cac6b">requirements.txt</h2>
-
-<p>Supposing <a href="https://github.com/rgmining/common">https://github.com/rgmining/common</a> as the GitHub repository to be added to <code>requirements.txt</code>,
-the package information for the repository is</p>
-
-<pre><code class="language-bash">-e git+https://github.com/rgmining/common.git#egg=rgmining_common-0.9.0
-</code></pre>
-
-<p>The format after <code>#egg=</code> shoule be <code>&lt;package name&gt;-&lt;version&gt;</code>.
-If you&rsquo;re using <code>pip-tools</code> to compile <code>requirements.txt</code>,
-your <code>requirements.in</code> should have the same clause.</p>
-
-<h2 id="setup-py:a0ee9d0ea8575a88500eea9bd15cac6b">setup.py</h2>
-
-<p>To include <code>requirements.txt</code> in <code>setup.py</code>,
-give the following <code>load_requires_from_file</code> function to <code>install_requires</code> attribute:</p>
-
-<pre><code class="language-py">from setuptools import setup, find_packages
-
-def load_requires_from_file(filepath):
-    with open(filepath) as fp:
-        return [pkg_name.strip() for pkg_name in fp.readlines()]
-
-setup(
-    # Other clauses are omitted.
-    install_requires=load_requires_from_file(&quot;requirements.txt&quot;)
-)
-</code></pre>
-
-<p>If your <code>requirements.txt</code> has URLs,
-<code>load_requires_from_file</code> function should be the following:</p>
-
-<pre><code class="language-py">def take_package_name(name):
-    if name.startswith(&quot;-e&quot;):
-        return name[name.find(&quot;=&quot;)+1:name.rfind(&quot;-&quot;)]
-    else:
-        return name.strip()
-
-def load_requires_from_file(filepath):
-    with open(filepath) as fp:
-        return [take_package_name(pkg_name) for pkg_name in fp.readlines()]
-</code></pre>
-
-<p>and give those URLs via <code>dependency_link</code> attribute in <code>setup</code> function:</p>
-
-<pre><code class="language-py">def load_links_from_file(filepath):
-    res = []
-    with open(filepath) as fp:
-        for pkg_name in fp.readlines():
-            if pkg_name.startswith(&quot;-e&quot;):
-                res.append(pkg_name.split(&quot; &quot;)[1])
-    return res
-
-setup(
-    # Other clauses are omitted.
-    install_requires=load_requires_from_file(&quot;requirements.txt&quot;),
-    dependency_links=load_links_from_file(&quot;requirements.txt&quot;),
-)
-</code></pre>
-
-<p>Finally, <code>python setup.py test</code> downloads packages from GitHub and runs tests.</p>
-
-	        </section>
 	      
 	        <section>
 	          

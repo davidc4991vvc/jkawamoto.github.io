@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on Junpei Kawamoto</title>
+    <link>https://www.jkawamoto.info/tags/mac/</link>
+    <description>Recent content in Mac on Junpei Kawamoto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
+    <lastBuildDate>Fri, 29 Jul 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.jkawamoto.info/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Install numba to mac</title>
+      <link>https://www.jkawamoto.info/blogs/install-numba-to-mac/</link>
+      <pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/blogs/install-numba-to-mac/</guid>
+      <description>
+
+&lt;h2 id=&#34;summary:1b715a24da2f354c147ae9b254f6ecd1&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://numba.pydata.org/&#34;&gt;numba&lt;/a&gt; provides an easy optimization for python codes
+but &lt;code&gt;pip&lt;/code&gt; doesn&amp;rsquo;t work to install numba.
+This entry explains installation and import way of numba.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation:1b715a24da2f354c147ae9b254f6ecd1&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;numba requires &lt;a href=&#34;http://llvm.org/&#34;&gt;&lt;code&gt;llvm&lt;/code&gt;&lt;/a&gt; and &lt;code&gt;enum34&lt;/code&gt;,
+and the required version of llvm isn&amp;rsquo;t the newest version 3.8.x but version 3.7.x.
+To install such version, you need to tap &lt;code&gt;homebrew/versions&lt;/code&gt; and set environ variable &lt;code&gt;LLVM_CONFIG&lt;/code&gt;.
+The following steps do that.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ brew tap homebrew/versions
+$ brew install homebrew/versions/llvm37
+$ export LLVM_CONFIG=/usr/local/Cellar/llvm37/3.7.1/bin/llvm-config-3.7
+
+$ pip install enum34
+$ pip install numba
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;import-numba:1b715a24da2f354c147ae9b254f6ecd1&#34;&gt;Import numba&lt;/h2&gt;
+
+&lt;p&gt;We should prepare import even if our source code will run without numba,
+and we replace no-op decorate if numba cannot be imported.
+The following source code do that:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;try:
+    from numba import jit
+except ImportError:
+    def jit(*args, **_kwargs):
+        if len(args) &amp;gt; 0 and hasattr(args[0], &amp;quot;__call__&amp;quot;):
+            return args[0]
+        else:
+            def _(func):
+                return func
+            return _
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If your code has other decorators than &lt;code&gt;@jit&lt;/code&gt;, you need to define those decorators,
+and in this case, you need to give types as texts not objects.&lt;/p&gt;
+
+&lt;h2 id=&#34;references:1b715a24da2f354c147ae9b254f6ecd1&#34;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.slideshare.net/teoliphant/numba-siam-2013&#34;&gt;http://www.slideshare.net/teoliphant/numba-siam-2013&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://dl.acm.org/citation.cfm?id=2833162&#34;&gt;http://dl.acm.org/citation.cfm?id=2833162&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
