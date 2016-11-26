@@ -29,7 +29,7 @@ and how to configure &lt;code&gt;setup.py&lt;/code&gt; referring &lt;code&gt;req
 &lt;p&gt;Supposing &lt;a href=&#34;https://github.com/rgmining/common&#34;&gt;https://github.com/rgmining/common&lt;/a&gt; as the GitHub repository to be added to &lt;code&gt;requirements.txt&lt;/code&gt;,
 the package information for the repository is&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-requirements.txt&#34;&gt;-e git+https://github.com/rgmining/common.git#egg=rgmining_common-0.9.0
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;-e git+https://github.com/rgmining/common.git#egg=rgmining_common-0.9.0
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The format after &lt;code&gt;#egg=&lt;/code&gt; shoule be &lt;code&gt;&amp;lt;package name&amp;gt;-&amp;lt;version&amp;gt;&lt;/code&gt;.
@@ -41,7 +41,7 @@ your &lt;code&gt;requirements.in&lt;/code&gt; should have the same clause.&lt;/p
 &lt;p&gt;To include &lt;code&gt;requirements.txt&lt;/code&gt; in &lt;code&gt;setup.py&lt;/code&gt;,
 give the following &lt;code&gt;load_requires_from_file&lt;/code&gt; function to &lt;code&gt;install_requires&lt;/code&gt; attribute:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-setup.py&#34;&gt;from setuptools import setup, find_packages
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;from setuptools import setup, find_packages
 
 def load_requires_from_file(filepath):
     with open(filepath) as fp:
@@ -56,7 +56,7 @@ setup(
 &lt;p&gt;If your &lt;code&gt;requirements.txt&lt;/code&gt; has URLs,
 &lt;code&gt;load_requires_from_file&lt;/code&gt; function should be the following:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-setup.py&#34;&gt;def take_package_name(name):
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;def take_package_name(name):
     if name.startswith(&amp;quot;-e&amp;quot;):
         return name[name.find(&amp;quot;=&amp;quot;)+1:name.rfind(&amp;quot;-&amp;quot;)]
     else:
@@ -69,7 +69,7 @@ def load_requires_from_file(filepath):
 
 &lt;p&gt;and give those URLs via &lt;code&gt;dependency_link&lt;/code&gt; attribute in &lt;code&gt;setup&lt;/code&gt; function:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-setup.py&#34;&gt;def load_links_from_file(filepath):
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;def load_links_from_file(filepath):
     res = []
     with open(filepath) as fp:
         for pkg_name in fp.readlines():
@@ -146,7 +146,7 @@ If your repository is public, you only need a token with &lt;code&gt;public_repo
 &lt;p&gt;Next, you need to add &lt;code&gt;wercker.yml&lt;/code&gt; in your branch root.
 You use Sphinx to build documents of which sources are in &lt;code&gt;docs&lt;/code&gt;. &lt;code&gt;wercker.yml&lt;/code&gt; may be there.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-wercker.yml&#34;&gt;box: jkawamoto/ghp-box
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;box: jkawamoto/ghp-box
 build:
   steps:
     - jkawamoto/sphinx:
@@ -193,7 +193,7 @@ and JSON and YAML formats for bilingual corpuses.&lt;/p&gt;
 
 &lt;p&gt;and add the following in script files to import it:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;import i18n from &amp;quot;meteor/universe:i18n&amp;quot;;
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;import i18n from &amp;quot;meteor/universe:i18n&amp;quot;;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;register-corpuses:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Register corpuses&lt;/h3&gt;
@@ -201,7 +201,7 @@ and JSON and YAML formats for bilingual corpuses.&lt;/p&gt;
 &lt;p&gt;You can add corpuses with APIs in &lt;a href=&#34;https://atmospherejs.com/universe/i18n&#34;&gt;universe:i18n&lt;/a&gt;.
 The following line adds a word associated with a namespace and a keyword to a locale.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;i18n.addTranslation(“locale&amp;quot;, “namespace&amp;quot;, “keyword&amp;quot;, “word&amp;quot;);
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;i18n.addTranslation(“locale&amp;quot;, “namespace&amp;quot;, “keyword&amp;quot;, “word&amp;quot;);
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;corpus-file:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Corpus file&lt;/h3&gt;
@@ -212,14 +212,14 @@ and such file names must end with &lt;code&gt;.i18n.json&lt;/code&gt; and &lt;co
 
 &lt;p&gt;For example, a YAML corpus file consists of key-value pairs such as&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-ja.i18n.yml&#34;&gt;ok: 決定
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;ok: 決定
 cancel: キャンセル
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;You can specify namespace of a corpus file with adding &lt;code&gt;_namespace&lt;/code&gt; key.
 The following example is a set of corpuses for namespace &lt;code&gt;ui&lt;/code&gt;:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-ja.i18n.yml&#34;&gt;_namespace: ui
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;_namespace: ui
 ok: 決定
 cancel: キャンセル
 &lt;/code&gt;&lt;/pre&gt;
@@ -227,7 +227,7 @@ cancel: キャンセル
 &lt;p&gt;Which locale a corpus file belongs to is specified by &lt;code&gt;_locale&lt;/code&gt; key or file name.
 The following file belongs to locale &lt;code&gt;ja&lt;/code&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-ja.i18n.yml&#34;&gt;_locale: ja
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;_locale: ja
 ok: 決定
 cancel: キャンセル
 &lt;/code&gt;&lt;/pre&gt;
@@ -248,7 +248,7 @@ one of the two formats.&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;i18n.__(namespace, key)&lt;/code&gt; function returns a translated word associated with &lt;code&gt;namespace&lt;/code&gt; and &lt;code&gt;key&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;i18n.__(“ui”, “ok”); // -&amp;gt; 決定 (in locale ja)
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;i18n.__(&amp;quot;ui&amp;quot;, &amp;quot;ok&amp;quot;); // -&amp;gt; 決定 (in locale ja)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h4 id=&#34;change-locale:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Change locale&lt;/h4&gt;
@@ -263,7 +263,7 @@ The function returns a &lt;code&gt;Promise&lt;/code&gt; and &lt;code&gt;.then&lt
 add &lt;code&gt;i18n.getTranslation&lt;/code&gt; method in a scope.
 Foe example, the following controller&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-app.js&#34;&gt;class AppCtrl {
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;class AppCtrl {
 
   constructor() {
     this.translator = i18n.getTranslation;
@@ -274,7 +274,7 @@ Foe example, the following controller&lt;/p&gt;
 
 &lt;p&gt;provides &lt;code&gt;translator&lt;/code&gt; method and a template&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;md-button ng-click=&amp;quot;$ctrl.onNext()” aria-label=&amp;quot;$ctrl.translator(‘ui&#39;, ‘ok’)&amp;quot;&amp;gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;md-button ng-click=&amp;quot;$ctrl.onNext()&amp;quot; aria-label=&amp;quot;$ctrl.translator(&#39;ui&#39;, &#39;ok&#39;)&amp;quot;&amp;gt;
   {{$ctrl.translator(&amp;quot;button&amp;quot;, &amp;quot;start&amp;quot;)}}
 &amp;lt;/md-button&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -291,7 +291,7 @@ setLocalePromise.then((e) =&amp;gt; {
 &lt;p&gt;But if you call &lt;code&gt;setLocale&lt;/code&gt; function without an UI event, for example in a constructor, DOM won&amp;rsquo;t be updated.
 You need to use &lt;code&gt;$scope.$apply()&lt;/code&gt;:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;constructor($scope) {
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;constructor($scope) {
 
   const setLocalePromise = i18n.setLocale(getLang()) || i18n.setLocale(&amp;quot;en&amp;quot;);
   setLocalePromise.then(() =&amp;gt; {
@@ -580,7 +580,7 @@ in Chart.js&amp;rsquo;s document for Angular Chart.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;chart.js&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-js:chart.js&#34;&gt;class ChartCtrl{
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;class ChartCtrl{
 
   constructor(){
 
@@ -627,7 +627,7 @@ in Chart.js&amp;rsquo;s document for Angular Chart.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;chart.html&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-chart.html&#34;&gt;&amp;lt;canvas class=&amp;quot;chart chart-bar&amp;quot;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;canvas class=&amp;quot;chart chart-bar&amp;quot;
   chart-data=&amp;quot;$ctrl.data&amp;quot;
   chart-labels=&amp;quot;$ctrl.labels&amp;quot;
   chart-series=&amp;quot;$ctrl.seriese&amp;quot;

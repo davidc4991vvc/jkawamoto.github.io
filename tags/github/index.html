@@ -31,13 +31,16 @@
 		<meta name="twitter:site" content="@junkawamoto" />
 
 		
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
-		<link rel="stylesheet" href="/css/main.css" />
 		
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
-		<link rel="stylesheet" href="/css/remodal.css">
-		<link rel="stylesheet" href="/css/remodal-default-theme.css">
-    <link rel="stylesheet" href="/css/custom.css">
+		<link rel="stylesheet" href="/css/main.css" />
+
+		<link rel="preload" as="style" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" onload="this.rel='stylesheet'" />
+    <link rel="preload" as="style" href="/css/custom.css" type="text/css" onload="this.rel='stylesheet'" />
+		<noscript>
+			<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" />
+	    <link rel="stylesheet" href="/css/custom.css" type="text/css" />
+		</noscript>
+
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<script>
 		  (adsbygoogle = window.adsbygoogle || []).push({
@@ -99,7 +102,7 @@ and how to configure <code>setup.py</code> referring <code>requirements.txt</cod
 <p>Supposing <a href="https://github.com/rgmining/common">https://github.com/rgmining/common</a> as the GitHub repository to be added to <code>requirements.txt</code>,
 the package information for the repository is</p>
 
-<pre><code class="language-requirements.txt">-e git+https://github.com/rgmining/common.git#egg=rgmining_common-0.9.0
+<pre><code class="language-bash">-e git+https://github.com/rgmining/common.git#egg=rgmining_common-0.9.0
 </code></pre>
 
 <p>The format after <code>#egg=</code> shoule be <code>&lt;package name&gt;-&lt;version&gt;</code>.
@@ -111,7 +114,7 @@ your <code>requirements.in</code> should have the same clause.</p>
 <p>To include <code>requirements.txt</code> in <code>setup.py</code>,
 give the following <code>load_requires_from_file</code> function to <code>install_requires</code> attribute:</p>
 
-<pre><code class="language-setup.py">from setuptools import setup, find_packages
+<pre><code class="language-py">from setuptools import setup, find_packages
 
 def load_requires_from_file(filepath):
     with open(filepath) as fp:
@@ -126,7 +129,7 @@ setup(
 <p>If your <code>requirements.txt</code> has URLs,
 <code>load_requires_from_file</code> function should be the following:</p>
 
-<pre><code class="language-setup.py">def take_package_name(name):
+<pre><code class="language-py">def take_package_name(name):
     if name.startswith(&quot;-e&quot;):
         return name[name.find(&quot;=&quot;)+1:name.rfind(&quot;-&quot;)]
     else:
@@ -139,7 +142,7 @@ def load_requires_from_file(filepath):
 
 <p>and give those URLs via <code>dependency_link</code> attribute in <code>setup</code> function:</p>
 
-<pre><code class="language-setup.py">def load_links_from_file(filepath):
+<pre><code class="language-py">def load_links_from_file(filepath):
     res = []
     with open(filepath) as fp:
         for pkg_name in fp.readlines():
@@ -221,7 +224,8 @@ setup(
   </script>
   
 
-  <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/agate.min.css" type="text/css" />
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57f285f012d45509"></script>
 </aside>
@@ -240,7 +244,9 @@ setup(
   <br/>
   <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
 </div>
-<script src="https://www.jkawamoto.info/js/remodal.min.js"></script>
+<link rel="stylesheet" href="css/remodal.css" type="text/css" />
+<link rel="stylesheet" href="css/remodal-default-theme.css" type="text/css" />
+<script src="js/remodal.min.js"></script>
 
 	</body>
 </html>

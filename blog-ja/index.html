@@ -31,13 +31,16 @@
 		<meta name="twitter:site" content="@junkawamoto" />
 
 		
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
-		<link rel="stylesheet" href="/css/main.css" />
 		
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
-		<link rel="stylesheet" href="/css/remodal.css">
-		<link rel="stylesheet" href="/css/remodal-default-theme.css">
-    <link rel="stylesheet" href="/css/custom.css">
+		<link rel="stylesheet" href="/css/main.css" />
+
+		<link rel="preload" as="style" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" onload="this.rel='stylesheet'" />
+    <link rel="preload" as="style" href="/css/custom.css" type="text/css" onload="this.rel='stylesheet'" />
+		<noscript>
+			<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" />
+	    <link rel="stylesheet" href="/css/custom.css" type="text/css" />
+		</noscript>
+
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<script>
 		  (adsbygoogle = window.adsbygoogle || []).push({
@@ -269,7 +272,8 @@
   </script>
   
 
-  <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/agate.min.css" type="text/css" />
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57f285f012d45509"></script>
 </aside>
@@ -288,7 +292,9 @@
   <br/>
   <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
 </div>
-<script src="https://www.jkawamoto.info/js/remodal.min.js"></script>
+<link rel="stylesheet" href="css/remodal.css" type="text/css" />
+<link rel="stylesheet" href="css/remodal-default-theme.css" type="text/css" />
+<script src="js/remodal.min.js"></script>
 
 	</body>
 </html>
