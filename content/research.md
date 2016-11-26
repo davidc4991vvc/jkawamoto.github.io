@@ -1,5 +1,7 @@
 ---
 title: Research
+lastmod: 2016-10-01
+description: List of research grants and academic societies.
 ---
 ## Research Grants
 * Grant-in-Aid for Young Scientists (B) from the Japan Society for the Promotion of Science, 2014-2016.

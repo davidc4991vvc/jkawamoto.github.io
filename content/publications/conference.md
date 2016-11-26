@@ -2,6 +2,7 @@
 title: List of publications in international conferences.
 description: List of publications in international conferences.
 weight: 2
+lastmod: 2016-11-14
 ---
 
 ## Conference/Workshop

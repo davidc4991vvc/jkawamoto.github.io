@@ -1,5 +1,7 @@
 ---
 title: Lectures
+lastmod: 2016-10-01
+description: List of my lectures.
 ---
 
 ## 2015

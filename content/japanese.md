@@ -1,5 +1,6 @@
 ---
 title: プロフィール
+lastmod: 2016-11-25
 isCJKLanguage: True
 categories:
 - ja

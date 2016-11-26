@@ -1,5 +1,6 @@
 ---
 title: その他の活動
+lastmod: 2016-11-25
 isCJKLanguage: True
 categories:
 - ja

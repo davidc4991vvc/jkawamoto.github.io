@@ -2,6 +2,7 @@
 title: List of thesis.
 description: List of thesis.
 weight: 4
+lastmod: 2016-10-01
 ---
 
 ## Thesis

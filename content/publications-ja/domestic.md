@@ -2,6 +2,7 @@
 title: List of publications to domestic workshops.
 description: List of publications to domestic workshops.
 weight: 3
+lastmod: 2016-10-01
 css2016:
   title: コンピュータセキュリティシンポジウム2016 (CSS 2016)
   link: http://www.iwsec.org/css/2016/

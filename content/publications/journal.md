@@ -2,6 +2,7 @@
 title: List of publications in journals.
 description: List of publications in journals.
 weight: 1
+lastmod: 2016-10-01
 ---
 
 ##  Journal

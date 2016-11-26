@@ -2,6 +2,7 @@
 title: List of publications in journals.
 description: List of publications in journals.
 weight: 1
+lastmod: 2016-10-01
 tod:
   title: 情報処理学会論文誌 データベース (TOD)
   link: https://ipsj-tod.org/
