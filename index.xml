@@ -7,8 +7,115 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
-    <lastBuildDate>Wed, 19 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.jkawamoto.info/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Import CSS files from npm libraries</title>
+      <link>https://www.jkawamoto.info/blogs/import-css-from-npm/</link>
+      <pubDate>Thu, 01 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/blogs/import-css-from-npm/</guid>
+      <description>
+
+&lt;h2 id=&#34;summary:b37abbaff78713a07ca81d3e2e751ef8&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;Client-side package management tool has been replacing to &lt;a href=&#34;https://www.npmjs.com/&#34;&gt;npm&lt;/a&gt; from &lt;a href=&#34;http://bower.io/&#34;&gt;bower&lt;/a&gt;,
+and client-side JavaScript packages are imported with &lt;a href=&#34;http://browserify.org/&#34;&gt;Browserify&lt;/a&gt;.
+However, it is difficult to import CSS files.
+Supposing importing bootstrap&amp;rsquo;s css installed with npm, which is installed by &lt;code&gt;npm i --save bootstrap&lt;/code&gt;, to &lt;code&gt;bundle.css&lt;/code&gt;,
+this entry explains two importing ways;
+&lt;a href=&#34;https://github.com/rotundasoftware/parcelify&#34;&gt;Parcelify&lt;/a&gt; and &lt;a href=&#34;https://github.com/reworkcss/rework&#34;&gt;rework&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We assume to use &lt;a href=&#34;http://gulpjs.com/&#34;&gt;Gulp&lt;/a&gt; as the task runner,
+and we investigate ways that don&amp;rsquo;t fix directory structure.&lt;/p&gt;
+
+&lt;h2 id=&#34;parcelify:b37abbaff78713a07ca81d3e2e751ef8&#34;&gt;Parcelify&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/rotundasoftware/parcelify&#34;&gt;Parcelify&lt;/a&gt; is a famous plugin of Browserify,
+which means if your project doesn&amp;rsquo;t use JavaScript, you need to add a dummy script file to use Parcelify.
+To use Parcelify, you need to list up css files at &lt;code&gt;style&lt;/code&gt; attribute in your &lt;code&gt;package.json&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;For example, the following &lt;code&gt;package.json&lt;/code&gt; imports css files provided from Bootstrap.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;style&amp;quot;: [
+    &amp;quot;./node_modules/bootstrap/dist/css/bootstrap.min.css&amp;quot;,
+    &amp;quot;./src/css/main.css&amp;quot;
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that the above object omits other elements.&lt;/p&gt;
+
+&lt;p&gt;The following gulp task, then, bundles the css files listed in &lt;code&gt;style&lt;/code&gt; attribute of your &lt;code&gt;package.json&lt;/code&gt;
+and makes &lt;code&gt;bundle.css&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-coffeescript&#34;&gt;gulp = require &amp;quot;gulp&amp;quot;
+browserify = require &amp;quot;browserify&amp;quot;
+parcelify = require &amp;quot;parcelify&amp;quot;
+source = require &amp;quot;vinyl-source-stream&amp;quot;
+
+gulp.task &amp;quot;browserify&amp;quot;, -&amp;gt;
+  b = browserify
+    entries: [&amp;quot;./src/main.js&amp;quot;]
+    extensions: [&amp;quot;.js&amp;quot;]
+  parcelify b,
+    bundles:
+      style: &amp;quot;./public/bundle/bundle.css&amp;quot;
+  b.bundle()
+    .pipe source &amp;quot;bundle.js&amp;quot;
+    .pipe gulp.dest &amp;quot;.public/bundle/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This way works but to list up all css files in the &lt;code&gt;style&lt;/code&gt; attribute,
+you need to know directory structures of all packages,
+and such structures will be changed when packages are updated.
+In other words, this way isn&amp;rsquo;t sustainable.&lt;/p&gt;
+
+&lt;h2 id=&#34;rework:b37abbaff78713a07ca81d3e2e751ef8&#34;&gt;rework&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/reworkcss/rework&#34;&gt;rework&lt;/a&gt; and a plugin of it &lt;a href=&#34;https://github.com/reworkcss/rework-npm&#34;&gt;rework-npm&lt;/a&gt;
+search all &lt;code&gt;package.json&lt;/code&gt; of the packages you&amp;rsquo;re using, and import css files those packages provide.
+In other words, you don&amp;rsquo;t need to list up css files in your &lt;code&gt;package.json&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sindresorhus/gulp-rework&#34;&gt;gulp-rework&lt;/a&gt; is a package to use rework from glup,
+and we use it in this entry.&lt;/p&gt;
+
+&lt;p&gt;First, we need to make a parent css file describing which css files to be imported by rework.
+For example, the following parent css file imports css files provided from Bootstrap.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;@import &amp;quot;bootstrap&amp;quot;;
+
+/* We omit other entries. */
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We put the parent css file in &lt;code&gt;./src/&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Next, we make the following gulp task,
+which reads all css files in &lt;code&gt;./src/&lt;/code&gt; and makes a bundled css file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-coffeescript&#34;&gt;gulp = require &amp;quot;gulp&amp;quot;
+rework = require &amp;quot;gulp-rework&amp;quot;
+reworkNPM = require &amp;quot;rework-npm&amp;quot;
+
+gulp.task &amp;quot;css&amp;quot;, -&amp;gt;
+  gulp.src &amp;quot;./src/*.css&amp;quot;
+    .pipe rework(reworkNPM())
+    .pipe gulp.dest &amp;quot;./public/bundle/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Running css task, rework imports Bootstrap&amp;rsquo;s css files and put them to the bundled file.&lt;/p&gt;
+
+&lt;p&gt;In this method, you don&amp;rsquo;t need to check file structures of each package.
+However, it, rework-npm, requires each package lists up its css file in its &lt;code&gt;package.json&lt;/code&gt;,
+which means you don&amp;rsquo;t need to list up them but the authors of each package have to do that.&lt;/p&gt;
+
+&lt;p&gt;After listing up css files in style attribute becomes a standard, this method would work well,
+but right now there are still packages which doesn&amp;rsquo;t do that, and you have to do it instead.
+The cost seems as same as one using Parcelify.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Include GitHub repositories to requirements.txt</title>
@@ -866,62 +973,6 @@ pre-start script
 end script
 
 exec /usr/local/bin/docker run —name=foo -v /data:/var/data bar:latest
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Systemd の設定</title>
-      <link>https://www.jkawamoto.info/blog-ja/systemd-configurations/</link>
-      <pubDate>Thu, 25 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.jkawamoto.info/blog-ja/systemd-configurations/</guid>
-      <description>
-
-&lt;h3 id=&#34;マウントユニット:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;マウントユニット&lt;/h3&gt;
-
-&lt;p&gt;ファイルシステムのマウントを設定する．
-ユニットファイルはマウントポイントによって決まり拡張子は &lt;code&gt;.mount&lt;/code&gt;．例えば，/var/data にマウントする場合，
-ユニットファイル名は &lt;code&gt;var-data.mount&lt;/code&gt; と / を - に置き換える．パスに - が含まれている場合はエスケープする．&lt;/p&gt;
-
-&lt;h4 id=&#34;nfs-を用いてマウントする例:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;NFS を用いてマウントする例&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-conf&#34;&gt;[Unit]
-Description=some network hdd
-
-[Mount]
-What=192.168.0.5:/data
-Where=/var/data
-Type=nfs
-Options=nolock
-
-[Install]
-WantedBy=multi-user.target
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;サービスユニット:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;サービスユニット&lt;/h3&gt;
-
-&lt;p&gt;Docker 用サービスを起動する設定．docker イメージの作成から行えるが，今回は既にあるイメージを起動する．&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-conf&#34;&gt;[Unit]
-Description=Apache2
-After=docker.service var-data.mount
-Requires=docker.service var-data.mount
-
-[Service]
-TimeoutStartSec=0
-ExecStartPre=-/usr/bin/docker kill apache2
-ExecStartPre=-/usr/bin/docker rm apache2
-ExecStart=/usr/bin/docker run --name apache2 -v /var/data:/var/www/html:rw -p 80:80 apache2:latest
-ExecStop /usr/bin/docker stop apache2
-
-[Install]
-WantedBy=multi-user.target
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;ユニットの有効化:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;ユニットの有効化&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ sudo systemctl enable /etc/systemd/system/var-data.mount
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>

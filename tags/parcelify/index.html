@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="content-language" content="ja" />
 
-		<title>Blogs &middot; Junpei Kawamoto</title>
+		<title>Parcelify &middot; Junpei Kawamoto</title>
 		<base href="https://www.jkawamoto.info/" />
 		<meta name="generator" content="Hugo 0.15" />
 
@@ -18,7 +18,7 @@
 		
 
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Blogs &middot; Junpei Kawamoto" />
+		<meta property="og:title" content="Parcelify &middot; Junpei Kawamoto" />
 		
 		<meta name="og:description" content="Homepage of Junpei Kawamoto." />
 		
@@ -86,99 +86,110 @@
 
 
 			<div id="main">
-				<h1>Blog</h1>
+				<h1></h1>
+	      
+	        <section>
+	          
 
-				<div style="padding: 10px;">
-					<p>
-						<!-- AdSense -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4734862314145555"
-     data-ad-slot="7714563027"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<h2 id="summary:b37abbaff78713a07ca81d3e2e751ef8">Summary</h2>
 
-					</p>
-				</div>
+<p>Client-side package management tool has been replacing to <a href="https://www.npmjs.com/">npm</a> from <a href="http://bower.io/">bower</a>,
+and client-side JavaScript packages are imported with <a href="http://browserify.org/">Browserify</a>.
+However, it is difficult to import CSS files.
+Supposing importing bootstrap&rsquo;s css installed with npm, which is installed by <code>npm i --save bootstrap</code>, to <code>bundle.css</code>,
+this entry explains two importing ways;
+<a href="https://github.com/rotundasoftware/parcelify">Parcelify</a> and <a href="https://github.com/reworkcss/rework">rework</a>.</p>
 
-				<ul>
-					
-						<li>
-							<a href="https://www.jkawamoto.info/blogs/import-css-from-npm/#main">Import CSS files from npm libraries</a>
-							&nbsp;
-							<i class="fa fa-calendar" aria-hidden="true"></i>
-							<time pubdate="2016-12-01">2016-12-01</time>
-						</li>
-		      
-						<li>
-							<a href="https://www.jkawamoto.info/blogs/include-github-repositories-to-requirements-txt/#main">Include GitHub repositories to requirements.txt</a>
-							&nbsp;
-							<i class="fa fa-calendar" aria-hidden="true"></i>
-							<time pubdate="2016-10-19">2016-10-19</time>
-						</li>
-		      
-						<li>
-							<a href="https://www.jkawamoto.info/blogs/sphinx-on-wercker/#main">Compiling a Sphinx document on Wercker</a>
-							&nbsp;
-							<i class="fa fa-calendar" aria-hidden="true"></i>
-							<time pubdate="2016-08-18">2016-08-18</time>
-						</li>
-		      
-						<li>
-							<a href="https://www.jkawamoto.info/blogs/i18n-package-in-meteor/#main">Internationalization (i18n) of Meteor applications</a>
-							&nbsp;
-							<i class="fa fa-calendar" aria-hidden="true"></i>
-							<time pubdate="2016-08-13">2016-08-13</time>
-						</li>
-		      
-						<li>
-							<a href="https://www.jkawamoto.info/blogs/fullpagejs-in-angularjs/#main">Use fullPage.js in AngularJS</a>
-							&nbsp;
-							<i class="fa fa-calendar" aria-hidden="true"></i>
-							<time pubdate="2016-08-12">2016-08-12</time>
-						</li>
-		      
-						<li>
-							<a href="https://www.jkawamoto.info/blogs/chartjs-in-angularjs/#main">Use Chart.js in AngularJS</a>
-							&nbsp;
-							<i class="fa fa-calendar" aria-hidden="true"></i>
-							<time pubdate="2016-08-11">2016-08-11</time>
-						</li>
-		      
-						<li>
-							<a href="https://www.jkawamoto.info/blogs/install-numba-to-mac/#main">Install numba to mac</a>
-							&nbsp;
-							<i class="fa fa-calendar" aria-hidden="true"></i>
-							<time pubdate="2016-07-29">2016-07-29</time>
-						</li>
-		      
-				</ul>
+<p>We assume to use <a href="http://gulpjs.com/">Gulp</a> as the task runner,
+and we investigate ways that don&rsquo;t fix directory structure.</p>
 
-				
+<h2 id="parcelify:b37abbaff78713a07ca81d3e2e751ef8">Parcelify</h2>
 
-				<div class="addthis_relatedposts_inline"></div>
-				<p>
-					<!-- AdSense -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:336px;height:280px"
-     data-ad-client="ca-pub-4734862314145555"
-     data-ad-slot="3140329829"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<p><a href="https://github.com/rotundasoftware/parcelify">Parcelify</a> is a famous plugin of Browserify,
+which means if your project doesn&rsquo;t use JavaScript, you need to add a dummy script file to use Parcelify.
+To use Parcelify, you need to list up css files at <code>style</code> attribute in your <code>package.json</code>.</p>
 
-<ins class="adsbygoogle"
-     style="display:inline-block;width:336px;height:280px"
-     data-ad-client="ca-pub-4734862314145555"
-     data-ad-slot="3140329829"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<p>For example, the following <code>package.json</code> imports css files provided from Bootstrap.</p>
 
-				</p>
+<pre><code class="language-json">{
+  &quot;style&quot;: [
+    &quot;./node_modules/bootstrap/dist/css/bootstrap.min.css&quot;,
+    &quot;./src/css/main.css&quot;
+  ]
+}
+</code></pre>
 
+<p>Note that the above object omits other elements.</p>
+
+<p>The following gulp task, then, bundles the css files listed in <code>style</code> attribute of your <code>package.json</code>
+and makes <code>bundle.css</code>:</p>
+
+<pre><code class="language-coffeescript">gulp = require &quot;gulp&quot;
+browserify = require &quot;browserify&quot;
+parcelify = require &quot;parcelify&quot;
+source = require &quot;vinyl-source-stream&quot;
+
+gulp.task &quot;browserify&quot;, -&gt;
+  b = browserify
+    entries: [&quot;./src/main.js&quot;]
+    extensions: [&quot;.js&quot;]
+  parcelify b,
+    bundles:
+      style: &quot;./public/bundle/bundle.css&quot;
+  b.bundle()
+    .pipe source &quot;bundle.js&quot;
+    .pipe gulp.dest &quot;.public/bundle/&quot;
+</code></pre>
+
+<p>This way works but to list up all css files in the <code>style</code> attribute,
+you need to know directory structures of all packages,
+and such structures will be changed when packages are updated.
+In other words, this way isn&rsquo;t sustainable.</p>
+
+<h2 id="rework:b37abbaff78713a07ca81d3e2e751ef8">rework</h2>
+
+<p><a href="https://github.com/reworkcss/rework">rework</a> and a plugin of it <a href="https://github.com/reworkcss/rework-npm">rework-npm</a>
+search all <code>package.json</code> of the packages you&rsquo;re using, and import css files those packages provide.
+In other words, you don&rsquo;t need to list up css files in your <code>package.json</code>.</p>
+
+<p><a href="https://github.com/sindresorhus/gulp-rework">gulp-rework</a> is a package to use rework from glup,
+and we use it in this entry.</p>
+
+<p>First, we need to make a parent css file describing which css files to be imported by rework.
+For example, the following parent css file imports css files provided from Bootstrap.</p>
+
+<pre><code class="language-css">@import &quot;bootstrap&quot;;
+
+/* We omit other entries. */
+</code></pre>
+
+<p>We put the parent css file in <code>./src/</code>.</p>
+
+<p>Next, we make the following gulp task,
+which reads all css files in <code>./src/</code> and makes a bundled css file.</p>
+
+<pre><code class="language-coffeescript">gulp = require &quot;gulp&quot;
+rework = require &quot;gulp-rework&quot;
+reworkNPM = require &quot;rework-npm&quot;
+
+gulp.task &quot;css&quot;, -&gt;
+  gulp.src &quot;./src/*.css&quot;
+    .pipe rework(reworkNPM())
+    .pipe gulp.dest &quot;./public/bundle/&quot;
+</code></pre>
+
+<p>Running css task, rework imports Bootstrap&rsquo;s css files and put them to the bundled file.</p>
+
+<p>In this method, you don&rsquo;t need to check file structures of each package.
+However, it, rework-npm, requires each package lists up its css file in its <code>package.json</code>,
+which means you don&rsquo;t need to list up them but the authors of each package have to do that.</p>
+
+<p>After listing up css files in style attribute becomes a standard, this method would work well,
+but right now there are still packages which doesn&rsquo;t do that, and you have to do it instead.
+The cost seems as same as one using Parcelify.</p>
+
+	        </section>
+	      
 			</div>
 
 			<!-- Footer -->
