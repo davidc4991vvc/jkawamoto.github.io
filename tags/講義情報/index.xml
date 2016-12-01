@@ -42,5 +42,22 @@
 </description>
     </item>
     
+    <item>
+      <title>高度プログラミングサンプルコード</title>
+      <link>https://www.jkawamoto.info/blog-ja/programming-sample-codes/</link>
+      <pubDate>Tue, 21 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/blog-ja/programming-sample-codes/</guid>
+      <description>
+
+&lt;h2 id=&#34;概要:1e0f5fb386406c30d3578e2a5282fedb&#34;&gt;概要&lt;/h2&gt;
+
+&lt;p&gt;九州大学基幹教育科目「高度プログラミング」総合課題３のサンプルコードです．
+課題の内容や配布資料を参照してください．&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/jkawamoto/7aca96b3ac8f96a3d769.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

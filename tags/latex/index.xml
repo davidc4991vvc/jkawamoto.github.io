@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Latex on Junpei Kawamoto</title>
+    <link>https://www.jkawamoto.info/tags/latex/</link>
+    <description>Recent content in Latex on Junpei Kawamoto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
+    <lastBuildDate>Wed, 02 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.jkawamoto.info/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>LaTeX スニペット集</title>
+      <link>https://www.jkawamoto.info/blog-ja/latex-snippets/</link>
+      <pubDate>Wed, 02 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/blog-ja/latex-snippets/</guid>
+      <description>&lt;script src=&#34;https://gist.github.com/jkawamoto/e9f73ffab91a7fda62b3.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

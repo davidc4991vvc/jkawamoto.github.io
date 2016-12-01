@@ -147,5 +147,21 @@ and in this case, you need to give types as texts not objects.&lt;/p&gt;
 </description>
     </item>
     
+    <item>
+      <title>データ解析のための統計モデリング入門 第10章 を PyMC で解く</title>
+      <link>https://www.jkawamoto.info/blog-ja/pymc-lesson-10/</link>
+      <pubDate>Tue, 24 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/blog-ja/pymc-lesson-10/</guid>
+      <description>
+
+&lt;script src=&#34;https://gist.github.com/jkawamoto/4a136615118fffe2930c54773389d079.js&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;参考書籍:347a12c97dd1f9b47c3d208ca1b149a3&#34;&gt;参考書籍&lt;/h2&gt;
+
+&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=jkwf4mew-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=400006973X&amp;linkId=e5d3611547b0a6ff789dc2ce355b7a15&#34;&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

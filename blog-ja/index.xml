@@ -74,7 +74,14 @@
       <pubDate>Tue, 21 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>https://www.jkawamoto.info/blog-ja/programming-sample-codes/</guid>
-      <description>&lt;script src=&#34;https://gist.github.com/jkawamoto/7aca96b3ac8f96a3d769.js&#34;&gt;&lt;/script&gt;
+      <description>
+
+&lt;h2 id=&#34;概要:1e0f5fb386406c30d3578e2a5282fedb&#34;&gt;概要&lt;/h2&gt;
+
+&lt;p&gt;九州大学基幹教育科目「高度プログラミング」総合課題３のサンプルコードです．
+課題の内容や配布資料を参照してください．&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/jkawamoto/7aca96b3ac8f96a3d769.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -189,6 +196,10 @@ WantedBy=multi-user.target
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ sudo systemctl enable /etc/systemd/system/var-data.mount
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;参考書籍:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;参考書籍&lt;/h2&gt;
+
+&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=jkwf4mew-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4798044911&amp;linkId=447a64b082142e7249663b401a0b892f&#34;&gt;&lt;/iframe&gt;
 </description>
     </item>
     
