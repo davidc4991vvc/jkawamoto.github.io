@@ -6,7 +6,7 @@ build:
         code: |-
           git submodule update --init
     - arjen/hugo-build:
-        version: "0.15"
+        version: "HEAD"
 deploy:
   steps:
     - jkawamoto/ghp-import:
