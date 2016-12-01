@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Meteor on Junpei Kawamoto</title>
-    <link>https://www.jkawamoto.info/tags/meteor/</link>
+    <link>https://www.jkawamoto.info/tags/meteor/index.xml</link>
     <description>Recent content in Meteor on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
-    <lastBuildDate>Sat, 13 Aug 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.jkawamoto.info/tags/meteor/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -18,7 +17,7 @@
       <guid>https://www.jkawamoto.info/blogs/i18n-package-in-meteor/</guid>
       <description>
 
-&lt;h2 id=&#34;universe-i18n:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;universe:i18n&lt;/h2&gt;
+&lt;h2 id=&#34;universe-i18n&#34;&gt;universe:i18n&lt;/h2&gt;
 
 &lt;p&gt;How to internationalize &lt;a href=&#34;https://www.meteor.com/&#34;&gt;Meteor&lt;/a&gt; application?
 An &lt;a href=&#34;https://atmospherejs.com&#34;&gt;atmosphere&lt;/a&gt; package &lt;a href=&#34;https://atmospherejs.com/universe/i18n&#34;&gt;universe:i18n&lt;/a&gt; helps it.
@@ -35,7 +34,7 @@ and JSON and YAML formats for bilingual corpuses.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;import i18n from &amp;quot;meteor/universe:i18n&amp;quot;;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;register-corpuses:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Register corpuses&lt;/h3&gt;
+&lt;h3 id=&#34;register-corpuses&#34;&gt;Register corpuses&lt;/h3&gt;
 
 &lt;p&gt;You can add corpuses with APIs in &lt;a href=&#34;https://atmospherejs.com/universe/i18n&#34;&gt;universe:i18n&lt;/a&gt;.
 The following line adds a word associated with a namespace and a keyword to a locale.&lt;/p&gt;
@@ -43,7 +42,7 @@ The following line adds a word associated with a namespace and a keyword to a lo
 &lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;i18n.addTranslation(“locale&amp;quot;, “namespace&amp;quot;, “keyword&amp;quot;, “word&amp;quot;);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;corpus-file:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Corpus file&lt;/h3&gt;
+&lt;h3 id=&#34;corpus-file&#34;&gt;Corpus file&lt;/h3&gt;
 
 &lt;p&gt;It is hard to add corpuses by &lt;code&gt;i18n.addTranslation&lt;/code&gt; function.
 You can add corpuses with JSON and YAML files,
@@ -83,20 +82,20 @@ one of the two formats.&lt;/p&gt;
 
 &lt;p&gt;Note that corpus files must not be in &lt;code&gt;imports&lt;/code&gt; directory.&lt;/p&gt;
 
-&lt;h3 id=&#34;get-a-translated-word:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Get a translated word&lt;/h3&gt;
+&lt;h3 id=&#34;get-a-translated-word&#34;&gt;Get a translated word&lt;/h3&gt;
 
 &lt;p&gt;&lt;code&gt;i18n.__(namespace, key)&lt;/code&gt; function returns a translated word associated with &lt;code&gt;namespace&lt;/code&gt; and &lt;code&gt;key&lt;/code&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;i18n.__(&amp;quot;ui&amp;quot;, &amp;quot;ok&amp;quot;); // -&amp;gt; 決定 (in locale ja)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;change-locale:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Change locale&lt;/h4&gt;
+&lt;h4 id=&#34;change-locale&#34;&gt;Change locale&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;i18n.setLocale(&amp;quot;locale&amp;quot;)&lt;/code&gt; function sets a new locale &lt;code&gt;locale&lt;/code&gt;,
 and downloads the corpus associated with the locale asynchronously.
 The function returns a &lt;code&gt;Promise&lt;/code&gt; and &lt;code&gt;.then&lt;/code&gt; method is available to run some commands after receiving the corpus.&lt;/p&gt;
 
-&lt;h3 id=&#34;use-universe-i18n-in-angular-meteor:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Use universe:i18n in Angular-Meteor&lt;/h3&gt;
+&lt;h3 id=&#34;use-universe-i18n-in-angular-meteor&#34;&gt;Use universe:i18n in Angular-Meteor&lt;/h3&gt;
 
 &lt;p&gt;To use universe:i18n in &lt;a href=&#34;http://www.angular-meteor.com/&#34;&gt;Angular-Meteor&lt;/a&gt; template,
 add &lt;code&gt;i18n.getTranslation&lt;/code&gt; method in a scope.

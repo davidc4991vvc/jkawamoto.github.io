@@ -6,13 +6,13 @@
 
 		<title>Systemd の設定 &middot; Junpei Kawamoto</title>
 		<base href="https://www.jkawamoto.info/" />
-		<meta name="generator" content="Hugo 0.15" />
+		<meta name="generator" content="Hugo 0.18-DEV" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Junpei Kawamoto" />
 
 		
-		<meta name="description" content="Homepage of Junpei Kawamoto." />
+		<meta name="description" content="Systemd を使ってリモートストレージをマウントする方法とサービスの起動方法のまとめです．" />
 		
 
 		
@@ -20,13 +20,13 @@
 		<meta property="og:type" content="article" />
 		<meta property="og:title" content="Systemd の設定 &middot; Junpei Kawamoto" />
 		
-		<meta name="og:description" content="Homepage of Junpei Kawamoto." />
+		<meta name="og:description" content="Systemd を使ってリモートストレージをマウントする方法とサービスの起動方法のまとめです．" />
 		
 		<meta property="og:image" content="/images/wordcloud.png" />
 		<meta property="og:site_name"  content="Junpei Kawamoto" />
 
 		
-		<meta name="twitter:card" content="Homepage of Junpei Kawamoto." />
+		<meta name="twitter:card" content="Systemd を使ってリモートストレージをマウントする方法とサービスの起動方法のまとめです．" />
 		
 		<meta name="twitter:site" content="@junkawamoto" />
 
@@ -120,13 +120,13 @@
 				<div class="ja">
 	    	
 
-<h3 id="マウントユニット:6b19b8ca7ad03e090dc16a2c8daabd45">マウントユニット</h3>
+<h3 id="マウントユニット">マウントユニット</h3>
 
 <p>ファイルシステムのマウントを設定する．
 ユニットファイルはマウントポイントによって決まり拡張子は <code>.mount</code>．例えば，/var/data にマウントする場合，
 ユニットファイル名は <code>var-data.mount</code> と / を - に置き換える．パスに - が含まれている場合はエスケープする．</p>
 
-<h4 id="nfs-を用いてマウントする例:6b19b8ca7ad03e090dc16a2c8daabd45">NFS を用いてマウントする例</h4>
+<h4 id="nfs-を用いてマウントする例">NFS を用いてマウントする例</h4>
 
 <pre><code class="language-conf">[Unit]
 Description=some network hdd
@@ -141,7 +141,7 @@ Options=nolock
 WantedBy=multi-user.target
 </code></pre>
 
-<h3 id="サービスユニット:6b19b8ca7ad03e090dc16a2c8daabd45">サービスユニット</h3>
+<h3 id="サービスユニット">サービスユニット</h3>
 
 <p>Docker 用サービスを起動する設定．docker イメージの作成から行えるが，今回は既にあるイメージを起動する．</p>
 
@@ -161,12 +161,12 @@ ExecStop /usr/bin/docker stop apache2
 WantedBy=multi-user.target
 </code></pre>
 
-<h3 id="ユニットの有効化:6b19b8ca7ad03e090dc16a2c8daabd45">ユニットの有効化</h3>
+<h3 id="ユニットの有効化">ユニットの有効化</h3>
 
 <pre><code class="language-sh">$ sudo systemctl enable /etc/systemd/system/var-data.mount
 </code></pre>
 
-<h2 id="参考書籍:6b19b8ca7ad03e090dc16a2c8daabd45">参考書籍</h2>
+<h2 id="参考書籍">参考書籍</h2>
 
 <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=FFFFFF&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=jkwf4mew-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4798044911&linkId=447a64b082142e7249663b401a0b892f"></iframe>
 

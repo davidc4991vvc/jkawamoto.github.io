@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bash on Junpei Kawamoto</title>
-    <link>https://www.jkawamoto.info/tags/bash/</link>
+    <link>https://www.jkawamoto.info/tags/bash/index.xml</link>
     <description>Recent content in Bash on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
-    <lastBuildDate>Wed, 10 Dec 2014 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.jkawamoto.info/tags/bash/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -30,7 +29,7 @@ echo ${IPPORT%:*}
 echo ${IPPORT#*:}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;参考:47af2e49b17f04e7b38ce80b18151268&#34;&gt;参考&lt;/h2&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/ozuma/20130928/1380380390&#34;&gt;shとbashでの変数内の文字列置換など | ろば電子が詰まっている&lt;/a&gt;&lt;/li&gt;

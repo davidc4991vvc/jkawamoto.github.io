@@ -6,13 +6,13 @@
 
 		<title>Install numba to mac &middot; Junpei Kawamoto</title>
 		<base href="https://www.jkawamoto.info/" />
-		<meta name="generator" content="Hugo 0.15" />
+		<meta name="generator" content="Hugo 0.18-DEV" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Junpei Kawamoto" />
 
 		
-		<meta name="description" content="Homepage of Junpei Kawamoto." />
+		<meta name="description" content="numba provides an easy optimization for python codes but pip doesn&#39;t work to install numba. This entry explains installation and import way of numba." />
 		
 
 		
@@ -22,13 +22,13 @@
 		<meta property="og:type" content="article" />
 		<meta property="og:title" content="Install numba to mac &middot; Junpei Kawamoto" />
 		
-		<meta name="og:description" content="Homepage of Junpei Kawamoto." />
+		<meta name="og:description" content="numba provides an easy optimization for python codes but pip doesn&#39;t work to install numba. This entry explains installation and import way of numba." />
 		
 		<meta property="og:image" content="/images/wordcloud.png" />
 		<meta property="og:site_name"  content="Junpei Kawamoto" />
 
 		
-		<meta name="twitter:card" content="Homepage of Junpei Kawamoto." />
+		<meta name="twitter:card" content="numba provides an easy optimization for python codes but pip doesn&#39;t work to install numba. This entry explains installation and import way of numba." />
 		
 		<meta name="twitter:site" content="@junkawamoto" />
 
@@ -131,13 +131,13 @@
 				</div>
 	    	
 
-<h2 id="summary:1b715a24da2f354c147ae9b254f6ecd1">Summary</h2>
+<h2 id="summary">Summary</h2>
 
 <p><a href="http://numba.pydata.org/">numba</a> provides an easy optimization for python codes
 but <code>pip</code> doesn&rsquo;t work to install numba.
 This entry explains installation and import way of numba.</p>
 
-<h2 id="installation:1b715a24da2f354c147ae9b254f6ecd1">Installation</h2>
+<h2 id="installation">Installation</h2>
 
 <p>numba requires <a href="http://llvm.org/"><code>llvm</code></a> and <code>enum34</code>,
 and the required version of llvm isn&rsquo;t the newest version 3.8.x but version 3.7.x.
@@ -152,7 +152,7 @@ $ pip install enum34
 $ pip install numba
 </code></pre>
 
-<h2 id="import-numba:1b715a24da2f354c147ae9b254f6ecd1">Import numba</h2>
+<h2 id="import-numba">Import numba</h2>
 
 <p>We should prepare import even if our source code will run without numba,
 and we replace no-op decorate if numba cannot be imported.
@@ -173,7 +173,7 @@ except ImportError:
 <p>If your code has other decorators than <code>@jit</code>, you need to define those decorators,
 and in this case, you need to give types as texts not objects.</p>
 
-<h2 id="references:1b715a24da2f354c147ae9b254f6ecd1">References</h2>
+<h2 id="references">References</h2>
 
 <ul>
 <li><a href="http://www.slideshare.net/teoliphant/numba-siam-2013">http://www.slideshare.net/teoliphant/numba-siam-2013</a></li>

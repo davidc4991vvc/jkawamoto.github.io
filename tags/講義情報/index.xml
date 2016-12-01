@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>講義情報 on Junpei Kawamoto</title>
-    <link>https://www.jkawamoto.info/tags/%E8%AC%9B%E7%BE%A9%E6%83%85%E5%A0%B1/</link>
+    <link>https://www.jkawamoto.info/tags/%E8%AC%9B%E7%BE%A9%E6%83%85%E5%A0%B1/index.xml</link>
     <description>Recent content in 講義情報 on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
-    <lastBuildDate>Wed, 17 Aug 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.jkawamoto.info/tags/%E8%AC%9B%E7%BE%A9%E6%83%85%E5%A0%B1/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -18,7 +17,7 @@
       <guid>https://www.jkawamoto.info/blog-ja/2016-08-17/</guid>
       <description>
 
-&lt;h2 id=&#34;教科書:1717e42594624ea816033f0095022e9c&#34;&gt;教科書&lt;/h2&gt;
+&lt;h2 id=&#34;教科書&#34;&gt;教科書&lt;/h2&gt;
 
 &lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=jkwf4mew-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4781910262&amp;linkId=b80a4550067a9b6fd184676c56847ff0&#34;&gt;&lt;/iframe&gt;
 &lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=jkwf4mew-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4781910270&amp;linkId=715b45764867431bfea1b57063f72787&#34;&gt;&lt;/iframe&gt;
@@ -27,7 +26,7 @@
 &lt;li&gt;&lt;a href=&#34;http://bit.ly/2b024rd&#34;&gt;講義ページ&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;講義ビデオ:1717e42594624ea816033f0095022e9c&#34;&gt;講義ビデオ&lt;/h2&gt;
+&lt;h2 id=&#34;講義ビデオ&#34;&gt;講義ビデオ&lt;/h2&gt;
 
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/2hib899vlGM&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/PoGX-d4dePc&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
@@ -50,7 +49,7 @@
       <guid>https://www.jkawamoto.info/blog-ja/programming-sample-codes/</guid>
       <description>
 
-&lt;h2 id=&#34;概要:1e0f5fb386406c30d3578e2a5282fedb&#34;&gt;概要&lt;/h2&gt;
+&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
 
 &lt;p&gt;九州大学基幹教育科目「高度プログラミング」総合課題３のサンプルコードです．
 課題の内容や配布資料を参照してください．&lt;/p&gt;

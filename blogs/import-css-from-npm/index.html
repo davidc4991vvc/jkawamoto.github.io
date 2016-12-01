@@ -6,13 +6,13 @@
 
 		<title>Import CSS files from npm libraries &middot; Junpei Kawamoto</title>
 		<base href="https://www.jkawamoto.info/" />
-		<meta name="generator" content="Hugo 0.15" />
+		<meta name="generator" content="Hugo 0.18-DEV" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Junpei Kawamoto" />
 
 		
-		<meta name="description" content="Homepage of Junpei Kawamoto." />
+		<meta name="description" content="Client-side package management tool has been replacing to npm from bower, and client-side JavaScript packages are imported with Browserify. However, it is difficult to import CSS files. Supposing importing bootstrap&#39;s css installed with npm to bundle.css, this entry explains two importing ways; Parcelify and rework." />
 		
 
 		
@@ -22,13 +22,13 @@
 		<meta property="og:type" content="article" />
 		<meta property="og:title" content="Import CSS files from npm libraries &middot; Junpei Kawamoto" />
 		
-		<meta name="og:description" content="Homepage of Junpei Kawamoto." />
+		<meta name="og:description" content="Client-side package management tool has been replacing to npm from bower, and client-side JavaScript packages are imported with Browserify. However, it is difficult to import CSS files. Supposing importing bootstrap&#39;s css installed with npm to bundle.css, this entry explains two importing ways; Parcelify and rework." />
 		
 		<meta property="og:image" content="/images/wordcloud.png" />
 		<meta property="og:site_name"  content="Junpei Kawamoto" />
 
 		
-		<meta name="twitter:card" content="Homepage of Junpei Kawamoto." />
+		<meta name="twitter:card" content="Client-side package management tool has been replacing to npm from bower, and client-side JavaScript packages are imported with Browserify. However, it is difficult to import CSS files. Supposing importing bootstrap&#39;s css installed with npm to bundle.css, this entry explains two importing ways; Parcelify and rework." />
 		
 		<meta name="twitter:site" content="@junkawamoto" />
 
@@ -133,7 +133,7 @@
 				</div>
 	    	
 
-<h2 id="summary:b37abbaff78713a07ca81d3e2e751ef8">Summary</h2>
+<h2 id="summary">Summary</h2>
 
 <p>Client-side package management tool has been replacing to <a href="https://www.npmjs.com/">npm</a> from <a href="http://bower.io/">bower</a>,
 and client-side JavaScript packages are imported with <a href="http://browserify.org/">Browserify</a>.
@@ -145,7 +145,7 @@ this entry explains two importing ways;
 <p>We assume to use <a href="http://gulpjs.com/">Gulp</a> as the task runner,
 and we investigate ways that don&rsquo;t fix directory structure.</p>
 
-<h2 id="parcelify:b37abbaff78713a07ca81d3e2e751ef8">Parcelify</h2>
+<h2 id="parcelify">Parcelify</h2>
 
 <p><a href="https://github.com/rotundasoftware/parcelify">Parcelify</a> is a famous plugin of Browserify,
 which means if your project doesn&rsquo;t use JavaScript, you need to add a dummy script file to use Parcelify.
@@ -188,7 +188,7 @@ you need to know directory structures of all packages,
 and such structures will be changed when packages are updated.
 In other words, this way isn&rsquo;t sustainable.</p>
 
-<h2 id="rework:b37abbaff78713a07ca81d3e2e751ef8">rework</h2>
+<h2 id="rework">rework</h2>
 
 <p><a href="https://github.com/reworkcss/rework">rework</a> and a plugin of it <a href="https://github.com/reworkcss/rework-npm">rework-npm</a>
 search all <code>package.json</code> of the packages you&rsquo;re using, and import css files those packages provide.

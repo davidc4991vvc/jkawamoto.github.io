@@ -6,7 +6,7 @@
 
 		<title>Angular &middot; Junpei Kawamoto</title>
 		<base href="https://www.jkawamoto.info/" />
-		<meta name="generator" content="Hugo 0.15" />
+		<meta name="generator" content="Hugo 0.18-DEV" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Junpei Kawamoto" />
@@ -91,7 +91,7 @@
 	        <section>
 	          
 
-<h2 id="universe-i18n:b29d758a8384a43dccfcfc35d604f1ac">universe:i18n</h2>
+<h2 id="universe-i18n">universe:i18n</h2>
 
 <p>How to internationalize <a href="https://www.meteor.com/">Meteor</a> application?
 An <a href="https://atmospherejs.com">atmosphere</a> package <a href="https://atmospherejs.com/universe/i18n">universe:i18n</a> helps it.
@@ -108,7 +108,7 @@ and JSON and YAML formats for bilingual corpuses.</p>
 <pre><code class="language-js">import i18n from &quot;meteor/universe:i18n&quot;;
 </code></pre>
 
-<h3 id="register-corpuses:b29d758a8384a43dccfcfc35d604f1ac">Register corpuses</h3>
+<h3 id="register-corpuses">Register corpuses</h3>
 
 <p>You can add corpuses with APIs in <a href="https://atmospherejs.com/universe/i18n">universe:i18n</a>.
 The following line adds a word associated with a namespace and a keyword to a locale.</p>
@@ -116,7 +116,7 @@ The following line adds a word associated with a namespace and a keyword to a lo
 <pre><code class="language-js">i18n.addTranslation(“locale&quot;, “namespace&quot;, “keyword&quot;, “word&quot;);
 </code></pre>
 
-<h3 id="corpus-file:b29d758a8384a43dccfcfc35d604f1ac">Corpus file</h3>
+<h3 id="corpus-file">Corpus file</h3>
 
 <p>It is hard to add corpuses by <code>i18n.addTranslation</code> function.
 You can add corpuses with JSON and YAML files,
@@ -156,20 +156,20 @@ one of the two formats.</p>
 
 <p>Note that corpus files must not be in <code>imports</code> directory.</p>
 
-<h3 id="get-a-translated-word:b29d758a8384a43dccfcfc35d604f1ac">Get a translated word</h3>
+<h3 id="get-a-translated-word">Get a translated word</h3>
 
 <p><code>i18n.__(namespace, key)</code> function returns a translated word associated with <code>namespace</code> and <code>key</code>.</p>
 
 <pre><code class="language-js">i18n.__(&quot;ui&quot;, &quot;ok&quot;); // -&gt; 決定 (in locale ja)
 </code></pre>
 
-<h4 id="change-locale:b29d758a8384a43dccfcfc35d604f1ac">Change locale</h4>
+<h4 id="change-locale">Change locale</h4>
 
 <p><code>i18n.setLocale(&quot;locale&quot;)</code> function sets a new locale <code>locale</code>,
 and downloads the corpus associated with the locale asynchronously.
 The function returns a <code>Promise</code> and <code>.then</code> method is available to run some commands after receiving the corpus.</p>
 
-<h3 id="use-universe-i18n-in-angular-meteor:b29d758a8384a43dccfcfc35d604f1ac">Use universe:i18n in Angular-Meteor</h3>
+<h3 id="use-universe-i18n-in-angular-meteor">Use universe:i18n in Angular-Meteor</h3>
 
 <p>To use universe:i18n in <a href="http://www.angular-meteor.com/">Angular-Meteor</a> template,
 add <code>i18n.getTranslation</code> method in a scope.

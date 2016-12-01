@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Junpei Kawamoto</title>
-    <link>https://www.jkawamoto.info/tags/python/</link>
+    <link>https://www.jkawamoto.info/tags/python/index.xml</link>
     <description>Recent content in Python on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
-    <lastBuildDate>Wed, 19 Oct 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.jkawamoto.info/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -18,13 +17,13 @@
       <guid>https://www.jkawamoto.info/blogs/include-github-repositories-to-requirements-txt/</guid>
       <description>
 
-&lt;h2 id=&#34;summary:a0ee9d0ea8575a88500eea9bd15cac6b&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;This document explains how to include packages hosted in GitHub
 but not not registered in &lt;a href=&#34;https://pypi.python.org/pypi&#34;&gt;PyPI&lt;/a&gt; into &lt;code&gt;requirements.txt&lt;/code&gt;,
 and how to configure &lt;code&gt;setup.py&lt;/code&gt; referring &lt;code&gt;requirements.txt&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;requirements-txt:a0ee9d0ea8575a88500eea9bd15cac6b&#34;&gt;requirements.txt&lt;/h2&gt;
+&lt;h2 id=&#34;requirements-txt&#34;&gt;requirements.txt&lt;/h2&gt;
 
 &lt;p&gt;Supposing &lt;a href=&#34;https://github.com/rgmining/common&#34;&gt;https://github.com/rgmining/common&lt;/a&gt; as the GitHub repository to be added to &lt;code&gt;requirements.txt&lt;/code&gt;,
 the package information for the repository is&lt;/p&gt;
@@ -36,7 +35,7 @@ the package information for the repository is&lt;/p&gt;
 If you&amp;rsquo;re using &lt;code&gt;pip-tools&lt;/code&gt; to compile &lt;code&gt;requirements.txt&lt;/code&gt;,
 your &lt;code&gt;requirements.in&lt;/code&gt; should have the same clause.&lt;/p&gt;
 
-&lt;h2 id=&#34;setup-py:a0ee9d0ea8575a88500eea9bd15cac6b&#34;&gt;setup.py&lt;/h2&gt;
+&lt;h2 id=&#34;setup-py&#34;&gt;setup.py&lt;/h2&gt;
 
 &lt;p&gt;To include &lt;code&gt;requirements.txt&lt;/code&gt; in &lt;code&gt;setup.py&lt;/code&gt;,
 give the following &lt;code&gt;load_requires_from_file&lt;/code&gt; function to &lt;code&gt;install_requires&lt;/code&gt; attribute:&lt;/p&gt;
@@ -96,13 +95,13 @@ setup(
       <guid>https://www.jkawamoto.info/blogs/install-numba-to-mac/</guid>
       <description>
 
-&lt;h2 id=&#34;summary:1b715a24da2f354c147ae9b254f6ecd1&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://numba.pydata.org/&#34;&gt;numba&lt;/a&gt; provides an easy optimization for python codes
 but &lt;code&gt;pip&lt;/code&gt; doesn&amp;rsquo;t work to install numba.
 This entry explains installation and import way of numba.&lt;/p&gt;
 
-&lt;h2 id=&#34;installation:1b715a24da2f354c147ae9b254f6ecd1&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;p&gt;numba requires &lt;a href=&#34;http://llvm.org/&#34;&gt;&lt;code&gt;llvm&lt;/code&gt;&lt;/a&gt; and &lt;code&gt;enum34&lt;/code&gt;,
 and the required version of llvm isn&amp;rsquo;t the newest version 3.8.x but version 3.7.x.
@@ -117,7 +116,7 @@ $ pip install enum34
 $ pip install numba
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;import-numba:1b715a24da2f354c147ae9b254f6ecd1&#34;&gt;Import numba&lt;/h2&gt;
+&lt;h2 id=&#34;import-numba&#34;&gt;Import numba&lt;/h2&gt;
 
 &lt;p&gt;We should prepare import even if our source code will run without numba,
 and we replace no-op decorate if numba cannot be imported.
@@ -138,7 +137,7 @@ except ImportError:
 &lt;p&gt;If your code has other decorators than &lt;code&gt;@jit&lt;/code&gt;, you need to define those decorators,
 and in this case, you need to give types as texts not objects.&lt;/p&gt;
 
-&lt;h2 id=&#34;references:1b715a24da2f354c147ae9b254f6ecd1&#34;&gt;References&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.slideshare.net/teoliphant/numba-siam-2013&#34;&gt;http://www.slideshare.net/teoliphant/numba-siam-2013&lt;/a&gt;&lt;/li&gt;
@@ -157,7 +156,7 @@ and in this case, you need to give types as texts not objects.&lt;/p&gt;
 
 &lt;script src=&#34;https://gist.github.com/jkawamoto/4a136615118fffe2930c54773389d079.js&#34;&gt;&lt;/script&gt;
 
-&lt;h2 id=&#34;参考書籍:347a12c97dd1f9b47c3d208ca1b149a3&#34;&gt;参考書籍&lt;/h2&gt;
+&lt;h2 id=&#34;参考書籍&#34;&gt;参考書籍&lt;/h2&gt;
 
 &lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=jkwf4mew-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=400006973X&amp;linkId=e5d3611547b0a6ff789dc2ce355b7a15&#34;&gt;&lt;/iframe&gt;
 </description>

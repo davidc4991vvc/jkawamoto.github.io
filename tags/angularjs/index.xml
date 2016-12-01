@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Angularjs on Junpei Kawamoto</title>
-    <link>https://www.jkawamoto.info/tags/angularjs/</link>
+    <link>https://www.jkawamoto.info/tags/angularjs/index.xml</link>
     <description>Recent content in Angularjs on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
-    <lastBuildDate>Fri, 12 Aug 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.jkawamoto.info/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -18,7 +17,7 @@
       <guid>https://www.jkawamoto.info/blogs/fullpagejs-in-angularjs/</guid>
       <description>
 
-&lt;h2 id=&#34;summary:69b24904d2568082afd340a9b334aca2&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/hellsan631/angular-fullpage.js&#34;&gt;angular-fullpage.js&lt;/a&gt; is a library
 to use &lt;a href=&#34;http://alvarotrigo.com/fullPage/&#34;&gt;fullPage.js&lt;/a&gt; in &lt;a href=&#34;http://angularjs.org/&#34;&gt;AngularJS&lt;/a&gt;,
@@ -30,7 +29,7 @@ I &lt;a href=&#34;https://github.com/jkawamoto/fullPage.js&#34;&gt;modified full
 
 &lt;p&gt;This entry explains how to use my fullPage.js in AngularJS.&lt;/p&gt;
 
-&lt;h2 id=&#34;angular-fullpage-js:69b24904d2568082afd340a9b334aca2&#34;&gt;angular-fullpage.js&lt;/h2&gt;
+&lt;h2 id=&#34;angular-fullpage-js&#34;&gt;angular-fullpage.js&lt;/h2&gt;
 
 &lt;p&gt;The current version of angular-fullpage.js in npm has a problem in event handling,
 and you need to use the newest source code from GitHub.
@@ -87,7 +86,7 @@ For example, make a controller&lt;/p&gt;
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;apply-fullpage-js-for-not-sibling-nodes:69b24904d2568082afd340a9b334aca2&#34;&gt;Apply fullPage.js for not sibling nodes&lt;/h2&gt;
+&lt;h2 id=&#34;apply-fullpage-js-for-not-sibling-nodes&#34;&gt;Apply fullPage.js for not sibling nodes&lt;/h2&gt;
 
 &lt;p&gt;fullpage.js assumes every section is a child of a same parent node, for example&lt;/p&gt;
 
@@ -171,7 +170,7 @@ To use my version, your &lt;code&gt;package.json&lt;/code&gt; should have a link
       <guid>https://www.jkawamoto.info/blogs/chartjs-in-angularjs/</guid>
       <description>
 
-&lt;h2 id=&#34;angular-chart:7c8787ac68b82ab2b2fa23384bd6e453&#34;&gt;Angular Chart&lt;/h2&gt;
+&lt;h2 id=&#34;angular-chart&#34;&gt;Angular Chart&lt;/h2&gt;
 
 &lt;p&gt;This entry explains how to use &lt;a href=&#34;http://www.chartjs.org/&#34;&gt;Chart.js&lt;/a&gt; in &lt;a href=&#34;http://angularjs.org/&#34;&gt;AngularJS&lt;/a&gt;.
 The answer is simple and use &lt;a href=&#34;http://jtblin.github.io/angular-chart.js/&#34;&gt;Angular Chart&lt;/a&gt;.&lt;/p&gt;
@@ -234,12 +233,12 @@ This attribute takes as same object as one in &lt;code&gt;Chart.js&lt;/code&gt; 
 
 &lt;p&gt;Note that, &lt;code&gt;chart-data&lt;/code&gt; attribute is required and you shouldn&amp;rsquo;t give data through &lt;code&gt;chart-dataset-override&lt;/code&gt; attaribute.&lt;/p&gt;
 
-&lt;h3 id=&#34;example:7c8787ac68b82ab2b2fa23384bd6e453&#34;&gt;Example&lt;/h3&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
 
-&lt;p&gt;In this example, we&amp;rsquo;ll convert &lt;a href=&#34;(http://www.chartjs.org/docs/#getting-started-creating-a-chart&#34;&gt;a bar chart example&lt;/a&gt;) given
+&lt;p&gt;In this example, we&amp;rsquo;ll convert &lt;a href=&#34;(http://www.chartjs.org/docs/#getting-started-creating-a-chart)&#34;&gt;a bar chart example&lt;/a&gt; given
 in Chart.js&amp;rsquo;s document for Angular Chart.&lt;/p&gt;
 
-&lt;h4 id=&#34;chart-js-version:7c8787ac68b82ab2b2fa23384bd6e453&#34;&gt;Chart.js version&lt;/h4&gt;
+&lt;h4 id=&#34;chart-js-version&#34;&gt;Chart.js version&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var myChart = new Chart(ctx, {
   type: &#39;bar&#39;,
@@ -279,7 +278,7 @@ in Chart.js&amp;rsquo;s document for Angular Chart.&lt;/p&gt;
 });
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;angular-chart-version:7c8787ac68b82ab2b2fa23384bd6e453&#34;&gt;Angular Chart version&lt;/h4&gt;
+&lt;h4 id=&#34;angular-chart-version&#34;&gt;Angular Chart version&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;chart.js&lt;/strong&gt;&lt;/p&gt;
 

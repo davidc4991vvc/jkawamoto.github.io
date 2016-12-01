@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ja on Junpei Kawamoto</title>
-    <link>https://www.jkawamoto.info/categories/ja/</link>
+    <link>https://www.jkawamoto.info/categories/ja/index.xml</link>
     <description>Recent content in Ja on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
@@ -17,7 +17,7 @@
       <guid>https://www.jkawamoto.info/activity-ja/</guid>
       <description>
 
-&lt;h2 id=&#34;学会活動:c7d152bcb24e241b3af8e680f8c73f6f&#34;&gt;学会活動&lt;/h2&gt;
+&lt;h2 id=&#34;学会活動&#34;&gt;学会活動&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;2013年 5月 - present:
@@ -61,14 +61,14 @@ Local Arrangement Committee&lt;/li&gt;
 &lt;li&gt;2011年 6月, 第25回人工知能学会全国大会 学生プログラム委員&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;アウトリーチ活動:c7d152bcb24e241b3af8e680f8c73f6f&#34;&gt;アウトリーチ活動&lt;/h2&gt;
+&lt;h2 id=&#34;アウトリーチ活動&#34;&gt;アウトリーチ活動&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;2014年 8月, ビッグデータ＆オープンデータ研究会 in 九州,
 第2回 BODIKトーク「&lt;a href=&#34;http://www.isit.or.jp/wg8/2014/07/24/talk2/&#34;&gt;オープンデータとプライバシ保護&lt;/a&gt;」&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;京都大学ictイノベーション:c7d152bcb24e241b3af8e680f8c73f6f&#34;&gt;京都大学ICTイノベーション&lt;/h3&gt;
+&lt;h3 id=&#34;京都大学ictイノベーション&#34;&gt;京都大学ICTイノベーション&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;2010年 Webサービスとサービス連携におけるプライバシ&lt;/li&gt;
@@ -86,13 +86,13 @@ Local Arrangement Committee&lt;/li&gt;
 &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;ipax:c7d152bcb24e241b3af8e680f8c73f6f&#34;&gt;IPAX&lt;/h3&gt;
+&lt;h3 id=&#34;ipax&#34;&gt;IPAX&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;2008年 Webアプリケーションにおけるプライバシコントローラの開発&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;未踏ソフトウェア:c7d152bcb24e241b3af8e680f8c73f6f&#34;&gt;未踏ソフトウェア&lt;/h2&gt;
+&lt;h2 id=&#34;未踏ソフトウェア&#34;&gt;未踏ソフトウェア&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;IPA 2007年度第Ⅱ期未踏ソフトウェア創造事業「未踏ユース」,
@@ -104,7 +104,7 @@ Local Arrangement Committee&lt;/li&gt;
 &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;ta-ra:c7d152bcb24e241b3af8e680f8c73f6f&#34;&gt;TA/RA&lt;/h2&gt;
+&lt;h2 id=&#34;ta-ra&#34;&gt;TA/RA&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;2009年度 計算機科学実験及演習2 – ソフトウェア TA (京都大学 工学部 情報学科 2回生向け)&lt;/li&gt;
@@ -125,7 +125,7 @@ Local Arrangement Committee&lt;/li&gt;
       <guid>https://www.jkawamoto.info/japanese/</guid>
       <description>
 
-&lt;h2 id=&#34;略歴:36b8e767580b13a539d7de56ea4862e1&#34;&gt;略歴&lt;/h2&gt;
+&lt;h2 id=&#34;略歴&#34;&gt;略歴&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;2013.9 - 2016.6:
@@ -160,7 +160,7 @@ Local Arrangement Committee&lt;/li&gt;
 &lt;a href=&#34;http://www.seifu.ac.jp/&#34;&gt;清風学園清風高等学校理数科&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;所属学会:36b8e767580b13a539d7de56ea4862e1&#34;&gt;所属学会&lt;/h2&gt;
+&lt;h2 id=&#34;所属学会&#34;&gt;所属学会&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.ieee.org/index.html&#34;&gt;IEEE: The Institute of Electrical and Electronics Engineers&lt;/a&gt; (2013年 3月- )&lt;/li&gt;
@@ -170,9 +170,9 @@ Local Arrangement Committee&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.ai-gakkai.or.jp/jsai/&#34;&gt;JSAI: 人工知能学会&lt;/a&gt; (2006年 3月- )&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;競争的外部資金獲得実績:36b8e767580b13a539d7de56ea4862e1&#34;&gt;競争的外部資金獲得実績&lt;/h2&gt;
+&lt;h2 id=&#34;競争的外部資金獲得実績&#34;&gt;競争的外部資金獲得実績&lt;/h2&gt;
 
-&lt;h3 id=&#34;代表:36b8e767580b13a539d7de56ea4862e1&#34;&gt;代表&lt;/h3&gt;
+&lt;h3 id=&#34;代表&#34;&gt;代表&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.jsps.go.jp/&#34;&gt;日本学術振興会&lt;/a&gt;
@@ -192,7 +192,7 @@ Local Arrangement Committee&lt;/li&gt;
 「Webアプリケーションにおけるプライバシコントローラの開発」&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;分担:36b8e767580b13a539d7de56ea4862e1&#34;&gt;分担&lt;/h3&gt;
+&lt;h3 id=&#34;分担&#34;&gt;分担&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;九州大学 P &amp;amp; P つばさプロジェクト (2015年度〜2016年度)
@@ -203,7 +203,7 @@ Local Arrangement Committee&lt;/li&gt;
 「画像等への情報隠ぺい型ではないステガノグラフイ技術の評価、および確率論的秘密分散・類似画像検索技術への適用と、アルゴリズムの確立」&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;研究プロジェクト:36b8e767580b13a539d7de56ea4862e1&#34;&gt;研究プロジェクト&lt;/h2&gt;
+&lt;h2 id=&#34;研究プロジェクト&#34;&gt;研究プロジェクト&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;2012.9 - 2016.3:
@@ -214,7 +214,7 @@ Local Arrangement Committee&lt;/li&gt;
 &lt;a href=&#34;http://www.tkl.iis.u-tokyo.ac.jp/FIRST/&#34;&gt;超巨大データベース時代に向けた最高速データベースエンジンの開発と当該エンジンを核とする戦略的社会サービスの実証・評価&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;資格-試験:36b8e767580b13a539d7de56ea4862e1&#34;&gt;資格・試験&lt;/h2&gt;
+&lt;h2 id=&#34;資格-試験&#34;&gt;資格・試験&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.jitec.jp/&#34;&gt;ソフトウェア開発技術者&lt;/a&gt;&lt;/li&gt;

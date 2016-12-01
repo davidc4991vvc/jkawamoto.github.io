@@ -6,7 +6,7 @@
 
 		<title>Github &middot; Junpei Kawamoto</title>
 		<base href="https://www.jkawamoto.info/" />
-		<meta name="generator" content="Hugo 0.15" />
+		<meta name="generator" content="Hugo 0.18-DEV" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Junpei Kawamoto" />
@@ -91,13 +91,13 @@
 	        <section>
 	          
 
-<h2 id="summary:a0ee9d0ea8575a88500eea9bd15cac6b">Summary</h2>
+<h2 id="summary">Summary</h2>
 
 <p>This document explains how to include packages hosted in GitHub
 but not not registered in <a href="https://pypi.python.org/pypi">PyPI</a> into <code>requirements.txt</code>,
 and how to configure <code>setup.py</code> referring <code>requirements.txt</code>.</p>
 
-<h2 id="requirements-txt:a0ee9d0ea8575a88500eea9bd15cac6b">requirements.txt</h2>
+<h2 id="requirements-txt">requirements.txt</h2>
 
 <p>Supposing <a href="https://github.com/rgmining/common">https://github.com/rgmining/common</a> as the GitHub repository to be added to <code>requirements.txt</code>,
 the package information for the repository is</p>
@@ -109,7 +109,7 @@ the package information for the repository is</p>
 If you&rsquo;re using <code>pip-tools</code> to compile <code>requirements.txt</code>,
 your <code>requirements.in</code> should have the same clause.</p>
 
-<h2 id="setup-py:a0ee9d0ea8575a88500eea9bd15cac6b">setup.py</h2>
+<h2 id="setup-py">setup.py</h2>
 
 <p>To include <code>requirements.txt</code> in <code>setup.py</code>,
 give the following <code>load_requires_from_file</code> function to <code>install_requires</code> attribute:</p>

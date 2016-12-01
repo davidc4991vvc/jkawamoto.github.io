@@ -6,7 +6,7 @@
 
 		<title>Chart.Js &middot; Junpei Kawamoto</title>
 		<base href="https://www.jkawamoto.info/" />
-		<meta name="generator" content="Hugo 0.15" />
+		<meta name="generator" content="Hugo 0.18-DEV" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Junpei Kawamoto" />
@@ -91,7 +91,7 @@
 	        <section>
 	          
 
-<h2 id="angular-chart:7c8787ac68b82ab2b2fa23384bd6e453">Angular Chart</h2>
+<h2 id="angular-chart">Angular Chart</h2>
 
 <p>This entry explains how to use <a href="http://www.chartjs.org/">Chart.js</a> in <a href="http://angularjs.org/">AngularJS</a>.
 The answer is simple and use <a href="http://jtblin.github.io/angular-chart.js/">Angular Chart</a>.</p>
@@ -154,12 +154,12 @@ This attribute takes as same object as one in <code>Chart.js</code> without <cod
 
 <p>Note that, <code>chart-data</code> attribute is required and you shouldn&rsquo;t give data through <code>chart-dataset-override</code> attaribute.</p>
 
-<h3 id="example:7c8787ac68b82ab2b2fa23384bd6e453">Example</h3>
+<h3 id="example">Example</h3>
 
-<p>In this example, we&rsquo;ll convert <a href="(http://www.chartjs.org/docs/#getting-started-creating-a-chart">a bar chart example</a>) given
+<p>In this example, we&rsquo;ll convert <a href="(http://www.chartjs.org/docs/#getting-started-creating-a-chart)">a bar chart example</a> given
 in Chart.js&rsquo;s document for Angular Chart.</p>
 
-<h4 id="chart-js-version:7c8787ac68b82ab2b2fa23384bd6e453">Chart.js version</h4>
+<h4 id="chart-js-version">Chart.js version</h4>
 
 <pre><code class="language-js">var myChart = new Chart(ctx, {
   type: 'bar',
@@ -199,7 +199,7 @@ in Chart.js&rsquo;s document for Angular Chart.</p>
 });
 </code></pre>
 
-<h4 id="angular-chart-version:7c8787ac68b82ab2b2fa23384bd6e453">Angular Chart version</h4>
+<h4 id="angular-chart-version">Angular Chart version</h4>
 
 <p><strong>chart.js</strong></p>
 

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Junpei Kawamoto</title>
-    <link>https://www.jkawamoto.info/blogs/</link>
+    <link>https://www.jkawamoto.info/blogs/index.xml</link>
     <description>Recent content in Blogs on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
@@ -18,7 +18,7 @@
       <guid>https://www.jkawamoto.info/blogs/import-css-from-npm/</guid>
       <description>
 
-&lt;h2 id=&#34;summary:b37abbaff78713a07ca81d3e2e751ef8&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;Client-side package management tool has been replacing to &lt;a href=&#34;https://www.npmjs.com/&#34;&gt;npm&lt;/a&gt; from &lt;a href=&#34;http://bower.io/&#34;&gt;bower&lt;/a&gt;,
 and client-side JavaScript packages are imported with &lt;a href=&#34;http://browserify.org/&#34;&gt;Browserify&lt;/a&gt;.
@@ -30,7 +30,7 @@ this entry explains two importing ways;
 &lt;p&gt;We assume to use &lt;a href=&#34;http://gulpjs.com/&#34;&gt;Gulp&lt;/a&gt; as the task runner,
 and we investigate ways that don&amp;rsquo;t fix directory structure.&lt;/p&gt;
 
-&lt;h2 id=&#34;parcelify:b37abbaff78713a07ca81d3e2e751ef8&#34;&gt;Parcelify&lt;/h2&gt;
+&lt;h2 id=&#34;parcelify&#34;&gt;Parcelify&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/rotundasoftware/parcelify&#34;&gt;Parcelify&lt;/a&gt; is a famous plugin of Browserify,
 which means if your project doesn&amp;rsquo;t use JavaScript, you need to add a dummy script file to use Parcelify.
@@ -73,7 +73,7 @@ you need to know directory structures of all packages,
 and such structures will be changed when packages are updated.
 In other words, this way isn&amp;rsquo;t sustainable.&lt;/p&gt;
 
-&lt;h2 id=&#34;rework:b37abbaff78713a07ca81d3e2e751ef8&#34;&gt;rework&lt;/h2&gt;
+&lt;h2 id=&#34;rework&#34;&gt;rework&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/reworkcss/rework&#34;&gt;rework&lt;/a&gt; and a plugin of it &lt;a href=&#34;https://github.com/reworkcss/rework-npm&#34;&gt;rework-npm&lt;/a&gt;
 search all &lt;code&gt;package.json&lt;/code&gt; of the packages you&amp;rsquo;re using, and import css files those packages provide.
@@ -125,13 +125,13 @@ The cost seems as same as one using Parcelify.&lt;/p&gt;
       <guid>https://www.jkawamoto.info/blogs/include-github-repositories-to-requirements-txt/</guid>
       <description>
 
-&lt;h2 id=&#34;summary:a0ee9d0ea8575a88500eea9bd15cac6b&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;This document explains how to include packages hosted in GitHub
 but not not registered in &lt;a href=&#34;https://pypi.python.org/pypi&#34;&gt;PyPI&lt;/a&gt; into &lt;code&gt;requirements.txt&lt;/code&gt;,
 and how to configure &lt;code&gt;setup.py&lt;/code&gt; referring &lt;code&gt;requirements.txt&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;requirements-txt:a0ee9d0ea8575a88500eea9bd15cac6b&#34;&gt;requirements.txt&lt;/h2&gt;
+&lt;h2 id=&#34;requirements-txt&#34;&gt;requirements.txt&lt;/h2&gt;
 
 &lt;p&gt;Supposing &lt;a href=&#34;https://github.com/rgmining/common&#34;&gt;https://github.com/rgmining/common&lt;/a&gt; as the GitHub repository to be added to &lt;code&gt;requirements.txt&lt;/code&gt;,
 the package information for the repository is&lt;/p&gt;
@@ -143,7 +143,7 @@ the package information for the repository is&lt;/p&gt;
 If you&amp;rsquo;re using &lt;code&gt;pip-tools&lt;/code&gt; to compile &lt;code&gt;requirements.txt&lt;/code&gt;,
 your &lt;code&gt;requirements.in&lt;/code&gt; should have the same clause.&lt;/p&gt;
 
-&lt;h2 id=&#34;setup-py:a0ee9d0ea8575a88500eea9bd15cac6b&#34;&gt;setup.py&lt;/h2&gt;
+&lt;h2 id=&#34;setup-py&#34;&gt;setup.py&lt;/h2&gt;
 
 &lt;p&gt;To include &lt;code&gt;requirements.txt&lt;/code&gt; in &lt;code&gt;setup.py&lt;/code&gt;,
 give the following &lt;code&gt;load_requires_from_file&lt;/code&gt; function to &lt;code&gt;install_requires&lt;/code&gt; attribute:&lt;/p&gt;
@@ -268,7 +268,7 @@ deploy:
 
 &lt;p&gt;It also specifies to install &lt;code&gt;sphinx_rtd_theme&lt;/code&gt;. Make sure after running &lt;code&gt;make html&lt;/code&gt; in &lt;code&gt;doc&lt;/code&gt; folder, your documents are in &lt;code&gt;docs/build/html&lt;/code&gt;. Otherwise, edit &lt;code&gt;basedir&lt;/code&gt; in the last line.&lt;/p&gt;
 
-&lt;h2 id=&#34;references:621771da372dad7b0cf1aa19329621c9&#34;&gt;References&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/jkawamoto/dockerfiles/tree/master/wercker-ghp-box&#34;&gt;jkawamoto/ghp-box&lt;/a&gt;&lt;/li&gt;
@@ -286,7 +286,7 @@ deploy:
       <guid>https://www.jkawamoto.info/blogs/i18n-package-in-meteor/</guid>
       <description>
 
-&lt;h2 id=&#34;universe-i18n:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;universe:i18n&lt;/h2&gt;
+&lt;h2 id=&#34;universe-i18n&#34;&gt;universe:i18n&lt;/h2&gt;
 
 &lt;p&gt;How to internationalize &lt;a href=&#34;https://www.meteor.com/&#34;&gt;Meteor&lt;/a&gt; application?
 An &lt;a href=&#34;https://atmospherejs.com&#34;&gt;atmosphere&lt;/a&gt; package &lt;a href=&#34;https://atmospherejs.com/universe/i18n&#34;&gt;universe:i18n&lt;/a&gt; helps it.
@@ -303,7 +303,7 @@ and JSON and YAML formats for bilingual corpuses.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;import i18n from &amp;quot;meteor/universe:i18n&amp;quot;;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;register-corpuses:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Register corpuses&lt;/h3&gt;
+&lt;h3 id=&#34;register-corpuses&#34;&gt;Register corpuses&lt;/h3&gt;
 
 &lt;p&gt;You can add corpuses with APIs in &lt;a href=&#34;https://atmospherejs.com/universe/i18n&#34;&gt;universe:i18n&lt;/a&gt;.
 The following line adds a word associated with a namespace and a keyword to a locale.&lt;/p&gt;
@@ -311,7 +311,7 @@ The following line adds a word associated with a namespace and a keyword to a lo
 &lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;i18n.addTranslation(“locale&amp;quot;, “namespace&amp;quot;, “keyword&amp;quot;, “word&amp;quot;);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;corpus-file:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Corpus file&lt;/h3&gt;
+&lt;h3 id=&#34;corpus-file&#34;&gt;Corpus file&lt;/h3&gt;
 
 &lt;p&gt;It is hard to add corpuses by &lt;code&gt;i18n.addTranslation&lt;/code&gt; function.
 You can add corpuses with JSON and YAML files,
@@ -351,20 +351,20 @@ one of the two formats.&lt;/p&gt;
 
 &lt;p&gt;Note that corpus files must not be in &lt;code&gt;imports&lt;/code&gt; directory.&lt;/p&gt;
 
-&lt;h3 id=&#34;get-a-translated-word:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Get a translated word&lt;/h3&gt;
+&lt;h3 id=&#34;get-a-translated-word&#34;&gt;Get a translated word&lt;/h3&gt;
 
 &lt;p&gt;&lt;code&gt;i18n.__(namespace, key)&lt;/code&gt; function returns a translated word associated with &lt;code&gt;namespace&lt;/code&gt; and &lt;code&gt;key&lt;/code&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;i18n.__(&amp;quot;ui&amp;quot;, &amp;quot;ok&amp;quot;); // -&amp;gt; 決定 (in locale ja)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;change-locale:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Change locale&lt;/h4&gt;
+&lt;h4 id=&#34;change-locale&#34;&gt;Change locale&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;i18n.setLocale(&amp;quot;locale&amp;quot;)&lt;/code&gt; function sets a new locale &lt;code&gt;locale&lt;/code&gt;,
 and downloads the corpus associated with the locale asynchronously.
 The function returns a &lt;code&gt;Promise&lt;/code&gt; and &lt;code&gt;.then&lt;/code&gt; method is available to run some commands after receiving the corpus.&lt;/p&gt;
 
-&lt;h3 id=&#34;use-universe-i18n-in-angular-meteor:b29d758a8384a43dccfcfc35d604f1ac&#34;&gt;Use universe:i18n in Angular-Meteor&lt;/h3&gt;
+&lt;h3 id=&#34;use-universe-i18n-in-angular-meteor&#34;&gt;Use universe:i18n in Angular-Meteor&lt;/h3&gt;
 
 &lt;p&gt;To use universe:i18n in &lt;a href=&#34;http://www.angular-meteor.com/&#34;&gt;Angular-Meteor&lt;/a&gt; template,
 add &lt;code&gt;i18n.getTranslation&lt;/code&gt; method in a scope.
@@ -422,7 +422,7 @@ You need to use &lt;code&gt;$scope.$apply()&lt;/code&gt;:&lt;/p&gt;
       <guid>https://www.jkawamoto.info/blogs/fullpagejs-in-angularjs/</guid>
       <description>
 
-&lt;h2 id=&#34;summary:69b24904d2568082afd340a9b334aca2&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/hellsan631/angular-fullpage.js&#34;&gt;angular-fullpage.js&lt;/a&gt; is a library
 to use &lt;a href=&#34;http://alvarotrigo.com/fullPage/&#34;&gt;fullPage.js&lt;/a&gt; in &lt;a href=&#34;http://angularjs.org/&#34;&gt;AngularJS&lt;/a&gt;,
@@ -434,7 +434,7 @@ I &lt;a href=&#34;https://github.com/jkawamoto/fullPage.js&#34;&gt;modified full
 
 &lt;p&gt;This entry explains how to use my fullPage.js in AngularJS.&lt;/p&gt;
 
-&lt;h2 id=&#34;angular-fullpage-js:69b24904d2568082afd340a9b334aca2&#34;&gt;angular-fullpage.js&lt;/h2&gt;
+&lt;h2 id=&#34;angular-fullpage-js&#34;&gt;angular-fullpage.js&lt;/h2&gt;
 
 &lt;p&gt;The current version of angular-fullpage.js in npm has a problem in event handling,
 and you need to use the newest source code from GitHub.
@@ -491,7 +491,7 @@ For example, make a controller&lt;/p&gt;
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;apply-fullpage-js-for-not-sibling-nodes:69b24904d2568082afd340a9b334aca2&#34;&gt;Apply fullPage.js for not sibling nodes&lt;/h2&gt;
+&lt;h2 id=&#34;apply-fullpage-js-for-not-sibling-nodes&#34;&gt;Apply fullPage.js for not sibling nodes&lt;/h2&gt;
 
 &lt;p&gt;fullpage.js assumes every section is a child of a same parent node, for example&lt;/p&gt;
 
@@ -575,7 +575,7 @@ To use my version, your &lt;code&gt;package.json&lt;/code&gt; should have a link
       <guid>https://www.jkawamoto.info/blogs/chartjs-in-angularjs/</guid>
       <description>
 
-&lt;h2 id=&#34;angular-chart:7c8787ac68b82ab2b2fa23384bd6e453&#34;&gt;Angular Chart&lt;/h2&gt;
+&lt;h2 id=&#34;angular-chart&#34;&gt;Angular Chart&lt;/h2&gt;
 
 &lt;p&gt;This entry explains how to use &lt;a href=&#34;http://www.chartjs.org/&#34;&gt;Chart.js&lt;/a&gt; in &lt;a href=&#34;http://angularjs.org/&#34;&gt;AngularJS&lt;/a&gt;.
 The answer is simple and use &lt;a href=&#34;http://jtblin.github.io/angular-chart.js/&#34;&gt;Angular Chart&lt;/a&gt;.&lt;/p&gt;
@@ -638,12 +638,12 @@ This attribute takes as same object as one in &lt;code&gt;Chart.js&lt;/code&gt; 
 
 &lt;p&gt;Note that, &lt;code&gt;chart-data&lt;/code&gt; attribute is required and you shouldn&amp;rsquo;t give data through &lt;code&gt;chart-dataset-override&lt;/code&gt; attaribute.&lt;/p&gt;
 
-&lt;h3 id=&#34;example:7c8787ac68b82ab2b2fa23384bd6e453&#34;&gt;Example&lt;/h3&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
 
-&lt;p&gt;In this example, we&amp;rsquo;ll convert &lt;a href=&#34;(http://www.chartjs.org/docs/#getting-started-creating-a-chart&#34;&gt;a bar chart example&lt;/a&gt;) given
+&lt;p&gt;In this example, we&amp;rsquo;ll convert &lt;a href=&#34;(http://www.chartjs.org/docs/#getting-started-creating-a-chart)&#34;&gt;a bar chart example&lt;/a&gt; given
 in Chart.js&amp;rsquo;s document for Angular Chart.&lt;/p&gt;
 
-&lt;h4 id=&#34;chart-js-version:7c8787ac68b82ab2b2fa23384bd6e453&#34;&gt;Chart.js version&lt;/h4&gt;
+&lt;h4 id=&#34;chart-js-version&#34;&gt;Chart.js version&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var myChart = new Chart(ctx, {
   type: &#39;bar&#39;,
@@ -683,7 +683,7 @@ in Chart.js&amp;rsquo;s document for Angular Chart.&lt;/p&gt;
 });
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;angular-chart-version:7c8787ac68b82ab2b2fa23384bd6e453&#34;&gt;Angular Chart version&lt;/h4&gt;
+&lt;h4 id=&#34;angular-chart-version&#34;&gt;Angular Chart version&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;chart.js&lt;/strong&gt;&lt;/p&gt;
 
@@ -780,13 +780,13 @@ this.datasets = {
       <guid>https://www.jkawamoto.info/blogs/install-numba-to-mac/</guid>
       <description>
 
-&lt;h2 id=&#34;summary:1b715a24da2f354c147ae9b254f6ecd1&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://numba.pydata.org/&#34;&gt;numba&lt;/a&gt; provides an easy optimization for python codes
 but &lt;code&gt;pip&lt;/code&gt; doesn&amp;rsquo;t work to install numba.
 This entry explains installation and import way of numba.&lt;/p&gt;
 
-&lt;h2 id=&#34;installation:1b715a24da2f354c147ae9b254f6ecd1&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;p&gt;numba requires &lt;a href=&#34;http://llvm.org/&#34;&gt;&lt;code&gt;llvm&lt;/code&gt;&lt;/a&gt; and &lt;code&gt;enum34&lt;/code&gt;,
 and the required version of llvm isn&amp;rsquo;t the newest version 3.8.x but version 3.7.x.
@@ -801,7 +801,7 @@ $ pip install enum34
 $ pip install numba
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;import-numba:1b715a24da2f354c147ae9b254f6ecd1&#34;&gt;Import numba&lt;/h2&gt;
+&lt;h2 id=&#34;import-numba&#34;&gt;Import numba&lt;/h2&gt;
 
 &lt;p&gt;We should prepare import even if our source code will run without numba,
 and we replace no-op decorate if numba cannot be imported.
@@ -822,7 +822,7 @@ except ImportError:
 &lt;p&gt;If your code has other decorators than &lt;code&gt;@jit&lt;/code&gt;, you need to define those decorators,
 and in this case, you need to give types as texts not objects.&lt;/p&gt;
 
-&lt;h2 id=&#34;references:1b715a24da2f354c147ae9b254f6ecd1&#34;&gt;References&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.slideshare.net/teoliphant/numba-siam-2013&#34;&gt;http://www.slideshare.net/teoliphant/numba-siam-2013&lt;/a&gt;&lt;/li&gt;

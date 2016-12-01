@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog-jas on Junpei Kawamoto</title>
-    <link>https://www.jkawamoto.info/blog-ja/</link>
+    <link>https://www.jkawamoto.info/blog-ja/index.xml</link>
     <description>Recent content in Blog-jas on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
@@ -18,7 +18,7 @@
       <guid>https://www.jkawamoto.info/blog-ja/2016-08-17/</guid>
       <description>
 
-&lt;h2 id=&#34;教科書:1717e42594624ea816033f0095022e9c&#34;&gt;教科書&lt;/h2&gt;
+&lt;h2 id=&#34;教科書&#34;&gt;教科書&lt;/h2&gt;
 
 &lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=jkwf4mew-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4781910262&amp;linkId=b80a4550067a9b6fd184676c56847ff0&#34;&gt;&lt;/iframe&gt;
 &lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=jkwf4mew-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4781910270&amp;linkId=715b45764867431bfea1b57063f72787&#34;&gt;&lt;/iframe&gt;
@@ -27,7 +27,7 @@
 &lt;li&gt;&lt;a href=&#34;http://bit.ly/2b024rd&#34;&gt;講義ページ&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;講義ビデオ:1717e42594624ea816033f0095022e9c&#34;&gt;講義ビデオ&lt;/h2&gt;
+&lt;h2 id=&#34;講義ビデオ&#34;&gt;講義ビデオ&lt;/h2&gt;
 
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/2hib899vlGM&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/PoGX-d4dePc&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
@@ -52,7 +52,7 @@
 
 &lt;script src=&#34;https://gist.github.com/jkawamoto/4a136615118fffe2930c54773389d079.js&#34;&gt;&lt;/script&gt;
 
-&lt;h2 id=&#34;参考書籍:347a12c97dd1f9b47c3d208ca1b149a3&#34;&gt;参考書籍&lt;/h2&gt;
+&lt;h2 id=&#34;参考書籍&#34;&gt;参考書籍&lt;/h2&gt;
 
 &lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=jkwf4mew-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=400006973X&amp;linkId=e5d3611547b0a6ff789dc2ce355b7a15&#34;&gt;&lt;/iframe&gt;
 </description>
@@ -76,7 +76,7 @@
       <guid>https://www.jkawamoto.info/blog-ja/programming-sample-codes/</guid>
       <description>
 
-&lt;h2 id=&#34;概要:1e0f5fb386406c30d3578e2a5282fedb&#34;&gt;概要&lt;/h2&gt;
+&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
 
 &lt;p&gt;九州大学基幹教育科目「高度プログラミング」総合課題３のサンプルコードです．
 課題の内容や配布資料を参照してください．&lt;/p&gt;
@@ -105,7 +105,7 @@ echo ${IPPORT%:*}
 echo ${IPPORT#*:}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;参考:47af2e49b17f04e7b38ce80b18151268&#34;&gt;参考&lt;/h2&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/ozuma/20130928/1380380390&#34;&gt;shとbashでの変数内の文字列置換など | ろば電子が詰まっている&lt;/a&gt;&lt;/li&gt;
@@ -151,13 +151,13 @@ exec /usr/local/bin/docker run —name=foo -v /data:/var/data bar:latest
       <guid>https://www.jkawamoto.info/blog-ja/systemd-configurations/</guid>
       <description>
 
-&lt;h3 id=&#34;マウントユニット:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;マウントユニット&lt;/h3&gt;
+&lt;h3 id=&#34;マウントユニット&#34;&gt;マウントユニット&lt;/h3&gt;
 
 &lt;p&gt;ファイルシステムのマウントを設定する．
 ユニットファイルはマウントポイントによって決まり拡張子は &lt;code&gt;.mount&lt;/code&gt;．例えば，/var/data にマウントする場合，
 ユニットファイル名は &lt;code&gt;var-data.mount&lt;/code&gt; と / を - に置き換える．パスに - が含まれている場合はエスケープする．&lt;/p&gt;
 
-&lt;h4 id=&#34;nfs-を用いてマウントする例:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;NFS を用いてマウントする例&lt;/h4&gt;
+&lt;h4 id=&#34;nfs-を用いてマウントする例&#34;&gt;NFS を用いてマウントする例&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-conf&#34;&gt;[Unit]
 Description=some network hdd
@@ -172,7 +172,7 @@ Options=nolock
 WantedBy=multi-user.target
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;サービスユニット:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;サービスユニット&lt;/h3&gt;
+&lt;h3 id=&#34;サービスユニット&#34;&gt;サービスユニット&lt;/h3&gt;
 
 &lt;p&gt;Docker 用サービスを起動する設定．docker イメージの作成から行えるが，今回は既にあるイメージを起動する．&lt;/p&gt;
 
@@ -192,12 +192,12 @@ ExecStop /usr/bin/docker stop apache2
 WantedBy=multi-user.target
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;ユニットの有効化:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;ユニットの有効化&lt;/h3&gt;
+&lt;h3 id=&#34;ユニットの有効化&#34;&gt;ユニットの有効化&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ sudo systemctl enable /etc/systemd/system/var-data.mount
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;参考書籍:6b19b8ca7ad03e090dc16a2c8daabd45&#34;&gt;参考書籍&lt;/h2&gt;
+&lt;h2 id=&#34;参考書籍&#34;&gt;参考書籍&lt;/h2&gt;
 
 &lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=jkwf4mew-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4798044911&amp;linkId=447a64b082142e7249663b401a0b892f&#34;&gt;&lt;/iframe&gt;
 </description>
@@ -216,7 +216,7 @@ XPath にてノード名を比較する方法が無いため？&lt;/p&gt;
 
 &lt;p&gt;XSLT 的には &lt;code&gt;apply-templetes&lt;/code&gt; 要素を使うのが正しいかと思われる．&lt;/p&gt;
 
-&lt;h2 id=&#34;参考書籍:1f1ae7033ee5f696a9cb6314e126a8bc&#34;&gt;参考書籍&lt;/h2&gt;
+&lt;h2 id=&#34;参考書籍&#34;&gt;参考書籍&lt;/h2&gt;
 
 &lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=jkwf4mew-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=4756140653&amp;linkId=b2835df657e267763950c4c934907627&#34;&gt;&lt;/iframe&gt;
 </description>

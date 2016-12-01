@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Parcelify on Junpei Kawamoto</title>
-    <link>https://www.jkawamoto.info/tags/parcelify/</link>
+    <link>https://www.jkawamoto.info/tags/parcelify/index.xml</link>
     <description>Recent content in Parcelify on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
-    <lastBuildDate>Thu, 01 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.jkawamoto.info/tags/parcelify/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -18,7 +17,7 @@
       <guid>https://www.jkawamoto.info/blogs/import-css-from-npm/</guid>
       <description>
 
-&lt;h2 id=&#34;summary:b37abbaff78713a07ca81d3e2e751ef8&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;Client-side package management tool has been replacing to &lt;a href=&#34;https://www.npmjs.com/&#34;&gt;npm&lt;/a&gt; from &lt;a href=&#34;http://bower.io/&#34;&gt;bower&lt;/a&gt;,
 and client-side JavaScript packages are imported with &lt;a href=&#34;http://browserify.org/&#34;&gt;Browserify&lt;/a&gt;.
@@ -30,7 +29,7 @@ this entry explains two importing ways;
 &lt;p&gt;We assume to use &lt;a href=&#34;http://gulpjs.com/&#34;&gt;Gulp&lt;/a&gt; as the task runner,
 and we investigate ways that don&amp;rsquo;t fix directory structure.&lt;/p&gt;
 
-&lt;h2 id=&#34;parcelify:b37abbaff78713a07ca81d3e2e751ef8&#34;&gt;Parcelify&lt;/h2&gt;
+&lt;h2 id=&#34;parcelify&#34;&gt;Parcelify&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/rotundasoftware/parcelify&#34;&gt;Parcelify&lt;/a&gt; is a famous plugin of Browserify,
 which means if your project doesn&amp;rsquo;t use JavaScript, you need to add a dummy script file to use Parcelify.
@@ -73,7 +72,7 @@ you need to know directory structures of all packages,
 and such structures will be changed when packages are updated.
 In other words, this way isn&amp;rsquo;t sustainable.&lt;/p&gt;
 
-&lt;h2 id=&#34;rework:b37abbaff78713a07ca81d3e2e751ef8&#34;&gt;rework&lt;/h2&gt;
+&lt;h2 id=&#34;rework&#34;&gt;rework&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/reworkcss/rework&#34;&gt;rework&lt;/a&gt; and a plugin of it &lt;a href=&#34;https://github.com/reworkcss/rework-npm&#34;&gt;rework-npm&lt;/a&gt;
 search all &lt;code&gt;package.json&lt;/code&gt; of the packages you&amp;rsquo;re using, and import css files those packages provide.

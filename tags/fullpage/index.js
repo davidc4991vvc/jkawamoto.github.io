@@ -6,7 +6,7 @@
 
 		<title>Fullpage.Js &middot; Junpei Kawamoto</title>
 		<base href="https://www.jkawamoto.info/" />
-		<meta name="generator" content="Hugo 0.15" />
+		<meta name="generator" content="Hugo 0.18-DEV" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Junpei Kawamoto" />
@@ -91,7 +91,7 @@
 	        <section>
 	          
 
-<h2 id="summary:69b24904d2568082afd340a9b334aca2">Summary</h2>
+<h2 id="summary">Summary</h2>
 
 <p><a href="https://github.com/hellsan631/angular-fullpage.js">angular-fullpage.js</a> is a library
 to use <a href="http://alvarotrigo.com/fullPage/">fullPage.js</a> in <a href="http://angularjs.org/">AngularJS</a>,
@@ -103,7 +103,7 @@ I <a href="https://github.com/jkawamoto/fullPage.js">modified fullPage.js</a> to
 
 <p>This entry explains how to use my fullPage.js in AngularJS.</p>
 
-<h2 id="angular-fullpage-js:69b24904d2568082afd340a9b334aca2">angular-fullpage.js</h2>
+<h2 id="angular-fullpage-js">angular-fullpage.js</h2>
 
 <p>The current version of angular-fullpage.js in npm has a problem in event handling,
 and you need to use the newest source code from GitHub.
@@ -160,7 +160,7 @@ For example, make a controller</p>
 &lt;/div&gt;
 </code></pre>
 
-<h2 id="apply-fullpage-js-for-not-sibling-nodes:69b24904d2568082afd340a9b334aca2">Apply fullPage.js for not sibling nodes</h2>
+<h2 id="apply-fullpage-js-for-not-sibling-nodes">Apply fullPage.js for not sibling nodes</h2>
 
 <p>fullpage.js assumes every section is a child of a same parent node, for example</p>
 

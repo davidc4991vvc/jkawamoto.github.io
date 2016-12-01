@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fullpage.Js on Junpei Kawamoto</title>
-    <link>https://www.jkawamoto.info/tags/fullpage/index.js/</link>
+    <link>https://www.jkawamoto.info/tags/fullpage.js/index.xml</link>
     <description>Recent content in Fullpage.Js on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
-    <lastBuildDate>Fri, 12 Aug 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.jkawamoto.info/tags/fullpage.js/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -18,7 +17,7 @@
       <guid>https://www.jkawamoto.info/blogs/fullpagejs-in-angularjs/</guid>
       <description>
 
-&lt;h2 id=&#34;summary:69b24904d2568082afd340a9b334aca2&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/hellsan631/angular-fullpage.js&#34;&gt;angular-fullpage.js&lt;/a&gt; is a library
 to use &lt;a href=&#34;http://alvarotrigo.com/fullPage/&#34;&gt;fullPage.js&lt;/a&gt; in &lt;a href=&#34;http://angularjs.org/&#34;&gt;AngularJS&lt;/a&gt;,
@@ -30,7 +29,7 @@ I &lt;a href=&#34;https://github.com/jkawamoto/fullPage.js&#34;&gt;modified full
 
 &lt;p&gt;This entry explains how to use my fullPage.js in AngularJS.&lt;/p&gt;
 
-&lt;h2 id=&#34;angular-fullpage-js:69b24904d2568082afd340a9b334aca2&#34;&gt;angular-fullpage.js&lt;/h2&gt;
+&lt;h2 id=&#34;angular-fullpage-js&#34;&gt;angular-fullpage.js&lt;/h2&gt;
 
 &lt;p&gt;The current version of angular-fullpage.js in npm has a problem in event handling,
 and you need to use the newest source code from GitHub.
@@ -87,7 +86,7 @@ For example, make a controller&lt;/p&gt;
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;apply-fullpage-js-for-not-sibling-nodes:69b24904d2568082afd340a9b334aca2&#34;&gt;Apply fullPage.js for not sibling nodes&lt;/h2&gt;
+&lt;h2 id=&#34;apply-fullpage-js-for-not-sibling-nodes&#34;&gt;Apply fullPage.js for not sibling nodes&lt;/h2&gt;
 
 &lt;p&gt;fullpage.js assumes every section is a child of a same parent node, for example&lt;/p&gt;
 

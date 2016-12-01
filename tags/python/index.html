@@ -6,7 +6,7 @@
 
 		<title>Python &middot; Junpei Kawamoto</title>
 		<base href="https://www.jkawamoto.info/" />
-		<meta name="generator" content="Hugo 0.15" />
+		<meta name="generator" content="Hugo 0.18-DEV" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Junpei Kawamoto" />
@@ -91,13 +91,13 @@
 	        <section>
 	          
 
-<h2 id="summary:a0ee9d0ea8575a88500eea9bd15cac6b">Summary</h2>
+<h2 id="summary">Summary</h2>
 
 <p>This document explains how to include packages hosted in GitHub
 but not not registered in <a href="https://pypi.python.org/pypi">PyPI</a> into <code>requirements.txt</code>,
 and how to configure <code>setup.py</code> referring <code>requirements.txt</code>.</p>
 
-<h2 id="requirements-txt:a0ee9d0ea8575a88500eea9bd15cac6b">requirements.txt</h2>
+<h2 id="requirements-txt">requirements.txt</h2>
 
 <p>Supposing <a href="https://github.com/rgmining/common">https://github.com/rgmining/common</a> as the GitHub repository to be added to <code>requirements.txt</code>,
 the package information for the repository is</p>
@@ -109,7 +109,7 @@ the package information for the repository is</p>
 If you&rsquo;re using <code>pip-tools</code> to compile <code>requirements.txt</code>,
 your <code>requirements.in</code> should have the same clause.</p>
 
-<h2 id="setup-py:a0ee9d0ea8575a88500eea9bd15cac6b">setup.py</h2>
+<h2 id="setup-py">setup.py</h2>
 
 <p>To include <code>requirements.txt</code> in <code>setup.py</code>,
 give the following <code>load_requires_from_file</code> function to <code>install_requires</code> attribute:</p>
@@ -164,13 +164,13 @@ setup(
 	        <section>
 	          
 
-<h2 id="summary:1b715a24da2f354c147ae9b254f6ecd1">Summary</h2>
+<h2 id="summary">Summary</h2>
 
 <p><a href="http://numba.pydata.org/">numba</a> provides an easy optimization for python codes
 but <code>pip</code> doesn&rsquo;t work to install numba.
 This entry explains installation and import way of numba.</p>
 
-<h2 id="installation:1b715a24da2f354c147ae9b254f6ecd1">Installation</h2>
+<h2 id="installation">Installation</h2>
 
 <p>numba requires <a href="http://llvm.org/"><code>llvm</code></a> and <code>enum34</code>,
 and the required version of llvm isn&rsquo;t the newest version 3.8.x but version 3.7.x.
@@ -185,7 +185,7 @@ $ pip install enum34
 $ pip install numba
 </code></pre>
 
-<h2 id="import-numba:1b715a24da2f354c147ae9b254f6ecd1">Import numba</h2>
+<h2 id="import-numba">Import numba</h2>
 
 <p>We should prepare import even if our source code will run without numba,
 and we replace no-op decorate if numba cannot be imported.
@@ -206,7 +206,7 @@ except ImportError:
 <p>If your code has other decorators than <code>@jit</code>, you need to define those decorators,
 and in this case, you need to give types as texts not objects.</p>
 
-<h2 id="references:1b715a24da2f354c147ae9b254f6ecd1">References</h2>
+<h2 id="references">References</h2>
 
 <ul>
 <li><a href="http://www.slideshare.net/teoliphant/numba-siam-2013">http://www.slideshare.net/teoliphant/numba-siam-2013</a></li>
@@ -220,7 +220,7 @@ and in this case, you need to give types as texts not objects.</p>
 
 <script src="https://gist.github.com/jkawamoto/4a136615118fffe2930c54773389d079.js"></script>
 
-<h2 id="参考書籍:347a12c97dd1f9b47c3d208ca1b149a3">参考書籍</h2>
+<h2 id="参考書籍">参考書籍</h2>
 
 <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=FFFFFF&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=jkwf4mew-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=400006973X&linkId=e5d3611547b0a6ff789dc2ce355b7a15"></iframe>
 
