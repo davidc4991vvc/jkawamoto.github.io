@@ -22,7 +22,7 @@
 		
 		<meta name="og:description" content="Homepage of Junpei Kawamoto." />
 		
-		<meta property="og:image" content="/images/wordcloud.png" />
+		<meta property="og:image" content="https://www.jkawamoto.info/images/wordcloud.png" />
 		<meta property="og:site_name"  content="Junpei Kawamoto" />
 
 		
