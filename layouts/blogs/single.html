@@ -23,6 +23,14 @@
 						{{ end }}
 					</span>
 					{{ end }}
+					{{ with .Params.cert }}
+					<br/>
+					<span>
+						<i class="fa fa-certificate" aria-hidden="true"></i>
+						<a href="{{.}}">Copyright certificate by blockai</a>
+					</span>
+					{{ end }}
+
 				</p>
 
 				<div class="addthis_inline_share_toolbox"></div>
