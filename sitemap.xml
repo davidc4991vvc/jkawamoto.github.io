@@ -92,6 +92,11 @@
   </url>
   
   <url>
+    <loc>https://www.jkawamoto.info/blogs/incremental-build-by-gulp-watchify/</loc>
+    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.jkawamoto.info/slides/deim2016/</loc>
     <lastmod>2016-02-29T00:00:00+00:00</lastmod>
   </url>
@@ -407,12 +412,18 @@
   </url>
   
   <url>
+    <loc>https://www.jkawamoto.info/tags/browserify/</loc>
+    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.jkawamoto.info/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.jkawamoto.info/tags/chart/index.js/</loc>
+    <loc>https://www.jkawamoto.info/tags/chartjs/</loc>
     <lastmod>2016-11-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -430,13 +441,19 @@
   </url>
   
   <url>
-    <loc>https://www.jkawamoto.info/tags/fullpage/index.js/</loc>
+    <loc>https://www.jkawamoto.info/tags/fullpagejs/</loc>
     <lastmod>2016-11-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.jkawamoto.info/tags/github/</loc>
+    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.jkawamoto.info/tags/gulp/</loc>
     <lastmod>2016-11-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -449,6 +466,12 @@
   
   <url>
     <loc>https://www.jkawamoto.info/categories/ja/</loc>
+    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.jkawamoto.info/tags/javascript/</loc>
     <lastmod>2016-11-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -483,7 +506,7 @@
   </url>
   
   <url>
-    <loc>https://www.jkawamoto.info/tags/node/index.js/</loc>
+    <loc>https://www.jkawamoto.info/tags/nodejs/</loc>
     <lastmod>2016-12-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -579,6 +602,12 @@
   
   <url>
     <loc>https://www.jkawamoto.info/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.jkawamoto.info/tags/watchify/</loc>
+    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
