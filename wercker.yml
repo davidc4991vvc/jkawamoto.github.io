@@ -9,6 +9,7 @@ build:
         version: "HEAD"
     - samueldebruyn/minify:
         base_dir: public
+        png: false
 deploy:
   steps:
     - jkawamoto/ghp-import:
