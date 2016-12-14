@@ -47,6 +47,11 @@
   </url>
   
   <url>
+    <loc>https://www.jkawamoto.info/blogs/incremental-build-by-gulp-watchify/</loc>
+    <lastmod>2016-12-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.jkawamoto.info/blogs/import-css-from-npm/</loc>
     <lastmod>2016-12-01T00:00:00+00:00</lastmod>
   </url>
@@ -89,11 +94,6 @@
   <url>
     <loc>https://www.jkawamoto.info/blog-ja/pymc-lesson-10/</loc>
     <lastmod>2016-08-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/blogs/incremental-build-by-gulp-watchify/</loc>
-    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -407,13 +407,13 @@
   
   <url>
     <loc>https://www.jkawamoto.info/blogs/</loc>
-    <lastmod>2016-12-01T00:00:00+00:00</lastmod>
+    <lastmod>2016-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.jkawamoto.info/tags/browserify/</loc>
-    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
+    <lastmod>2016-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -454,7 +454,7 @@
   
   <url>
     <loc>https://www.jkawamoto.info/tags/gulp/</loc>
-    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
+    <lastmod>2016-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -472,13 +472,13 @@
   
   <url>
     <loc>https://www.jkawamoto.info/tags/javascript/</loc>
-    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
+    <lastmod>2016-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.jkawamoto.info/</loc>
-    <lastmod>2016-12-01T00:00:00+00:00</lastmod>
+    <lastmod>2016-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -525,7 +525,7 @@
   
   <url>
     <loc>https://www.jkawamoto.info/tags/parcelify/</loc>
-    <lastmod>2016-12-01T00:00:00+00:00</lastmod>
+    <lastmod>2016-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -607,7 +607,7 @@
   
   <url>
     <loc>https://www.jkawamoto.info/tags/watchify/</loc>
-    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
+    <lastmod>2016-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

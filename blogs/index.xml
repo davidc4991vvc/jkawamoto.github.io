@@ -7,8 +7,84 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
-    <lastBuildDate>Thu, 01 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.jkawamoto.info/blogs/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Incremental build of browserify and parcelify by gulp-watchify</title>
+      <link>https://www.jkawamoto.info/blogs/incremental-build-by-gulp-watchify/</link>
+      <pubDate>Wed, 14 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/blogs/incremental-build-by-gulp-watchify/</guid>
+      <description>
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/substack/watchify&#34;&gt;watchify&lt;/a&gt; supports incremental build to reduce building time,
+and &lt;a href=&#34;https://github.com/marcello3d/gulp-watchify&#34;&gt;gulp-watchify&lt;/a&gt; is a &lt;a href=&#34;http://gulpjs.com/&#34;&gt;gulp&lt;/a&gt; plugin of watchify.
+This post explains how to apply watchfy to &lt;a href=&#34;http://browserify.org/&#34;&gt;browserify&lt;/a&gt; and &lt;a href=&#34;https://github.com/rotundasoftware/parcelify&#34;&gt;Parcelify&lt;/a&gt;
+with &lt;a href=&#34;http://gulpjs.com/&#34;&gt;gulp&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;gulp-watchify&#34;&gt;gulp-watchify&lt;/h2&gt;
+
+&lt;p&gt;From a &lt;a href=&#34;https://github.com/marcello3d/gulp-watchify/blob/master/examples/simple/gulpfile.js&#34;&gt;sample file&lt;/a&gt;,
+basic usage is&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-coffeescript&#34;&gt;gulp = require &amp;quot;gulp&amp;quot;
+$ = require(&amp;quot;gulp-load-plugins&amp;quot;)()
+watching = false
+
+gulp.task &amp;quot;browserify&amp;quot;, $.watchify (watchify) -&amp;gt;
+  gulp.src &amp;quot;src/*.js&amp;quot;
+    .pipe watchify
+      watch:watching
+    .pipe gulp.dest &amp;quot;public/js/&amp;quot;
+
+gulp.task &amp;quot;watch&amp;quot;, -&amp;gt;
+  watching = true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;By this task file, &lt;code&gt;gulp browserify&lt;/code&gt; builds normally,
+and &lt;code&gt;gulp watch browserify&lt;/code&gt; starts watching script files to incremental build.&lt;/p&gt;
+
+&lt;p&gt;Note that installing gulp-watchify doesn&amp;rsquo;t install watchify, and you need to run&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm i —save-dev watchify gulp-watchify
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;use-parcelify&#34;&gt;Use parcelify&lt;/h2&gt;
+
+&lt;p&gt;gulp-watchify takes callback functions which will be called before bundling.
+We use parcelify in the callback function.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-coffeescript&#34;&gt;gulp = require &amp;quot;gulp&amp;quot;
+parcelify = require &amp;quot;parcelify&amp;quot;
+$ = require(&amp;quot;gulp-load-plugins&amp;quot;)()
+watching = false
+
+gulp.task &amp;quot;browserify&amp;quot;, $.watchify (watchify) -&amp;gt;
+  gulp.src &amp;quot;src/main.js&amp;quot;
+    .pipe watchify
+      extensions: [&amp;quot;.js&amp;quot;]
+      watch: watching
+      setup: (bundle) -&amp;gt;
+        parcelify bundle,
+          bundles:
+            style: &amp;quot;public/css/bundle.css&amp;quot;
+    .pipe $.rename &amp;quot;bundle.js&amp;quot;
+    .pipe gulp.dest &amp;quot;public/js/&amp;quot;
+
+gulp.task &amp;quot;watch&amp;quot;, -&amp;gt;
+  watching = true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This task file reads &lt;code&gt;main.js&lt;/code&gt; as the entry script and outputs &lt;code&gt;bundle.js&lt;/code&gt;.
+To rename file names, it requires &lt;code&gt;gulp-rename&lt;/code&gt;, too.&lt;/p&gt;
+
+&lt;p&gt;watchify takes same options as ones browserify takes.
+The above example takes &lt;code&gt;extensions&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Import CSS files from npm libraries</title>
@@ -828,82 +904,6 @@ and in this case, you need to give types as texts not objects.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.slideshare.net/teoliphant/numba-siam-2013&#34;&gt;http://www.slideshare.net/teoliphant/numba-siam-2013&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://dl.acm.org/citation.cfm?id=2833162&#34;&gt;http://dl.acm.org/citation.cfm?id=2833162&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Incremental build of browserify and parcelify by gulp-watchify</title>
-      <link>https://www.jkawamoto.info/blogs/incremental-build-by-gulp-watchify/</link>
-      <pubDate>Tue, 17 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.jkawamoto.info/blogs/incremental-build-by-gulp-watchify/</guid>
-      <description>
-
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;利用するライブラリが増えてビルドに時間がかかるようになったので，&lt;a href=&#34;https://github.com/substack/watchify&#34;&gt;watchify&lt;/a&gt; を使った差分ビルドを試してみる．タスクランナーに &lt;a href=&#34;http://gulpjs.com/&#34;&gt;gulp&lt;/a&gt; を使用しているので，&lt;a href=&#34;https://github.com/marcello3d/gulp-watchify&#34;&gt;gulp-watchify&lt;/a&gt; を使い，&lt;a href=&#34;http://browserify.org/&#34;&gt;browserify&lt;/a&gt; と &lt;a href=&#34;https://github.com/rotundasoftware/parcelify&#34;&gt;Parcelify&lt;/a&gt;によるビルドを差分ビルドにする．&lt;/p&gt;
-
-&lt;h1 id=&#34;gulp-watchify-の使い方&#34;&gt;gulp-watchify の使い方&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/marcello3d/gulp-watchify/blob/master/examples/simple/gulpfile.js&#34;&gt;サンプルファイル&lt;/a&gt; によると，単純な使い方は，&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-coffeescript&#34;&gt;gulp = require &amp;quot;gulp&amp;quot;
-$ = require(&amp;quot;gulp-load-plugins&amp;quot;)()
-watching = false
-
-gulp.task &amp;quot;browserify&amp;quot;, $.watchify (watchify) -&amp;gt;
-  gulp.src &amp;quot;src/*.js&amp;quot;
-    .pipe watchify
-      watch:watching
-    .pipe gulp.dest &amp;quot;public/js/&amp;quot;
-
-gulp.task &amp;quot;watch&amp;quot;, -&amp;gt;
-  watching = true
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;となるようだ．これで，&lt;code&gt;gulp browserify&lt;/code&gt; とすれば通常のビルドを &lt;code&gt;gulp watch browserify&lt;/code&gt; とすれば，watchify による監視を始めることができる．&lt;/p&gt;
-
-&lt;p&gt;なお，&lt;code&gt;gulp-load-plugins&lt;/code&gt; に関しては，&lt;a href=&#34;http://qiita.com/superbrothers/items/a342f3580b8acb5b9b06&#34;&gt;[gulp] 効率的にプラグインを読み込む&lt;/a&gt; を参照．上の例では変わらないが，require を減らすために使っている．&lt;/p&gt;
-
-&lt;h2 id=&#34;注意&#34;&gt;注意&lt;/h2&gt;
-
-&lt;p&gt;gulp-watchify をインストールしただけでは，watchify はインストールされない模様．なので，&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm i —save-dev watchify gulp-watchify
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;と両方インストールするのを忘れずに．&lt;/p&gt;
-
-&lt;h1 id=&#34;parcelify-の利用&#34;&gt;parcelify の利用&lt;/h1&gt;
-
-&lt;p&gt;先ほどの例では，gulp-watchify の内部で browserify を呼んでいるため，parcelify を使う場所がない．gulp-watchify は，オプションで bundle の前に実行するコールバックを渡せるので，そこで parcelify を使う．&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-coffeescript&#34;&gt;gulp = require &amp;quot;gulp&amp;quot;
-parcelify = require &amp;quot;parcelify&amp;quot;
-$ = require(&amp;quot;gulp-load-plugins&amp;quot;)()
-watching = false
-
-gulp.task &amp;quot;browserify&amp;quot;, $.watchify (watchify) -&amp;gt;
-  gulp.src &amp;quot;src/main.js&amp;quot;
-    .pipe watchify
-      extensions: [&amp;quot;.js&amp;quot;]
-      watch: watching
-      setup: (bundle) -&amp;gt;
-        parcelify bundle,
-          bundles:
-            style: &amp;quot;public/css/bundle.css&amp;quot;
-    .pipe $.rename &amp;quot;bundle.js&amp;quot;
-    .pipe gulp.dest &amp;quot;public/js/&amp;quot;
-
-gulp.task &amp;quot;watch&amp;quot;, -&amp;gt;
-  watching = true
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;これで先ほどと同様に，&lt;code&gt;gulp browserify&lt;/code&gt; とすれば通常のビルドを &lt;code&gt;gulp watch browserify&lt;/code&gt; とすれば，watchify による監視を始めることができる．&lt;/p&gt;
-
-&lt;p&gt;上は，&lt;code&gt;main.js&lt;/code&gt; をエントリーにスクリプトとして，出力を &lt;code&gt;bundle.js&lt;/code&gt; にする例となっている．名前変更のために別途 &lt;code&gt;gulp-rename&lt;/code&gt; が必要．&lt;/p&gt;
-
-&lt;p&gt;watchify のオプションには，browserify に渡すオプションと同じものを使える．上の例では，&lt;code&gt;extensions&lt;/code&gt; を渡している．&lt;/p&gt;
 </description>
     </item>
     
