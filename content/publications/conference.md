@@ -17,15 +17,15 @@ lastmod: 2016-11-14
 * Ziyi Li, *Junpei Kawamoto*, Yaokai Feng, and Kouichi Sakurai,
   "Cyberbullying Detection Using Parent-Child Relationship between Comments,"
   Proc. of the 18th International Conference on Information Integration and Web-based Applications & Services (iiWAS2016),
-  Singapore, Nov. 23-30, 2016. (to appear)
+  Singapore, Nov. 23-30, 2016.
 * Yuxuan Gao, Yaokai Feng, *Junpei Kawamoto*, and Kouichi Sakurai,
   "[{{%img qir%}}A Machine Learning Based Approach for Detecting DRDoS Attacks and Its Performance Evaluation](http://hdl.handle.net/2324/1661854),"
   Proc. of [the 11th Asia Joint Conference on Information Security](http://ipsr.ynu.ac.jp/asiajcis2016/index.html),
-  Fukuoka, Japan, Aug.4-5, 2016.
+  pp.80-86, Fukuoka, Japan, Aug.4-5, 2016.
 * Longzhu Cai, Yaokai Feng, *Junpei Kawamoto*, and Kouichi Sakurai,
   "[{{%img qir%}}A Behavior-based Method for Detecting DNS Amplification Attacks](http://hdl.handle.net/2324/1657554),"
   Proc. of [the 10th International Workshop on Advances in Information Security](http://voyager.ce.fit.ac.jp/conf/WAIS/2016/),
-  Fukuoka, Japan, July 6, 2016.
+  pp.608-613, Fukuoka, Japan, July 6, 2016.
 * Pengfei Li, Yaokai Feng, *Junpei Kawamoto*, and Kouichi Sakurai,
   "[{{%img qir%}}A Proposal for Cyber-Attack Trace-back Using Packet Marking and Logging](http://hdl.handle.net/2324/1657555),"
   Proc. of [the 10th International Workshop on Advances in Information Security](http://voyager.ce.fit.ac.jp/conf/WAIS/2016/),
@@ -38,11 +38,11 @@ lastmod: 2016-11-14
 * *Junpei Kawamoto*,
   "An Implementation of Privacy Preserving Stream Integration System",
   Proc. of the 30th International Conference on Information Networking (ICOIN 2016),
-  O3-1, Malaysia, Jan. 13-15, 2016.
+  pp.57-62, Malaysia, Jan. 13-15, 2016.
 * Chenyutao Ke, Hiroaki Anada, *Junpei Kawamoto*, Kirill Morozov, and Kouichi Sakurai,
   "[{{%img qir%}}Cross-group Secret Sharing for Secure Cloud Storage Service](http://hdl.handle.net/2324/1563374),"
   Proc. of the Annual International Conference on Ubiquitous Information Management and Communication (IMCOM 2016),
-  6-3, Vietnam, Jan.4-6, 2016.
+  pp.63:1-63:8, Vietnam, Jan.4-6, 2016.
 * Chunlu Chen, Hiroaki Anada, *Junpei Kawamoto*, and Kouichi Sakurai,
   "[{{%img qir%}}Hybrid Encryption Scheme using Terminal Fingerprint and its Application to Attribute-based Encryption without Key Misuse](http://hdl.handle.net/2324/1544167),"
   Proc. of the 2015 Asian Conference on Availability, Reliability and Security,
