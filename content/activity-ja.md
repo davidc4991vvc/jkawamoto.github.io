@@ -6,10 +6,10 @@ categories:
 - ja
 ---
 ## 学会活動
-* 2013年 5月 - present:
-  [電子情報通信学会](http://www.ieice.org/jpn/index.html) 査読委員
 * 2013年 4月 - present:
   [情報処理学会](http://www.ipsj.or.jp/) 会誌編集委員会 編集委員
+* 2013年 5月 - 2016年12月:
+  [電子情報通信学会](http://www.ieice.org/jpn/index.html) 査読委員
 * 2014年 6月 - 2015年 3月:
   [電子情報通信学会 情報セキュリティ研究会](http://www.ieice.org/~isec/) 幹事補佐
 * 2008年 9月 - 2012年 3月:
