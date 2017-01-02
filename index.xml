@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
-    <lastBuildDate>Wed, 14 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.jkawamoto.info/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -1849,6 +1849,144 @@ February 16, 2007. (in Japanese)&lt;/li&gt;
     </item>
     
     <item>
+      <title>Receive logs from Stackdriver Logging</title>
+      <link>https://www.jkawamoto.info/blogs/get-logs-from-stackdriver-logging/</link>
+      <pubDate>Mon, 02 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/blogs/get-logs-from-stackdriver-logging/</guid>
+      <description>
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;In order to obtain log data from &lt;a href=&#34;https://cloud.google.com/&#34;&gt;Google Cloud Platform&lt;/a&gt;,
+using the &lt;a href=&#34;https://cloud.google.com/stackdriver/&#34;&gt;Stackdriver&lt;/a&gt; client which
+&lt;a href=&#34;https://godoc.org/cloud.google.com/go/logging/logadmin&#34;&gt;logadmin&lt;/a&gt; package provides
+is one of the easiest ways.
+But, the type of log entries returned by the client is
+&lt;a href=&#34;https://godoc.org/cloud.google.com/go/logging#Entry&#34;&gt;logging.Entry&lt;/a&gt;,
+and the type of payloads is &lt;code&gt;interface{}&lt;/code&gt;, which means you need to cast payloads to access their fields.
+This article introduces how to cast them with a pre-defined structure.&lt;/p&gt;
+
+&lt;h2 id=&#34;logadmin-package&#34;&gt;logadmin package&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://godoc.org/cloud.google.com/go/logging/logadmin&#34;&gt;logadmin&lt;/a&gt; provides interfaces to access logs
+in &lt;a href=&#34;https://cloud.google.com/&#34;&gt;Google Cloud Platform&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The following code obtains log entries matching a query in variable &lt;code&gt;filter&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;import (
+    &amp;quot;cloud.google.com/go/logging/logadmin&amp;quot;
+    &amp;quot;golang.org/x/net/context&amp;quot;
+    &amp;quot;google.golang.org/api/iterator&amp;quot;
+)
+
+func GetLogEntries(filter string) error{
+    ctx := context.Background()
+    client, err := logadmin.NewClient(ctx, &amp;quot;your-project-id&amp;quot;)
+    if err != nil {
+        return err
+    }
+    defer client.Close()
+
+    iter := client.Entries(ctx, logadmin.Filter(filter))
+    for {
+        e, err := iter.Next()
+        if err == iterator.Done {
+            return nil
+        } else if err != nil {
+            return err
+        }
+        // Use log entry `e`, of which type is logging.Entry.
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;logging-entry&#34;&gt;logging.Entry&lt;/h2&gt;
+
+&lt;p&gt;The type of log entries which the logadmin client returns is
+&lt;a href=&#34;https://godoc.org/cloud.google.com/go/logging#Entry&#34;&gt;logging.Entry&lt;/a&gt;,
+and the type of their payload is &lt;code&gt;interface{}&lt;/code&gt;.
+To access each field of those payloads, you need to case them.
+In most cases, you can cast those payloads to pointers of
+&lt;a href=&#34;https://godoc.org/github.com/golang/protobuf/ptypes/struct#Struct&#34;&gt;&lt;code&gt;structpb.Struct&lt;/code&gt;&lt;/a&gt;.
+Since &lt;code&gt;structpb.Struct&lt;/code&gt; is a kind of meta-structure,
+you also need to convert an instance of &lt;code&gt;structpb.Struct&lt;/code&gt; to another structure.&lt;/p&gt;
+
+&lt;p&gt;My &lt;a href=&#34;https://github.com/jkawamoto/structpbconv&#34;&gt;&lt;code&gt;structpbconv&lt;/code&gt;&lt;/a&gt; package
+provides such conversion.&lt;/p&gt;
+
+&lt;h2 id=&#34;structpbconv&#34;&gt;structpbconv&lt;/h2&gt;
+
+&lt;p&gt;The following code converts a log payload of a VM instance&amp;rsquo;s activity_log
+in &lt;a href=&#34;https://cloud.google.com/compute/&#34;&gt;Compute Engine&lt;/a&gt;
+from a &lt;code&gt;structpb.Struct&lt;/code&gt; instance.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;import (
+    &amp;quot;github.com/golang/protobuf/ptypes/struct&amp;quot;
+    &amp;quot;github.com/jkawamoto/structpbconv&amp;quot;
+)
+
+
+type ActivityPayload struct {
+    EventTimestampUs string `structpb:&amp;quot;event_timestamp_us&amp;quot;`
+    EventType        string `structpb:&amp;quot;event_type&amp;quot;`
+    TraceID          string `structpb:&amp;quot;trace_id&amp;quot;`
+    Actor            struct {
+        User string
+    }
+    Resource struct {
+        Zone string
+        Type string
+        ID   string
+        Name string
+    }
+    Version      string
+    EventSubtype string `structpb:&amp;quot;event_subtype&amp;quot;`
+    Operation    struct {
+        Zone string
+        Type string
+        ID   string
+        Name string
+    }
+}
+
+func NewActivityPayload(payload *structpb.Struct) *ActivityPayload {
+    var res ActivityPayload
+    structpbconv.Convert(payload, &amp;amp;res)
+    return &amp;amp;res
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I defined &lt;code&gt;ActivityPayload&lt;/code&gt; structure according to an actual payload of activity_log.
+To give a mapping of field names, use a &lt;code&gt;structpb&lt;/code&gt; tag.&lt;/p&gt;
+
+&lt;p&gt;Finally, we can access each field like that:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// Getting log entries of which event types are GCE_OPERATION_DONE.
+iter := client.Entries(
+  ctx, logadmin.Filter(&amp;quot;jsonPayload.event_type = \&amp;quot;GCE_OPERATION_DONE\&amp;quot;&amp;quot;))
+for {
+    e, err := iter.Next()
+    if err == iterator.Done {
+        return nil
+    } else if err != nil {
+        return err
+    }
+
+    // Converting the payload.
+    if s, ok := e.Payload.(*structpb.Struct); ok {
+        payload := NewActivityPayload(s)
+
+        // Printing trace_id.
+        fmt.Println(payload.TraceID)
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Incremental build of browserify and parcelify by gulp-watchify</title>
       <link>https://www.jkawamoto.info/blogs/incremental-build-by-gulp-watchify/</link>
       <pubDate>Wed, 14 Dec 2016 00:00:00 +0000</pubDate>
@@ -2221,142 +2359,6 @@ deploy:
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/g_tnwhYoOjo&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/WOU3XGn23Ck&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/avqMn9ykuR0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Internationalization (i18n) of Meteor applications</title>
-      <link>https://www.jkawamoto.info/blogs/i18n-package-in-meteor/</link>
-      <pubDate>Sat, 13 Aug 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.jkawamoto.info/blogs/i18n-package-in-meteor/</guid>
-      <description>
-
-&lt;h2 id=&#34;universe-i18n&#34;&gt;universe:i18n&lt;/h2&gt;
-
-&lt;p&gt;How to internationalize &lt;a href=&#34;https://www.meteor.com/&#34;&gt;Meteor&lt;/a&gt; application?
-An &lt;a href=&#34;https://atmospherejs.com&#34;&gt;atmosphere&lt;/a&gt; package &lt;a href=&#34;https://atmospherejs.com/universe/i18n&#34;&gt;universe:i18n&lt;/a&gt; helps it.
-It supports locales in &lt;a href=&#34;https://github.com/vazco/meteor-universe-i18n/blob/master/lib/locales.js&#34;&gt;the list&lt;/a&gt;,
-and JSON and YAML formats for bilingual corpuses.&lt;/p&gt;
-
-&lt;p&gt;To install &lt;a href=&#34;https://atmospherejs.com/universe/i18n&#34;&gt;universe:i18n&lt;/a&gt;, run&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ meteor add universe:i18n
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and add the following in script files to import it:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;import i18n from &amp;quot;meteor/universe:i18n&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;register-corpuses&#34;&gt;Register corpuses&lt;/h3&gt;
-
-&lt;p&gt;You can add corpuses with APIs in &lt;a href=&#34;https://atmospherejs.com/universe/i18n&#34;&gt;universe:i18n&lt;/a&gt;.
-The following line adds a word associated with a namespace and a keyword to a locale.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;i18n.addTranslation(“locale&amp;quot;, “namespace&amp;quot;, “keyword&amp;quot;, “word&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;corpus-file&#34;&gt;Corpus file&lt;/h3&gt;
-
-&lt;p&gt;It is hard to add corpuses by &lt;code&gt;i18n.addTranslation&lt;/code&gt; function.
-You can add corpuses with JSON and YAML files,
-and such file names must end with &lt;code&gt;.i18n.json&lt;/code&gt; and &lt;code&gt;.i18n.yml&lt;/code&gt;, respectively.&lt;/p&gt;
-
-&lt;p&gt;For example, a YAML corpus file consists of key-value pairs such as&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;ok: 決定
-cancel: キャンセル
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can specify namespace of a corpus file with adding &lt;code&gt;_namespace&lt;/code&gt; key.
-The following example is a set of corpuses for namespace &lt;code&gt;ui&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;_namespace: ui
-ok: 決定
-cancel: キャンセル
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Which locale a corpus file belongs to is specified by &lt;code&gt;_locale&lt;/code&gt; key or file name.
-The following file belongs to locale &lt;code&gt;ja&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;_locale: ja
-ok: 決定
-cancel: キャンセル
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You need to open each corpus files to check locale if using &lt;code&gt;_locale&lt;/code&gt; key.
-I think it is better to use file name to specify locale.
-For example, a corpus file which belongs to &lt;code&gt;en-US&lt;/code&gt; locale should be following
-one of the two formats.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;en-us.i18n.yml&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;en-us/someName.i18n.yml&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Note that corpus files must not be in &lt;code&gt;imports&lt;/code&gt; directory.&lt;/p&gt;
-
-&lt;h3 id=&#34;get-a-translated-word&#34;&gt;Get a translated word&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;i18n.__(namespace, key)&lt;/code&gt; function returns a translated word associated with &lt;code&gt;namespace&lt;/code&gt; and &lt;code&gt;key&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;i18n.__(&amp;quot;ui&amp;quot;, &amp;quot;ok&amp;quot;); // -&amp;gt; 決定 (in locale ja)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;change-locale&#34;&gt;Change locale&lt;/h4&gt;
-
-&lt;p&gt;&lt;code&gt;i18n.setLocale(&amp;quot;locale&amp;quot;)&lt;/code&gt; function sets a new locale &lt;code&gt;locale&lt;/code&gt;,
-and downloads the corpus associated with the locale asynchronously.
-The function returns a &lt;code&gt;Promise&lt;/code&gt; and &lt;code&gt;.then&lt;/code&gt; method is available to run some commands after receiving the corpus.&lt;/p&gt;
-
-&lt;h3 id=&#34;use-universe-i18n-in-angular-meteor&#34;&gt;Use universe:i18n in Angular-Meteor&lt;/h3&gt;
-
-&lt;p&gt;To use universe:i18n in &lt;a href=&#34;http://www.angular-meteor.com/&#34;&gt;Angular-Meteor&lt;/a&gt; template,
-add &lt;code&gt;i18n.getTranslation&lt;/code&gt; method in a scope.
-Foe example, the following controller&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;class AppCtrl {
-
-  constructor() {
-    this.translator = i18n.getTranslation;
-  }
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;provides &lt;code&gt;translator&lt;/code&gt; method and a template&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;md-button ng-click=&amp;quot;$ctrl.onNext()&amp;quot; aria-label=&amp;quot;$ctrl.translator(&#39;ui&#39;, &#39;ok&#39;)&amp;quot;&amp;gt;
-  {{$ctrl.translator(&amp;quot;button&amp;quot;, &amp;quot;start&amp;quot;)}}
-&amp;lt;/md-button&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;inserts a word associated with &lt;code&gt;button&lt;/code&gt; namespace and &lt;code&gt;start&lt;/code&gt; key.
-To update such words when locale is changed, use the following commands:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const setLocalePromise = i18n.setLocale(locale) || i18n.setLocale(&amp;quot;en&amp;quot;);
-setLocalePromise.then((e) =&amp;gt; {
-   this.translator = i18n.getTranslation;
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;But if you call &lt;code&gt;setLocale&lt;/code&gt; function without an UI event, for example in a constructor, DOM won&amp;rsquo;t be updated.
-You need to use &lt;code&gt;$scope.$apply()&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;constructor($scope) {
-
-  const setLocalePromise = i18n.setLocale(getLang()) || i18n.setLocale(&amp;quot;en&amp;quot;);
-  setLocalePromise.then(() =&amp;gt; {
-    $scope.$apply( () =&amp;gt;{
-      this.translator = i18n.getTranslation;
-    });
-  });
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;See &lt;a href=&#34;http://jimhoskins.com/2012/12/17/angularjs-and-apply.html&#34;&gt;AngularJS and scope.$apply&lt;/a&gt; for more information.&lt;/p&gt;
 </description>
     </item>
     

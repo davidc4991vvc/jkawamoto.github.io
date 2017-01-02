@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Log on Junpei Kawamoto</title>
+    <link>https://www.jkawamoto.info/tags/log/index.xml</link>
+    <description>Recent content in Log on Junpei Kawamoto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
+    <atom:link href="https://www.jkawamoto.info/tags/log/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Receive logs from Stackdriver Logging</title>
+      <link>https://www.jkawamoto.info/blogs/get-logs-from-stackdriver-logging/</link>
+      <pubDate>Mon, 02 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/blogs/get-logs-from-stackdriver-logging/</guid>
+      <description>
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;In order to obtain log data from &lt;a href=&#34;https://cloud.google.com/&#34;&gt;Google Cloud Platform&lt;/a&gt;,
+using the &lt;a href=&#34;https://cloud.google.com/stackdriver/&#34;&gt;Stackdriver&lt;/a&gt; client which
+&lt;a href=&#34;https://godoc.org/cloud.google.com/go/logging/logadmin&#34;&gt;logadmin&lt;/a&gt; package provides
+is one of the easiest ways.
+But, the type of log entries returned by the client is
+&lt;a href=&#34;https://godoc.org/cloud.google.com/go/logging#Entry&#34;&gt;logging.Entry&lt;/a&gt;,
+and the type of payloads is &lt;code&gt;interface{}&lt;/code&gt;, which means you need to cast payloads to access their fields.
+This article introduces how to cast them with a pre-defined structure.&lt;/p&gt;
+
+&lt;h2 id=&#34;logadmin-package&#34;&gt;logadmin package&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://godoc.org/cloud.google.com/go/logging/logadmin&#34;&gt;logadmin&lt;/a&gt; provides interfaces to access logs
+in &lt;a href=&#34;https://cloud.google.com/&#34;&gt;Google Cloud Platform&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The following code obtains log entries matching a query in variable &lt;code&gt;filter&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;import (
+    &amp;quot;cloud.google.com/go/logging/logadmin&amp;quot;
+    &amp;quot;golang.org/x/net/context&amp;quot;
+    &amp;quot;google.golang.org/api/iterator&amp;quot;
+)
+
+func GetLogEntries(filter string) error{
+    ctx := context.Background()
+    client, err := logadmin.NewClient(ctx, &amp;quot;your-project-id&amp;quot;)
+    if err != nil {
+        return err
+    }
+    defer client.Close()
+
+    iter := client.Entries(ctx, logadmin.Filter(filter))
+    for {
+        e, err := iter.Next()
+        if err == iterator.Done {
+            return nil
+        } else if err != nil {
+            return err
+        }
+        // Use log entry `e`, of which type is logging.Entry.
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;logging-entry&#34;&gt;logging.Entry&lt;/h2&gt;
+
+&lt;p&gt;The type of log entries which the logadmin client returns is
+&lt;a href=&#34;https://godoc.org/cloud.google.com/go/logging#Entry&#34;&gt;logging.Entry&lt;/a&gt;,
+and the type of their payload is &lt;code&gt;interface{}&lt;/code&gt;.
+To access each field of those payloads, you need to case them.
+In most cases, you can cast those payloads to pointers of
+&lt;a href=&#34;https://godoc.org/github.com/golang/protobuf/ptypes/struct#Struct&#34;&gt;&lt;code&gt;structpb.Struct&lt;/code&gt;&lt;/a&gt;.
+Since &lt;code&gt;structpb.Struct&lt;/code&gt; is a kind of meta-structure,
+you also need to convert an instance of &lt;code&gt;structpb.Struct&lt;/code&gt; to another structure.&lt;/p&gt;
+
+&lt;p&gt;My &lt;a href=&#34;https://github.com/jkawamoto/structpbconv&#34;&gt;&lt;code&gt;structpbconv&lt;/code&gt;&lt;/a&gt; package
+provides such conversion.&lt;/p&gt;
+
+&lt;h2 id=&#34;structpbconv&#34;&gt;structpbconv&lt;/h2&gt;
+
+&lt;p&gt;The following code converts a log payload of a VM instance&amp;rsquo;s activity_log
+in &lt;a href=&#34;https://cloud.google.com/compute/&#34;&gt;Compute Engine&lt;/a&gt;
+from a &lt;code&gt;structpb.Struct&lt;/code&gt; instance.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;import (
+    &amp;quot;github.com/golang/protobuf/ptypes/struct&amp;quot;
+    &amp;quot;github.com/jkawamoto/structpbconv&amp;quot;
+)
+
+
+type ActivityPayload struct {
+    EventTimestampUs string `structpb:&amp;quot;event_timestamp_us&amp;quot;`
+    EventType        string `structpb:&amp;quot;event_type&amp;quot;`
+    TraceID          string `structpb:&amp;quot;trace_id&amp;quot;`
+    Actor            struct {
+        User string
+    }
+    Resource struct {
+        Zone string
+        Type string
+        ID   string
+        Name string
+    }
+    Version      string
+    EventSubtype string `structpb:&amp;quot;event_subtype&amp;quot;`
+    Operation    struct {
+        Zone string
+        Type string
+        ID   string
+        Name string
+    }
+}
+
+func NewActivityPayload(payload *structpb.Struct) *ActivityPayload {
+    var res ActivityPayload
+    structpbconv.Convert(payload, &amp;amp;res)
+    return &amp;amp;res
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I defined &lt;code&gt;ActivityPayload&lt;/code&gt; structure according to an actual payload of activity_log.
+To give a mapping of field names, use a &lt;code&gt;structpb&lt;/code&gt; tag.&lt;/p&gt;
+
+&lt;p&gt;Finally, we can access each field like that:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// Getting log entries of which event types are GCE_OPERATION_DONE.
+iter := client.Entries(
+  ctx, logadmin.Filter(&amp;quot;jsonPayload.event_type = \&amp;quot;GCE_OPERATION_DONE\&amp;quot;&amp;quot;))
+for {
+    e, err := iter.Next()
+    if err == iterator.Done {
+        return nil
+    } else if err != nil {
+        return err
+    }
+
+    // Converting the payload.
+    if s, ok := e.Payload.(*structpb.Struct); ok {
+        payload := NewActivityPayload(s)
+
+        // Printing trace_id.
+        fmt.Println(payload.TraceID)
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
