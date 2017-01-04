@@ -36,7 +36,7 @@ in &lt;a href=&#34;https://cloud.google.com/&#34;&gt;Google Cloud Platform&lt;/a
 
 &lt;p&gt;The following code obtains log entries matching a query in variable &lt;code&gt;filter&lt;/code&gt;:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;import (
+&lt;pre&gt;&lt;code&gt;import (
     &amp;quot;cloud.google.com/go/logging/logadmin&amp;quot;
     &amp;quot;golang.org/x/net/context&amp;quot;
     &amp;quot;google.golang.org/api/iterator&amp;quot;
@@ -83,7 +83,7 @@ provides such conversion.&lt;/p&gt;
 in &lt;a href=&#34;https://cloud.google.com/compute/&#34;&gt;Compute Engine&lt;/a&gt;
 from a &lt;code&gt;structpb.Struct&lt;/code&gt; instance.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;import (
+&lt;pre&gt;&lt;code&gt;import (
     &amp;quot;github.com/golang/protobuf/ptypes/struct&amp;quot;
     &amp;quot;github.com/jkawamoto/structpbconv&amp;quot;
 )
@@ -124,7 +124,7 @@ To give a mapping of field names, use a &lt;code&gt;structpb&lt;/code&gt; tag.&l
 
 &lt;p&gt;Finally, we can access each field like that:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// Getting log entries of which event types are GCE_OPERATION_DONE.
+&lt;pre&gt;&lt;code&gt;// Getting log entries of which event types are GCE_OPERATION_DONE.
 iter := client.Entries(
   ctx, logadmin.Filter(&amp;quot;jsonPayload.event_type = \&amp;quot;GCE_OPERATION_DONE\&amp;quot;&amp;quot;))
 for {
