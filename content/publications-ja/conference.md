@@ -29,7 +29,7 @@ lastmod: 2016-11-14
 * Pengfei Li, Yaokai Feng, *Junpei Kawamoto*, and Kouichi Sakurai,
   "[{{%img qir%}}A Proposal for Cyber-Attack Trace-back Using Packet Marking and Logging](http://hdl.handle.net/2324/1657555),"
   Proc. of [the 10th International Workshop on Advances in Information Security](http://voyager.ce.fit.ac.jp/conf/WAIS/2016/),
-  Fukuoka, Japan, July 6, 2016.
+  pp.603-607, Fukuoka, Japan, July 6, 2016.
 * Misni Harjo Suwito, Shinchi Matsumoto, *Junpei Kawamoto*, Dieter Gollmann, and Kouichi Sakurai,
   "[{{%img qir%}}An Analysis of IT Assessment Security Maturity in Higher Education Institution](http://hdl.handle.net/2324/1566107),"
   Proc. of the International Conference on Information Science and Applications,
