@@ -2,48 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.jkawamoto.info/publications-ja/journal/</loc>
-    <lastmod>2016-10-01T00:00:00+00:00</lastmod>
+    <loc>https://www.jkawamoto.info/</loc>
+    <lastmod>2017-01-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.jkawamoto.info/publications/journal/</loc>
-    <lastmod>2016-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/publications-ja/conference/</loc>
-    <lastmod>2016-11-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/publications/conference/</loc>
-    <lastmod>2016-11-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/publications-ja/domestic/</loc>
-    <lastmod>2016-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/publications/thesis/</loc>
-    <lastmod>2016-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/publications/link/</loc>
-    <lastmod>2016-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/publications-ja/thesis/</loc>
-    <lastmod>2016-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/publications-ja/link/</loc>
-    <lastmod>2016-10-01T00:00:00+00:00</lastmod>
+    <loc>https://www.jkawamoto.info/blogs/test-remote-ci-scripts-locally/</loc>
+    <lastmod>2017-01-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -387,211 +352,8 @@
   </url>
   
   <url>
-    <loc>https://www.jkawamoto.info/tags/angular/</loc>
-    <lastmod>2016-11-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/angularjs/</loc>
-    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/bash/</loc>
-    <lastmod>2016-08-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/blog-ja/</loc>
-    <lastmod>2016-08-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/blogs/</loc>
-    <lastmod>2017-01-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/browserify/</loc>
-    <lastmod>2016-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/chartjs/</loc>
-    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/cloud-database/</loc>
-    <lastmod>2014-05-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/docker/</loc>
-    <lastmod>2016-08-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/fullpagejs/</loc>
-    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/gcp/</loc>
-    <lastmod>2017-01-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/github/</loc>
-    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/go/</loc>
-    <lastmod>2017-01-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/gulp/</loc>
-    <lastmod>2016-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/i18n/</loc>
-    <lastmod>2016-11-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/categories/ja/</loc>
-    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/javascript/</loc>
-    <lastmod>2016-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/</loc>
-    <lastmod>2017-01-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/latex/</loc>
-    <lastmod>2015-09-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.jkawamoto.info/lectures/</loc>
     <lastmod>2016-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/log/</loc>
-    <lastmod>2017-01-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/mac/</loc>
-    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/meteor/</loc>
-    <lastmod>2016-11-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/nodejs/</loc>
-    <lastmod>2016-12-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/npm/</loc>
-    <lastmod>2016-12-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/numba/</loc>
-    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/parcelify/</loc>
-    <lastmod>2016-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/posters/</loc>
-    <lastmod>2012-11-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/privacy/</loc>
-    <lastmod>2014-05-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/publications/</loc>
-    <lastmod>2016-10-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/publications-ja/</loc>
-    <lastmod>2016-10-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/pymc/</loc>
-    <lastmod>2016-08-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/python/</loc>
-    <lastmod>2016-11-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/categories/qiita/</loc>
-    <lastmod>2016-08-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -600,61 +362,8 @@
   </url>
   
   <url>
-    <loc>https://www.jkawamoto.info/tags/rework/</loc>
-    <lastmod>2016-12-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/categories/slide/</loc>
-    <lastmod>2016-02-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/slides/</loc>
-    <lastmod>2016-02-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/sphinx/</loc>
-    <lastmod>2016-08-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/watchify/</loc>
-    <lastmod>2016-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/wercker/</loc>
-    <lastmod>2016-08-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/xml/</loc>
-    <lastmod>2014-12-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.jkawamoto.info/activity-ja/</loc>
     <lastmod>2016-11-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.jkawamoto.info/tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%9E%E3%82%A4%E3%83%8B%E3%83%B3%E3%82%B0/</loc>
-    <lastmod>2016-08-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -663,9 +372,48 @@
   </url>
   
   <url>
-    <loc>https://www.jkawamoto.info/tags/%E8%AC%9B%E7%BE%A9%E6%83%85%E5%A0%B1/</loc>
-    <lastmod>2016-08-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://www.jkawamoto.info/publications-ja/journal/</loc>
+    <lastmod>2016-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jkawamoto.info/publications/journal/</loc>
+    <lastmod>2016-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jkawamoto.info/publications-ja/conference/</loc>
+    <lastmod>2016-11-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jkawamoto.info/publications/conference/</loc>
+    <lastmod>2016-11-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jkawamoto.info/publications-ja/domestic/</loc>
+    <lastmod>2016-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jkawamoto.info/publications/thesis/</loc>
+    <lastmod>2016-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jkawamoto.info/publications/link/</loc>
+    <lastmod>2016-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jkawamoto.info/publications-ja/thesis/</loc>
+    <lastmod>2016-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.jkawamoto.info/publications-ja/link/</loc>
+    <lastmod>2016-10-01T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>

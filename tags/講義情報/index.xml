@@ -2,11 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>講義情報 on Junpei Kawamoto</title>
-    <link>https://www.jkawamoto.info/tags/%E8%AC%9B%E7%BE%A9%E6%83%85%E5%A0%B1/index.xml</link>
+    <link>https://www.jkawamoto.info/tags/%E8%AC%9B%E7%BE%A9%E6%83%85%E5%A0%B1/</link>
     <description>Recent content in 講義情報 on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
+    <lastBuildDate>Wed, 17 Aug 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.jkawamoto.info/tags/%E8%AC%9B%E7%BE%A9%E6%83%85%E5%A0%B1/index.xml" rel="self" type="application/rss+xml" />
     
     <item>

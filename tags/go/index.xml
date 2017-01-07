@@ -2,12 +2,102 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on Junpei Kawamoto</title>
-    <link>https://www.jkawamoto.info/tags/go/index.xml</link>
+    <link>https://www.jkawamoto.info/tags/go/</link>
     <description>Recent content in Go on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
+    <lastBuildDate>Fri, 06 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.jkawamoto.info/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Test a test script for remote CI services locally</title>
+      <link>https://www.jkawamoto.info/blogs/test-remote-ci-scripts-locally/</link>
+      <pubDate>Fri, 06 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jkawamoto.info/blogs/test-remote-ci-scripts-locally/</guid>
+      <description>
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;You usually employ remote CI services such as &lt;a href=&#34;https://travis-ci.org&#34;&gt;Travis CI&lt;/a&gt;
+to automatically test your projects hosted in &lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt;.
+Your tests should be passed in such CI services always because you have made sure
+your codebase passes the tests before pushing.
+However, &lt;code&gt;.travis.yml&lt;/code&gt;, the configuration file of Travis, sometimes has bugs and
+your dependency list sometime loses any libraries.&lt;/p&gt;
+
+&lt;p&gt;If your codebase fails tests in remote CI services, you need to fix bugs and
+re-push, and your commit history gets messy.
+If you&amp;rsquo;re working with colleague&amp;rsquo;s repository, you should care about it more.&lt;/p&gt;
+
+&lt;p&gt;To evaluate those tests locally, I made &lt;a href=&#34;https://jkawamoto.github.io/loci/&#34;&gt;Loci&lt;/a&gt;,
+which runs tests in a sandbox based on &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt;.
+Loci currently supports &lt;a href=&#34;https://www.python.org/&#34;&gt;Python&lt;/a&gt; and
+&lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; projects.&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;Loci uses &lt;a href=&#34;https://www.docker.com/&#34;&gt;Docker&lt;/a&gt;.
+If you don&amp;rsquo;t have it, install it first.&lt;/p&gt;
+
+&lt;p&gt;You can install Loci in several ways.
+If you&amp;rsquo;re familiar with &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt;, run&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ go get github.com/jkawamoto/loci
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or if you&amp;rsquo;re a &lt;a href=&#34;http://brew.sh/&#34;&gt;Homebrew&lt;/a&gt; user, run&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ brew tap jkawamoto/loci
+$ brew install loci
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Otherwise, you can get a compiled binary from &lt;a href=&#34;https://github.com/jkawamoto/loci/releases&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;If your current directory has &lt;code&gt;.travis.yml&lt;/code&gt;, just run &lt;code&gt;loci&lt;/code&gt; command.
+If you want to test another file, give the path after &lt;code&gt;loci&lt;/code&gt; command like &lt;code&gt;loci &amp;lt;path&amp;gt;&lt;/code&gt;.
+First time, Loci build container images which install dependent packages listed in &lt;code&gt;.travis.yml&lt;/code&gt;, and it may take long time,
+but those images can be reusable.&lt;/p&gt;
+
+&lt;p&gt;If you have cache servers of APT repository and PyPI repository,
+give their addresses via &lt;code&gt;--apt-proxy&lt;/code&gt; and &lt;code&gt;--pypi-proxy&lt;/code&gt; flags.
+Those cache servers may reduce network traffic and building time.&lt;/p&gt;
+
+&lt;p&gt;Here is the whole command line options of Loci:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;loci [global options] [script file]
+
+  If script file isn&#39;t given, .travis.yml will be used.
+
+GLOBAL OPTIONS:
+   --name NAME, -n NAME  creating a container named NAME to run tests,
+                         and that container will not be deleted.
+   --tag TAG, -t TAG     creating an image named TAG.
+   --base TAG, -b TAG    use image TAG as the base image.
+                         (default: &amp;quot;ubuntu:latest&amp;quot;)
+   --verbose             verbose mode, which prints Dockerfile and
+                         entrypoint.sh.
+   --apt-proxy URL       URL for a proxy server of apt repository.
+                         [$APT_PROXY]
+   --pypi-proxy URL      URL for a proxy server of pypi repository.
+                         [$PYPI_PROXY]
+   --http-proxy URL      URL for a http proxy server. [$HTTP_PROXY]
+   --https-proxy URL     URL for a https proxy server. [$HTTPS_PROXY]
+   --no-proxy LIST       Comma separated URL LIST for which proxies won&#39;t
+                         be used. [$NO_PROXY]
+   --help, -h            show help
+   --version, -v         print the version
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;future-work&#34;&gt;Future work&lt;/h2&gt;
+
+&lt;p&gt;Loci currently supports Python and Go projects.
+I&amp;rsquo;ll supports other languages and welcome any pull requests.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Receive logs from Stackdriver Logging</title>

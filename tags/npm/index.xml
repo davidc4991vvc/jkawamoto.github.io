@@ -2,11 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Npm on Junpei Kawamoto</title>
-    <link>https://www.jkawamoto.info/tags/npm/index.xml</link>
+    <link>https://www.jkawamoto.info/tags/npm/</link>
     <description>Recent content in Npm on Junpei Kawamoto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2016 Junpei Kawamoto</copyright>
+    <lastBuildDate>Thu, 01 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.jkawamoto.info/tags/npm/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
